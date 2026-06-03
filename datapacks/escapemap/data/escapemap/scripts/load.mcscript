@@ -1,0 +1,15 @@
+#file: ./load
+
+/function escapemap:spyglass/load
+/function escapemap:area/load
+/function escapemap:boatcall/load
+/function escapemap:placements/load
+/function escapemap:puzzles/load
+
+as (@a) {
+    //activate later for prod
+    //attribute @s minecraft:jump_strength modifier add escapemap -0.5 add_value
+    /attribute @s minecraft:fall_damage_multiplier modifier add escapemap -1 add_value
+}
+
+/say Loaded The Craftness v0.1.1!

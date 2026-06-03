@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "changed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:redstone",
+            "predicates": {
+              "minecraft:custom_data": {
+                "puzzle": {
+                  "id": "ground"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "escapemap:area/areas/inventory_changed"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "using_spyglass": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:spyglass"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "escapemap:spyglass/used"
+  }
+}

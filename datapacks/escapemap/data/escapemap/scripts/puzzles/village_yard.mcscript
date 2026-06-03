@@ -1,0 +1,16 @@
+#file: ./village_yard/complete
+/setblock -32 -37 34 minecraft:andesite_wall
+/function escapemap:puzzles/complete
+
+#file: ./village_yard/reset
+/setblock -32 -37 34 minecraft:andesite
+/setblock -33 -37 34 minecraft:waxed_oxidized_copper_bulb[powered=false]
+//redstone field
+/fill -30 -37 39 -27 -37 34 air
+/setblock -31 -37 34 air
+/setblock -30 -37 32 air
+/setblock -30 -37 33 air
+/setblock -29 -37 33 air
+/setblock -28 -37 33 air
+//piston
+/setblock -29 -39 31 minecraft:stone_button[face=ceiling,powered=true]

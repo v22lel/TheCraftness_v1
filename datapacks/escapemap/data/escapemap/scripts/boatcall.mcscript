@@ -1,0 +1,80 @@
+modal open1() {
+    /setblock -150 -42 124 minecraft:air
+    /setblock -150 -43 124 minecraft:spruce_slab[type=bottom]
+    /setblock -150 -44 124 minecraft:air
+}
+
+modal close1() {
+    /setblock -150 -42 124 minecraft:barrier
+    /setblock -150 -44 124 minecraft:spruce_slab[type=bottom]
+    /setblock -150 -43 124 minecraft:air
+}
+
+modal open2() {
+    /setblock -115 -41 -39 minecraft:air
+    /setblock -115 -43 -39 minecraft:dark_oak_slab[type=bottom]
+    /setblock -115 -44 -39 minecraft:air
+}
+
+modal close2() {
+    /setblock -115 -41 -39 minecraft:barrier
+    /setblock -115 -43 -39 minecraft:air
+    /setblock -115 -44 -39 minecraft:dark_oak_slab[type=bottom]
+}
+
+#file: ./boatcall/load
+var calledBoat
+
+#file: ./boatcall/tick
+
+asat (@a[gamemode=adventure,nbt=!{RootVehicle:{Entity:{id:"minecraft:spruce_boat"}}}]) {
+    if ('biome ~ ~ ~ minecraft:warm_ocean' && 'block ~ ~ ~ water') {
+        /ride @s mount @e[type=#minecraft:boat,sort=nearest,limit=1]
+    }
+}
+
+// dock 1 open
+//-160 -45 118 dx=13 dy=5 dz=2
+as(@a[x=-160,y=-45,z=118,dx=13,dy=5,dz=2]) {
+    open1()
+}
+
+//dock 1 close
+//-157 -45 111 dx=15 dy=5 dz=2
+as(@a[x=-157,y=-45,z=111,dx=15,dy=5,dz=2]) {
+    close1()
+}
+
+// dock 2 open
+// -165 -45 -78 dx=2 dy=5 dz=11
+as(@a[x=-165,y=-45,z=-78,dx=2,dy=5,dz=11]) {
+    open2()
+}
+
+//dock 2 close
+// -173 -45 -77 dx=2 dy=5 dz=10
+as(@a[x=-173,y=-45,z=-77,dx=2,dy=5,dz=10]) {
+    close2()
+}
+
+as(@a[scores={calledBoat=1}]) {
+    /kill @e[tag=calledBoat]
+    /summon minecraft:spruce_boat -155 -52.286 122 {Motion:[0.0,3.5,0.0],Tags:["calledBoat"],Invulnerable:1}
+    open1()
+    close2()
+    calledBoat @a = 0
+}
+
+as(@a[scores={calledBoat=2}]) {
+    /kill @e[tag=calledBoat]
+    /summon minecraft:spruce_boat -118 -52.286 -39 {Motion:[0.0,3.5,0.0],Tags:["calledBoat"],Invulnerable:1}
+    open2()
+    close1()
+    calledBoat @a = 0
+}
+
+#file: ./boatcall/reset
+calledBoat @a = 0
+close1()
+close2()
+/kill @e[tag=calledBoat]

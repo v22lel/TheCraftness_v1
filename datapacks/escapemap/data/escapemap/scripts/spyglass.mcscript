@@ -1,0 +1,24 @@
+#file: ./spyglass/load
+var spyglass_ticks
+var spyglass_using
+
+var spyglass_objective @a = 0
+
+/advancement revoke @a only escapemap:using_spyglass
+//scoreboard objectives setdisplay sidebar spyglass_ticks
+
+#file: ./spyglass/tick
+as (@a[scores={spyglass_using=0}]) {
+    spyglass_ticks @s = 0
+}
+
+spyglass_using @a = 0
+
+#file: ./spyglass/used
+spyglass_using @s = 1
+as (@s[scores={spyglass_objective=1..}]) {
+    spyglass_ticks @s += 1
+}
+/advancement revoke @s only escapemap:using_spyglass
+
+

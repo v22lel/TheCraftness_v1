@@ -1,0 +1,26 @@
+#file: ./main
+
+/function escapemap:jumppad
+/function escapemap:spyglass/tick
+/function escapemap:boatcall/tick
+/function escapemap:placements/tick
+/function escapemap:puzzles/tick
+
+as (@a) {
+    /function escapemap:area/tick
+}
+
+as (@a[gamemode=adventure]) {
+    /attribute @s minecraft:movement_speed modifier remove minecraft:sprinting
+}
+
+/execute as @e[type=item] if items entity @s contents *[minecraft:custom_data~{puzzle:{persistent:true}}] run data modify entity @s Age set value -32768s
+
+#file: ./jumppad
+run function jumppad {
+    asat(@a) {
+        if ('block ~ ~ ~ minecraft:yellow_carpet') {
+            /effect give @s minecraft:levitation 1 11 true
+        }
+    }
+}

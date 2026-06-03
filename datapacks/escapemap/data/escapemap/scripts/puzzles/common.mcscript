@@ -1,0 +1,35 @@
+#file: ./load
+var puzzles_complete
+var secrets_complete
+var super_secrets_complete
+
+// TODO: sounds
+#file: ./complete
+puzzles_complete @a += 1
+
+#file: ./secret_complete
+secrets_complete @a += 1
+
+#file: ./super_secret_complete
+super_secrets_complete @a += 1
+
+
+#file: ./tick
+as (@a[scores={super_secrets_complete=1..}]) {
+    /title @s actionbar ["",{"score":{"name":"@s","objective":"puzzles_complete"}},{"text":" +"},{"score":{"name":"@s","objective":"secrets_complete"}},{"text":" (+"},{"score":{"name":"@s","objective":"super_secrets_complete"}},{"text":")"}]
+}
+
+as (@a[scores={super_secrets_complete=0,secrets_complete=1..}]) {
+    /title @s actionbar ["",{"score":{"name":"@s","objective":"puzzles_complete"}},{"text":" +"},{"score":{"name":"@s","objective":"secrets_complete"}}]
+}
+
+as (@a[scores={secrets_complete=0}]) {
+    /title @s actionbar ["",{"score":{"name":"@s","objective":"puzzles_complete"}}]
+}
+
+#file: ./reset
+puzzles_complete @a = 0
+secrets_complete @a = 0
+super_secrets_complete @a = 0
+
+/function escapemap:puzzles/village_yard/reset

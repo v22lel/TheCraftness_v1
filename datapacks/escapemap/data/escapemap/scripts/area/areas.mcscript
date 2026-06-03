@@ -1,0 +1,28 @@
+#file: ./areas/changed
+/execute if score @s area matches 0 run function escapemap:area/areas/neutral
+/execute if score @s area matches 1 run function escapemap:area/areas/village_yard
+/execute if score @s area matches 2 run function escapemap:area/areas/spawn_tutorial
+
+/execute if score @s area matches 0 run function escapemap:area/freeze_items
+/execute unless score @s area matches 0 run function escapemap:area/unfreeze_items
+
+#file: ./freeze_items
+/execute as @e[type=item] if items entity @s contents *[minecraft:custom_data~{puzzle:{id:"ground"}}] run data modify entity @s PickupDelay set value 32767s
+
+#file: ./unfreeze_items
+/execute as @e[type=item] if items entity @s contents *[minecraft:custom_data~{puzzle:{id:"ground"}}] run data modify entity @s PickupDelay set value 0s
+
+#file: ./areas/neutral
+/function escapemap:area/items/multitool_neutral
+/function escapemap:area/items/village_yard_redstone_neutral
+
+#file: ./areas/village_yard
+/function escapemap:area/items/multitool_village_yard
+/function escapemap:area/items/village_yard_redstone_active
+
+#file: ./areas/spawn_tutorial
+/function escapemap:area/items/multitool_spawn_tutorial
+
+#file: ./areas/inventory_changed
+/function escapemap:area/areas/changed
+/advancement revoke @s only escapemap:inventory_changed

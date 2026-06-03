@@ -1,0 +1,17 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:can_break": {
+        "blocks": [
+          "minecraft:pale_oak_leaves"
+        ]
+      },
+      "minecraft:custom_data": {
+        "puzzle": {
+          "id": "multitool"
+        }
+      }
+    }
+  }
+]

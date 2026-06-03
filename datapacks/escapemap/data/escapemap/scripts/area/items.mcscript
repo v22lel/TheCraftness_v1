@@ -1,0 +1,42 @@
+modal modifyInventory(predicate, modifier) {
+    if ('items entity @s weapon.mainhand $(predicate)') {
+        /item modify entity @s weapon.mainhand $(modifier)
+    }
+    if ('items entity @s weapon.offhand $(predicate)') {
+        /item modify entity @s weapon.offhand $(modifier)
+    }
+    if ('items entity @s player.cursor $(predicate)') {
+        /item modify entity @s player.cursor $(modifier)
+    }
+    for (0, 3) {
+        if ('items entity @s player.crafting.$(i) $(predicate)') {
+            /item modify entity @s player.crafting.$(i) $(modifier)
+        }
+    }
+    for (0, 8) {
+        if ('items entity @s hotbar.$(i) $(predicate)') {
+            /item modify entity @s hotbar.$(i) $(modifier)
+        }
+    }
+    for (0, 26) {
+        if ('items entity @s inventory.$(i) $(predicate)') {
+            /item modify entity @s inventory.$(i) $(modifier)
+        }
+    }
+}
+
+#file: ./items/multitool_neutral
+modifyInventory('minecraft:shears[minecraft:custom_data~{puzzle:{id:"multitool"}}]', 'escapemap:multitool/neutral')
+
+#file: ./items/multitool_village_yard
+modifyInventory('minecraft:shears[minecraft:custom_data~{puzzle:{id:"multitool"}}]', 'escapemap:multitool/village_yard')
+
+#file: ./items/multitool_spawn_tutorial
+modifyInventory('minecraft:shears[minecraft:custom_data~{puzzle:{id:"multitool"}}]', 'escapemap:multitool/spawn_tutorial')
+
+#file: ./items/village_yard_redstone_neutral
+modifyInventory('minecraft:redstone[minecraft:custom_data~{puzzle:{id:"village_yard"}}]', 'escapemap:village_yard_redstone/neutral')
+
+#file: ./items/village_yard_redstone_active
+modifyInventory('minecraft:redstone[minecraft:custom_data~{puzzle:{id:"village_yard"}}]', 'escapemap:village_yard_redstone/active')
+modifyInventory('minecraft:redstone[minecraft:custom_data~{puzzle:{id:"ground"}}]', 'escapemap:village_yard_redstone/active')

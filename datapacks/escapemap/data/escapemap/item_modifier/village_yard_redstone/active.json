@@ -1,0 +1,17 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:can_place_on": {
+        "blocks": [
+          "minecraft:coarse_dirt"
+        ]
+      },
+      "minecraft:custom_data": {
+        "puzzle": {
+          "id": "village_yard"
+        }
+      }
+    }
+  }
+]

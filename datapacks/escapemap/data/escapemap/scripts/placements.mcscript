@@ -1,0 +1,29 @@
+/*
+place0 = slab at the very start
+*/
+
+#file: ./placements/load
+var place0
+
+#file: ./placements/tick
+if('block -140 -42 122 #slabs' && 'entity @a[scores={place0=0}]') {
+    /setblock -140 -40 122 air
+    /setblock -140 -40 123 air
+    place0 @a = 1
+}
+
+#file: ./placements/reset
+place0 @a = 0
+
+//spawn slab
+/setblock -140 -40 122 barrier
+/setblock -140 -40 123 barrier
+/setblock -140 -42 122 air
+
+//spawn pale leaves
+/setblock -117 -37 108 minecraft:pale_oak_leaves[persistent=true]
+/setblock -119 -36 99 minecraft:pale_oak_leaves[persistent=true]
+
+//spawn trapdoors
+/setblock -131 -38 110 minecraft:oak_trapdoor
+/setblock -131 -38 109 minecraft:oak_trapdoor

@@ -1,0 +1,5 @@
+#file: ./items/multitool
+/give @s minecraft:shears[minecraft:custom_name='{"text":"Multitool","italic":false}',minecraft:unbreakable={},minecraft:custom_data={puzzle:{id:"multitool","persistent":1b}}] 1
+
+#file: ./items/village_yard_redstone
+/give @s minecraft:redstone[minecraft:custom_data={puzzle:{id:"village_yard","persistent":1b}}] 1
