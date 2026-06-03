@@ -7,5 +7,6 @@
 execute if score @s area matches 0 run function escapemap:area/areas/neutral
 execute if score @s area matches 1 run function escapemap:area/areas/village_yard
 execute if score @s area matches 2 run function escapemap:area/areas/spawn_tutorial
+execute if score @s area matches 3 run function escapemap:area/areas/village_cyan
 execute if score @s area matches 0 run function escapemap:area/freeze_items
 execute unless score @s area matches 0 run function escapemap:area/unfreeze_items

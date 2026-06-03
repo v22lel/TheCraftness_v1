@@ -8,4 +8,5 @@ scoreboard players operation @s old_area = @s area
 scoreboard players set @s area 0
 execute as @s[x= -31 ,y= -38 ,z= 31 ,dx= 4.5 ,dy= 3 ,dz= 8.5 ] run scoreboard players set @s area 1
 execute as @s[x= -160 ,y= -45 ,z= 104.5 ,dx= 46 ,dy= 30 ,dz= 48 ] run scoreboard players set @s area 2
+execute as @s[x= -53 ,y= -38 ,z= 48.5 ,dx= 4 ,dy= 3 ,dz= 2.5 ] run scoreboard players set @s area 3
 execute as @s unless score @s area = @s old_area run function escapemap:area/areas/changed

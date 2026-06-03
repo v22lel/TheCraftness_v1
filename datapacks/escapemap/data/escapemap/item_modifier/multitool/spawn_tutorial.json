@@ -9,6 +9,7 @@
       },
       "minecraft:custom_data": {
         "puzzle": {
+          "persistent": true,
           "id": "multitool"
         }
       }

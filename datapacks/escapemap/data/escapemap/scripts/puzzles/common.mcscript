@@ -33,3 +33,5 @@ secrets_complete @a = 0
 super_secrets_complete @a = 0
 
 /function escapemap:puzzles/village_yard/reset
+/function escapemap:puzzles/cyan_candle/reset
+/function escapemap:puzzles/red_candle/reset

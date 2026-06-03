@@ -17,3 +17,13 @@ const spawn_tutorial = Map{
     "dy":"30",
     "dz":"48"
 }
+
+const village_cyan_id = 3
+const village_cyan = Map{
+    "x":"-53",
+    "y":"-38",
+    "z":"48.5",
+    "dx":"4",
+    "dy":"3",
+    "dz":"2.5"
+}

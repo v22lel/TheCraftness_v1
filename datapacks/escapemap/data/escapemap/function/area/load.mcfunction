@@ -6,3 +6,5 @@
 ######
 
 
+advancement revoke @a only escapemap:inventory_changed
+

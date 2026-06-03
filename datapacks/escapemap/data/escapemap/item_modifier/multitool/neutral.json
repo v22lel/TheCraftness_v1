@@ -5,6 +5,7 @@
       "!minecraft:can_break": {},
       "minecraft:custom_data": {
         "puzzle": {
+          "persistent": true,
           "id": "multitool"
         }
       }

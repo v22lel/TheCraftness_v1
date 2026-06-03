@@ -8,3 +8,5 @@ scoreboard players set @a puzzles_complete 0
 scoreboard players set @a secrets_complete 0
 scoreboard players set @a super_secrets_complete 0
 function escapemap:puzzles/village_yard/reset
+function escapemap:puzzles/cyan_candle/reset
+function escapemap:puzzles/red_candle/reset

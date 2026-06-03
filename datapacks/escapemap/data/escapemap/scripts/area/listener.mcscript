@@ -2,18 +2,21 @@
 var area
 var old_area
 
-#file: ./tick
+/advancement revoke @a only escapemap:inventory_changed
 
+modal areaCheck(area, id) {
+    as (@s[x= $(area).x ,y= $(area).y ,z= $(area).z ,dx= $(area).dx ,dy= $(area).dy ,dz= $(area).dz ]) {
+        area @s = $(id)
+    }
+}
+
+#file: ./tick
 old_area @s = area @s
 area @s = 0
 
-as (@s[x= $(village_yard).x ,y= $(village_yard).y ,z= $(village_yard).z ,dx= $(village_yard).dx ,dy= $(village_yard).dy ,dz= $(village_yard).dz ]) {
-    area @s = $(village_yard_id)
-}
-
-as (@s[x= $(spawn_tutorial).x ,y= $(spawn_tutorial).y ,z= $(spawn_tutorial).z ,dx= $(spawn_tutorial).dx ,dy= $(spawn_tutorial).dy ,dz= $(spawn_tutorial).dz ]) {
-    area @s = $(spawn_tutorial_id)
-}
+areaCheck($(village_yard), $(village_yard_id))
+areaCheck($(spawn_tutorial), $(spawn_tutorial_id))
+areaCheck($(village_cyan), $(village_cyan_id))
 
 /execute as @s unless score @s area = @s old_area run function escapemap:area/areas/changed
 

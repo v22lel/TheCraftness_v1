@@ -1,15 +1,14 @@
 {
   "criteria": {
-    "changed": {
+    "pickup_ground": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "minecraft:redstone",
             "predicates": {
               "minecraft:custom_data": {
                 "puzzle": {
-                  "id": "ground"
+                  "persistent": true
                 }
               }
             }

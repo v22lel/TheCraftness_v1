@@ -1,0 +1,63 @@
+modal blockOak(pos, barrierPos) {
+    /setblock $(pos) air
+    /setblock $(barrierPos) barrier
+    /schedule function escapemap:puzzles/red_candle/fences/oak/expireblock 3s replace
+}
+
+modal stencilOak(pos, barrierPos) {
+    /setblock $(pos) stripped_oak_wood
+    /setblock $(barrierPos) air
+    /schedule function escapemap:puzzles/red_candle/fences/oak/expirestencil 3s replace
+}
+
+modal fenceOak(pos, barrierPos) {
+    /execute store success storage escapemap:tmp isFence byte 1 if block $(pos) oak_fence
+
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(pos) air
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(barrierPos) barrier
+
+    /execute if data storage escapemap:tmp {isFence:0b} if block $(pos) air run setblock $(pos) oak_fence
+    /execute if data storage escapemap:tmp {isFence:0b} run setblock $(barrierPos) air
+}
+
+//modal block(pos, expireName) {
+//    /setblock $(pos) air
+//    /schedule function $(expireName) 3s replace
+//}
+//
+//modal stencil(pos, name, expireName) {
+//    /setblock $(pos) $(name)
+//    /schedule function $(expireName) 3s replace
+//}
+//
+//modal fence(name, pos, barrierPos) {
+//    /execute store success storage escapemap:tmp isFence byte 1 if block $(pos) $(name)
+//
+//    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(pos) air
+//    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(barrierPos) barrier
+//
+//    /execute if data storage escapemap:tmp {isFence:0b} if block $(pos) air run setblock $(pos) $(name)
+//    /execute if data storage escapemap:tmp {isFence:0b} run setblock $(barrierPos) air
+//}
+
+#file: ./fences/reset
+//lever in house
+/setblock -31 -37 65 minecraft:lever[facing=south]
+
+//=======
+//OAK
+//=======
+
+#file: ./fences/oak/press
+fenceOak('-46 -36 63', '-46 -34 63')
+fenceOak('-46 -36 62', '-46 -34 62')
+blockOak('-46 -36 61', '-46 -34 61')
+stencilOak('-46 -36 60', '-46 -34 60')
+
+#file: ./fences/oak/expireblock
+/setblock -46 -36 61 oak_wood
+/setblock -46 -34 61 air
+
+#file: ./fences/oak/expirestencil
+/setblock -46 -36 60 air
+/setblock -46 -34 60 barrier

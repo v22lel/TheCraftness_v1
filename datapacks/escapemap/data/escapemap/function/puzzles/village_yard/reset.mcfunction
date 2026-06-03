@@ -13,3 +13,4 @@ setblock -30 -37 33 air
 setblock -29 -37 33 air
 setblock -28 -37 33 air
 setblock -29 -39 31 minecraft:stone_button[face=ceiling,powered=true]
+clone -125 -48 119 -125 -48 119 -35 -37 37
