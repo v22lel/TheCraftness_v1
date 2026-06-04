@@ -7,3 +7,4 @@
 setblock -53 -37 49 minecraft:trapped_chest[facing=east]
 setblock -52 -37 49 air
 setblock -52 -38 50 minecraft:waxed_oxidized_copper_bulb[powered=false]
+setblock -108 -39 41 air

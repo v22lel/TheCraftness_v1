@@ -7,5 +7,7 @@ call mcscript compile -fullErr
 
 ren ".\data\escapemap\functions" "function"
 
+del .mcfunction
+
 echo Done.
 endlocal

@@ -1,0 +1,3 @@
+#file: ./crash
+/execute in escapemap:crash_dimension run forceload add 1000 1000
+/execute in escapemap:crash_dimension run forceload remove 1000 1000
