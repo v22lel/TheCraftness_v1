@@ -1,0 +1,8 @@
+{
+  "sound_event": {
+    "sound_id": "minecraft:challenge.theme"
+  },
+  "description": "A 'certain' challenge",
+  "length_in_seconds": 394,
+  "comparator_output": 15
+}

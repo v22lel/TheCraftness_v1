@@ -1,13 +1,11 @@
+// ##############
+//      OAK
+// ##############
+
 modal blockOak(pos, barrierPos) {
     /setblock $(pos) air
     /setblock $(barrierPos) barrier
     /schedule function escapemap:puzzles/red_candle/fences/oak/expireblock 3s replace
-}
-
-modal stencilOak(pos, barrierPos) {
-    /setblock $(pos) stripped_oak_wood
-    /setblock $(barrierPos) air
-    /schedule function escapemap:puzzles/red_candle/fences/oak/expirestencil 3s replace
 }
 
 modal fenceOak(pos, barrierPos) {
@@ -19,6 +17,149 @@ modal fenceOak(pos, barrierPos) {
     /execute if data storage escapemap:tmp {isFence:0b} if block $(pos) air run setblock $(pos) oak_fence
     /execute if data storage escapemap:tmp {isFence:0b} run setblock $(barrierPos) air
 }
+
+// ##############
+//      DARK
+// ##############
+
+modal stencilDark(pos, barrierPos) {
+    /setblock $(pos) stripped_dark_oak_wood
+    /setblock $(barrierPos) air
+    /schedule function escapemap:puzzles/red_candle/fences/dark/expirestencil 3s replace
+}
+
+modal fenceDark(pos, barrierPos) {
+    /execute store success storage escapemap:tmp isFence byte 1 if block $(pos) dark_oak_fence
+
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(pos) air
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(barrierPos) barrier
+
+    /execute if data storage escapemap:tmp {isFence:0b} if block $(pos) air run setblock $(pos) dark_oak_fence
+    /execute if data storage escapemap:tmp {isFence:0b} run setblock $(barrierPos) air
+}
+
+// ##############
+//     WARPED
+// ##############
+
+modal fenceWarped(pos, barrierPos) {
+    /execute store success storage escapemap:tmp isFence byte 1 if block $(pos) warped_fence
+
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(pos) air
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(barrierPos) barrier
+
+    /execute if data storage escapemap:tmp {isFence:0b} if block $(pos) air run setblock $(pos) warped_fence
+    /execute if data storage escapemap:tmp {isFence:0b} run setblock $(barrierPos) air
+}
+
+// ##############
+//     CHERRY
+// ##############
+
+modal fenceCherry(pos, barrierPos) {
+    /execute store success storage escapemap:tmp isFence byte 1 if block $(pos) cherry_fence
+
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(pos) air
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(barrierPos) barrier
+
+    /execute if data storage escapemap:tmp {isFence:0b} if block $(pos) air run setblock $(pos) cherry_fence
+    /execute if data storage escapemap:tmp {isFence:0b} run setblock $(barrierPos) air
+}
+
+// ##############
+//     BIRCH
+// ##############
+
+modal blockBirch(pos, barrierPos) {
+    /setblock $(pos) air
+    /setblock $(barrierPos) barrier
+    /schedule function escapemap:puzzles/red_candle/fences/birch/expireblock 3s replace
+}
+
+#file: ./fences/reset
+//lever in house
+/setblock -31 -37 65 minecraft:lever[facing=south]
+/setblock -32 -38 64 air destroy
+
+//oak
+/setblock -44 -37 55 oak_fence
+/setblock -51 -37 55 air
+/setblock -51 -35 55 barrier
+/schedule clear escapemap:puzzles/red_candle/fences/oak/expireblock
+/function escapemap:puzzles/red_candle/fences/oak/expireblock
+
+//dark
+/setblock -42 -36 58 dark_oak_fence
+/setblock -44 -36 59 air
+/schedule clear escapemap:puzzles/red_candle/fences/dark/expirestencil
+/function escapemap:puzzles/red_candle/fences/dark/expirestencil
+
+//warped
+/setblock -48 -36 63 warped_fence
+/setblock -48 -34 63 air
+/setblock -47 -36 64 air
+/setblock -47 -34 64 barrier
+/setblock -58 -36 67 warped_fence
+
+//cherry
+/setblock -49 -36 63 cherry_fence
+/setblock -49 -34 63 air
+
+//birch
+/schedule clear escapemap:puzzles/red_candle/fences/birch/expireblock
+/function escapemap:puzzles/red_candle/fences/birch/expireblock
+
+//=======
+//OAK
+//=======
+
+#file: ./fences/oak/press
+fenceOak('-44 -37 55', '-44 -39 55')
+fenceOak('-51 -37 55', '-51 -35 55')
+blockOak('-54 -36 65', '-54 -34 65')
+
+#file: ./fences/oak/expireblock
+/setblock -54 -36 65 oak_wood
+/setblock -54 -34 65 air
+
+//=======
+//DARK
+//=======
+
+#file: ./fences/dark/press
+fenceDark('-42 -36 58', '-42 -38 58')
+fenceDark('-44 -36 59', '-44 -38 59')
+stencilDark('-47 -36 58', '-47 -34 58')
+
+#file: ./fences/dark/expirestencil
+/setblock -47 -36 58 air
+/setblock -47 -34 58 barrier
+
+//=======
+//WARPED
+//=======
+
+#file: ./fences/warped/press
+fenceWarped('-48 -36 63', '-48 -34 63')
+fenceWarped('-47 -36 64', '-47 -34 64')
+fenceWarped('-58 -36 67', '-58 -38 67')
+
+//======
+//CHERRY
+//======
+
+#file: ./fences/cherry/press
+fenceCherry('-49 -36 63', '-49 -34 63')
+
+//=======
+//BIRCH
+//=======
+#file: ./fences/birch/press
+blockBirch('-41 -36 62', '-41 -38 62')
+
+#file: ./fences/birch/expireblock
+/setblock -41 -36 62 birch_wood
+
 
 //modal block(pos, expireName) {
 //    /setblock $(pos) air
@@ -39,25 +180,3 @@ modal fenceOak(pos, barrierPos) {
 //    /execute if data storage escapemap:tmp {isFence:0b} if block $(pos) air run setblock $(pos) $(name)
 //    /execute if data storage escapemap:tmp {isFence:0b} run setblock $(barrierPos) air
 //}
-
-#file: ./fences/reset
-//lever in house
-/setblock -31 -37 65 minecraft:lever[facing=south]
-
-//=======
-//OAK
-//=======
-
-#file: ./fences/oak/press
-fenceOak('-46 -36 63', '-46 -34 63')
-fenceOak('-46 -36 62', '-46 -34 62')
-blockOak('-46 -36 61', '-46 -34 61')
-stencilOak('-46 -36 60', '-46 -34 60')
-
-#file: ./fences/oak/expireblock
-/setblock -46 -36 61 oak_wood
-/setblock -46 -34 61 air
-
-#file: ./fences/oak/expirestencil
-/setblock -46 -36 60 air
-/setblock -46 -34 60 barrier

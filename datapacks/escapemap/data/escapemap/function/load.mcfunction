@@ -12,4 +12,4 @@ function escapemap:boatcall/load
 function escapemap:placements/load
 function escapemap:puzzles/load
 execute as @a run attribute @s minecraft:fall_damage_multiplier modifier add escapemap -1 add_value
-say Loaded The Craftness v0.1.1!
+say Loaded The Craftness v0.1.2!

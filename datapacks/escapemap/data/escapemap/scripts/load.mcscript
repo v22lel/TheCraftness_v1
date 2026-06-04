@@ -12,4 +12,4 @@ as (@a) {
     /attribute @s minecraft:fall_damage_multiplier modifier add escapemap -1 add_value
 }
 
-/say Loaded The Craftness v0.1.1!
+/say Loaded The Craftness v0.1.2!

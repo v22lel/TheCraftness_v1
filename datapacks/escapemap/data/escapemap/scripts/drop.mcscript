@@ -1,0 +1,2 @@
+#file: ./drop/tick
+/execute as @e[type=item] unless data entity @s {Item:{components:{"minecraft:custom_data":{"puzzle":{"id":"ground"}}}}} at @s run tp @s @p

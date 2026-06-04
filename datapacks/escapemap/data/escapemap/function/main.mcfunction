@@ -9,6 +9,7 @@ function escapemap:spyglass/tick
 function escapemap:boatcall/tick
 function escapemap:placements/tick
 function escapemap:puzzles/tick
+function escapemap:drop/tick
 execute as @a run function escapemap:area/tick
 execute as @a[gamemode=adventure] run attribute @s minecraft:movement_speed modifier remove minecraft:sprinting
 execute as @e[type=item] if items entity @s contents *[minecraft:custom_data~{puzzle:{persistent:true}}] run data modify entity @s Age set value -32768s
