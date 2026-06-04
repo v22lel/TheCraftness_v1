@@ -8,30 +8,20 @@ execute as @a[gamemode=adventure,nbt=!{RootVehicle:{Entity:{id:"minecraft:spruce
 execute as @a[x=-160,y=-45,z=118,dx=13,dy=5,dz=2] run setblock -150 -42 124 minecraft:air
 execute as @a[x=-160,y=-45,z=118,dx=13,dy=5,dz=2] run setblock -150 -43 124 minecraft:spruce_slab[type=bottom]
 execute as @a[x=-160,y=-45,z=118,dx=13,dy=5,dz=2] run setblock -150 -44 124 minecraft:air
+execute as @a[x=-160,y=-45,z=118,dx=13,dy=5,dz=2] run setblock -154 -42 125 air
+execute as @a[x=-160,y=-45,z=118,dx=13,dy=5,dz=2] run setblock -154 -42 124 air
+execute as @a[x=-160,y=-45,z=118,dx=13,dy=5,dz=2] run setblock -153 -42 123 air
 execute as @a[x=-157,y=-45,z=111,dx=15,dy=5,dz=2] run setblock -150 -42 124 minecraft:barrier
 execute as @a[x=-157,y=-45,z=111,dx=15,dy=5,dz=2] run setblock -150 -44 124 minecraft:spruce_slab[type=bottom]
 execute as @a[x=-157,y=-45,z=111,dx=15,dy=5,dz=2] run setblock -150 -43 124 minecraft:air
+execute as @a[x=-157,y=-45,z=111,dx=15,dy=5,dz=2] run setblock -154 -42 125 minecraft:barrier
+execute as @a[x=-157,y=-45,z=111,dx=15,dy=5,dz=2] run setblock -154 -42 124 minecraft:barrier
+execute as @a[x=-157,y=-45,z=111,dx=15,dy=5,dz=2] run setblock -153 -42 123 minecraft:barrier
 execute as @a[x=-165,y=-45,z=-78,dx=2,dy=5,dz=11] run setblock -115 -41 -39 minecraft:air
 execute as @a[x=-165,y=-45,z=-78,dx=2,dy=5,dz=11] run setblock -115 -43 -39 minecraft:dark_oak_slab[type=bottom]
 execute as @a[x=-165,y=-45,z=-78,dx=2,dy=5,dz=11] run setblock -115 -44 -39 minecraft:air
+execute as @a[x=-165,y=-45,z=-78,dx=2,dy=5,dz=11] run setblock -117 -42 -39 air
 execute as @a[x=-173,y=-45,z=-77,dx=2,dy=5,dz=10] run setblock -115 -41 -39 minecraft:barrier
 execute as @a[x=-173,y=-45,z=-77,dx=2,dy=5,dz=10] run setblock -115 -43 -39 minecraft:air
 execute as @a[x=-173,y=-45,z=-77,dx=2,dy=5,dz=10] run setblock -115 -44 -39 minecraft:dark_oak_slab[type=bottom]
-execute as @a[scores={calledBoat=1}] run kill @e[tag=calledBoat]
-execute as @a[scores={calledBoat=1}] run summon minecraft:spruce_boat -155 -52.286 122 {Motion:[0.0,3.5,0.0],Tags:["calledBoat"],Invulnerable:1}
-execute as @a[scores={calledBoat=1}] run setblock -150 -42 124 minecraft:air
-execute as @a[scores={calledBoat=1}] run setblock -150 -43 124 minecraft:spruce_slab[type=bottom]
-execute as @a[scores={calledBoat=1}] run setblock -150 -44 124 minecraft:air
-execute as @a[scores={calledBoat=1}] run setblock -115 -41 -39 minecraft:barrier
-execute as @a[scores={calledBoat=1}] run setblock -115 -43 -39 minecraft:air
-execute as @a[scores={calledBoat=1}] run setblock -115 -44 -39 minecraft:dark_oak_slab[type=bottom]
-execute as @a[scores={calledBoat=1}] run scoreboard players set @a calledBoat 0
-execute as @a[scores={calledBoat=2}] run kill @e[tag=calledBoat]
-execute as @a[scores={calledBoat=2}] run summon minecraft:spruce_boat -118 -52.286 -39 {Motion:[0.0,3.5,0.0],Tags:["calledBoat"],Invulnerable:1}
-execute as @a[scores={calledBoat=2}] run setblock -115 -41 -39 minecraft:air
-execute as @a[scores={calledBoat=2}] run setblock -115 -43 -39 minecraft:dark_oak_slab[type=bottom]
-execute as @a[scores={calledBoat=2}] run setblock -115 -44 -39 minecraft:air
-execute as @a[scores={calledBoat=2}] run setblock -150 -42 124 minecraft:barrier
-execute as @a[scores={calledBoat=2}] run setblock -150 -44 124 minecraft:spruce_slab[type=bottom]
-execute as @a[scores={calledBoat=2}] run setblock -150 -43 124 minecraft:air
-execute as @a[scores={calledBoat=2}] run scoreboard players set @a calledBoat 0
+execute as @a[x=-173,y=-45,z=-77,dx=2,dy=5,dz=10] run setblock -117 -42 -39 barrier

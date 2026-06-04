@@ -3,12 +3,18 @@ var puzzles_complete
 var secrets_complete
 var super_secrets_complete
 
+/function escapemap:puzzles/spawn/load
+
 // TODO: sounds
 #file: ./complete
 puzzles_complete @a += 1
+/execute as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
 
 #file: ./secret_complete
+'$summon firework_rocket $(p) {Silent:1b,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"burst",has_twinkle:true,has_trail:true,colors:[I;3735544],fade_colors:[I;3735544]}]}}}}'
+'$setblock $(p) minecraft:soul_campfire[lit=true]'
 secrets_complete @a += 1
+/execute as @a at @s run playsound minecraft:ui.toast.challenge_complete master @p
 
 #file: ./super_secret_complete
 super_secrets_complete @a += 1
@@ -27,6 +33,8 @@ as (@a[scores={secrets_complete=0}]) {
     /title @s actionbar ["",{"score":{"name":"@s","objective":"puzzles_complete"}}]
 }
 
+/function escapemap:puzzles/spawn/tick
+
 #file: ./reset
 puzzles_complete @a = 0
 secrets_complete @a = 0
@@ -35,3 +43,4 @@ super_secrets_complete @a = 0
 /function escapemap:puzzles/village_yard/reset
 /function escapemap:puzzles/cyan_candle/reset
 /function escapemap:puzzles/red_candle/reset
+/function escapemap:puzzles/spawn/reset

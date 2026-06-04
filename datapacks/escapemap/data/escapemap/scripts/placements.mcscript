@@ -20,10 +20,7 @@ place0 @a = 0
 /setblock -140 -40 123 barrier
 /setblock -140 -42 122 air
 
-//spawn pale leaves
-/setblock -117 -37 108 minecraft:pale_oak_leaves[persistent=true]
-/setblock -119 -36 99 minecraft:pale_oak_leaves[persistent=true]
 
 //spawn trapdoors
-/setblock -131 -38 110 minecraft:oak_trapdoor
-/setblock -131 -38 109 minecraft:oak_trapdoor
+/setblock -131 -38 110 minecraft:oak_trapdoor[facing=east]
+/setblock -131 -38 109 minecraft:oak_trapdoor[facing=east]

@@ -1,0 +1,5 @@
+#file: ./comparator/compare
+'$setblock $(x) $(y) $(z) minecraft:comparator[facing=$(facing),mode=compare]'
+
+#file: ./comparator/subtract
+'$setblock $(x) $(y) $(z) minecraft:comparator[facing=$(facing),mode=subtract]'

@@ -4,7 +4,6 @@
 /function escapemap:placements/reset
 /function escapemap:boatcall/reset
 /function escapemap:area/reset
-/function escapemap:lootpools/reset
 /function escapemap:puzzles/reset
 
 /tp @a -135.5 -42.00 127.5

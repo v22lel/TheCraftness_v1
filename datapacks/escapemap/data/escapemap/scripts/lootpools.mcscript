@@ -1,6 +1,10 @@
+//JUST A UTILITY FILE: DO NOT CALL FROM MAIN RESET LINE
 #file: ./lootpools/reset
 //multitool chest
 /clone -125 -48 120 -125 -48 120 -129 -32 120
+
+// flashlight chest
+/clone -125 -48 118 -125 -48 118 -119 -37 98
 
 //village_yard redstone
 /clone -125 -48 119 -125 -48 119 -35 -37 37

@@ -7,3 +7,4 @@
 
 
 
+function escapemap:puzzles/spawn/load

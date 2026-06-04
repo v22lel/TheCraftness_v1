@@ -4,10 +4,19 @@ modal open1() {
     /setblock -150 -44 124 minecraft:air
 }
 
+modal open1_part2() {
+    /setblock -154 -42 125 air
+    /setblock -154 -42 124 air
+    /setblock -153 -42 123 air
+}
+
 modal close1() {
     /setblock -150 -42 124 minecraft:barrier
     /setblock -150 -44 124 minecraft:spruce_slab[type=bottom]
     /setblock -150 -43 124 minecraft:air
+    /setblock -154 -42 125 minecraft:barrier
+    /setblock -154 -42 124 minecraft:barrier
+    /setblock -153 -42 123 minecraft:barrier
 }
 
 modal open2() {
@@ -16,14 +25,19 @@ modal open2() {
     /setblock -115 -44 -39 minecraft:air
 }
 
+modal open2_part2() {
+    /setblock -117 -42 -39 air
+}
+
 modal close2() {
     /setblock -115 -41 -39 minecraft:barrier
     /setblock -115 -43 -39 minecraft:air
     /setblock -115 -44 -39 minecraft:dark_oak_slab[type=bottom]
+    /setblock -117 -42 -39 barrier
 }
 
 #file: ./boatcall/load
-var calledBoat
+//var calledBoat
 
 #file: ./boatcall/tick
 
@@ -37,6 +51,7 @@ asat (@a[gamemode=adventure,nbt=!{RootVehicle:{Entity:{id:"minecraft:spruce_boat
 //-160 -45 118 dx=13 dy=5 dz=2
 as(@a[x=-160,y=-45,z=118,dx=13,dy=5,dz=2]) {
     open1()
+    open1_part2()
 }
 
 //dock 1 close
@@ -49,6 +64,7 @@ as(@a[x=-157,y=-45,z=111,dx=15,dy=5,dz=2]) {
 // -165 -45 -78 dx=2 dy=5 dz=11
 as(@a[x=-165,y=-45,z=-78,dx=2,dy=5,dz=11]) {
     open2()
+    open2_part2()
 }
 
 //dock 2 close
@@ -57,24 +73,98 @@ as(@a[x=-173,y=-45,z=-77,dx=2,dy=5,dz=10]) {
     close2()
 }
 
-as(@a[scores={calledBoat=1}]) {
-    /kill @e[tag=calledBoat]
-    /summon minecraft:spruce_boat -155 -52.286 122 {Motion:[0.0,3.5,0.0],Tags:["calledBoat"],Invulnerable:1}
-    open1()
-    close2()
-    calledBoat @a = 0
-}
+//as(@a[scores={calledBoat=1}]) {
+//    /kill @e[tag=calledBoat]
+//    /summon minecraft:spruce_boat -155 -52.286 122 {Motion:[0.0,3.5,0.0],Tags:["calledBoat"],Invulnerable:1}
+//    open1()
+//    close2()
+//    calledBoat @a = 0
+//}
+//
+//as(@a[scores={calledBoat=2}]) {
+//    /kill @e[tag=calledBoat]
+//    /summon minecraft:spruce_boat -118 -52.286 -39 {Motion:[0.0,3.5,0.0],Tags:["calledBoat"],Invulnerable:1}
+//    open2()
+//    close1()
+//    calledBoat @a = 0
+//}
 
-as(@a[scores={calledBoat=2}]) {
-    /kill @e[tag=calledBoat]
-    /summon minecraft:spruce_boat -118 -52.286 -39 {Motion:[0.0,3.5,0.0],Tags:["calledBoat"],Invulnerable:1}
-    open2()
-    close1()
-    calledBoat @a = 0
-}
+#file: ./boatcall/call1
+/kill @e[tag=calledBoat]
+close1()
+open1()
+close2()
+/schedule clear escapemap:boatcall/particle2
+/schedule clear escapemap:boatcall/particle2_post
+/schedule clear escapemap:boatcall/summon2
+/schedule clear escapemap:boatcall/particle1
+/schedule clear escapemap:boatcall/particle1_post
+/schedule function escapemap:boatcall/particle1 42t append
+/schedule function escapemap:boatcall/particle1 60t append
+/schedule function escapemap:boatcall/particle1 70t append
+/schedule function escapemap:boatcall/particle1 80t append
+/schedule function escapemap:boatcall/particle1 90t append
+/schedule function escapemap:boatcall/particle1 95t append
+/schedule function escapemap:boatcall/particle1 100t append
+/schedule function escapemap:boatcall/particle1 105t append
+/schedule function escapemap:boatcall/particle1 110t append
+/schedule function escapemap:boatcall/particle1 115t append
+/schedule function escapemap:boatcall/summon1 120t replace
+/schedule function escapemap:boatcall/particle1_post 125t append
+/schedule function escapemap:boatcall/particle1_post 130t append
+
+#file: ./boatcall/particle1
+/particle minecraft:bubble -155 -43.25 122 0.7 0 0.7 0.3 75 normal
+/particle minecraft:snowflake -155 -44.5 122 0.7 0 0.7 0.1 75 normal
+
+#file: ./boatcall/particle1_post
+/particle minecraft:bubble -155 -43 122 0.7 0 0.7 0.3 75 normal
+/particle minecraft:snowflake -155 -44 122 0.7 0 0.7 0.1 75 normal
+
+#file: ./boatcall/summon1
+open1_part2()
+/kill @e[tag=calledBoat]
+/particle minecraft:bubble_pop -155 -43.5 122 1 0 1 0.2 100 normal
+/summon minecraft:spruce_boat -155 -52.286 122 {Motion:[0.0,3.5,0.0],Tags:["calledBoat"],Invulnerable:1}
+
+#file: ./boatcall/call2
+/kill @e[tag=calledBoat]
+close2()
+open2()
+close1()
+/schedule clear escapemap:boatcall/particle1
+/schedule clear escapemap:boatcall/particle1_post
+/schedule clear escapemap:boatcall/summon1
+/schedule clear escapemap:boatcall/particle2
+/schedule clear escapemap:boatcall/particle2_post
+/schedule function escapemap:boatcall/particle2 42t append
+/schedule function escapemap:boatcall/particle2 60t append
+/schedule function escapemap:boatcall/particle2 70t append
+/schedule function escapemap:boatcall/particle2 80t append
+/schedule function escapemap:boatcall/particle2 90t append
+/schedule function escapemap:boatcall/particle2 95t append
+/schedule function escapemap:boatcall/particle2 100t append
+/schedule function escapemap:boatcall/particle2 105t append
+/schedule function escapemap:boatcall/particle2 110t append
+/schedule function escapemap:boatcall/particle2 115t append
+/schedule function escapemap:boatcall/summon2 120t replace
+/schedule function escapemap:boatcall/particle2_post 125t append
+/schedule function escapemap:boatcall/particle2_post 130t append
+
+#file: ./boatcall/particle2
+/particle minecraft:bubble -118 -43.25 -39 0.7 0 0.7 0.3 75 normal
+/particle minecraft:snowflake -118 -44.5 -39 0.7 0 0.7 0.1 75 normal
+
+#file: ./boatcall/particle2_post
+/particle minecraft:bubble -118 -43 -39 0.7 0 0.7 0.3 75 normal
+/particle minecraft:snowflake -118 -44 -39 0.7 0 0.7 0.1 75 normal
+
+#file: ./boatcall/summon2
+open2_part2()
+/kill @e[tag=calledBoat]
+/summon minecraft:spruce_boat -118 -52.286 -39 {Motion:[0.0,3.5,0.0],Tags:["calledBoat"],Invulnerable:1}
 
 #file: ./boatcall/reset
-calledBoat @a = 0
 close1()
 close2()
 /kill @e[tag=calledBoat]

@@ -3,3 +3,7 @@
 
 #file: ./items/village_yard_redstone
 /give @s minecraft:redstone[minecraft:custom_data={puzzle:{id:"village_yard","persistent":1b}}] 1
+
+#file: ./items/flashlight
+/give @s minecraft:soul_torch[minecraft:custom_name='{"text":"Flashlight","italic":false}',minecraft:custom_data={puzzle:{id:"flashlight","persistent":1b}}] 1
+
