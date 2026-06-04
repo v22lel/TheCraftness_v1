@@ -1,0 +1,8 @@
+{
+  "challenge.theme": {
+    "sounds": [
+      "minecraft:challenge/theme"
+    ],
+    "stream": true
+  }
+}
