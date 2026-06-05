@@ -1,0 +1,14 @@
+
+#file: ./attic/reset
+/setblock -31 -34 68 spruce_slab[type=bottom]
+/kill @e[tag=attic_breakable]
+/summon minecraft:interaction -30.5 -36 68.15 {width:0.5f,height:1f,Tags:["attic_breakable"]}
+
+#file: ./attic/tick
+if('entity @e[tag=attic_breakable,nbt={attack:{}}]') {
+    /function escapemap:puzzles/red_candle/attic/break
+    /kill @e[tag=attic_breakable]
+}
+
+#file: ./attic/break
+/setblock -31 -34 68 air

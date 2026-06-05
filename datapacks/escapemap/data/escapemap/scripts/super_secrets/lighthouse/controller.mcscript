@@ -1,0 +1,80 @@
+#file: ./controller/load
+/function escapemap:super_secrets/lighthouse/outline/reset
+/data remove entity @e[tag=ep_input,limit=1] attack
+/attribute @p minecraft:movement_speed modifier remove ep
+var ep_raycast
+
+//0=off;1=tracing;2=flashing;3=fixed
+var ep_active
+var ep_flash_timer
+
+#file: ./controller/reset
+/data remove entity @e[tag=ep_input,limit=1] attack
+ep_active EP = 0
+ep_flash_timer EP = 0
+ep_raycast raycast1 = 0
+
+#file: ./controller/complete
+/function escapemap:super_secrets/lighthouse/trail/run
+/function escapemap:puzzles/super_secret_complete
+
+#file: ./controller/tick
+if('entity @e[tag=ep_input,nbt={attack:{}}]') {
+    /execute if score EP ep_active matches ..2 run function escapemap:super_secrets/lighthouse/controller/begin_raycast
+    /data remove entity @e[tag=ep_input,limit=1] attack
+}
+
+/execute if score EP ep_active matches 1..2 run function escapemap:super_secrets/lighthouse/controller/handle_active_tick
+//tick fixed
+/execute if score EP ep_active matches 3 run function escapemap:super_secrets/lighthouse/outline/tick_fixed
+
+#file: ./controller/handle_active_tick
+//tick_a for tracing
+/execute if score EP ep_active matches 1 run function escapemap:super_secrets/lighthouse/outline/tick_a
+
+//for flashing, keep track of timer
+/scoreboard players add EP ep_flash_timer 1
+/execute if score EP ep_flash_timer matches 20.. run scoreboard players set EP ep_flash_timer 0
+/execute if score EP ep_active matches 2 if score EP ep_flash_timer matches ..10 run function escapemap:super_secrets/lighthouse/outline/tick_a
+/execute if score EP ep_active matches 2 if score EP ep_flash_timer matches 10.. run function escapemap:super_secrets/lighthouse/outline/tick_b
+
+//check if ep is about to be completed
+/execute as @e[tag=ep_cursor] if score @s ep_progress matches 10 run scoreboard players set EP ep_active 2
+/execute as @e[tag=ep_cursor] if score @s ep_progress matches ..9 run scoreboard players set EP ep_active 1
+
+#file: ./controller/begin_raycast
+ep_raycast raycast1 = 0
+/execute as @p at @s positioned ^ ^ ^30 run function escapemap:super_secrets/lighthouse/controller/raycast
+
+#file: ./controller/raycast
+/scoreboard players add raycast1 ep_raycast 1
+/execute positioned ^ ^ ^1 if entity @e[tag=ep_start,limit=1,distance=..5,sort=nearest] run tag @s add raycast_stop
+/execute positioned ^ ^ ^1 if entity @e[tag=ep_end,limit=1,distance=..2,sort=nearest] run tag @s add raycast_stop
+/execute positioned ^ ^ ^1 if entity @e[tag=ep_start,limit=1,distance=..5,sort=nearest] run function escapemap:super_secrets/lighthouse/controller/raycast_start_hit
+/execute positioned ^ ^ ^1 if entity @e[tag=ep_end,limit=1,distance=..2,sort=nearest] run function escapemap:super_secrets/lighthouse/controller/raycast_end_hit
+/execute positioned ^ ^ ^1 if entity @s[tag=!raycast_stop] if block ~ ~ ~ air if score raycast1 ep_raycast matches ..70 run function escapemap:super_secrets/lighthouse/controller/raycast
+/execute positioned ^ ^ ^1 if entity @s[tag=!raycast_stop] unless block ~ ~ ~ air run function escapemap:super_secrets/lighthouse/controller/raycast_fail
+/execute positioned ^ ^ ^1 if entity @s[tag=!raycast_stop] if block ~ ~ ~ air if score raycast1 ep_raycast matches 71.. run function escapemap:super_secrets/lighthouse/controller/raycast_fail
+/tag @s[tag=raycast_stop] remove raycast_stop
+
+#file: ./controller/raycast_start_hit
+/say hit start
+/execute store result storage escapemap:tmp raycast int 1 run scoreboard players get EP ep_active
+/execute if data storage escapemap:tmp {raycast:0} run scoreboard players set EP ep_active 1
+/execute if data storage escapemap:tmp {raycast:0} run function escapemap:super_secrets/lighthouse/outline/reset
+/execute if data storage escapemap:tmp {raycast:0} run attribute @p minecraft:movement_speed modifier add ep -1.0 add_value
+/execute unless data storage escapemap:tmp {raycast:0} run scoreboard players set EP ep_active 0
+/execute unless data storage escapemap:tmp {raycast:0} run attribute @p minecraft:movement_speed modifier remove ep
+
+#file: ./controller/raycast_end_hit
+/say hit end
+/execute store result storage escapemap:tmp raycast int 1 run scoreboard players get EP ep_active
+/execute if data storage escapemap:tmp {raycast:2} run scoreboard players set EP ep_active 3
+/execute unless data storage escapemap:tmp {raycast:2} run scoreboard players set EP ep_active 0
+/execute if data storage escapemap:tmp {raycast:2} run function escapemap:super_secrets/lighthouse/controller/complete
+/attribute @p minecraft:movement_speed modifier remove ep
+
+#file: ./controller/raycast_fail
+/say hit fail
+/execute unless data storage escapemap:tmp {raycast:3} run scoreboard players set EP ep_active 0
+/execute unless data storage escapemap:tmp {raycast:0} run attribute @p minecraft:movement_speed modifier remove ep

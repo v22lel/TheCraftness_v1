@@ -1,0 +1,273 @@
+#file: ./outline/reset
+
+/kill @e[tag=ep_joint]
+/kill @e[tag=ep_cursor]
+
+/summon armor_stand -34 -33 -36 {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ep_joint","ep_joint_0"]}
+/scoreboard players set @e[tag=ep_joint_0,limit=1] ep_index 0
+/summon armor_stand -35 -34 -33 {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ep_joint","ep_joint_1"]}
+/scoreboard players set @e[tag=ep_joint_1,limit=1] ep_index 1
+/summon armor_stand -36 -35 -31 {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ep_joint","ep_joint_2"]}
+/scoreboard players set @e[tag=ep_joint_2,limit=1] ep_index 2
+/summon armor_stand -37 -35 -29 {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ep_joint","ep_joint_3"]}
+/scoreboard players set @e[tag=ep_joint_3,limit=1] ep_index 3
+/summon armor_stand -38 -36 -27 {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ep_joint","ep_joint_4"]}
+/scoreboard players set @e[tag=ep_joint_4,limit=1] ep_index 4
+/summon armor_stand -40 -37 -26 {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ep_joint","ep_joint_5"]}
+/scoreboard players set @e[tag=ep_joint_5,limit=1] ep_index 5
+/summon armor_stand -42 -39 -24 {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ep_joint","ep_joint_6"]}
+/scoreboard players set @e[tag=ep_joint_6,limit=1] ep_index 6
+/summon armor_stand -42 -39 -22 {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ep_joint","ep_joint_7"]}
+/scoreboard players set @e[tag=ep_joint_7,limit=1] ep_index 7
+/summon armor_stand -42 -39 -20 {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ep_joint","ep_joint_8"]}
+/scoreboard players set @e[tag=ep_joint_8,limit=1] ep_index 8
+/summon armor_stand -42 -39 -18 {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ep_joint","ep_joint_9"]}
+/scoreboard players set @e[tag=ep_joint_9,limit=1] ep_index 9
+/summon armor_stand -41 -38 -17 {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ep_joint","ep_joint_10"]}
+/scoreboard players set @e[tag=ep_joint_10,limit=1] ep_index 10
+
+/summon armor_stand 0 0 0 {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ep_cursor"]}
+/scoreboard players set @e[tag=ep_cursor,limit=1] ep_progress 0
+
+
+#file: ./outline/tick_a
+
+/execute as @e[tag=ep_cursor] at @p run tp @s ^ ^ ^53
+/execute as @e[tag=ep_cursor] at @s run tp @s @e[tag=ep_joint,limit=1,sort=nearest]
+
+/execute as @e[tag=ep_cursor,scores={ep_progress=0}] at @s if entity @e[tag=ep_joint_1,distance=..1] run scoreboard players set @s ep_progress 1
+/execute as @e[tag=ep_cursor,scores={ep_progress=1}] at @s if entity @e[tag=ep_joint_0,distance=..1] run scoreboard players set @s ep_progress 0
+/execute as @e[tag=ep_cursor,scores={ep_progress=1}] at @s if entity @e[tag=ep_joint_2,distance=..1] run scoreboard players set @s ep_progress 2
+/execute as @e[tag=ep_cursor,scores={ep_progress=2}] at @s if entity @e[tag=ep_joint_1,distance=..1] run scoreboard players set @s ep_progress 1
+/execute as @e[tag=ep_cursor,scores={ep_progress=2}] at @s if entity @e[tag=ep_joint_3,distance=..1] run scoreboard players set @s ep_progress 3
+/execute as @e[tag=ep_cursor,scores={ep_progress=3}] at @s if entity @e[tag=ep_joint_2,distance=..1] run scoreboard players set @s ep_progress 2
+/execute as @e[tag=ep_cursor,scores={ep_progress=3}] at @s if entity @e[tag=ep_joint_4,distance=..1] run scoreboard players set @s ep_progress 4
+/execute as @e[tag=ep_cursor,scores={ep_progress=4}] at @s if entity @e[tag=ep_joint_3,distance=..1] run scoreboard players set @s ep_progress 3
+/execute as @e[tag=ep_cursor,scores={ep_progress=4}] at @s if entity @e[tag=ep_joint_5,distance=..1] run scoreboard players set @s ep_progress 5
+/execute as @e[tag=ep_cursor,scores={ep_progress=5}] at @s if entity @e[tag=ep_joint_4,distance=..1] run scoreboard players set @s ep_progress 4
+/execute as @e[tag=ep_cursor,scores={ep_progress=5}] at @s if entity @e[tag=ep_joint_6,distance=..1] run scoreboard players set @s ep_progress 6
+/execute as @e[tag=ep_cursor,scores={ep_progress=6}] at @s if entity @e[tag=ep_joint_5,distance=..1] run scoreboard players set @s ep_progress 5
+/execute as @e[tag=ep_cursor,scores={ep_progress=6}] at @s if entity @e[tag=ep_joint_7,distance=..1] run scoreboard players set @s ep_progress 7
+/execute as @e[tag=ep_cursor,scores={ep_progress=7}] at @s if entity @e[tag=ep_joint_6,distance=..1] run scoreboard players set @s ep_progress 6
+/execute as @e[tag=ep_cursor,scores={ep_progress=7}] at @s if entity @e[tag=ep_joint_8,distance=..1] run scoreboard players set @s ep_progress 8
+/execute as @e[tag=ep_cursor,scores={ep_progress=8}] at @s if entity @e[tag=ep_joint_7,distance=..1] run scoreboard players set @s ep_progress 7
+/execute as @e[tag=ep_cursor,scores={ep_progress=8}] at @s if entity @e[tag=ep_joint_9,distance=..1] run scoreboard players set @s ep_progress 9
+/execute as @e[tag=ep_cursor,scores={ep_progress=9}] at @s if entity @e[tag=ep_joint_8,distance=..1] run scoreboard players set @s ep_progress 8
+/execute as @e[tag=ep_cursor,scores={ep_progress=9}] at @s if entity @e[tag=ep_joint_10,distance=..1] run scoreboard players set @s ep_progress 10
+/execute as @e[tag=ep_cursor,scores={ep_progress=10}] at @s if entity @e[tag=ep_joint_9,distance=..1] run scoreboard players set @s ep_progress 9
+
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -34 -34 -33 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -33 -33 -33 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -32 -33 -33 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -31 -32 -34 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -31 -32 -35 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -30 -31 -36 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -30 -31 -37 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -30 -31 -38 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -31 -32 -39 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -32 -32 -40 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -33 -33 -41 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -34 -34 -41 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -35 -35 -41 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -36 -36 -40 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -37 -39 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -37 -38 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -37 -37 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -37 -36 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -36 -35 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -35 -34 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 1.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -35 -34 -33 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 1.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -35 -34 -32 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 1.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -35 -34 -31 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 1.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -35 -33 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 1.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -35 -32 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 2.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -35 -34 -30 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 2.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -36 -34 -29 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 2.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -35 -29 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 2.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -36 -31 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 2.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -36 -30 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 3.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -35 -28 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 3.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -35 -27 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 3.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -39 -36 -29 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 3.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -40 -37 -28 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 4.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -36 -26 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 4.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -39 -36 -26 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 4.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -41 -38 -27 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 5.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -40 -37 -25 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 5.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -41 -38 -24 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 5.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -42 -39 -26 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 5.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -43 -40 -25 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 5.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -43 -40 -24 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 6.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -41 -38 -23 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 6.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -42 -39 -22 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 6.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -44 -41 -23 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 6.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -44 -41 -22 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 7.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -42 -39 -21 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 7.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -42 -39 -20 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 7.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -44 -41 -21 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 7.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -44 -41 -20 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 8.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -42 -39 -19 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 8.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -44 -41 -19 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 8.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -44 -41 -18 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 9.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -41 -38 -18 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 9.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -43 -40 -17 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 9.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -42 -39 -16 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 10.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -40 -37 -18 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 10.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -39 -36 -17 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 10.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -39 -36 -16 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 10.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -39 -36 -15 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 10.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -40 -37 -15 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 10.. run particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -41 -38 -15 0.3 0.3 0.3 0 1 force
+
+#file: ./outline/tick_b
+
+/execute as @e[tag=ep_cursor] at @p run tp @s ^ ^ ^53
+/execute as @e[tag=ep_cursor] at @s run tp @s @e[tag=ep_joint,limit=1,sort=nearest]
+
+/execute as @e[tag=ep_cursor,scores={ep_progress=0}] at @s if entity @e[tag=ep_joint_1,distance=..1] run scoreboard players set @s ep_progress 1
+/execute as @e[tag=ep_cursor,scores={ep_progress=1}] at @s if entity @e[tag=ep_joint_0,distance=..1] run scoreboard players set @s ep_progress 0
+/execute as @e[tag=ep_cursor,scores={ep_progress=1}] at @s if entity @e[tag=ep_joint_2,distance=..1] run scoreboard players set @s ep_progress 2
+/execute as @e[tag=ep_cursor,scores={ep_progress=2}] at @s if entity @e[tag=ep_joint_1,distance=..1] run scoreboard players set @s ep_progress 1
+/execute as @e[tag=ep_cursor,scores={ep_progress=2}] at @s if entity @e[tag=ep_joint_3,distance=..1] run scoreboard players set @s ep_progress 3
+/execute as @e[tag=ep_cursor,scores={ep_progress=3}] at @s if entity @e[tag=ep_joint_2,distance=..1] run scoreboard players set @s ep_progress 2
+/execute as @e[tag=ep_cursor,scores={ep_progress=3}] at @s if entity @e[tag=ep_joint_4,distance=..1] run scoreboard players set @s ep_progress 4
+/execute as @e[tag=ep_cursor,scores={ep_progress=4}] at @s if entity @e[tag=ep_joint_3,distance=..1] run scoreboard players set @s ep_progress 3
+/execute as @e[tag=ep_cursor,scores={ep_progress=4}] at @s if entity @e[tag=ep_joint_5,distance=..1] run scoreboard players set @s ep_progress 5
+/execute as @e[tag=ep_cursor,scores={ep_progress=5}] at @s if entity @e[tag=ep_joint_4,distance=..1] run scoreboard players set @s ep_progress 4
+/execute as @e[tag=ep_cursor,scores={ep_progress=5}] at @s if entity @e[tag=ep_joint_6,distance=..1] run scoreboard players set @s ep_progress 6
+/execute as @e[tag=ep_cursor,scores={ep_progress=6}] at @s if entity @e[tag=ep_joint_5,distance=..1] run scoreboard players set @s ep_progress 5
+/execute as @e[tag=ep_cursor,scores={ep_progress=6}] at @s if entity @e[tag=ep_joint_7,distance=..1] run scoreboard players set @s ep_progress 7
+/execute as @e[tag=ep_cursor,scores={ep_progress=7}] at @s if entity @e[tag=ep_joint_6,distance=..1] run scoreboard players set @s ep_progress 6
+/execute as @e[tag=ep_cursor,scores={ep_progress=7}] at @s if entity @e[tag=ep_joint_8,distance=..1] run scoreboard players set @s ep_progress 8
+/execute as @e[tag=ep_cursor,scores={ep_progress=8}] at @s if entity @e[tag=ep_joint_7,distance=..1] run scoreboard players set @s ep_progress 7
+/execute as @e[tag=ep_cursor,scores={ep_progress=8}] at @s if entity @e[tag=ep_joint_9,distance=..1] run scoreboard players set @s ep_progress 9
+/execute as @e[tag=ep_cursor,scores={ep_progress=9}] at @s if entity @e[tag=ep_joint_8,distance=..1] run scoreboard players set @s ep_progress 8
+/execute as @e[tag=ep_cursor,scores={ep_progress=9}] at @s if entity @e[tag=ep_joint_10,distance=..1] run scoreboard players set @s ep_progress 10
+/execute as @e[tag=ep_cursor,scores={ep_progress=10}] at @s if entity @e[tag=ep_joint_9,distance=..1] run scoreboard players set @s ep_progress 9
+
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -34 -34 -33 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -33 -33 -33 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -32 -33 -33 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -31 -32 -34 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -31 -32 -35 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -30 -31 -36 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -30 -31 -37 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -30 -31 -38 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -31 -32 -39 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -32 -32 -40 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -33 -33 -41 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -34 -34 -41 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -35 -35 -41 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -36 -36 -40 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -37 -37 -39 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -38 -37 -38 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -38 -37 -37 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -38 -37 -36 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -38 -36 -35 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 0.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -37 -35 -34 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 1.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -35 -34 -33 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 1.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -35 -34 -32 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 1.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -35 -34 -31 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 1.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -37 -35 -33 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 1.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -37 -35 -32 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 2.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -35 -34 -30 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 2.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -36 -34 -29 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 2.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -37 -35 -29 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 2.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -38 -36 -31 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 2.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -38 -36 -30 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 3.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -37 -35 -28 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 3.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -37 -35 -27 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 3.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -39 -36 -29 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 3.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -40 -37 -28 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 4.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -38 -36 -26 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 4.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -39 -36 -26 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 4.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -41 -38 -27 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 5.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -40 -37 -25 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 5.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -41 -38 -24 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 5.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -42 -39 -26 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 5.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -43 -40 -25 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 5.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -43 -40 -24 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 6.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -41 -38 -23 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 6.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -42 -39 -22 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 6.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -44 -41 -23 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 6.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -44 -41 -22 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 7.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -42 -39 -21 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 7.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -42 -39 -20 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 7.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -44 -41 -21 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 7.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -44 -41 -20 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 8.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -42 -39 -19 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 8.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -44 -41 -19 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 8.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -44 -41 -18 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 9.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -41 -38 -18 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 9.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -43 -40 -17 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 9.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -42 -39 -16 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 10.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -40 -37 -18 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 10.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -39 -36 -17 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 10.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -39 -36 -16 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 10.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -39 -36 -15 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 10.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -40 -37 -15 0.3 0.3 0.3 0 1 force
+/execute if score @e[tag=ep_cursor,limit=1] ep_progress matches 10.. run particle minecraft:dust{color:[1.0,1.0,1.0],scale:2} -41 -38 -15 0.3 0.3 0.3 0 1 force
+
+#file: ./outline/tick_fixed
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -34 -34 -33 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -33 -33 -33 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -32 -33 -33 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -31 -32 -34 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -31 -32 -35 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -30 -31 -36 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -30 -31 -37 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -30 -31 -38 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -31 -32 -39 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -32 -32 -40 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -33 -33 -41 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -34 -34 -41 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -35 -35 -41 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -36 -36 -40 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -37 -39 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -37 -38 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -37 -37 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -37 -36 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -36 -35 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -35 -34 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -35 -34 -33 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -35 -34 -32 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -35 -34 -31 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -35 -33 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -35 -32 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -35 -34 -30 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -36 -34 -29 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -35 -29 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -36 -31 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -36 -30 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -35 -28 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -37 -35 -27 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -39 -36 -29 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -40 -37 -28 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -38 -36 -26 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -39 -36 -26 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -41 -38 -27 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -40 -37 -25 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -41 -38 -24 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -42 -39 -26 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -43 -40 -25 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -43 -40 -24 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -41 -38 -23 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -42 -39 -22 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -44 -41 -23 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -44 -41 -22 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -42 -39 -21 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -42 -39 -20 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -44 -41 -21 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -44 -41 -20 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -42 -39 -19 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -44 -41 -19 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -44 -41 -18 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -41 -38 -18 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -43 -40 -17 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -42 -39 -16 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -40 -37 -18 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -39 -36 -17 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -39 -36 -16 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -39 -36 -15 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -40 -37 -15 0.3 0.3 0.3 0 1 force
+/particle minecraft:dust{color:[0.15,1.0,0.2],scale:2} -41 -38 -15 0.3 0.3 0.3 0 1 force

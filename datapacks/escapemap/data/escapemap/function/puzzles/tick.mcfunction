@@ -8,3 +8,4 @@ execute as @a[scores={super_secrets_complete=1..}] run title @s actionbar ["",{"
 execute as @a[scores={super_secrets_complete=0,secrets_complete=1..}] run title @s actionbar ["",{"score":{"name":"@s","objective":"puzzles_complete"}},{"text":" +"},{"score":{"name":"@s","objective":"secrets_complete"}}]
 execute as @a[scores={secrets_complete=0}] run title @s actionbar ["",{"score":{"name":"@s","objective":"puzzles_complete"}}]
 function escapemap:puzzles/spawn/tick
+function escapemap:puzzles/red_candle/tick

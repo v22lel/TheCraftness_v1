@@ -1,11 +1,13 @@
 #file: ./load
 
-/function escapemap:super_secrets/treetop/trail/load
+/function escapemap:super_secrets/lighthouse/trail/load
+/function escapemap:super_secrets/lighthouse/controller/load
 
 #file: ./tick
 
-/function escapemap:super_secrets/treetop/trail/tick
+/function escapemap:super_secrets/lighthouse/trail/tick
+/execute positioned -85 -12 -41 run function escapemap:super_secrets/lighthouse/controller/tick
 
 #file: ./reset
 
-/function escapemap:super_secrets/treetop/trail/reset
+/function escapemap:super_secrets/lighthouse/controller/reset

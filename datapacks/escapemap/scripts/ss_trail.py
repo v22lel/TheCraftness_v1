@@ -7,52 +7,15 @@ import matplotlib.pyplot as plt
 
 
 # Config
-TRAIL_ID = "treetop"
-
-# Number of generated points between each pair of rough points.
-# Higher = smoother trail, more marker entities.
-USE_ADVANCED = True
-FINAL_DELAY = 2
-TICKS_PER_PARTICLE = 0.5
-SAMPLES_PER_SEGMENT = 8
-SAMPLES_PER_SEGMENT_ADVANCED = [
-    8,
-    8,
-    8,
-    8,
-    8,
-    8,
-    8,
-    3,
-]
-
-# Rough path points: x, y, z
-# Put your EP endpoint first and obelisk top last.
-CONTROL_POINTS = [
-    (20.03, -31.00, 17.65),
-    (21.03, -27.71, 19.78),
-    (23.06, -25.82, 25.56),
-    (20.90, -23.20, 23.87),
-    (20.13, -25.45, 21.85),
-    (21.69, -28.99, 24.13),
-    (23.41, -26.95, 29.13),
-    (25.41, -30.68, 30.66),
-    (25.41, -33.00, 30.66)
-]
+from trails.lighthouse import *
 
 # Global config (dont modify every run)
 NAMESPACE = "escapemap"
 PARTICLE_PATH = "super_secrets/particles"
-TRAIL_PATH = "super_secrets/treetop"
 OUTPUT_DIR = Path("scripts/output")
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 def catmull_rom(p0, p1, p2, p3, t):
-    """
-    Catmull-Rom spline point.
-    p1 and p2 are the segment endpoints.
-    t is 0..1.
-    """
     t2 = t * t
     t3 = t2 * t
 
@@ -75,14 +38,67 @@ def generate_path(points):
 
     segment_count = len(points) - 1
 
-    if USE_ADVANCED:
+    # Subdivision modes, checked in priority order:
+    # 1. USE_AUTO_DENSITY
+    # 2. USE_ADVANCED
+    # 3. normal SAMPLES_PER_SEGMENT
+    #
+    # Expected globals:
+    # USE_ADVANCED = True / False
+    # USE_AUTO_DENSITY = True / False
+    # SAMPLES_PER_SEGMENT_ADVANCED = [...]
+    # SAMPLES_PER_BLOCK = 3.0
+    # MIN_SAMPLES_PER_SEGMENT = 2
+    # MAX_SAMPLES_PER_SEGMENT = 32
+    #
+    # Optional smoothing globals:
+    # USE_SMOOTH_APPROXIMATION = True / False
+    # SMOOTHING_AMOUNT = 0.55
+    #
+    # SMOOTHING_AMOUNT:
+    # 0.0 = exact Catmull-Rom, goes through every control point
+    # 1.0 = smoother approximation, only start/end guaranteed exact
+
+    use_auto_density = globals().get("USE_AUTO_DENSITY", False)
+    use_advanced = globals().get("USE_ADVANCED", False)
+    use_smooth_approximation = globals().get("USE_SMOOTH_APPROXIMATION", True)
+
+    smoothing_amount = globals().get("SMOOTHING_AMOUNT", 0.55)
+    smoothing_amount = max(0.0, min(1.0, float(smoothing_amount)))
+
+    if use_auto_density:
+        samples_per_block = globals().get("SAMPLES_PER_BLOCK", 3.0)
+        min_samples = globals().get("MIN_SAMPLES_PER_SEGMENT", 2)
+        max_samples = globals().get("MAX_SAMPLES_PER_SEGMENT", 32)
+
+        if samples_per_block <= 0:
+            raise ValueError("SAMPLES_PER_BLOCK must be greater than 0.")
+
+        samples_by_segment = []
+
+        for i in range(segment_count):
+            x1, y1, z1 = points[i]
+            x2, y2, z2 = points[i + 1]
+
+            distance = math.sqrt(
+                (x2 - x1) ** 2
+                + (y2 - y1) ** 2
+                + (z2 - z1) ** 2
+            )
+
+            samples = round(distance * samples_per_block)
+            samples = max(min_samples, min(max_samples, samples))
+            samples_by_segment.append(samples)
+
+    elif use_advanced:
         if len(SAMPLES_PER_SEGMENT_ADVANCED) != segment_count:
             raise ValueError(
                 f"SAMPLES_PER_SEGMENT_ADVANCED must contain exactly {segment_count} values, "
-                f"one for each segment between control points. Found: {len(SAMPLES_PER_SEGMENT_ADVANCED)} values instead."
+                f"one for each segment between control points."
             )
 
         samples_by_segment = SAMPLES_PER_SEGMENT_ADVANCED
+
     else:
         samples_by_segment = [SAMPLES_PER_SEGMENT] * segment_count
 
@@ -93,9 +109,29 @@ def generate_path(points):
                 f"Each segment must have at least 1 sample."
             )
 
-    # Duplicate ends so the curve starts and ends correctly.
-    padded = [points[0]] + points + [points[-1]]
+    def lerp(a, b, t):
+        return tuple(a[i] + (b[i] - a[i]) * t for i in range(3))
 
+    def smooth_approx_point(p0, p1, p2, p3, t):
+        # Cubic uniform B-spline approximation.
+        # This does not force the curve through p1/p2, which smooths the path.
+        t2 = t * t
+        t3 = t2 * t
+
+        b0 = (-t3 + 3.0 * t2 - 3.0 * t + 1.0) / 6.0
+        b1 = (3.0 * t3 - 6.0 * t2 + 4.0) / 6.0
+        b2 = (-3.0 * t3 + 3.0 * t2 + 3.0 * t + 1.0) / 6.0
+        b3 = t3 / 6.0
+
+        return tuple(
+            p0[i] * b0
+            + p1[i] * b1
+            + p2[i] * b2
+            + p3[i] * b3
+            for i in range(3)
+        )
+
+    padded = [points[0]] + points + [points[-1]]
     generated = []
 
     for i in range(1, len(padded) - 2):
@@ -108,9 +144,20 @@ def generate_path(points):
 
         for s in range(samples):
             t = s / samples
-            generated.append(catmull_rom(p0, p1, p2, p3, t))
 
+            exact_point = catmull_rom(p0, p1, p2, p3, t)
+
+            if use_smooth_approximation:
+                smooth_point = smooth_approx_point(p0, p1, p2, p3, t)
+                point = lerp(exact_point, smooth_point, smoothing_amount)
+            else:
+                point = exact_point
+
+            generated.append(point)
+
+    generated[0] = points[0]
     generated.append(points[-1])
+
     return generated
 
 def write_mcscript(path_points):
@@ -121,7 +168,10 @@ def write_mcscript(path_points):
         "#file: ./trail/tick",
         f"if ({TRAIL_ID}_trail @p >= 1) {{",
         f"    {TRAIL_ID}_trail @a += 1",
-        "}"
+        f"    /function {NAMESPACE}:{TRAIL_PATH}/trail/check",
+        "}",
+        "",
+        "#file: ./trail/check"
     ]
 
     for i in range(len(path_points)):
@@ -149,18 +199,24 @@ def write_mcscript(path_points):
         f"/execute if score @p {TRAIL_ID}_trail matches {final_end}.. at @e[type=minecraft:marker,tag=ss_trail_{TRAIL_ID}_end,limit=1] run function {NAMESPACE}:{TRAIL_PATH}/trail/end",
         "",
         "#file: ./trail/run",
+        f"/function {NAMESPACE}:{TRAIL_PATH}/trail/summon",
         f"{TRAIL_ID}_trail @a = 1",
         "",
         "#file: ./trail/end",
+        f"/function {NAMESPACE}:{TRAIL_PATH}/trail/kill",
         f"{TRAIL_ID}_trail @a = 0",
-        "/execute at @e[type=minecraft:marker,tag=ss_trail_treetop_end,limit=1] run particle minecraft:sonic_boom ~ ~ ~ 0 0 0 0 1 force",
-        "/execute at @e[type=minecraft:marker,tag=ss_trail_treetop_end,limit=1] run particle minecraft:end_rod ~ ~ ~ 0.6 0.9 0.6 0.04 120 force",
-        "/execute at @e[type=minecraft:marker,tag=ss_trail_treetop_end,limit=1] run playsound minecraft:block.beacon.activate master @a[distance=..64] ~ ~ ~ 0.9 1.6",
+        f"/execute at @e[type=minecraft:marker,tag=ss_trail_{TRAIL_ID}_end,limit=1] run particle minecraft:sonic_boom ~ ~ ~ 0 0 0 0 1 force",
+        f"/execute at @e[type=minecraft:marker,tag=ss_trail_{TRAIL_ID}_end,limit=1] run particle minecraft:end_rod ~ ~ ~ 0.6 0.9 0.6 0.04 120 force",
+        f"/execute at @e[type=minecraft:marker,tag=ss_trail_{TRAIL_ID}_end,limit=1] run playsound minecraft:block.beacon.activate master @a[distance=..64] ~ ~ ~ 0.9 1.6",
         "",
-        "#file: ./trail/reset",
-        "",
+        "#file: ./trail/kill",
         f"/kill @e[tag=ss_trail_{TRAIL_ID}]",
         f"/kill @e[tag=ss_trail_{TRAIL_ID}_end]"
+        "",
+        "#file: ./trail/summon",
+        f"/kill @e[tag=ss_trail_{TRAIL_ID}]",
+        f"/kill @e[tag=ss_trail_{TRAIL_ID}_end]",
+        ""
     ]
 
     for i, (x, y, z) in enumerate(path_points):

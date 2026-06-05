@@ -1,2 +1,6 @@
 #file: ./reset
 /function escapemap:puzzles/red_candle/fences/reset
+/function escapemap:puzzles/red_candle/attic/reset
+
+#file: ./tick
+/function escapemap:puzzles/red_candle/attic/tick

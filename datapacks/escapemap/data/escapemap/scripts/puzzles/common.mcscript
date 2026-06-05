@@ -34,6 +34,7 @@ as (@a[scores={secrets_complete=0}]) {
 }
 
 /function escapemap:puzzles/spawn/tick
+/function escapemap:puzzles/red_candle/tick
 
 #file: ./reset
 puzzles_complete @a = 0
