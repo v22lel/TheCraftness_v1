@@ -8,6 +8,7 @@ function escapemap:placements/reset
 function escapemap:boatcall/reset
 function escapemap:area/reset
 function escapemap:puzzles/reset
+function escapemap:super_secrets/reset
 tp @a -135.5 -42.00 127.5
 gamemode adventure @a
 execute as @a run attribute @s minecraft:jump_strength modifier add escapemap -0.5 add_value

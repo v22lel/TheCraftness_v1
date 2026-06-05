@@ -5,6 +5,7 @@
 /function escapemap:boatcall/load
 /function escapemap:placements/load
 /function escapemap:puzzles/load
+/function escapemap:super_secrets/load
 
 as (@a) {
     //activate later for prod

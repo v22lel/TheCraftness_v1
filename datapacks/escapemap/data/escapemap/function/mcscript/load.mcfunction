@@ -12,12 +12,6 @@
 scoreboard objectives add area dummy
 scoreboard objectives add old_area dummy
 
-# Extended from data/escapemap/functions/placements.mcscript
-# to data/escapemap/functions/mcscript/load.mcfunction
-# please do not touch this file!
-# it is used by the compiler!
-scoreboard objectives add place0 dummy
-
 # Extended from escapemap/functions/puzzles/common.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
 # please do not touch this file!
@@ -26,12 +20,6 @@ scoreboard objectives add puzzles_complete dummy
 scoreboard objectives add secrets_complete dummy
 scoreboard objectives add super_secrets_complete dummy
 
-# Extended from escapemap/functions/puzzles/spawn.mcscript
-# to data/escapemap/functions/mcscript/load.mcfunction
-# please do not touch this file!
-# it is used by the compiler!
-scoreboard objectives add spawn_secret dummy
-
 # Extended from data/escapemap/functions/spyglass.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
 # please do not touch this file!
@@ -39,3 +27,9 @@ scoreboard objectives add spawn_secret dummy
 scoreboard objectives add spyglass_ticks dummy
 scoreboard objectives add spyglass_using dummy
 scoreboard objectives add spyglass_objective dummy
+
+# Extended from escapemap/functions/puzzles/spawn.mcscript
+# to data/escapemap/functions/mcscript/load.mcfunction
+# please do not touch this file!
+# it is used by the compiler!
+scoreboard objectives add spawn_secret dummy

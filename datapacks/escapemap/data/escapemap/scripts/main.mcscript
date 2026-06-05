@@ -5,6 +5,7 @@
 /function escapemap:boatcall/tick
 /function escapemap:placements/tick
 /function escapemap:puzzles/tick
+/function escapemap:super_secrets/tick
 /function escapemap:drop/tick
 
 as (@a) {

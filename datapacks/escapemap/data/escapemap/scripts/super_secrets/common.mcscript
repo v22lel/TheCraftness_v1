@@ -1,0 +1,11 @@
+#file: ./load
+
+/function escapemap:super_secrets/treetop/trail/load
+
+#file: ./tick
+
+/function escapemap:super_secrets/treetop/trail/tick
+
+#file: ./reset
+
+/function escapemap:super_secrets/treetop/trail/reset

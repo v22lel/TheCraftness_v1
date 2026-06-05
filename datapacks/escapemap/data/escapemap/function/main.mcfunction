@@ -9,6 +9,7 @@ function escapemap:spyglass/tick
 function escapemap:boatcall/tick
 function escapemap:placements/tick
 function escapemap:puzzles/tick
+function escapemap:super_secrets/tick
 function escapemap:drop/tick
 execute as @a run function escapemap:area/tick
 execute as @a[gamemode=adventure] run attribute @s minecraft:movement_speed modifier remove minecraft:sprinting
