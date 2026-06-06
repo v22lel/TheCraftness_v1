@@ -1,0 +1,19 @@
+#file: ./elevator_listener/start
+/setblock -63 -42 54 barrier
+/setblock -63 -43 54 barrier
+
+#file: ./elevator_listener/end
+/setblock -63 -42 54 air
+/setblock -63 -43 54 air
+/setblock -63 -42 53 barrier
+
+/fill -65 -36 50 -61 -36 54 air replace barrier
+
+#file: ./elevator_listener/reset
+/setblock -63 -42 54 air
+/setblock -63 -42 53 air
+/setblock -63 -43 54 air
+
+/fill -62 -36 53 -64 -36 51 stone
+/fill -65 -36 50 -61 -36 54 barrier replace air
+/fill -62 -36 53 -64 -36 51 air

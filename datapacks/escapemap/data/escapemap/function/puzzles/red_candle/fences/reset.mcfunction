@@ -10,7 +10,7 @@ setblock -43 -35 61 spruce_fence_gate
 setblock -43 -34 61 spruce_fence_gate
 setblock -47 -37 52 spruce_fence_gate
 setblock -51 -32 50 dark_oak_planks
-setblock -52 -32 50 stone_button[facing=west]
+setblock -51 -31 50 stone_button[face=floor,facing=west]
 setblock -52 -33 50 waxed_copper_bulb[lit=false,powered=false]
 setblock -50 -28 50 soul_campfire[lit=false]
 setblock -23 -37 30 soul_campfire[lit=false]

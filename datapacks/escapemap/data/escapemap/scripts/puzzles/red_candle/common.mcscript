@@ -1,6 +1,14 @@
+#file: ./load
+/function escapemap:puzzles/red_candle/elevator/load
+
 #file: ./reset
 /function escapemap:puzzles/red_candle/fences/reset
 /function escapemap:puzzles/red_candle/attic/reset
+/function escapemap:puzzles/red_candle/cave/reset
+/function escapemap:puzzles/red_candle/elevator/reset
+/function escapemap:puzzles/red_candle/elevator_listener/reset
+
 
 #file: ./tick
 /function escapemap:puzzles/red_candle/attic/tick
+/function escapemap:puzzles/red_candle/elevator/tick

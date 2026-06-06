@@ -6,3 +6,6 @@
 ######
 function escapemap:puzzles/red_candle/fences/reset
 function escapemap:puzzles/red_candle/attic/reset
+function escapemap:puzzles/red_candle/cave/reset
+function escapemap:puzzles/red_candle/elevator/reset
+function escapemap:puzzles/red_candle/elevator_listener/reset

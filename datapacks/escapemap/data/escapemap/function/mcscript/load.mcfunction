@@ -42,3 +42,9 @@ scoreboard objectives add spyglass_objective dummy
 scoreboard objectives add ep_raycast dummy
 scoreboard objectives add ep_active dummy
 scoreboard objectives add ep_flash_timer dummy
+
+# Extended from functions/super_secrets/lighthouse/trail.mcscript
+# to data/escapemap/functions/mcscript/load.mcfunction
+# please do not touch this file!
+# it is used by the compiler!
+scoreboard objectives add lighthouse_trail dummy

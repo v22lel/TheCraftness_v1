@@ -7,3 +7,5 @@
 setblock -31 -34 68 spruce_slab[type=bottom]
 kill @e[tag=attic_breakable]
 summon minecraft:interaction -30.5 -36 68.15 {width:0.5f,height:1f,Tags:["attic_breakable"]}
+setblock -34 -34 64 minecraft:oak_button[face=ceiling]
+setblock -34 -33 63 minecraft:waxed_oxidized_copper_bulb[lit=false]

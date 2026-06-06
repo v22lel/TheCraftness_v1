@@ -4,6 +4,7 @@ var secrets_complete
 var super_secrets_complete
 
 /function escapemap:puzzles/spawn/load
+/function escapemap:puzzles/red_candle/load
 
 // TODO: sounds
 #file: ./complete

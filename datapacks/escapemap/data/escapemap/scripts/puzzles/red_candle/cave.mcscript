@@ -1,0 +1,149 @@
+modal blockWarped(pos) {
+    /setblock $(pos) air
+    /schedule function escapemap:puzzles/red_candle/cave/warped/expireblock 5s replace
+}
+
+modal stencilWarped(pos, barrierPos) {
+    /setblock $(pos) stripped_warped_hyphae
+    /setblock $(barrierPos) air
+    /schedule function escapemap:puzzles/red_candle/cave/warped/expirestencil 5s replace
+}
+
+modal fenceWarped(pos, barrierPos) {
+    /execute store success storage escapemap:tmp isFence byte 1 if block $(pos) warped_fence
+
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(pos) air
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(barrierPos) barrier
+
+    /execute if data storage escapemap:tmp {isFence:0b} if block $(pos) air run setblock $(pos) warped_fence
+    /execute if data storage escapemap:tmp {isFence:0b} run setblock $(barrierPos) air
+}
+
+//MANGROOVE
+modal fenceMangroove(pos, barrierPos) {
+    /execute store success storage escapemap:tmp isFence byte 1 if block $(pos) mangrove_fence
+
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(pos) air
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(barrierPos) barrier
+
+    /execute if data storage escapemap:tmp {isFence:0b} if block $(pos) air run setblock $(pos) mangrove_fence
+    /execute if data storage escapemap:tmp {isFence:0b} run setblock $(barrierPos) air
+}
+
+//PALE
+modal fencePale(pos, barrierPos) {
+    /execute store success storage escapemap:tmp isFence byte 1 if block $(pos) pale_oak_fence
+
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(pos) air
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(barrierPos) barrier
+
+    /execute if data storage escapemap:tmp {isFence:0b} if block $(pos) air run setblock $(pos) pale_oak_fence
+    /execute if data storage escapemap:tmp {isFence:0b} run setblock $(barrierPos) air
+}
+
+//BAMBOO
+modal fenceBamboo(pos, barrierPos) {
+    /execute store success storage escapemap:tmp isFence byte 1 if block $(pos) bamboo_fence
+
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(pos) air
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(barrierPos) barrier
+
+    /execute if data storage escapemap:tmp {isFence:0b} if block $(pos) air run setblock $(pos) bamboo_fence
+    /execute if data storage escapemap:tmp {isFence:0b} run setblock $(barrierPos) air
+}
+
+//OAK
+modal fenceOak(pos, barrierPos) {
+    /execute store success storage escapemap:tmp isFence byte 1 if block $(pos) oak_fence
+
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(pos) air
+    /execute if data storage escapemap:tmp {isFence:1b} run setblock $(barrierPos) barrier
+
+    /execute if data storage escapemap:tmp {isFence:0b} if block $(pos) air run setblock $(pos) oak_fence
+    /execute if data storage escapemap:tmp {isFence:0b} run setblock $(barrierPos) air
+}
+
+#file: ./cave/reset
+/setblock -65 -42 52 minecraft:waxed_oxidized_copper_bulb[powered=false,lit=false]
+/setblock -64 -42 52 stone_button[facing=east]
+
+/function escapemap:puzzles/red_candle/cave/warped/expirestencil
+/function escapemap:puzzles/red_candle/cave/warped/expireblock
+
+//oak
+/setblock -43 -45 67 air
+/setblock -43 -45 64 oak_fence
+/setblock -58 -45 65 air
+/setblock -61 -45 67 oak_fence
+/setblock -62 -43 71 air
+/setblock -57 -45 74 air
+
+/setblock -43 -43 67 barrier
+/setblock -43 -43 64 air
+/setblock -58 -43 65 barrier
+
+//mangroove
+/setblock -49 -45 65 minecraft:mangrove_fence
+/setblock -51 -45 63 air
+
+/setblock -51 -43 63 barrier
+/setblock -49 -43 65 air
+
+//warp
+/setblock -53 -45 71 air
+/setblock -56 -45 72 minecraft:warped_fence
+
+/setblock -53 -43 71 barrier
+/setblock -56 -43 72 air
+
+//bamboo
+/setblock -53 -45 70 minecraft:bamboo_fence
+
+/setblock -53 -43 70 air
+
+//pale
+/setblock -63 -43 60 pale_oak_fence
+/setblock -63 -43 57 pale_oak_fence
+//secret pale
+/setblock -54 -37 53 minecraft:pale_oak_fence
+/setblock -54 -35 53 air
+
+#file: ./cave/oak/press
+fenceOak('-58 -45 65', '-58 -43 65')
+fenceOak('-57 -45 74', '-57 -47 74')
+fenceOak('-43 -45 67', '-43 -43 67')
+fenceOak('-43 -45 64', '-43 -43 64')
+fenceOak('-62 -43 71', '-62 -45 71')
+fenceOak('-61 -45 67', '-61 -47 67')
+
+#file: ./cave/bamboo/press
+fenceBamboo('-53 -45 70', '-53 -43 70')
+
+#file: ./cave/mangroove/press
+fenceMangroove('-49 -45 65', '-49 -43 65')
+fenceMangroove('-51 -45 63', '-51 -43 63')
+
+#file: ./cave/pale/press
+fencePale('-63 -43 60', '-63 -41 60')
+fencePale('-63 -43 57', '-63 -45 57')
+fencePale('-54 -37 53', '-54 -35 53')
+
+#file: ./cave/warped/press
+blockWarped('-56 -45 65')
+blockWarped('-65 -43 66')
+stencilWarped('-57 -43 75', '-57 -41 75')
+fenceWarped('-53 -45 71', '-53 -43 71')
+fenceWarped('-56 -45 72', '-56 -43 72')
+
+#file: ./cave/warped/expirestencil
+/setblock -57 -43 75 air
+/setblock -57 -41 75 barrier
+
+#file: ./cave/warped/expireblock
+/setblock -56 -45 65 warped_hyphae
+/setblock -65 -43 66 warped_hyphae
+
+#file: ./cave/complete
+/function escapemap:puzzles/complete
+/setblock -64 -42 52 air
+/function escapemap:puzzles/red_candle/elevator/start

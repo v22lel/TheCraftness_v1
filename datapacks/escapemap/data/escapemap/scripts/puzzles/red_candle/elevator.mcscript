@@ -1,0 +1,170 @@
+# Generated shulker elevator mcscript.
+# Namespace: escapemap
+# Function prefix: escapemap:puzzles/red_candle/elevator
+# Generated #file base: ./elevator
+# Start platform Y: -44
+# End platform Y: -38
+# Scale: 1
+# Per-cycle movement: 2
+# Visual per-step movement: 0.01
+# Cycles: 6
+
+#file: ./elevator/load
+/scoreboard objectives add escapemap_red_candle dummy
+/scoreboard players set #a escapemap_red_candle 0
+/scoreboard players set #b escapemap_red_candle 0
+/scoreboard players set #active escapemap_red_candle 0
+/scoreboard players set #running escapemap_red_candle 0
+/scoreboard players set #cycle escapemap_red_candle 0
+/scoreboard players set #tick escapemap_red_candle 0
+/scoreboard players set #do_step escapemap_red_candle 0
+/scoreboard players set #tick_divisor escapemap_red_candle 2
+
+#file: ./elevator/reset
+/scoreboard players set #running escapemap_red_candle 0
+/scoreboard players set #a escapemap_red_candle 0
+/scoreboard players set #b escapemap_red_candle 0
+/scoreboard players set #active escapemap_red_candle 0
+/scoreboard players set #cycle escapemap_red_candle 0
+/scoreboard players set #tick escapemap_red_candle 0
+/function escapemap:puzzles/red_candle/elevator/despawn_entities
+/setblock -64 -44 51 minecraft:smooth_stone
+/setblock -64 -44 52 minecraft:smooth_stone
+/setblock -64 -44 53 minecraft:smooth_stone
+/setblock -63 -44 51 minecraft:smooth_stone
+/setblock -63 -44 52 minecraft:smooth_stone
+/setblock -63 -44 53 minecraft:smooth_stone
+/setblock -62 -44 51 minecraft:smooth_stone
+/setblock -62 -44 52 minecraft:smooth_stone
+/setblock -62 -44 53 minecraft:smooth_stone
+/setblock -64 -38 51 minecraft:air
+/setblock -64 -38 52 minecraft:air
+/setblock -64 -38 53 minecraft:air
+/setblock -63 -38 51 minecraft:air
+/setblock -63 -38 52 minecraft:air
+/setblock -63 -38 53 minecraft:air
+/setblock -62 -38 51 minecraft:air
+/setblock -62 -38 52 minecraft:air
+/setblock -62 -38 53 minecraft:air
+
+#file: ./elevator/start
+/scoreboard players set #a escapemap_red_candle 0
+/scoreboard players set #b escapemap_red_candle 0
+/scoreboard players set #active escapemap_red_candle 0
+/scoreboard players set #cycle escapemap_red_candle 0
+/scoreboard players set #tick escapemap_red_candle 0
+/scoreboard players set #running escapemap_red_candle 1
+/function escapemap:puzzles/red_candle/elevator_listener/start
+/setblock -64 -44 51 minecraft:air
+/setblock -64 -44 52 minecraft:air
+/setblock -64 -44 53 minecraft:air
+/setblock -63 -44 51 minecraft:air
+/setblock -63 -44 52 minecraft:air
+/setblock -63 -44 53 minecraft:air
+/setblock -62 -44 51 minecraft:air
+/setblock -62 -44 52 minecraft:air
+/setblock -62 -44 53 minecraft:air
+/summon minecraft:shulker -64 -44 51 {Tags:["escapemap_red_candle","escapemap_red_candle_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:10b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -64 -44 52 {Tags:["escapemap_red_candle","escapemap_red_candle_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:10b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -64 -44 53 {Tags:["escapemap_red_candle","escapemap_red_candle_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:10b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -63 -44 51 {Tags:["escapemap_red_candle","escapemap_red_candle_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:10b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -63 -44 52 {Tags:["escapemap_red_candle","escapemap_red_candle_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:10b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -63 -44 53 {Tags:["escapemap_red_candle","escapemap_red_candle_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:10b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -62 -44 51 {Tags:["escapemap_red_candle","escapemap_red_candle_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:10b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -62 -44 52 {Tags:["escapemap_red_candle","escapemap_red_candle_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:10b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -62 -44 53 {Tags:["escapemap_red_candle","escapemap_red_candle_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:10b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -64 -45 51 {Tags:["escapemap_red_candle","escapemap_red_candle_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:11b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -64 -45 52 {Tags:["escapemap_red_candle","escapemap_red_candle_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:11b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -64 -45 53 {Tags:["escapemap_red_candle","escapemap_red_candle_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:11b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -63 -45 51 {Tags:["escapemap_red_candle","escapemap_red_candle_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:11b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -63 -45 52 {Tags:["escapemap_red_candle","escapemap_red_candle_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:11b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -63 -45 53 {Tags:["escapemap_red_candle","escapemap_red_candle_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:11b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -62 -45 51 {Tags:["escapemap_red_candle","escapemap_red_candle_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:11b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -62 -45 52 {Tags:["escapemap_red_candle","escapemap_red_candle_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:11b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -62 -45 53 {Tags:["escapemap_red_candle","escapemap_red_candle_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:11b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:block_display -64 -43 51 {Tags:["escapemap_red_candle","escapemap_red_candle_display"],block_state:{Name:"minecraft:smooth_stone"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -64 -43 52 {Tags:["escapemap_red_candle","escapemap_red_candle_display"],block_state:{Name:"minecraft:smooth_stone"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -64 -43 53 {Tags:["escapemap_red_candle","escapemap_red_candle_display"],block_state:{Name:"minecraft:smooth_stone"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -63 -43 51 {Tags:["escapemap_red_candle","escapemap_red_candle_display"],block_state:{Name:"minecraft:smooth_stone"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -63 -43 52 {Tags:["escapemap_red_candle","escapemap_red_candle_display"],block_state:{Name:"minecraft:smooth_stone"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -63 -43 53 {Tags:["escapemap_red_candle","escapemap_red_candle_display"],block_state:{Name:"minecraft:smooth_stone"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -62 -43 51 {Tags:["escapemap_red_candle","escapemap_red_candle_display"],block_state:{Name:"minecraft:smooth_stone"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -62 -43 52 {Tags:["escapemap_red_candle","escapemap_red_candle_display"],block_state:{Name:"minecraft:smooth_stone"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -62 -43 53 {Tags:["escapemap_red_candle","escapemap_red_candle_display"],block_state:{Name:"minecraft:smooth_stone"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/execute as @a[x=-65,y=-46,z=50,dx=4,dy=12,dz=4] at @s run tp @s ~ ~0.1 ~
+
+#file: ./elevator/tick
+/execute if score #running escapemap_red_candle matches 1 run function escapemap:puzzles/red_candle/elevator/force_attach_face
+/scoreboard players set #do_step escapemap_red_candle 0
+/execute if score #running escapemap_red_candle matches 1 run scoreboard players add #tick escapemap_red_candle 1
+/execute if score #running escapemap_red_candle matches 1 if score #tick escapemap_red_candle >= #tick_divisor escapemap_red_candle run scoreboard players set #do_step escapemap_red_candle 1
+/execute if score #do_step escapemap_red_candle matches 1 run scoreboard players set #tick escapemap_red_candle 0
+/execute if score #do_step escapemap_red_candle matches 1 if score #active escapemap_red_candle matches 0 run function escapemap:puzzles/red_candle/elevator/step_a
+/execute if score #do_step escapemap_red_candle matches 1 if score #active escapemap_red_candle matches 1 run function escapemap:puzzles/red_candle/elevator/step_b
+
+#file: ./elevator/force_attach_face
+/execute as @e[type=minecraft:shulker,tag=escapemap_red_candle] run data merge entity @s {AttachFace:0b}
+
+#file: ./elevator/step_a
+/scoreboard players add #a escapemap_red_candle 1
+/execute as @e[type=minecraft:shulker,tag=escapemap_red_candle_a] store result entity @s Peek byte 1 run scoreboard players get #a escapemap_red_candle
+/execute as @e[type=minecraft:block_display,tag=escapemap_red_candle_display] at @s run tp @s ~ ~0.01 ~
+/execute if score #a escapemap_red_candle matches 100.. run function escapemap:puzzles/red_candle/elevator/finish_a
+
+#file: ./elevator/step_b
+/scoreboard players add #b escapemap_red_candle 1
+/execute as @e[type=minecraft:shulker,tag=escapemap_red_candle_b] store result entity @s Peek byte 1 run scoreboard players get #b escapemap_red_candle
+/execute as @e[type=minecraft:block_display,tag=escapemap_red_candle_display] at @s run tp @s ~ ~0.01 ~
+/execute if score #b escapemap_red_candle matches 100.. run function escapemap:puzzles/red_candle/elevator/finish_b
+
+#file: ./elevator/finish_a
+/execute as @e[type=minecraft:shulker,tag=escapemap_red_candle_b] at @s run tp @s ~ ~2 ~
+/execute as @e[type=minecraft:shulker,tag=escapemap_red_candle_a,limit=1] at @s run function escapemap:puzzles/red_candle/elevator/nudge_players
+/execute as @e[type=minecraft:shulker,tag=escapemap_red_candle_a] run data merge entity @s {Peek:0b,AttachFace:0b}
+/scoreboard players set #a escapemap_red_candle 0
+/scoreboard players set #active escapemap_red_candle 1
+/scoreboard players add #cycle escapemap_red_candle 1
+/execute if score #cycle escapemap_red_candle matches 6.. run function escapemap:puzzles/red_candle/elevator/arrive_top
+
+#file: ./elevator/finish_b
+/execute as @e[type=minecraft:shulker,tag=escapemap_red_candle_a] at @s run tp @s ~ ~2 ~
+/execute as @e[type=minecraft:shulker,tag=escapemap_red_candle_b,limit=1] at @s run function escapemap:puzzles/red_candle/elevator/nudge_players
+/execute as @e[type=minecraft:shulker,tag=escapemap_red_candle_b] run data merge entity @s {Peek:0b,AttachFace:0b}
+/scoreboard players set #b escapemap_red_candle 0
+/scoreboard players set #active escapemap_red_candle 0
+/scoreboard players add #cycle escapemap_red_candle 1
+/execute if score #cycle escapemap_red_candle matches 6.. run function escapemap:puzzles/red_candle/elevator/arrive_top
+
+#file: ./elevator/nudge_players
+/execute as @a[x=-65,y=-46,z=50,dx=4,dy=12,dz=4] at @s run tp @s ~ ~0.1 ~
+
+#file: ./elevator/arrive_top
+/scoreboard players set #running escapemap_red_candle 0
+/setblock -64 -38 51 minecraft:smooth_stone
+/setblock -64 -38 52 minecraft:smooth_stone
+/setblock -64 -38 53 minecraft:smooth_stone
+/setblock -63 -38 51 minecraft:smooth_stone
+/setblock -63 -38 52 minecraft:smooth_stone
+/setblock -63 -38 53 minecraft:smooth_stone
+/setblock -62 -38 51 minecraft:smooth_stone
+/setblock -62 -38 52 minecraft:smooth_stone
+/setblock -62 -38 53 minecraft:smooth_stone
+/execute as @a[x=-65,y=-46,z=50,dx=4,dy=12,dz=4] at @s run tp @s ~ ~0.1 ~
+/function escapemap:puzzles/red_candle/elevator_listener/end
+/execute as @e[type=minecraft:shulker,tag=escapemap_red_candle] run data merge entity @s {Peek:0b,AttachFace:0b}
+/function escapemap:puzzles/red_candle/elevator/despawn_entities
+
+#file: ./elevator/despawn_entities
+/execute as @e[tag=escapemap_red_candle] at @s run tp @s 0 -512 0
+/kill @e[type=minecraft:shulker,tag=escapemap_red_candle]
+/kill @e[type=minecraft:block_display,tag=escapemap_red_candle_display]
+
+#file: ./elevator/stop
+/scoreboard players set #running escapemap_red_candle 0
+/execute as @e[type=minecraft:shulker,tag=escapemap_red_candle] run data merge entity @s {Peek:0b,AttachFace:0b}
+/kill @e[type=minecraft:shulker,tag=escapemap_red_candle]
+/kill @e[type=minecraft:block_display,tag=escapemap_red_candle_display]
+
+#file: ./elevator/cleanup
+/scoreboard players set #running escapemap_red_candle 0
+/function escapemap:puzzles/red_candle/elevator/despawn_entities

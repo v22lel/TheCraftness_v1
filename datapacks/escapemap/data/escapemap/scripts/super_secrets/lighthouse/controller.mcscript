@@ -58,7 +58,6 @@ ep_raycast raycast1 = 0
 /tag @s[tag=raycast_stop] remove raycast_stop
 
 #file: ./controller/raycast_start_hit
-/say hit start
 /execute store result storage escapemap:tmp raycast int 1 run scoreboard players get EP ep_active
 /execute if data storage escapemap:tmp {raycast:0} run scoreboard players set EP ep_active 1
 /execute if data storage escapemap:tmp {raycast:0} run function escapemap:super_secrets/lighthouse/outline/reset
@@ -67,7 +66,6 @@ ep_raycast raycast1 = 0
 /execute unless data storage escapemap:tmp {raycast:0} run attribute @p minecraft:movement_speed modifier remove ep
 
 #file: ./controller/raycast_end_hit
-/say hit end
 /execute store result storage escapemap:tmp raycast int 1 run scoreboard players get EP ep_active
 /execute if data storage escapemap:tmp {raycast:2} run scoreboard players set EP ep_active 3
 /execute unless data storage escapemap:tmp {raycast:2} run scoreboard players set EP ep_active 0
@@ -75,6 +73,5 @@ ep_raycast raycast1 = 0
 /attribute @p minecraft:movement_speed modifier remove ep
 
 #file: ./controller/raycast_fail
-/say hit fail
 /execute unless data storage escapemap:tmp {raycast:3} run scoreboard players set EP ep_active 0
 /execute unless data storage escapemap:tmp {raycast:0} run attribute @p minecraft:movement_speed modifier remove ep

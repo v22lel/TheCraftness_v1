@@ -1,6 +1,4 @@
-/*
-place0 = slab at the very start
-*/
+//place0 = slab at the very start
 
 #file: ./placements/load
 var place0

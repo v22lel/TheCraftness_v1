@@ -9,5 +9,7 @@ ren ".\data\escapemap\functions" "function"
 
 del .mcfunction
 
+python .\scripts\post_compile.py
+
 echo Done.
 endlocal

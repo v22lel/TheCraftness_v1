@@ -78,6 +78,7 @@ modal blockBirch(pos, barrierPos) {
 
 #file: ./fences/secret1_complete
 /setblock -51 -32 50 deepslate_tile_stairs[facing=east]
+/setblock -52 -33 50 minecraft:waxed_copper_bulb[lit=true]
 /function escapemap:puzzles/secret_complete {p:"-50 -28 50"}
 
 #file: ./fences/secret2_complete
@@ -98,7 +99,7 @@ modal blockBirch(pos, barrierPos) {
 
 // secret 1
 /setblock -51 -32 50 dark_oak_planks
-/setblock -52 -32 50 stone_button[facing=west]
+/setblock -51 -31 50 stone_button[face=floor,facing=west]
 /setblock -52 -33 50 waxed_copper_bulb[lit=false,powered=false]
 /setblock -50 -28 50 soul_campfire[lit=false]
 

@@ -8,3 +8,4 @@
 
 
 function escapemap:puzzles/spawn/load
+function escapemap:puzzles/red_candle/load
