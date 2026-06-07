@@ -64,6 +64,9 @@ modal fenceOak(pos, barrierPos) {
 }
 
 #file: ./cave/reset
+/kill @e[tag=red_candle_frame]
+/summon minecraft:item_frame -63 -36 53 {Facing:2b,Invisible:1b,Invulnerable:0b,Tags:["single_use", "red_candle_frame"],Item:{id:"minecraft:flint_and_steel",count:1,components:{"minecraft:can_place_on":{predicates:[{blocks:"minecraft:red_candle"}],show_in_tooltip:true},"minecraft:damage":64,"minecraft:custom_data":{puzzle:{id:"ground",persistent:1b}}}}}
+
 /setblock -65 -42 52 minecraft:waxed_oxidized_copper_bulb[powered=false,lit=false]
 /setblock -64 -42 52 stone_button[facing=east]
 

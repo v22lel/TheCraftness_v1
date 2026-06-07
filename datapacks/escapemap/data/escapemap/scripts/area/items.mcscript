@@ -25,6 +25,9 @@ modal modifyInventory(predicate, modifier) {
     }
 }
 
+#file: ./items/candle_flint_and_steel
+modifyInventory('minecraft:flint_and_steel[minecraft:custom_data~{puzzle:{id:"ground"}}]', 'escapemap:candle_flint_and_steel')
+
 #file: ./items/multitool_neutral
 modifyInventory('minecraft:shears[minecraft:custom_data~{puzzle:{id:"multitool"}}]', 'escapemap:multitool/neutral')
 

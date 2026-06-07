@@ -29,4 +29,5 @@
 
 #file: ./areas/inventory_changed
 /function escapemap:area/areas/changed
+/function escapemap:area/items/candle_flint_and_steel
 /advancement revoke @s only escapemap:inventory_changed

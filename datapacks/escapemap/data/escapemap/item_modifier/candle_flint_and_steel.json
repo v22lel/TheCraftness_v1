@@ -1,0 +1,13 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:custom_data": {
+        "puzzle": {
+          "persistent": true,
+          "id": "candle_flint_and_steel"
+        }
+      }
+    }
+  }
+]
