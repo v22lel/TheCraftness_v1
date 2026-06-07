@@ -6,9 +6,17 @@
 /setblock -34 -34 64 minecraft:oak_button[face=ceiling]
 /setblock -34 -33 63 minecraft:waxed_oxidized_copper_bulb[lit=false]
 
+/setblock -34 -31 66 stone_button[facing=south]
+/setblock -34 -31 64 waxed_copper_bulb[powered=false,lit=false]
+/setblock -31 -37 61 soul_campfire[lit=false]
+
 #file: ./attic/complete
 /function escapemap:puzzles/complete
 /setblock -34 -34 64 air
+
+#file: ./attic/secret_complete
+/function escapemap:puzzles/secret_complete {p:"-31 -37 61"}
+/setblock -34 -31 66 air
 
 #file: ./attic/tick
 if('entity @e[tag=attic_breakable,nbt={attack:{}}]') {

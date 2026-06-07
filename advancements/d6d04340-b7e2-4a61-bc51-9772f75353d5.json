@@ -3399,5 +3399,17 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/suspicious_stew_from_dandelion": {
+    "criteria": {
+      "has_dandelion": "2026-06-06 22:32:18 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/yellow_dye_from_dandelion": {
+    "criteria": {
+      "has_dandelion": "2026-06-06 22:32:18 +0200"
+    },
+    "done": true
+  },
   "DataVersion": 4189
 }
