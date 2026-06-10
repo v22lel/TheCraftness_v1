@@ -17,6 +17,8 @@ area @s = 0
 areaCheck($(village_yard), $(village_yard_id))
 areaCheck($(spawn_tutorial), $(spawn_tutorial_id))
 areaCheck($(village_cyan), $(village_cyan_id))
+areaCheck($(castle), $(castle_id))
+areaCheck($(basement), $(basement_id))
 
 /execute as @s unless score @s area = @s old_area run function escapemap:area/areas/changed
 

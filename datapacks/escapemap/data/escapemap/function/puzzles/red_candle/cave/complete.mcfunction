@@ -6,4 +6,4 @@
 ######
 function escapemap:puzzles/complete
 setblock -64 -42 52 air
-function escapemap:puzzles/red_candle/elevator/start
+function escapemap:puzzles/red_candle/elevator/start

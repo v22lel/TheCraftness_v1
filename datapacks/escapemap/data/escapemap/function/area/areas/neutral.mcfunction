@@ -6,3 +6,5 @@
 ######
 function escapemap:area/items/multitool_neutral
 function escapemap:area/items/village_yard_redstone_neutral
+function escapemap:area/items/castle_stair_neutral
+function escapemap:area/items/flashlight_active

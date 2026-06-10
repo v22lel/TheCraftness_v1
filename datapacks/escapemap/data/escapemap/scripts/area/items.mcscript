@@ -43,3 +43,21 @@ modifyInventory('minecraft:redstone[minecraft:custom_data~{puzzle:{id:"village_y
 #file: ./items/village_yard_redstone_active
 modifyInventory('minecraft:redstone[minecraft:custom_data~{puzzle:{id:"village_yard"}}]', 'escapemap:village_yard_redstone/active')
 modifyInventory('minecraft:redstone[minecraft:custom_data~{puzzle:{id:"ground"}}]', 'escapemap:village_yard_redstone/active')
+
+#file: ./items/castle_stair_neutral
+modifyInventory('minecraft:oak_stairs[minecraft:custom_data~{puzzle:{id:"castle_stair"}}]', 'escapemap:castle_stair/neutral')
+
+#file: ./items/castle_stair_active
+modifyInventory('minecraft:oak_stairs[minecraft:custom_data~{puzzle:{id:"castle_stair"}}]', 'escapemap:castle_stair/active')
+
+#file: ./items/flashlight_neutral
+modifyInventory('minecraft:tropical_fish[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/neutral')
+modifyInventory('minecraft:soul_torch[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/neutral')
+
+#file: ./items/flashlight_basement
+modifyInventory('minecraft:tropical_fish[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/basement')
+modifyInventory('minecraft:soul_torch[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/basement')
+
+#file: ./items/flashlight_active
+modifyInventory('minecraft:tropical_fish[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/active')
+modifyInventory('minecraft:soul_torch[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/active')

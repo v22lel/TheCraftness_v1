@@ -10,6 +10,9 @@ setblock -65 -42 52 minecraft:waxed_oxidized_copper_bulb[powered=false,lit=false
 setblock -64 -42 52 stone_button[facing=east]
 function escapemap:puzzles/red_candle/cave/warped/expirestencil
 function escapemap:puzzles/red_candle/cave/warped/expireblock
+setblock -38 -41 78 stone_button[facing=west]
+setblock -37 -41 78 waxed_copper_bulb[powered=false,lit=false]
+setblock -43 -45 70 soul_campfire[lit=false]
 setblock -43 -45 67 air
 setblock -43 -45 64 oak_fence
 setblock -58 -45 65 air
@@ -27,9 +30,13 @@ setblock -53 -45 71 air
 setblock -56 -45 72 minecraft:warped_fence
 setblock -53 -43 71 barrier
 setblock -56 -43 72 air
-setblock -53 -45 70 minecraft:bamboo_fence
+setblock -53 -45 70 bamboo_fence
+setblock -115 -39 45 bamboo_fence
 setblock -53 -43 70 air
 setblock -63 -43 60 pale_oak_fence
 setblock -63 -43 57 pale_oak_fence
-setblock -54 -37 53 minecraft:pale_oak_fence
+setblock -37 -42 68 pale_oak_fence
+setblock -59 -42 76 pale_oak_fence
+setblock -54 -37 53 pale_oak_fence
 setblock -54 -35 53 air
+setblock -117 -37 45 pale_oak_fence

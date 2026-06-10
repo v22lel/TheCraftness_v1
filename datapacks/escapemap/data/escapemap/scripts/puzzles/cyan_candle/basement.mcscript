@@ -1,0 +1,33 @@
+#file: ./basement/load
+var puzzle_basement_complete
+var puzzle_basement_secret_complete
+
+#file: ./basement/cauldron
+// regular
+if('score P puzzle_basement_complete matches 0') {
+    /execute if blocks -113 -41 42 -110 -41 42 -113 -44 42 all run function escapemap:puzzles/cyan_candle/basement/complete
+}
+
+// secret
+if('score P puzzle_basement_secret_complete matches 0') {
+    /execute if blocks -113 -41 42 -110 -41 42 -113 -46 42 all run function escapemap:puzzles/cyan_candle/basement/secret_complete
+}
+
+#file: ./basement/complete
+/function escapemap:puzzles/complete
+puzzle_basement_complete P = 1
+/setblock -108 -40 41 waxed_oxidized_copper_bulb[lit=true]
+
+#file: ./basement/secret_complete
+/function escapemap:puzzles/secret_complete {p:"-116 -41 46"}
+puzzle_basement_secret_complete P = 1
+/setblock -118 -40 41 waxed_copper_bulb[lit=true]
+
+#file: ./basement/reset
+puzzle_basement_complete P = 0
+puzzle_basement_secret_complete P = 0
+/fill -113 -41 42 -110 -41 42 minecraft:cauldron
+/setblock -108 -40 41 waxed_oxidized_copper_bulb[lit=false,powered=false]
+
+/setblock -118 -40 41 waxed_copper_bulb[lit=false,powered=false]
+/setblock -116 -41 46 soul_campfire[lit=false]

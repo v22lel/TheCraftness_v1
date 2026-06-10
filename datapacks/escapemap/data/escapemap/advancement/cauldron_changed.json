@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "cauldron_interaction": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:water_cauldron",
+                  "minecraft:cauldron"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "escapemap:puzzles/castle/oncauldron"
+  }
+}

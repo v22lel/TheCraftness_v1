@@ -9,3 +9,8 @@ execute if data storage escapemap:tmp {isFence:1b} run setblock -53 -45 70 air
 execute if data storage escapemap:tmp {isFence:1b} run setblock -53 -43 70 barrier
 execute if data storage escapemap:tmp {isFence:0b} if block -53 -45 70 air run setblock -53 -45 70 bamboo_fence
 execute if data storage escapemap:tmp {isFence:0b} run setblock -53 -43 70 air
+execute store success storage escapemap:tmp isFence byte 1 if block -115 -39 45 bamboo_fence
+execute if data storage escapemap:tmp {isFence:1b} run setblock -115 -39 45 air
+execute if data storage escapemap:tmp {isFence:1b} run setblock -116 -42 45 barrier
+execute if data storage escapemap:tmp {isFence:0b} if block -115 -39 45 air run setblock -115 -39 45 bamboo_fence
+execute if data storage escapemap:tmp {isFence:0b} run setblock -116 -42 45 air

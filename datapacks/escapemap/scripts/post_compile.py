@@ -14,6 +14,36 @@ WINDOWS_RESERVED_NAMES = {
     *(f"LPT{i}" for i in range(1, 10)),
 }
 
+FUCKING_PILER_LINES = [
+    "!",
+    "r!",
+    "er!",
+    "ler!",
+    "iler!",
+    "piler!",
+    "mpiler!",
+    "ompiler!",
+    "compiler!",
+    " compiler!",
+    "e compiler!",
+    "he compiler!",
+    "the compiler!",
+    " the compiler!",
+    "y the compiler!",
+    "by the compiler!",
+    " by the compiler!",
+    "d by the compiler!",
+    "ed by the compiler!",
+    "sed by the compiler!",
+    "used by the compiler!",
+    " used by the compiler!",
+    "s used by the compiler!",
+    "is used by the compiler!",
+    " is used by the compiler!",
+    "t is used by the compiler!",
+    "it is used by the compiler!",
+    " it is used by the compiler!",
+]
 
 def is_windows_illegal_name(name: str) -> bool:
     if not name:
@@ -47,13 +77,13 @@ def remove_stray_piler_lines(root: Path) -> int:
 
         fixed = [
             line for line in original
-            if line.strip() != "piler!"
+            if line.strip() not in FUCKING_PILER_LINES
         ]
 
         if fixed != original:
             load_file.write_text("".join(fixed), encoding="utf-8")
             fixed_count += 1
-            print(f"[FIXED] Removed stray `piler!` line from: {load_file}")
+            print(f"[FIXED] Removed stray `piler!` or whatever from: {load_file}")
 
     return fixed_count
 

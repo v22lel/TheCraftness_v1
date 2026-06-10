@@ -1,10 +1,32 @@
+//DONT EVER EVER NAME UR PARAMETERS "tag" CUZ IS THIS A KW
+modal summonFramePottery(pos, tags) {
+    /summon item_frame $(pos) {Facing:3b,Invulnerable:1b,Tags:["castle_pottery_frame","$(tags)"],Item:{id:"minecraft:flow_pottery_sherd",count:1}}
+}
+
+#file: ./pottery/load
+var puzzle_castle_pottery_complete
+
 #file: ./pottery/complete
-/say hi
+if('score P puzzle_castle_pottery_complete matches 0') {
+    /setblock -164 -37 -51 minecraft:waxed_oxidized_copper_bulb[lit=true]
+    /setblock -167 -39 -52 minecraft:redstone_torch
+    /function escapemap:puzzles/complete
+    /function escapemap:puzzles/castle/onpuzzlecomplete
+    puzzle_castle_pottery_complete P = 1
+}
 
 #file: ./pottery/reset
+puzzle_castle_pottery_complete P = 0
+/setblock -167 -39 -52 air
+/setblock -164 -37 -51 minecraft:waxed_oxidized_copper_bulb[lit=false]
+
 /kill @e[tag=castle_pottery_frame]
-//fucking modal wont compile due to nbt being "too complex" THIS FUCKASS COMPILER I SWEAR
-/summon item_frame -163 -36 -53 {Facing:3b,Invulnerable:1b,Tags:["castle_pottery_frame", "frame4"],Item:{id:"minecraft:flow_pottery_sherd",count:1}}
-/summon item_frame -164 -36 -53 {Facing:3b,Invulnerable:1b,Tags:["castle_pottery_frame", "frame3"],Item:{id:"minecraft:flow_pottery_sherd",count:1}}
-/summon item_frame -165 -36 -53 {Facing:3b,Invulnerable:1b,Tags:["castle_pottery_frame", "frame2"],Item:{id:"minecraft:flow_pottery_sherd",count:1}}
-/summon item_frame -166 -36 -53 {Facing:3b,Invulnerable:1b,Tags:["castle_pottery_frame", "frame1"],Item:{id:"minecraft:flow_pottery_sherd",count:1}}
+summonFramePottery('-163 -36 -53', 'frame4')
+summonFramePottery('-164 -36 -53', 'frame3')
+summonFramePottery('-165 -36 -53', 'frame2')
+summonFramePottery('-166 -36 -53', 'frame1')
+
+#file: ./pottery/onitemframe
+if('entity @e[tag=frame4,tag=castle_pottery_frame,nbt={ItemRotation:6b}]' && 'entity @e[tag=frame3,tag=castle_pottery_frame,nbt={ItemRotation:4b}]' && 'entity @e[tag=frame2,tag=castle_pottery_frame,nbt={ItemRotation:2b}]' && 'entity @e[tag=frame1,tag=castle_pottery_frame,nbt={ItemRotation:4b}]') {
+    /function escapemap:puzzles/castle/pottery/complete
+}

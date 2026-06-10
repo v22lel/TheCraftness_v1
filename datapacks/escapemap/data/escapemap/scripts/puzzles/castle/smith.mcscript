@@ -1,0 +1,27 @@
+#file: ./smith/load
+var puzzle_castle_smith_complete
+
+#file: ./smith/reset
+/fill -170 -37 -26 -170 -37 -25 cauldron
+/fill -171 -37 -24 -172 -37 -24 cauldron
+/fill -173 -37 -25 -173 -37 -26 cauldron
+
+puzzle_castle_smith_complete P = 0
+
+/setblock -173 -37 -24 minecraft:waxed_oxidized_copper_bulb[lit=false,powered=false]
+
+#file: ./smith/complete
+if('score P puzzle_castle_smith_complete matches 0') {
+    /setblock -173 -37 -24 minecraft:waxed_oxidized_copper_bulb[lit=true]
+    /function escapemap:puzzles/complete
+    /function escapemap:puzzles/castle/onpuzzlecomplete
+    puzzle_castle_smith_complete P = 1
+}
+
+
+#file: ./smith/cauldron
+/say hi
+if('blocks -170 -37 -26 -173 -37 -24 -172 -40 -20 all') {
+    /say correct
+    /function escapemap:puzzles/castle/smith/complete
+}

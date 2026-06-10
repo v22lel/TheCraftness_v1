@@ -1,0 +1,20 @@
+[
+  {
+    "function": "minecraft:set_item",
+    "item": "minecraft:soul_torch"
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:custom_data": {
+        "puzzle": {
+          "persistent": true,
+          "id": "flashlight"
+        }
+      },
+      "minecraft:lore": [
+        "[{\"text\":\"(Mostly) trustworthy!\",\"color\":\"gray\",\"italic\":false}]"
+      ]
+    }
+  }
+]

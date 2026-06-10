@@ -1,0 +1,17 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "!minecraft:can_place_on": {},
+      "minecraft:custom_data": {
+        "puzzle": {
+          "persistent": true,
+          "id": "castle_stair"
+        }
+      },
+      "minecraft:lore": [
+        "[{\"text\":\"From: \",\"color\":\"gray\",\"italic\":false},{\"text\":\"Castle\",\"color\":\"light_purple\",\"italic\":false}]"
+      ]
+    }
+  }
+]

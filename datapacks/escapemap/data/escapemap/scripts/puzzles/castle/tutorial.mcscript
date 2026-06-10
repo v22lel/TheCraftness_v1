@@ -1,0 +1,27 @@
+#file: ./tutorial/load
+var puzzle_castle_tutorial_complete
+
+#file: ./tutorial/reset
+/fill -163 -37 -1 -163 -37 -5 cauldron
+/setblock -163 -37 -3 air
+//chest with bottle
+/clone -125 -48 117 -125 -48 117 -163 -37 -6
+puzzle_castle_tutorial_complete P = 0
+
+//torch and bulb
+/setblock -164 -39 -3 minecraft:air
+/setblock -163 -38 -3 minecraft:waxed_oxidized_copper_bulb[lit=false,powered=false]
+
+#file: ./tutorial/complete
+if('score P puzzle_castle_tutorial_complete matches 0') {
+    /setblock -164 -39 -3 minecraft:redstone_torch
+    /function escapemap:puzzles/complete
+    /function escapemap:puzzles/castle/onpuzzlecomplete
+    puzzle_castle_tutorial_complete P = 1
+}
+
+
+#file: ./tutorial/cauldron
+if('blocks -163 -37 -1 -163 -37 -5 -162 -40 -5 all') {
+    /function escapemap:puzzles/castle/tutorial/complete
+}

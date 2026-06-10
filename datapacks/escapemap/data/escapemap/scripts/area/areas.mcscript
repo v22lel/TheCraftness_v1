@@ -3,6 +3,8 @@
 /execute if score @s area matches 1 run function escapemap:area/areas/village_yard
 /execute if score @s area matches 2 run function escapemap:area/areas/spawn_tutorial
 /execute if score @s area matches 3 run function escapemap:area/areas/village_cyan
+/execute if score @s area matches 4 run function escapemap:area/areas/castle
+/execute if score @s area matches 5 run function escapemap:area/areas/basement
 
 /execute if score @s area matches 0 run function escapemap:area/freeze_items
 /execute unless score @s area matches 0 run function escapemap:area/unfreeze_items
@@ -16,6 +18,8 @@
 #file: ./areas/neutral
 /function escapemap:area/items/multitool_neutral
 /function escapemap:area/items/village_yard_redstone_neutral
+/function escapemap:area/items/castle_stair_neutral
+/function escapemap:area/items/flashlight_active
 
 #file: ./areas/village_yard
 /function escapemap:area/items/multitool_village_yard
@@ -26,6 +30,12 @@
 
 #file: ./areas/village_cyan
 /function escapemap:area/items/village_yard_redstone_active
+
+#file: ./areas/castle
+/function escapemap:area/items/castle_stair_active
+
+#file: ./areas/basement
+/function escapemap:area/items/flashlight_basement
 
 #file: ./areas/inventory_changed
 /function escapemap:area/areas/changed

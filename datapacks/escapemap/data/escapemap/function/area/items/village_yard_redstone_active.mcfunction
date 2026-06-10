@@ -175,3 +175,4 @@ execute if items entity @s inventory.24 minecraft:redstone[minecraft:custom_data
 execute if items entity @s inventory.25 minecraft:redstone[minecraft:custom_data~{puzzle:{id:"ground"}}] run item modify entity @s inventory.25 escapemap:village_yard_redstone/active
 
 execute if items entity @s inventory.26 minecraft:redstone[minecraft:custom_data~{puzzle:{id:"ground"}}] run item modify entity @s inventory.26 escapemap:village_yard_redstone/active
+

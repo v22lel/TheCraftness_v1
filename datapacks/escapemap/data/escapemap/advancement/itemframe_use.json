@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "rotate_item_frame": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:item_frame"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "escapemap:puzzles/castle/onitemframe"
+  }
+}

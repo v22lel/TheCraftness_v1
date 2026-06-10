@@ -10,6 +10,9 @@ if('block -140 -42 122 #slabs' && 'entity @a[scores={place0=0}]') {
     place0 @a = 1
 }
 
+//chest in castle seeds supply
+/data modify block -179 -38 -43 Items set value [{Slot:13b,id:"minecraft:wheat_seeds",count:1}]
+
 #file: ./placements/reset
 place0 @a = 0
 

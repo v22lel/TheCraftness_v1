@@ -1,0 +1,40 @@
+modal summonFrameTowers(pos, tags, facing) {
+    /summon item_frame $(pos) {Facing:1b,ItemRotation:$(facing),Invulnerable:1b,Tags:["castle_towers_frame","$(tags)"],Item:{id:"minecraft:spectral_arrow",count:1}}
+}
+
+#file: ./towers/load
+var puzzle_castle_towers_complete
+
+#file: ./towers/reset
+puzzle_castle_towers_complete P = 0
+/setblock -162 -30 -46 minecraft:waxed_oxidized_copper_bulb[lit=false]
+
+/setblock -162 -34 -45 air
+
+/kill @e[tag=castle_towers_frame]
+summonFrameTowers('-181 -28 -56', 'frame1', '2b')
+summonFrameTowers('-186 -28 -26', 'frame2', '3b')
+summonFrameTowers('-179 -28 -4', 'frame3', '1b')
+summonFrameTowers('-154 -28 2', 'frame4', '2b')
+summonFrameTowers('-159 -28 -27', 'frame5', '0b')
+
+#file: ./towers/complete
+if('score P puzzle_castle_towers_complete matches 0') {
+    /setblock -162 -30 -46 minecraft:waxed_oxidized_copper_bulb[lit=true]
+    /setblock -162 -34 -45 redstone_torch
+    /function escapemap:puzzles/complete
+    puzzle_castle_towers_complete P = 1
+}
+
+#file: ./towers/onitemframe
+puzzle_castle_towers_complete C = 0
+
+/execute if entity @e[tag=castle_towers_frame,tag=frame1,nbt={ItemRotation:0b}] run scoreboard players add C puzzle_castle_towers_complete 1
+/execute if entity @e[tag=castle_towers_frame,tag=frame2,nbt={ItemRotation:5b}] run scoreboard players add C puzzle_castle_towers_complete 1
+/execute if entity @e[tag=castle_towers_frame,tag=frame3,nbt={ItemRotation:7b}] run scoreboard players add C puzzle_castle_towers_complete 1
+/execute if entity @e[tag=castle_towers_frame,tag=frame4,nbt={ItemRotation:5b}] run scoreboard players add C puzzle_castle_towers_complete 1
+/execute if entity @e[tag=castle_towers_frame,tag=frame5,nbt={ItemRotation:7b}] run scoreboard players add C puzzle_castle_towers_complete 1
+
+if('score C puzzle_castle_towers_complete matches 5') {
+    /function escapemap:puzzles/castle/towers/complete
+}

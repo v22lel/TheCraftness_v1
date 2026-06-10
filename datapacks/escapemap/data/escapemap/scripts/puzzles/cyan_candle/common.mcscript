@@ -1,2 +1,6 @@
+#file: ./load
+/function escapemap:puzzles/cyan_candle/basement/load
+
 #file: ./reset
 /function escapemap:puzzles/cyan_candle/part1/reset
+/function escapemap:puzzles/cyan_candle/basement/reset

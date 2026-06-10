@@ -27,3 +27,23 @@ const village_cyan = Map{
     "dy":"3",
     "dz":"2.5"
 }
+
+const castle_id = 4
+const castle = Map{
+    "x":"-190",
+    "y":"-80",
+    "z":"-65",
+    "dx":"40",
+    "dy":"80",
+    "dz":"71"
+}
+
+const basement_id = 5
+const basement = Map{
+    "x":"-120",
+    "y":"-50",
+    "z":"37",
+    "dx":"14",
+    "dy":"10",
+    "dz":"12"
+}

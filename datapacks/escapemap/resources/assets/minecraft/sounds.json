@@ -4,5 +4,11 @@
       "minecraft:challenge/theme"
     ],
     "stream": true
+  },
+  "dang.badending": {
+    "sounds": [
+      "minecraft:dang/badending"
+    ],
+    "stream": true
   }
 }

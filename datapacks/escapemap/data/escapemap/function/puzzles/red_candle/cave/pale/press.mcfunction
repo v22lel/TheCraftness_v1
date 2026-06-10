@@ -14,8 +14,23 @@ execute if data storage escapemap:tmp {isFence:1b} run setblock -63 -43 57 air
 execute if data storage escapemap:tmp {isFence:1b} run setblock -63 -45 57 barrier
 execute if data storage escapemap:tmp {isFence:0b} if block -63 -43 57 air run setblock -63 -43 57 pale_oak_fence
 execute if data storage escapemap:tmp {isFence:0b} run setblock -63 -45 57 air
+execute store success storage escapemap:tmp isFence byte 1 if block -37 -42 68 pale_oak_fence
+execute if data storage escapemap:tmp {isFence:1b} run setblock -37 -42 68 air
+execute if data storage escapemap:tmp {isFence:1b} run setblock -37 -44 68 barrier
+execute if data storage escapemap:tmp {isFence:0b} if block -37 -42 68 air run setblock -37 -42 68 pale_oak_fence
+execute if data storage escapemap:tmp {isFence:0b} run setblock -37 -44 68 air
+execute store success storage escapemap:tmp isFence byte 1 if block -59 -42 76 pale_oak_fence
+execute if data storage escapemap:tmp {isFence:1b} run setblock -59 -42 76 air
+execute if data storage escapemap:tmp {isFence:1b} run setblock -59 -44 76 barrier
+execute if data storage escapemap:tmp {isFence:0b} if block -59 -42 76 air run setblock -59 -42 76 pale_oak_fence
+execute if data storage escapemap:tmp {isFence:0b} run setblock -59 -44 76 air
 execute store success storage escapemap:tmp isFence byte 1 if block -54 -37 53 pale_oak_fence
 execute if data storage escapemap:tmp {isFence:1b} run setblock -54 -37 53 air
 execute if data storage escapemap:tmp {isFence:1b} run setblock -54 -35 53 barrier
 execute if data storage escapemap:tmp {isFence:0b} if block -54 -37 53 air run setblock -54 -37 53 pale_oak_fence
 execute if data storage escapemap:tmp {isFence:0b} run setblock -54 -35 53 air
+execute store success storage escapemap:tmp isFence byte 1 if block -117 -37 45 pale_oak_fence
+execute if data storage escapemap:tmp {isFence:1b} run setblock -117 -37 45 air
+execute if data storage escapemap:tmp {isFence:1b} run setblock -116 -42 45 barrier
+execute if data storage escapemap:tmp {isFence:0b} if block -117 -37 45 air run setblock -117 -37 45 pale_oak_fence
+execute if data storage escapemap:tmp {isFence:0b} run setblock -116 -42 45 air

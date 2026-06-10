@@ -1,0 +1,20 @@
+[
+  {
+    "function": "minecraft:set_item",
+    "item": "minecraft:tropical_fish"
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:custom_data": {
+        "puzzle": {
+          "persistent": true,
+          "id": "flashlight"
+        }
+      },
+      "minecraft:lore": [
+        "[{\"text\":\"Not enough oxygen...\",\"color\":\"gray\",\"italic\":false}]"
+      ]
+    }
+  }
+]

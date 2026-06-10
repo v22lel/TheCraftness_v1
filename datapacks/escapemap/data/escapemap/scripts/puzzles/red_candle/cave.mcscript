@@ -73,6 +73,11 @@ modal fenceOak(pos, barrierPos) {
 /function escapemap:puzzles/red_candle/cave/warped/expirestencil
 /function escapemap:puzzles/red_candle/cave/warped/expireblock
 
+//secret
+/setblock -38 -41 78 stone_button[facing=west]
+/setblock -37 -41 78 waxed_copper_bulb[powered=false,lit=false]
+/setblock -43 -45 70 soul_campfire[lit=false]
+
 //oak
 /setblock -43 -45 67 air
 /setblock -43 -45 64 oak_fence
@@ -100,16 +105,21 @@ modal fenceOak(pos, barrierPos) {
 /setblock -56 -43 72 air
 
 //bamboo
-/setblock -53 -45 70 minecraft:bamboo_fence
+/setblock -53 -45 70 bamboo_fence
+/setblock -115 -39 45 bamboo_fence
 
 /setblock -53 -43 70 air
 
 //pale
 /setblock -63 -43 60 pale_oak_fence
 /setblock -63 -43 57 pale_oak_fence
+//backtrack pale
+/setblock -37 -42 68 pale_oak_fence
+/setblock -59 -42 76 pale_oak_fence
 //secret pale
-/setblock -54 -37 53 minecraft:pale_oak_fence
+/setblock -54 -37 53 pale_oak_fence
 /setblock -54 -35 53 air
+/setblock -117 -37 45 pale_oak_fence
 
 #file: ./cave/oak/press
 fenceOak('-58 -45 65', '-58 -43 65')
@@ -122,6 +132,9 @@ fenceOak('-61 -45 67', '-61 -47 67')
 #file: ./cave/bamboo/press
 fenceBamboo('-53 -45 70', '-53 -43 70')
 
+// house
+fenceBamboo('-115 -39 45', '-116 -42 45')
+
 #file: ./cave/mangroove/press
 fenceMangroove('-49 -45 65', '-49 -43 65')
 fenceMangroove('-51 -45 63', '-51 -43 63')
@@ -129,7 +142,14 @@ fenceMangroove('-51 -45 63', '-51 -43 63')
 #file: ./cave/pale/press
 fencePale('-63 -43 60', '-63 -41 60')
 fencePale('-63 -43 57', '-63 -45 57')
+
+// side path
+fencePale('-37 -42 68', '-37 -44 68')
+fencePale('-59 -42 76', '-59 -44 76')
+
+// secret + cyan
 fencePale('-54 -37 53', '-54 -35 53')
+fencePale('-117 -37 45', '-116 -42 45')
 
 #file: ./cave/warped/press
 blockWarped('-56 -45 65')
@@ -150,3 +170,7 @@ fenceWarped('-56 -45 72', '-56 -43 72')
 /function escapemap:puzzles/complete
 /setblock -64 -42 52 air
 /function escapemap:puzzles/red_candle/elevator/start
+
+#file: ./cave/secret_complete
+/function escapemap:puzzles/secret_complete {p:"-43 -45 70"}
+/setblock -38 -41 78 air

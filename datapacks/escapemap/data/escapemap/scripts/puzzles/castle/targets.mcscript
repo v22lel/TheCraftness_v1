@@ -1,0 +1,25 @@
+#file: ./targets/load
+var puzzle_castle_targets_complete
+
+#file: ./targets/reset
+/setblock -165 -38 -27 cauldron
+/setblock -165 -37 -26 cauldron
+/fill -165 -38 -25 -165 -38 -21 minecraft:cauldron
+
+puzzle_castle_targets_complete P = 0
+
+/setblock -165 -37 -24 minecraft:waxed_oxidized_copper_bulb[lit=false,powered=false]
+
+#file: ./targets/complete
+if('score P puzzle_castle_targets_complete matches 0') {
+    /setblock -165 -37 -24 minecraft:waxed_oxidized_copper_bulb[lit=true]
+    /function escapemap:puzzles/complete
+    /function escapemap:puzzles/castle/onpuzzlecomplete
+    puzzle_castle_targets_complete P = 1
+}
+
+
+#file: ./targets/cauldron
+if('blocks -165 -38 -27 -165 -37 -21 -165 -41 -27 all') {
+    /function escapemap:puzzles/castle/targets/complete
+}

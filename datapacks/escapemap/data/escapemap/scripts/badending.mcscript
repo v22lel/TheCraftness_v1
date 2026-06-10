@@ -1,0 +1,10 @@
+var is_bad_ending
+
+#file: ./badending/reset
+is_bad_ending P = 0
+
+#file: ./badending/tick
+/execute if score P is_bad_ending matches 0 as @a at @s anchored feet if block ~ ~ ~ #cauldrons run scoreboard players set P is_bad_ending 1
+/execute if score P is_bad_ending matches 0 as @a at @s anchored feet if block ~ ~ ~ composter run scoreboard players set P is_bad_ending 1
+/execute if score P is_bad_ending matches 1 as @a at @s run playsound minecraft:dang.badending master @p ~ ~ ~
+/execute if score P is_bad_ending matches 1 run scoreboard players set P is_bad_ending 2

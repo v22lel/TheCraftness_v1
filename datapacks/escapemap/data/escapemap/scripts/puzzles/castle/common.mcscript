@@ -1,4 +1,90 @@
+var castle_puzzles_completed
+
+#file: ./load
+/execute as @a run advancement revoke @s only escapemap:cauldron_changed
+/execute as @a run advancement revoke @s only escapemap:itemframe_use
+/function escapemap:puzzles/castle/tutorial/load
+/function escapemap:puzzles/castle/pottery/load
+
+/function escapemap:puzzles/castle/hay1/load
+/function escapemap:puzzles/castle/hay2/load
+/function escapemap:puzzles/castle/hay3/load
+/function escapemap:puzzles/castle/hay4/load
+
+/function escapemap:puzzles/castle/smith/load
+
+/function escapemap:puzzles/castle/farm/load
+
+/function escapemap:puzzles/castle/targets/load
+/function escapemap:puzzles/castle/targetsrev/load
+
+/function escapemap:puzzles/castle/waterarrows/load
+/function escapemap:puzzles/castle/secrets/walltop/load
+
+/function escapemap:puzzles/castle/towers/load
+
 #file: ./reset
+castle_puzzles_completed C = 0
+
+/function escapemap:puzzles/castle/tutorial/reset
 /function escapemap:puzzles/castle/pottery/reset
 
-//
+/function escapemap:puzzles/castle/hay1/reset
+/function escapemap:puzzles/castle/hay2/reset
+/function escapemap:puzzles/castle/hay3/reset
+/function escapemap:puzzles/castle/hay4/reset
+
+/function escapemap:puzzles/castle/smith/reset
+
+/function escapemap:puzzles/castle/farm/reset
+
+/function escapemap:puzzles/castle/targets/reset
+/function escapemap:puzzles/castle/targetsrev/reset
+
+/function escapemap:puzzles/castle/waterarrows/reset
+/function escapemap:puzzles/castle/secrets/walltop/reset
+
+/function escapemap:puzzles/castle/towers/reset
+
+//staircase loot
+/clone -125 -48 116 -125 -48 116 -178 -37 -57
+//placed staircase
+/setblock -180 -37 -19 air
+
+//door to other 2 towers
+/setblock -156 -33 1 air
+
+#file: ./oncauldron
+/advancement revoke @s only escapemap:cauldron_changed
+/function escapemap:puzzles/cyan_candle/basement/cauldron
+/function escapemap:puzzles/castle/tutorial/cauldron
+
+/function escapemap:puzzles/castle/hay1/cauldron
+/function escapemap:puzzles/castle/hay2/cauldron
+/function escapemap:puzzles/castle/hay3/cauldron
+/function escapemap:puzzles/castle/hay4/cauldron
+
+/function escapemap:puzzles/castle/smith/cauldron
+
+/function escapemap:puzzles/castle/targets/cauldron
+/function escapemap:puzzles/castle/targetsrev/cauldron
+
+/function escapemap:puzzles/castle/secrets/walltop/cauldron
+
+#file: ./oncomposter
+/advancement revoke @s only escapemap:composter_changed
+/function escapemap:puzzles/castle/farm/composter
+
+#file: ./onitemframe
+/execute as @a run advancement revoke @s only escapemap:itemframe_use
+/function escapemap:puzzles/castle/pottery/onitemframe
+/function escapemap:puzzles/castle/waterarrows/onitemframe
+
+/function escapemap:puzzles/castle/towers/onitemframe
+
+#file: ./onpuzzlecomplete
+/scoreboard players add C castle_puzzles_completed 1
+
+if('score C castle_puzzles_completed matches 11..') {
+    /setblock -156 -33 1 redstone_torch
+}

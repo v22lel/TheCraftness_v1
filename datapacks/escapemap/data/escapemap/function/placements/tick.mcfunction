@@ -8,3 +8,4 @@ execute if block -140 -42 122 #slabs if entity @a[scores={place0=0}] run setbloc
 execute if block -140 -42 122 #slabs if entity @a[scores={place0=0}] run setblock -140 -40 123 air
 execute if block -140 -42 122 #slabs if entity @a[scores={place0=0}] run scoreboard players set @a place0 1
 
+data modify block -179 -38 -43 Items set value [{Slot:13b,id:"minecraft:wheat_seeds",count:1}]

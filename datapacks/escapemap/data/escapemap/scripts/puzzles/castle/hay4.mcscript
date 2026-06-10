@@ -1,0 +1,23 @@
+#file: ./hay4/load
+var puzzle_castle_hay4_complete
+
+#file: ./hay4/reset
+/fill -173 -37 -13 -176 -37 -13 cauldron
+
+puzzle_castle_hay4_complete P = 0
+
+/setblock -174 -37 -13 minecraft:waxed_oxidized_copper_bulb[lit=false,powered=false]
+
+#file: ./hay4/complete
+if('score P puzzle_castle_hay4_complete matches 0') {
+    /setblock -174 -37 -13 minecraft:waxed_oxidized_copper_bulb[lit=true]
+    /function escapemap:puzzles/complete
+    /function escapemap:puzzles/castle/onpuzzlecomplete
+    puzzle_castle_hay4_complete P = 1
+}
+
+
+#file: ./hay4/cauldron
+if('blocks -173 -37 -13 -176 -37 -13 -176 -40 -13 all') {
+    /function escapemap:puzzles/castle/hay4/complete
+}
