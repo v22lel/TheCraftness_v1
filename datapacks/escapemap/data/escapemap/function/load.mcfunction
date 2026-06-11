@@ -6,11 +6,14 @@
 ######
 function escapemap:mcscript/load
 
+function escapemap:numbers/load
 function escapemap:spyglass/load
 function escapemap:area/load
 function escapemap:boatcall/load
 function escapemap:placements/load
 function escapemap:puzzles/load
 function escapemap:super_secrets/load
+function escapemap:explicit_randomness/load
+function escapemap:mechanical/elevators/elevator/load
 execute as @a run attribute @s minecraft:fall_damage_multiplier modifier add escapemap -1 add_value
 say Loaded The Craftness v0.1.2!

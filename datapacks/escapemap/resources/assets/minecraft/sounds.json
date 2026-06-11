@@ -10,5 +10,11 @@
       "minecraft:dang/badending"
     ],
     "stream": true
+  },
+  "geigercounter": {
+    "sounds": [
+      "minecraft:geiger"
+    ],
+    "stream": true
   }
 }

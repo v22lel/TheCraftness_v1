@@ -1,0 +1,95 @@
+#file: ./actionbar/tick
+as (@a[scores={radiation=1..}]) {
+    /execute as @s if score @s rad_div matches 1..5 run function escapemap:puzzles/actionbar/radiation/1
+    /execute as @s if score @s rad_div matches 6..10 run function escapemap:puzzles/actionbar/radiation/2
+    /execute as @s if score @s rad_div matches 11..15 run function escapemap:puzzles/actionbar/radiation/3
+    /execute as @s if score @s rad_div matches 16..20 run function escapemap:puzzles/actionbar/radiation/4
+    /execute as @s if score @s rad_div matches 21..25 run function escapemap:puzzles/actionbar/radiation/5
+    /execute as @s if score @s rad_div matches 26..30 run function escapemap:puzzles/actionbar/radiation/6
+    /execute as @s if score @s rad_div matches 31..35 run function escapemap:puzzles/actionbar/radiation/7
+    /execute as @s if score @s rad_div matches 36..40 run function escapemap:puzzles/actionbar/radiation/8
+    /execute as @s if score @s rad_div matches 41..45 run function escapemap:puzzles/actionbar/radiation/9
+    /execute as @s if score @s rad_div matches 46..50 run function escapemap:puzzles/actionbar/radiation/10
+    /execute as @s if score @s rad_div matches 51..55 run function escapemap:puzzles/actionbar/radiation/11
+    /execute as @s if score @s rad_div matches 56..60 run function escapemap:puzzles/actionbar/radiation/12
+    /execute as @s if score @s rad_div matches 61..65 run function escapemap:puzzles/actionbar/radiation/13
+    /execute as @s if score @s rad_div matches 66..70 run function escapemap:puzzles/actionbar/radiation/14
+    /execute as @s if score @s rad_div matches 71..75 run function escapemap:puzzles/actionbar/radiation/15
+    /execute as @s if score @s rad_div matches 76..80 run function escapemap:puzzles/actionbar/radiation/16
+    /execute as @s if score @s rad_div matches 81..85 run function escapemap:puzzles/actionbar/radiation/17
+    /execute as @s if score @s rad_div matches 86..90 run function escapemap:puzzles/actionbar/radiation/18
+    /execute as @s if score @s rad_div matches 91..95 run function escapemap:puzzles/actionbar/radiation/19
+    /execute as @s if score @s rad_div matches 96..100 run function escapemap:puzzles/actionbar/radiation/20
+}
+
+as (@a[scores={radiation=0,super_secrets_complete=1..}]) {
+    /title @s actionbar ["",{"score":{"name":"@s","objective":"puzzles_complete"}},{"text":" +"},{"score":{"name":"@s","objective":"secrets_complete"}},{"text":" (+"},{"score":{"name":"@s","objective":"super_secrets_complete"}},{"text":")"}]
+}
+
+as (@a[scores={radiation=0,super_secrets_complete=0,secrets_complete=1..}]) {
+    /title @s actionbar ["",{"score":{"name":"@s","objective":"puzzles_complete"}},{"text":" +"},{"score":{"name":"@s","objective":"secrets_complete"}}]
+}
+
+as (@a[scores={radiation=0,secrets_complete=0}]) {
+    /title @s actionbar ["",{"score":{"name":"@s","objective":"puzzles_complete"}}]
+}
+
+#file: ./actionbar/radiation/1
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|","color":"green"},{"text":"|||||||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/2
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||","color":"green"},{"text":"||||||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/3
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||","color":"green"},{"text":"|||||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/4
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||","color":"green"},{"text":"||||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/5
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||","color":"green"},{"text":"|||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/6
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||","color":"green"},{"text":"||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/7
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||","color":"green"},{"text":"|||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/8
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||","color":"green"},{"text":"||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/9
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||||","color":"green"},{"text":"|||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/10
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||||","color":"green"},{"text":"||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/11
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||||||","color":"green"},{"text":"|||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/12
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||||||","color":"green"},{"text":"||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/13
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||||||||","color":"green"},{"text":"|||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/14
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||||||||","color":"green"},{"text":"||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/15
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||||||||||","color":"green"},{"text":"|||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/16
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||||||||||","color":"green"},{"text":"||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/17
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||||||||||||","color":"green"},{"text":"|||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/18
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||||||||||||","color":"green"},{"text":"||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/19
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||||||||||||||","color":"green"},{"text":"|","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+
+#file: ./actionbar/radiation/20
+/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||||||||||||||","color":"green"},{"text":"","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]

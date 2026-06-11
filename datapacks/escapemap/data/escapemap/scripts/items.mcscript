@@ -8,5 +8,5 @@
 /give @s minecraft:soul_torch[minecraft:custom_name='{"text":"Flashlight","italic":false}',minecraft:custom_data={puzzle:{id:"flashlight","persistent":1b}}] 1
 
 #file: ./items/castle_stair
-/give @s minecraft:oak_stairs[minecraft:custom_name='{"text":"Missing tower stair","italic":false}',minecraft:custom_data={puzzle:{id:"castle_stair","persistent":1b}}] 1
+/give @s minecraft:oak_stairs[minecraft:custom_data={puzzle:{id:"castle_stair","persistent":1b}}] 1
 

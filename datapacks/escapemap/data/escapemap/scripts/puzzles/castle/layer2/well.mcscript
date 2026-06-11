@@ -1,0 +1,18 @@
+#file: ./layer/well/load
+var puzzle_castle2_well_complete
+
+#file: ./well/reset
+puzzle_castle2_well_complete P = 0
+/setblock -169 -42 -44 air
+/setblock -169 -46 -45 air
+
+/setblock -169 -43 -44 air
+/setblock -169 -43 -44 crafter[orientation=down_east]
+
+#file: ./well/complete
+puzzle_castle2_well_complete P = 1
+/setblock -169 -42 -44 lever[powered=true,face=floor]
+/setblock -169 -46 -45 redstone_torch
+
+#file: ./well/tick
+'execute if score P puzzle_castle2_well_complete matches 0 if data block -169 -43 -44 {disabled_slots: [I; 0,2,3,5,6,7,8]} run function escapemap:puzzles/castle/layer2/well/complete'

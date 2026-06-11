@@ -10,3 +10,4 @@
 function escapemap:puzzles/spawn/load
 function escapemap:puzzles/red_candle/load
 function escapemap:puzzles/castle/load
+function escapemap:puzzles/radiation/load

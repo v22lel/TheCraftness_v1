@@ -3,6 +3,9 @@ var castle_puzzles_completed
 #file: ./load
 /execute as @a run advancement revoke @s only escapemap:cauldron_changed
 /execute as @a run advancement revoke @s only escapemap:itemframe_use
+
+/function escapemap:puzzles/castle/layer2/load
+
 /function escapemap:puzzles/castle/tutorial/load
 /function escapemap:puzzles/castle/pottery/load
 
@@ -25,6 +28,8 @@ var castle_puzzles_completed
 
 #file: ./reset
 castle_puzzles_completed C = 0
+
+/function escapemap:puzzles/castle/layer2/reset
 
 /function escapemap:puzzles/castle/tutorial/reset
 /function escapemap:puzzles/castle/pottery/reset
@@ -53,6 +58,9 @@ castle_puzzles_completed C = 0
 
 //door to other 2 towers
 /setblock -156 -33 1 air
+
+#file: ./tick
+/function escapemap:puzzles/castle/layer2/tick
 
 #file: ./oncauldron
 /advancement revoke @s only escapemap:cauldron_changed

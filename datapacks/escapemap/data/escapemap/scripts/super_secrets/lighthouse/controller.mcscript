@@ -10,6 +10,7 @@ var ep_flash_timer
 
 #file: ./controller/reset
 /data remove entity @e[tag=ep_input,limit=1] attack
+/data remove entity @e[tag=ep_input,limit=1] interaction
 ep_active EP = 0
 ep_flash_timer EP = 0
 ep_raycast raycast1 = 0
@@ -19,10 +20,16 @@ ep_raycast raycast1 = 0
 /function escapemap:puzzles/super_secret_complete
 
 #file: ./controller/tick
-if('entity @e[tag=ep_input,nbt={attack:{}}]') {
+if('entity @e[tag=ep_input,nbt={attack:{}}]' || 'entity @e[tag=ep_input,nbt={interaction:{}}]') {
     /execute if score EP ep_active matches ..2 run function escapemap:super_secrets/lighthouse/controller/begin_raycast
     /data remove entity @e[tag=ep_input,limit=1] attack
+    /data remove entity @e[tag=ep_input,limit=1] interaction
 }
+
+//if('entity @e[tag=ep_input,nbt={interaction:{}}]') {
+//    /execute if score EP ep_active matches ..2 run function escapemap:super_secrets/lighthouse/controller/begin_raycast
+//    /data remove entity @e[tag=ep_input,limit=1] interaction
+//}
 
 /execute if score EP ep_active matches 1..2 run function escapemap:super_secrets/lighthouse/controller/handle_active_tick
 //tick fixed

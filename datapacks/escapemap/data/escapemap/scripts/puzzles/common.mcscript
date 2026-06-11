@@ -6,6 +6,7 @@ var super_secrets_complete
 /function escapemap:puzzles/spawn/load
 /function escapemap:puzzles/red_candle/load
 /function escapemap:puzzles/castle/load
+/function escapemap:puzzles/radiation/load
 
 // TODO: sounds
 #file: ./complete
@@ -23,20 +24,12 @@ super_secrets_complete @a += 1
 
 
 #file: ./tick
-as (@a[scores={super_secrets_complete=1..}]) {
-    /title @s actionbar ["",{"score":{"name":"@s","objective":"puzzles_complete"}},{"text":" +"},{"score":{"name":"@s","objective":"secrets_complete"}},{"text":" (+"},{"score":{"name":"@s","objective":"super_secrets_complete"}},{"text":")"}]
-}
-
-as (@a[scores={super_secrets_complete=0,secrets_complete=1..}]) {
-    /title @s actionbar ["",{"score":{"name":"@s","objective":"puzzles_complete"}},{"text":" +"},{"score":{"name":"@s","objective":"secrets_complete"}}]
-}
-
-as (@a[scores={secrets_complete=0}]) {
-    /title @s actionbar ["",{"score":{"name":"@s","objective":"puzzles_complete"}}]
-}
+/function escapemap:puzzles/actionbar/tick
 
 /function escapemap:puzzles/spawn/tick
 /function escapemap:puzzles/red_candle/tick
+/function escapemap:puzzles/castle/tick
+/function escapemap:puzzles/radiation/tick
 
 #file: ./reset
 puzzles_complete @a = 0
@@ -47,3 +40,4 @@ super_secrets_complete @a = 0
 /function escapemap:puzzles/cyan_candle/reset
 /function escapemap:puzzles/red_candle/reset
 /function escapemap:puzzles/spawn/reset
+/function escapemap:puzzles/radiation/reset

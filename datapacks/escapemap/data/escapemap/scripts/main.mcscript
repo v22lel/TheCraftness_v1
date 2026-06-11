@@ -8,6 +8,8 @@
 /function escapemap:super_secrets/tick
 /function escapemap:drop/tick
 /function escapemap:badending/tick
+//TEST
+/function escapemap:mechanical/elevators/elevator/tick
 
 as (@a) {
     /function escapemap:area/tick

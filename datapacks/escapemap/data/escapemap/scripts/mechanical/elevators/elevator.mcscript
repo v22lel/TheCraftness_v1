@@ -1,0 +1,906 @@
+#file: ./elevator/load
+/scoreboard objectives add escapemap_castle_elevator dummy
+/scoreboard players set #running escapemap_castle_elevator 0
+/scoreboard players set #tick_divisor escapemap_castle_elevator 2
+/scoreboard players set #current_station escapemap_castle_elevator 0
+
+#file: ./elevator/reset
+/scoreboard players set #running escapemap_castle_elevator 0
+/function escapemap:puzzles/castle/layer2/elevators/elevator/despawn_entities
+/scoreboard players set #current_station escapemap_castle_elevator 0
+/function escapemap:puzzles/castle/layer2/elevators/elevator/place_station_0_blocks
+/function escapemap:puzzles/castle/layer2/elevators/elevator/clear_station_1_blocks
+/function escapemap:puzzles/castle/layer2/elevators/elevator/clear_station_2_blocks
+/function escapemap:puzzles/castle/layer2/elevators/elevator/clear_station_3_blocks
+
+#file: ./elevator/place_station_0_blocks
+/setblock -163 -45 -43 minecraft:crafter[orientation=north_up]
+/setblock -162 -45 -43 minecraft:crafter[orientation=north_up]
+/setblock -164 -45 -43 minecraft:crafter[orientation=north_up]
+/setblock -163 -45 -42 minecraft:crafter[orientation=north_up]
+/setblock -163 -45 -44 minecraft:crafter[orientation=north_up]
+/setblock -161 -45 -43 minecraft:deepslate_bricks
+/setblock -160 -45 -43 minecraft:deepslate_bricks
+/setblock -165 -45 -43 minecraft:deepslate_bricks
+/setblock -166 -45 -43 minecraft:deepslate_bricks
+/setblock -163 -45 -41 minecraft:deepslate_bricks
+/setblock -163 -45 -40 minecraft:deepslate_bricks
+/setblock -163 -45 -45 minecraft:deepslate_bricks
+/setblock -163 -45 -46 minecraft:deepslate_bricks
+/setblock -163 -45 -47 minecraft:deepslate_bricks
+/setblock -159 -45 -42 minecraft:deepslate_bricks
+/setblock -160 -45 -42 minecraft:deepslate_bricks
+/setblock -161 -45 -42 minecraft:deepslate_bricks
+/setblock -162 -45 -42 minecraft:deepslate_bricks
+/setblock -164 -45 -42 minecraft:deepslate_bricks
+/setblock -165 -45 -42 minecraft:deepslate_bricks
+/setblock -166 -45 -42 minecraft:deepslate_bricks
+/setblock -167 -45 -42 minecraft:deepslate_bricks
+/setblock -159 -45 -44 minecraft:deepslate_bricks
+/setblock -160 -45 -44 minecraft:deepslate_bricks
+/setblock -161 -45 -44 minecraft:deepslate_bricks
+/setblock -162 -45 -44 minecraft:deepslate_bricks
+/setblock -164 -45 -44 minecraft:deepslate_bricks
+/setblock -165 -45 -44 minecraft:deepslate_bricks
+/setblock -166 -45 -44 minecraft:deepslate_bricks
+/setblock -167 -45 -44 minecraft:deepslate_bricks
+/setblock -159 -45 -41 minecraft:deepslate_bricks
+/setblock -160 -45 -41 minecraft:deepslate_bricks
+/setblock -161 -45 -41 minecraft:deepslate_bricks
+/setblock -162 -45 -41 minecraft:deepslate_bricks
+/setblock -164 -45 -41 minecraft:deepslate_bricks
+/setblock -165 -45 -41 minecraft:deepslate_bricks
+/setblock -166 -45 -41 minecraft:deepslate_bricks
+/setblock -167 -45 -41 minecraft:deepslate_bricks
+/setblock -159 -45 -45 minecraft:deepslate_bricks
+/setblock -160 -45 -45 minecraft:deepslate_bricks
+/setblock -161 -45 -45 minecraft:deepslate_bricks
+/setblock -162 -45 -45 minecraft:deepslate_bricks
+/setblock -164 -45 -45 minecraft:deepslate_bricks
+/setblock -165 -45 -45 minecraft:deepslate_bricks
+/setblock -166 -45 -45 minecraft:deepslate_bricks
+/setblock -167 -45 -45 minecraft:deepslate_bricks
+/setblock -160 -45 -40 minecraft:deepslate_bricks
+/setblock -161 -45 -40 minecraft:deepslate_bricks
+/setblock -162 -45 -40 minecraft:deepslate_bricks
+/setblock -164 -45 -40 minecraft:deepslate_bricks
+/setblock -165 -45 -40 minecraft:deepslate_bricks
+/setblock -166 -45 -40 minecraft:deepslate_bricks
+/setblock -160 -45 -46 minecraft:deepslate_bricks
+/setblock -161 -45 -46 minecraft:deepslate_bricks
+/setblock -162 -45 -46 minecraft:deepslate_bricks
+/setblock -164 -45 -46 minecraft:deepslate_bricks
+/setblock -165 -45 -46 minecraft:deepslate_bricks
+/setblock -166 -45 -46 minecraft:deepslate_bricks
+/setblock -161 -45 -39 minecraft:deepslate_bricks
+/setblock -162 -45 -39 minecraft:deepslate_bricks
+/setblock -164 -45 -39 minecraft:deepslate_bricks
+/setblock -165 -45 -39 minecraft:deepslate_bricks
+/setblock -161 -45 -47 minecraft:deepslate_bricks
+/setblock -162 -45 -47 minecraft:deepslate_bricks
+/setblock -164 -45 -47 minecraft:deepslate_bricks
+/setblock -165 -45 -47 minecraft:deepslate_bricks
+
+#file: ./elevator/clear_station_0_blocks
+/setblock -163 -45 -43 minecraft:air
+/setblock -162 -45 -43 minecraft:air
+/setblock -164 -45 -43 minecraft:air
+/setblock -163 -45 -42 minecraft:air
+/setblock -163 -45 -44 minecraft:air
+/setblock -161 -45 -43 minecraft:air
+/setblock -160 -45 -43 minecraft:air
+/setblock -165 -45 -43 minecraft:air
+/setblock -166 -45 -43 minecraft:air
+/setblock -163 -45 -41 minecraft:air
+/setblock -163 -45 -40 minecraft:air
+/setblock -163 -45 -45 minecraft:air
+/setblock -163 -45 -46 minecraft:air
+/setblock -163 -45 -47 minecraft:air
+/setblock -159 -45 -42 minecraft:air
+/setblock -160 -45 -42 minecraft:air
+/setblock -161 -45 -42 minecraft:air
+/setblock -162 -45 -42 minecraft:air
+/setblock -164 -45 -42 minecraft:air
+/setblock -165 -45 -42 minecraft:air
+/setblock -166 -45 -42 minecraft:air
+/setblock -167 -45 -42 minecraft:air
+/setblock -159 -45 -44 minecraft:air
+/setblock -160 -45 -44 minecraft:air
+/setblock -161 -45 -44 minecraft:air
+/setblock -162 -45 -44 minecraft:air
+/setblock -164 -45 -44 minecraft:air
+/setblock -165 -45 -44 minecraft:air
+/setblock -166 -45 -44 minecraft:air
+/setblock -167 -45 -44 minecraft:air
+/setblock -159 -45 -41 minecraft:air
+/setblock -160 -45 -41 minecraft:air
+/setblock -161 -45 -41 minecraft:air
+/setblock -162 -45 -41 minecraft:air
+/setblock -164 -45 -41 minecraft:air
+/setblock -165 -45 -41 minecraft:air
+/setblock -166 -45 -41 minecraft:air
+/setblock -167 -45 -41 minecraft:air
+/setblock -159 -45 -45 minecraft:air
+/setblock -160 -45 -45 minecraft:air
+/setblock -161 -45 -45 minecraft:air
+/setblock -162 -45 -45 minecraft:air
+/setblock -164 -45 -45 minecraft:air
+/setblock -165 -45 -45 minecraft:air
+/setblock -166 -45 -45 minecraft:air
+/setblock -167 -45 -45 minecraft:air
+/setblock -160 -45 -40 minecraft:air
+/setblock -161 -45 -40 minecraft:air
+/setblock -162 -45 -40 minecraft:air
+/setblock -164 -45 -40 minecraft:air
+/setblock -165 -45 -40 minecraft:air
+/setblock -166 -45 -40 minecraft:air
+/setblock -160 -45 -46 minecraft:air
+/setblock -161 -45 -46 minecraft:air
+/setblock -162 -45 -46 minecraft:air
+/setblock -164 -45 -46 minecraft:air
+/setblock -165 -45 -46 minecraft:air
+/setblock -166 -45 -46 minecraft:air
+/setblock -161 -45 -39 minecraft:air
+/setblock -162 -45 -39 minecraft:air
+/setblock -164 -45 -39 minecraft:air
+/setblock -165 -45 -39 minecraft:air
+/setblock -161 -45 -47 minecraft:air
+/setblock -162 -45 -47 minecraft:air
+/setblock -164 -45 -47 minecraft:air
+/setblock -165 -45 -47 minecraft:air
+
+#file: ./elevator/place_station_1_blocks
+/setblock -163 -49 -43 minecraft:crafter[orientation=north_up]
+/setblock -162 -49 -43 minecraft:crafter[orientation=north_up]
+/setblock -164 -49 -43 minecraft:crafter[orientation=north_up]
+/setblock -163 -49 -42 minecraft:crafter[orientation=north_up]
+/setblock -163 -49 -44 minecraft:crafter[orientation=north_up]
+/setblock -161 -49 -43 minecraft:deepslate_bricks
+/setblock -160 -49 -43 minecraft:deepslate_bricks
+/setblock -165 -49 -43 minecraft:deepslate_bricks
+/setblock -166 -49 -43 minecraft:deepslate_bricks
+/setblock -163 -49 -41 minecraft:deepslate_bricks
+/setblock -163 -49 -40 minecraft:deepslate_bricks
+/setblock -163 -49 -45 minecraft:deepslate_bricks
+/setblock -163 -49 -46 minecraft:deepslate_bricks
+/setblock -163 -49 -47 minecraft:deepslate_bricks
+/setblock -159 -49 -42 minecraft:deepslate_bricks
+/setblock -160 -49 -42 minecraft:deepslate_bricks
+/setblock -161 -49 -42 minecraft:deepslate_bricks
+/setblock -162 -49 -42 minecraft:deepslate_bricks
+/setblock -164 -49 -42 minecraft:deepslate_bricks
+/setblock -165 -49 -42 minecraft:deepslate_bricks
+/setblock -166 -49 -42 minecraft:deepslate_bricks
+/setblock -167 -49 -42 minecraft:deepslate_bricks
+/setblock -159 -49 -44 minecraft:deepslate_bricks
+/setblock -160 -49 -44 minecraft:deepslate_bricks
+/setblock -161 -49 -44 minecraft:deepslate_bricks
+/setblock -162 -49 -44 minecraft:deepslate_bricks
+/setblock -164 -49 -44 minecraft:deepslate_bricks
+/setblock -165 -49 -44 minecraft:deepslate_bricks
+/setblock -166 -49 -44 minecraft:deepslate_bricks
+/setblock -167 -49 -44 minecraft:deepslate_bricks
+/setblock -159 -49 -41 minecraft:deepslate_bricks
+/setblock -160 -49 -41 minecraft:deepslate_bricks
+/setblock -161 -49 -41 minecraft:deepslate_bricks
+/setblock -162 -49 -41 minecraft:deepslate_bricks
+/setblock -164 -49 -41 minecraft:deepslate_bricks
+/setblock -165 -49 -41 minecraft:deepslate_bricks
+/setblock -166 -49 -41 minecraft:deepslate_bricks
+/setblock -167 -49 -41 minecraft:deepslate_bricks
+/setblock -159 -49 -45 minecraft:deepslate_bricks
+/setblock -160 -49 -45 minecraft:deepslate_bricks
+/setblock -161 -49 -45 minecraft:deepslate_bricks
+/setblock -162 -49 -45 minecraft:deepslate_bricks
+/setblock -164 -49 -45 minecraft:deepslate_bricks
+/setblock -165 -49 -45 minecraft:deepslate_bricks
+/setblock -166 -49 -45 minecraft:deepslate_bricks
+/setblock -167 -49 -45 minecraft:deepslate_bricks
+/setblock -160 -49 -40 minecraft:deepslate_bricks
+/setblock -161 -49 -40 minecraft:deepslate_bricks
+/setblock -162 -49 -40 minecraft:deepslate_bricks
+/setblock -164 -49 -40 minecraft:deepslate_bricks
+/setblock -165 -49 -40 minecraft:deepslate_bricks
+/setblock -166 -49 -40 minecraft:deepslate_bricks
+/setblock -160 -49 -46 minecraft:deepslate_bricks
+/setblock -161 -49 -46 minecraft:deepslate_bricks
+/setblock -162 -49 -46 minecraft:deepslate_bricks
+/setblock -164 -49 -46 minecraft:deepslate_bricks
+/setblock -165 -49 -46 minecraft:deepslate_bricks
+/setblock -166 -49 -46 minecraft:deepslate_bricks
+/setblock -161 -49 -39 minecraft:deepslate_bricks
+/setblock -162 -49 -39 minecraft:deepslate_bricks
+/setblock -164 -49 -39 minecraft:deepslate_bricks
+/setblock -165 -49 -39 minecraft:deepslate_bricks
+/setblock -161 -49 -47 minecraft:deepslate_bricks
+/setblock -162 -49 -47 minecraft:deepslate_bricks
+/setblock -164 -49 -47 minecraft:deepslate_bricks
+/setblock -165 -49 -47 minecraft:deepslate_bricks
+
+#file: ./elevator/clear_station_1_blocks
+/setblock -163 -49 -43 minecraft:air
+/setblock -162 -49 -43 minecraft:air
+/setblock -164 -49 -43 minecraft:air
+/setblock -163 -49 -42 minecraft:air
+/setblock -163 -49 -44 minecraft:air
+/setblock -161 -49 -43 minecraft:air
+/setblock -160 -49 -43 minecraft:air
+/setblock -165 -49 -43 minecraft:air
+/setblock -166 -49 -43 minecraft:air
+/setblock -163 -49 -41 minecraft:air
+/setblock -163 -49 -40 minecraft:air
+/setblock -163 -49 -45 minecraft:air
+/setblock -163 -49 -46 minecraft:air
+/setblock -163 -49 -47 minecraft:air
+/setblock -159 -49 -42 minecraft:air
+/setblock -160 -49 -42 minecraft:air
+/setblock -161 -49 -42 minecraft:air
+/setblock -162 -49 -42 minecraft:air
+/setblock -164 -49 -42 minecraft:air
+/setblock -165 -49 -42 minecraft:air
+/setblock -166 -49 -42 minecraft:air
+/setblock -167 -49 -42 minecraft:air
+/setblock -159 -49 -44 minecraft:air
+/setblock -160 -49 -44 minecraft:air
+/setblock -161 -49 -44 minecraft:air
+/setblock -162 -49 -44 minecraft:air
+/setblock -164 -49 -44 minecraft:air
+/setblock -165 -49 -44 minecraft:air
+/setblock -166 -49 -44 minecraft:air
+/setblock -167 -49 -44 minecraft:air
+/setblock -159 -49 -41 minecraft:air
+/setblock -160 -49 -41 minecraft:air
+/setblock -161 -49 -41 minecraft:air
+/setblock -162 -49 -41 minecraft:air
+/setblock -164 -49 -41 minecraft:air
+/setblock -165 -49 -41 minecraft:air
+/setblock -166 -49 -41 minecraft:air
+/setblock -167 -49 -41 minecraft:air
+/setblock -159 -49 -45 minecraft:air
+/setblock -160 -49 -45 minecraft:air
+/setblock -161 -49 -45 minecraft:air
+/setblock -162 -49 -45 minecraft:air
+/setblock -164 -49 -45 minecraft:air
+/setblock -165 -49 -45 minecraft:air
+/setblock -166 -49 -45 minecraft:air
+/setblock -167 -49 -45 minecraft:air
+/setblock -160 -49 -40 minecraft:air
+/setblock -161 -49 -40 minecraft:air
+/setblock -162 -49 -40 minecraft:air
+/setblock -164 -49 -40 minecraft:air
+/setblock -165 -49 -40 minecraft:air
+/setblock -166 -49 -40 minecraft:air
+/setblock -160 -49 -46 minecraft:air
+/setblock -161 -49 -46 minecraft:air
+/setblock -162 -49 -46 minecraft:air
+/setblock -164 -49 -46 minecraft:air
+/setblock -165 -49 -46 minecraft:air
+/setblock -166 -49 -46 minecraft:air
+/setblock -161 -49 -39 minecraft:air
+/setblock -162 -49 -39 minecraft:air
+/setblock -164 -49 -39 minecraft:air
+/setblock -165 -49 -39 minecraft:air
+/setblock -161 -49 -47 minecraft:air
+/setblock -162 -49 -47 minecraft:air
+/setblock -164 -49 -47 minecraft:air
+/setblock -165 -49 -47 minecraft:air
+
+#file: ./elevator/place_station_2_blocks
+/setblock -163 -53 -43 minecraft:crafter[orientation=north_up]
+/setblock -162 -53 -43 minecraft:crafter[orientation=north_up]
+/setblock -164 -53 -43 minecraft:crafter[orientation=north_up]
+/setblock -163 -53 -42 minecraft:crafter[orientation=north_up]
+/setblock -163 -53 -44 minecraft:crafter[orientation=north_up]
+/setblock -161 -53 -43 minecraft:deepslate_bricks
+/setblock -160 -53 -43 minecraft:deepslate_bricks
+/setblock -165 -53 -43 minecraft:deepslate_bricks
+/setblock -166 -53 -43 minecraft:deepslate_bricks
+/setblock -163 -53 -41 minecraft:deepslate_bricks
+/setblock -163 -53 -40 minecraft:deepslate_bricks
+/setblock -163 -53 -45 minecraft:deepslate_bricks
+/setblock -163 -53 -46 minecraft:deepslate_bricks
+/setblock -163 -53 -47 minecraft:deepslate_bricks
+/setblock -159 -53 -42 minecraft:deepslate_bricks
+/setblock -160 -53 -42 minecraft:deepslate_bricks
+/setblock -161 -53 -42 minecraft:deepslate_bricks
+/setblock -162 -53 -42 minecraft:deepslate_bricks
+/setblock -164 -53 -42 minecraft:deepslate_bricks
+/setblock -165 -53 -42 minecraft:deepslate_bricks
+/setblock -166 -53 -42 minecraft:deepslate_bricks
+/setblock -167 -53 -42 minecraft:deepslate_bricks
+/setblock -159 -53 -44 minecraft:deepslate_bricks
+/setblock -160 -53 -44 minecraft:deepslate_bricks
+/setblock -161 -53 -44 minecraft:deepslate_bricks
+/setblock -162 -53 -44 minecraft:deepslate_bricks
+/setblock -164 -53 -44 minecraft:deepslate_bricks
+/setblock -165 -53 -44 minecraft:deepslate_bricks
+/setblock -166 -53 -44 minecraft:deepslate_bricks
+/setblock -167 -53 -44 minecraft:deepslate_bricks
+/setblock -159 -53 -41 minecraft:deepslate_bricks
+/setblock -160 -53 -41 minecraft:deepslate_bricks
+/setblock -161 -53 -41 minecraft:deepslate_bricks
+/setblock -162 -53 -41 minecraft:deepslate_bricks
+/setblock -164 -53 -41 minecraft:deepslate_bricks
+/setblock -165 -53 -41 minecraft:deepslate_bricks
+/setblock -166 -53 -41 minecraft:deepslate_bricks
+/setblock -167 -53 -41 minecraft:deepslate_bricks
+/setblock -159 -53 -45 minecraft:deepslate_bricks
+/setblock -160 -53 -45 minecraft:deepslate_bricks
+/setblock -161 -53 -45 minecraft:deepslate_bricks
+/setblock -162 -53 -45 minecraft:deepslate_bricks
+/setblock -164 -53 -45 minecraft:deepslate_bricks
+/setblock -165 -53 -45 minecraft:deepslate_bricks
+/setblock -166 -53 -45 minecraft:deepslate_bricks
+/setblock -167 -53 -45 minecraft:deepslate_bricks
+/setblock -160 -53 -40 minecraft:deepslate_bricks
+/setblock -161 -53 -40 minecraft:deepslate_bricks
+/setblock -162 -53 -40 minecraft:deepslate_bricks
+/setblock -164 -53 -40 minecraft:deepslate_bricks
+/setblock -165 -53 -40 minecraft:deepslate_bricks
+/setblock -166 -53 -40 minecraft:deepslate_bricks
+/setblock -160 -53 -46 minecraft:deepslate_bricks
+/setblock -161 -53 -46 minecraft:deepslate_bricks
+/setblock -162 -53 -46 minecraft:deepslate_bricks
+/setblock -164 -53 -46 minecraft:deepslate_bricks
+/setblock -165 -53 -46 minecraft:deepslate_bricks
+/setblock -166 -53 -46 minecraft:deepslate_bricks
+/setblock -161 -53 -39 minecraft:deepslate_bricks
+/setblock -162 -53 -39 minecraft:deepslate_bricks
+/setblock -164 -53 -39 minecraft:deepslate_bricks
+/setblock -165 -53 -39 minecraft:deepslate_bricks
+/setblock -161 -53 -47 minecraft:deepslate_bricks
+/setblock -162 -53 -47 minecraft:deepslate_bricks
+/setblock -164 -53 -47 minecraft:deepslate_bricks
+/setblock -165 -53 -47 minecraft:deepslate_bricks
+
+#file: ./elevator/clear_station_2_blocks
+/setblock -163 -53 -43 minecraft:air
+/setblock -162 -53 -43 minecraft:air
+/setblock -164 -53 -43 minecraft:air
+/setblock -163 -53 -42 minecraft:air
+/setblock -163 -53 -44 minecraft:air
+/setblock -161 -53 -43 minecraft:air
+/setblock -160 -53 -43 minecraft:air
+/setblock -165 -53 -43 minecraft:air
+/setblock -166 -53 -43 minecraft:air
+/setblock -163 -53 -41 minecraft:air
+/setblock -163 -53 -40 minecraft:air
+/setblock -163 -53 -45 minecraft:air
+/setblock -163 -53 -46 minecraft:air
+/setblock -163 -53 -47 minecraft:air
+/setblock -159 -53 -42 minecraft:air
+/setblock -160 -53 -42 minecraft:air
+/setblock -161 -53 -42 minecraft:air
+/setblock -162 -53 -42 minecraft:air
+/setblock -164 -53 -42 minecraft:air
+/setblock -165 -53 -42 minecraft:air
+/setblock -166 -53 -42 minecraft:air
+/setblock -167 -53 -42 minecraft:air
+/setblock -159 -53 -44 minecraft:air
+/setblock -160 -53 -44 minecraft:air
+/setblock -161 -53 -44 minecraft:air
+/setblock -162 -53 -44 minecraft:air
+/setblock -164 -53 -44 minecraft:air
+/setblock -165 -53 -44 minecraft:air
+/setblock -166 -53 -44 minecraft:air
+/setblock -167 -53 -44 minecraft:air
+/setblock -159 -53 -41 minecraft:air
+/setblock -160 -53 -41 minecraft:air
+/setblock -161 -53 -41 minecraft:air
+/setblock -162 -53 -41 minecraft:air
+/setblock -164 -53 -41 minecraft:air
+/setblock -165 -53 -41 minecraft:air
+/setblock -166 -53 -41 minecraft:air
+/setblock -167 -53 -41 minecraft:air
+/setblock -159 -53 -45 minecraft:air
+/setblock -160 -53 -45 minecraft:air
+/setblock -161 -53 -45 minecraft:air
+/setblock -162 -53 -45 minecraft:air
+/setblock -164 -53 -45 minecraft:air
+/setblock -165 -53 -45 minecraft:air
+/setblock -166 -53 -45 minecraft:air
+/setblock -167 -53 -45 minecraft:air
+/setblock -160 -53 -40 minecraft:air
+/setblock -161 -53 -40 minecraft:air
+/setblock -162 -53 -40 minecraft:air
+/setblock -164 -53 -40 minecraft:air
+/setblock -165 -53 -40 minecraft:air
+/setblock -166 -53 -40 minecraft:air
+/setblock -160 -53 -46 minecraft:air
+/setblock -161 -53 -46 minecraft:air
+/setblock -162 -53 -46 minecraft:air
+/setblock -164 -53 -46 minecraft:air
+/setblock -165 -53 -46 minecraft:air
+/setblock -166 -53 -46 minecraft:air
+/setblock -161 -53 -39 minecraft:air
+/setblock -162 -53 -39 minecraft:air
+/setblock -164 -53 -39 minecraft:air
+/setblock -165 -53 -39 minecraft:air
+/setblock -161 -53 -47 minecraft:air
+/setblock -162 -53 -47 minecraft:air
+/setblock -164 -53 -47 minecraft:air
+/setblock -165 -53 -47 minecraft:air
+
+#file: ./elevator/place_station_3_blocks
+/setblock -163 -57 -43 minecraft:crafter[orientation=north_up]
+/setblock -162 -57 -43 minecraft:crafter[orientation=north_up]
+/setblock -164 -57 -43 minecraft:crafter[orientation=north_up]
+/setblock -163 -57 -42 minecraft:crafter[orientation=north_up]
+/setblock -163 -57 -44 minecraft:crafter[orientation=north_up]
+/setblock -161 -57 -43 minecraft:deepslate_bricks
+/setblock -160 -57 -43 minecraft:deepslate_bricks
+/setblock -165 -57 -43 minecraft:deepslate_bricks
+/setblock -166 -57 -43 minecraft:deepslate_bricks
+/setblock -163 -57 -41 minecraft:deepslate_bricks
+/setblock -163 -57 -40 minecraft:deepslate_bricks
+/setblock -163 -57 -45 minecraft:deepslate_bricks
+/setblock -163 -57 -46 minecraft:deepslate_bricks
+/setblock -163 -57 -47 minecraft:deepslate_bricks
+/setblock -159 -57 -42 minecraft:deepslate_bricks
+/setblock -160 -57 -42 minecraft:deepslate_bricks
+/setblock -161 -57 -42 minecraft:deepslate_bricks
+/setblock -162 -57 -42 minecraft:deepslate_bricks
+/setblock -164 -57 -42 minecraft:deepslate_bricks
+/setblock -165 -57 -42 minecraft:deepslate_bricks
+/setblock -166 -57 -42 minecraft:deepslate_bricks
+/setblock -167 -57 -42 minecraft:deepslate_bricks
+/setblock -159 -57 -44 minecraft:deepslate_bricks
+/setblock -160 -57 -44 minecraft:deepslate_bricks
+/setblock -161 -57 -44 minecraft:deepslate_bricks
+/setblock -162 -57 -44 minecraft:deepslate_bricks
+/setblock -164 -57 -44 minecraft:deepslate_bricks
+/setblock -165 -57 -44 minecraft:deepslate_bricks
+/setblock -166 -57 -44 minecraft:deepslate_bricks
+/setblock -167 -57 -44 minecraft:deepslate_bricks
+/setblock -159 -57 -41 minecraft:deepslate_bricks
+/setblock -160 -57 -41 minecraft:deepslate_bricks
+/setblock -161 -57 -41 minecraft:deepslate_bricks
+/setblock -162 -57 -41 minecraft:deepslate_bricks
+/setblock -164 -57 -41 minecraft:deepslate_bricks
+/setblock -165 -57 -41 minecraft:deepslate_bricks
+/setblock -166 -57 -41 minecraft:deepslate_bricks
+/setblock -167 -57 -41 minecraft:deepslate_bricks
+/setblock -159 -57 -45 minecraft:deepslate_bricks
+/setblock -160 -57 -45 minecraft:deepslate_bricks
+/setblock -161 -57 -45 minecraft:deepslate_bricks
+/setblock -162 -57 -45 minecraft:deepslate_bricks
+/setblock -164 -57 -45 minecraft:deepslate_bricks
+/setblock -165 -57 -45 minecraft:deepslate_bricks
+/setblock -166 -57 -45 minecraft:deepslate_bricks
+/setblock -167 -57 -45 minecraft:deepslate_bricks
+/setblock -160 -57 -40 minecraft:deepslate_bricks
+/setblock -161 -57 -40 minecraft:deepslate_bricks
+/setblock -162 -57 -40 minecraft:deepslate_bricks
+/setblock -164 -57 -40 minecraft:deepslate_bricks
+/setblock -165 -57 -40 minecraft:deepslate_bricks
+/setblock -166 -57 -40 minecraft:deepslate_bricks
+/setblock -160 -57 -46 minecraft:deepslate_bricks
+/setblock -161 -57 -46 minecraft:deepslate_bricks
+/setblock -162 -57 -46 minecraft:deepslate_bricks
+/setblock -164 -57 -46 minecraft:deepslate_bricks
+/setblock -165 -57 -46 minecraft:deepslate_bricks
+/setblock -166 -57 -46 minecraft:deepslate_bricks
+/setblock -161 -57 -39 minecraft:deepslate_bricks
+/setblock -162 -57 -39 minecraft:deepslate_bricks
+/setblock -164 -57 -39 minecraft:deepslate_bricks
+/setblock -165 -57 -39 minecraft:deepslate_bricks
+/setblock -161 -57 -47 minecraft:deepslate_bricks
+/setblock -162 -57 -47 minecraft:deepslate_bricks
+/setblock -164 -57 -47 minecraft:deepslate_bricks
+/setblock -165 -57 -47 minecraft:deepslate_bricks
+
+#file: ./elevator/clear_station_3_blocks
+/setblock -163 -57 -43 minecraft:air
+/setblock -162 -57 -43 minecraft:air
+/setblock -164 -57 -43 minecraft:air
+/setblock -163 -57 -42 minecraft:air
+/setblock -163 -57 -44 minecraft:air
+/setblock -161 -57 -43 minecraft:air
+/setblock -160 -57 -43 minecraft:air
+/setblock -165 -57 -43 minecraft:air
+/setblock -166 -57 -43 minecraft:air
+/setblock -163 -57 -41 minecraft:air
+/setblock -163 -57 -40 minecraft:air
+/setblock -163 -57 -45 minecraft:air
+/setblock -163 -57 -46 minecraft:air
+/setblock -163 -57 -47 minecraft:air
+/setblock -159 -57 -42 minecraft:air
+/setblock -160 -57 -42 minecraft:air
+/setblock -161 -57 -42 minecraft:air
+/setblock -162 -57 -42 minecraft:air
+/setblock -164 -57 -42 minecraft:air
+/setblock -165 -57 -42 minecraft:air
+/setblock -166 -57 -42 minecraft:air
+/setblock -167 -57 -42 minecraft:air
+/setblock -159 -57 -44 minecraft:air
+/setblock -160 -57 -44 minecraft:air
+/setblock -161 -57 -44 minecraft:air
+/setblock -162 -57 -44 minecraft:air
+/setblock -164 -57 -44 minecraft:air
+/setblock -165 -57 -44 minecraft:air
+/setblock -166 -57 -44 minecraft:air
+/setblock -167 -57 -44 minecraft:air
+/setblock -159 -57 -41 minecraft:air
+/setblock -160 -57 -41 minecraft:air
+/setblock -161 -57 -41 minecraft:air
+/setblock -162 -57 -41 minecraft:air
+/setblock -164 -57 -41 minecraft:air
+/setblock -165 -57 -41 minecraft:air
+/setblock -166 -57 -41 minecraft:air
+/setblock -167 -57 -41 minecraft:air
+/setblock -159 -57 -45 minecraft:air
+/setblock -160 -57 -45 minecraft:air
+/setblock -161 -57 -45 minecraft:air
+/setblock -162 -57 -45 minecraft:air
+/setblock -164 -57 -45 minecraft:air
+/setblock -165 -57 -45 minecraft:air
+/setblock -166 -57 -45 minecraft:air
+/setblock -167 -57 -45 minecraft:air
+/setblock -160 -57 -40 minecraft:air
+/setblock -161 -57 -40 minecraft:air
+/setblock -162 -57 -40 minecraft:air
+/setblock -164 -57 -40 minecraft:air
+/setblock -165 -57 -40 minecraft:air
+/setblock -166 -57 -40 minecraft:air
+/setblock -160 -57 -46 minecraft:air
+/setblock -161 -57 -46 minecraft:air
+/setblock -162 -57 -46 minecraft:air
+/setblock -164 -57 -46 minecraft:air
+/setblock -165 -57 -46 minecraft:air
+/setblock -166 -57 -46 minecraft:air
+/setblock -161 -57 -39 minecraft:air
+/setblock -162 -57 -39 minecraft:air
+/setblock -164 -57 -39 minecraft:air
+/setblock -165 -57 -39 minecraft:air
+/setblock -161 -57 -47 minecraft:air
+/setblock -162 -57 -47 minecraft:air
+/setblock -164 -57 -47 minecraft:air
+/setblock -165 -57 -47 minecraft:air
+
+#file: ./elevator/go_to_floor1
+/execute if score #running escapemap_castle_elevator matches 0 unless score #current_station escapemap_castle_elevator matches 0 run scoreboard players set #target_station escapemap_castle_elevator 0
+/execute if score #running escapemap_castle_elevator matches 0 unless score #current_station escapemap_castle_elevator matches 0 run function escapemap:puzzles/castle/layer2/elevators/elevator/prepare_trip
+
+#file: ./elevator/go_to_floor2
+/execute if score #running escapemap_castle_elevator matches 0 unless score #current_station escapemap_castle_elevator matches 1 run scoreboard players set #target_station escapemap_castle_elevator 1
+/execute if score #running escapemap_castle_elevator matches 0 unless score #current_station escapemap_castle_elevator matches 1 run function escapemap:puzzles/castle/layer2/elevators/elevator/prepare_trip
+
+#file: ./elevator/go_to_floor3
+/execute if score #running escapemap_castle_elevator matches 0 unless score #current_station escapemap_castle_elevator matches 2 run scoreboard players set #target_station escapemap_castle_elevator 2
+/execute if score #running escapemap_castle_elevator matches 0 unless score #current_station escapemap_castle_elevator matches 2 run function escapemap:puzzles/castle/layer2/elevators/elevator/prepare_trip
+
+#file: ./elevator/go_to_floor4
+/execute if score #running escapemap_castle_elevator matches 0 unless score #current_station escapemap_castle_elevator matches 3 run scoreboard players set #target_station escapemap_castle_elevator 3
+/execute if score #running escapemap_castle_elevator matches 0 unless score #current_station escapemap_castle_elevator matches 3 run function escapemap:puzzles/castle/layer2/elevators/elevator/prepare_trip
+
+#file: ./elevator/prepare_trip
+/scoreboard players set #running escapemap_castle_elevator 1
+/function escapemap:puzzles/castle/layer2/elevators/elevator_listener/start
+/execute if score #current_station escapemap_castle_elevator matches 0 if score #target_station escapemap_castle_elevator matches 1 run scoreboard players set #dir_sign escapemap_castle_elevator -1
+/execute if score #current_station escapemap_castle_elevator matches 0 if score #target_station escapemap_castle_elevator matches 1 run scoreboard players set #max_cycles escapemap_castle_elevator 4
+/execute if score #current_station escapemap_castle_elevator matches 0 if score #target_station escapemap_castle_elevator matches 2 run scoreboard players set #dir_sign escapemap_castle_elevator -1
+/execute if score #current_station escapemap_castle_elevator matches 0 if score #target_station escapemap_castle_elevator matches 2 run scoreboard players set #max_cycles escapemap_castle_elevator 8
+/execute if score #current_station escapemap_castle_elevator matches 0 if score #target_station escapemap_castle_elevator matches 3 run scoreboard players set #dir_sign escapemap_castle_elevator -1
+/execute if score #current_station escapemap_castle_elevator matches 0 if score #target_station escapemap_castle_elevator matches 3 run scoreboard players set #max_cycles escapemap_castle_elevator 12
+/execute if score #current_station escapemap_castle_elevator matches 1 if score #target_station escapemap_castle_elevator matches 0 run scoreboard players set #dir_sign escapemap_castle_elevator 1
+/execute if score #current_station escapemap_castle_elevator matches 1 if score #target_station escapemap_castle_elevator matches 0 run scoreboard players set #max_cycles escapemap_castle_elevator 4
+/execute if score #current_station escapemap_castle_elevator matches 1 if score #target_station escapemap_castle_elevator matches 2 run scoreboard players set #dir_sign escapemap_castle_elevator -1
+/execute if score #current_station escapemap_castle_elevator matches 1 if score #target_station escapemap_castle_elevator matches 2 run scoreboard players set #max_cycles escapemap_castle_elevator 4
+/execute if score #current_station escapemap_castle_elevator matches 1 if score #target_station escapemap_castle_elevator matches 3 run scoreboard players set #dir_sign escapemap_castle_elevator -1
+/execute if score #current_station escapemap_castle_elevator matches 1 if score #target_station escapemap_castle_elevator matches 3 run scoreboard players set #max_cycles escapemap_castle_elevator 8
+/execute if score #current_station escapemap_castle_elevator matches 2 if score #target_station escapemap_castle_elevator matches 0 run scoreboard players set #dir_sign escapemap_castle_elevator 1
+/execute if score #current_station escapemap_castle_elevator matches 2 if score #target_station escapemap_castle_elevator matches 0 run scoreboard players set #max_cycles escapemap_castle_elevator 8
+/execute if score #current_station escapemap_castle_elevator matches 2 if score #target_station escapemap_castle_elevator matches 1 run scoreboard players set #dir_sign escapemap_castle_elevator 1
+/execute if score #current_station escapemap_castle_elevator matches 2 if score #target_station escapemap_castle_elevator matches 1 run scoreboard players set #max_cycles escapemap_castle_elevator 4
+/execute if score #current_station escapemap_castle_elevator matches 2 if score #target_station escapemap_castle_elevator matches 3 run scoreboard players set #dir_sign escapemap_castle_elevator -1
+/execute if score #current_station escapemap_castle_elevator matches 2 if score #target_station escapemap_castle_elevator matches 3 run scoreboard players set #max_cycles escapemap_castle_elevator 4
+/execute if score #current_station escapemap_castle_elevator matches 3 if score #target_station escapemap_castle_elevator matches 0 run scoreboard players set #dir_sign escapemap_castle_elevator 1
+/execute if score #current_station escapemap_castle_elevator matches 3 if score #target_station escapemap_castle_elevator matches 0 run scoreboard players set #max_cycles escapemap_castle_elevator 12
+/execute if score #current_station escapemap_castle_elevator matches 3 if score #target_station escapemap_castle_elevator matches 1 run scoreboard players set #dir_sign escapemap_castle_elevator 1
+/execute if score #current_station escapemap_castle_elevator matches 3 if score #target_station escapemap_castle_elevator matches 1 run scoreboard players set #max_cycles escapemap_castle_elevator 8
+/execute if score #current_station escapemap_castle_elevator matches 3 if score #target_station escapemap_castle_elevator matches 2 run scoreboard players set #dir_sign escapemap_castle_elevator 1
+/execute if score #current_station escapemap_castle_elevator matches 3 if score #target_station escapemap_castle_elevator matches 2 run scoreboard players set #max_cycles escapemap_castle_elevator 4
+/execute if score #current_station escapemap_castle_elevator matches 0 run function escapemap:puzzles/castle/layer2/elevators/elevator/clear_station_0_blocks
+/execute if score #current_station escapemap_castle_elevator matches 1 run function escapemap:puzzles/castle/layer2/elevators/elevator/clear_station_1_blocks
+/execute if score #current_station escapemap_castle_elevator matches 2 run function escapemap:puzzles/castle/layer2/elevators/elevator/clear_station_2_blocks
+/execute if score #current_station escapemap_castle_elevator matches 3 run function escapemap:puzzles/castle/layer2/elevators/elevator/clear_station_3_blocks
+/execute if score #current_station escapemap_castle_elevator matches 0 run execute positioned -163 -45 -43 run function escapemap:puzzles/castle/layer2/elevators/elevator/summon_entities
+/execute if score #current_station escapemap_castle_elevator matches 1 run execute positioned -163 -49 -43 run function escapemap:puzzles/castle/layer2/elevators/elevator/summon_entities
+/execute if score #current_station escapemap_castle_elevator matches 2 run execute positioned -163 -53 -43 run function escapemap:puzzles/castle/layer2/elevators/elevator/summon_entities
+/execute if score #current_station escapemap_castle_elevator matches 3 run execute positioned -163 -57 -43 run function escapemap:puzzles/castle/layer2/elevators/elevator/summon_entities
+/function escapemap:puzzles/castle/layer2/elevators/elevator/calculate_distance
+/execute as @a[x=-167.5,y=-59,z=-47.5,dx=10,dy=18,dz=10] at @s run tp @s ~ ~0.1 ~
+
+#file: ./elevator/summon_entities
+/summon minecraft:shulker -162.5 ~ -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~-1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~ -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~-1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~ -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~-1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~ -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~-1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~ -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~-1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~ -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~-1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~ -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~-1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~ -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~-1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~ -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~-1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~ -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~-1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~ -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~-1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~ -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~-1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~ -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~-1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~ -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -162.5 ~-1 -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -158.5 ~ -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -158.5 ~-1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~ -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~-1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~ -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~-1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~ -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~-1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~ -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~-1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~ -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~-1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~ -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~-1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~ -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~-1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -158.5 ~ -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -158.5 ~-1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~ -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~-1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~ -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~-1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~ -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~-1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~ -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~-1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~ -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~-1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~ -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~-1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~ -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~-1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -158.5 ~ -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -158.5 ~-1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~ -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~-1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~ -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~-1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~ -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~-1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~ -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~-1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~ -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~-1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~ -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~-1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~ -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~-1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -158.5 ~ -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -158.5 ~-1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~ -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~-1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~ -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~-1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~ -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~-1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~ -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~-1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~ -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~-1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~ -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~-1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~ -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~-1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~ -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~-1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~ -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~-1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~ -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~-1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~ -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~-1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~ -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~-1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~ -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~-1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~ -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -159.5 ~-1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~ -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~-1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~ -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~-1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~ -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~-1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~ -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~-1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~ -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -165.5 ~-1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~ -38.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~-1 -38.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~ -38.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~-1 -38.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~ -38.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~-1 -38.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~ -38.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~-1 -38.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~ -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -160.5 ~-1 -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~ -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -161.5 ~-1 -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~ -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -163.5 ~-1 -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~ -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -164.5 ~-1 -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:block_display -162.5 ~1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:crafter",Properties:{orientation:"north_up"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -161.5 ~1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:crafter",Properties:{orientation:"north_up"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -163.5 ~1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:crafter",Properties:{orientation:"north_up"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -162.5 ~1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:crafter",Properties:{orientation:"north_up"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -162.5 ~1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:crafter",Properties:{orientation:"north_up"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -160.5 ~1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -159.5 ~1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -164.5 ~1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -165.5 ~1 -42.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -162.5 ~1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -162.5 ~1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -162.5 ~1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -162.5 ~1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -162.5 ~1 -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -158.5 ~1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -159.5 ~1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -160.5 ~1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -161.5 ~1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -163.5 ~1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -164.5 ~1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -165.5 ~1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -166.5 ~1 -41.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -158.5 ~1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -159.5 ~1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -160.5 ~1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -161.5 ~1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -163.5 ~1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -164.5 ~1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -165.5 ~1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -166.5 ~1 -43.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -158.5 ~1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -159.5 ~1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -160.5 ~1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -161.5 ~1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -163.5 ~1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -164.5 ~1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -165.5 ~1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -166.5 ~1 -40.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -158.5 ~1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -159.5 ~1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -160.5 ~1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -161.5 ~1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -163.5 ~1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -164.5 ~1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -165.5 ~1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -166.5 ~1 -44.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -159.5 ~1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -160.5 ~1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -161.5 ~1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -163.5 ~1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -164.5 ~1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -165.5 ~1 -39.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -159.5 ~1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -160.5 ~1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -161.5 ~1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -163.5 ~1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -164.5 ~1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -165.5 ~1 -45.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -160.5 ~1 -38.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -161.5 ~1 -38.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -163.5 ~1 -38.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -164.5 ~1 -38.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -160.5 ~1 -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -161.5 ~1 -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -163.5 ~1 -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -164.5 ~1 -46.5 {Tags:["escapemap_castle_elevator","escapemap_castle_elevator_display"],block_state:{Name:"minecraft:deepslate_bricks"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/execute if score #dir_sign escapemap_castle_elevator matches -1 as @e[type=minecraft:shulker,tag=escapemap_castle_elevator] at @s run tp @s ~ ~-1.0 ~
+/execute if score #dir_sign escapemap_castle_elevator matches -1 run data merge entity @e[type=minecraft:shulker,tag=escapemap_castle_elevator,limit=1] {Peek:100b}
+/execute if score #dir_sign escapemap_castle_elevator matches -1 as @e[type=minecraft:shulker,tag=escapemap_castle_elevator] run data merge entity @s {Peek:100b}
+
+/function escapemap:puzzles/castle/layer2/elevators/elevator/calculate_distance
+/scoreboard players set #a escapemap_castle_elevator 0
+/scoreboard players set #b escapemap_castle_elevator 0
+/scoreboard players set #active escapemap_castle_elevator 0
+/scoreboard players set #cycle escapemap_castle_elevator 0
+/scoreboard players set #tick escapemap_castle_elevator 0
+
+#file: ./elevator/tick
+/execute if score #running escapemap_castle_elevator matches 1 run function escapemap:puzzles/castle/layer2/elevators/elevator/force_attach_face
+/scoreboard players set #do_step escapemap_castle_elevator 0
+/execute if score #running escapemap_castle_elevator matches 1 run scoreboard players add #tick escapemap_castle_elevator 1
+/execute if score #running escapemap_castle_elevator matches 1 if score #tick escapemap_castle_elevator >= #tick_divisor escapemap_castle_elevator run scoreboard players set #do_step escapemap_castle_elevator 1
+/execute if score #do_step escapemap_castle_elevator matches 1 run scoreboard players set #tick escapemap_castle_elevator 0
+/execute if score #do_step escapemap_castle_elevator matches 1 if score #active escapemap_castle_elevator matches 0 run function escapemap:puzzles/castle/layer2/elevators/elevator/step_a
+/execute if score #do_step escapemap_castle_elevator matches 1 if score #active escapemap_castle_elevator matches 1 run function escapemap:puzzles/castle/layer2/elevators/elevator/step_b
+
+#file: ./elevator/force_attach_face
+/execute as @e[type=minecraft:shulker,tag=escapemap_castle_elevator] run data merge entity @s {AttachFace:0b}
+
+#file: ./elevator/step_a
+/scoreboard players add #a escapemap_castle_elevator 1
+/execute if score #dir_sign escapemap_castle_elevator matches 1 as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_a] store result entity @s Peek byte 1 run scoreboard players get #a escapemap_castle_elevator
+/scoreboard players set #peek_tmp escapemap_castle_elevator 100
+/execute if score #dir_sign escapemap_castle_elevator matches -1 run scoreboard players operation #peek_tmp escapemap_castle_elevator -= #a escapemap_castle_elevator
+/execute if score #dir_sign escapemap_castle_elevator matches -1 as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_a] store result entity @s Peek byte 1 run scoreboard players get #peek_tmp escapemap_castle_elevator
+/execute if score #dir_sign escapemap_castle_elevator matches 1 run execute as @e[type=minecraft:block_display,tag=escapemap_castle_elevator_display] at @s run tp @s ~ ~0.01 ~
+/execute if score #dir_sign escapemap_castle_elevator matches -1 run execute as @e[type=minecraft:block_display,tag=escapemap_castle_elevator_display] at @s run tp @s ~ ~-0.01 ~
+/execute if score #a escapemap_castle_elevator matches 100.. run function escapemap:puzzles/castle/layer2/elevators/elevator/finish_a
+
+#file: ./elevator/step_b
+/scoreboard players add #b escapemap_castle_elevator 1
+/execute if score #dir_sign escapemap_castle_elevator matches 1 as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_b] store result entity @s Peek byte 1 run scoreboard players get #b escapemap_castle_elevator
+/scoreboard players set #peek_tmp escapemap_castle_elevator 100
+/execute if score #dir_sign escapemap_castle_elevator matches -1 run scoreboard players operation #peek_tmp escapemap_castle_elevator -= #b escapemap_castle_elevator
+/execute if score #dir_sign escapemap_castle_elevator matches -1 as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_b] store result entity @s Peek byte 1 run scoreboard players get #peek_tmp escapemap_castle_elevator
+/execute if score #dir_sign escapemap_castle_elevator matches 1 run execute as @e[type=minecraft:block_display,tag=escapemap_castle_elevator_display] at @s run tp @s ~ ~0.01 ~
+/execute if score #dir_sign escapemap_castle_elevator matches -1 run execute as @e[type=minecraft:block_display,tag=escapemap_castle_elevator_display] at @s run tp @s ~ ~-0.01 ~
+/execute if score #b escapemap_castle_elevator matches 100.. run function escapemap:puzzles/castle/layer2/elevators/elevator/finish_b
+
+#file: ./elevator/finish_a
+/execute if score #dir_sign escapemap_castle_elevator matches 1 run execute as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_b] at @s run tp @s ~ ~2 ~
+/execute if score #dir_sign escapemap_castle_elevator matches -1 run execute as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_a] at @s run tp @s ~ ~-2 ~
+/execute as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_a,limit=1] at @s run function escapemap:puzzles/castle/layer2/elevators/elevator/nudge_players
+/execute if score #dir_sign escapemap_castle_elevator matches 1 as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_a] run data merge entity @s {Peek:0b,AttachFace:0b}
+/execute if score #dir_sign escapemap_castle_elevator matches -1 as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_a] run data merge entity @s {Peek:100b,AttachFace:0b}
+/scoreboard players set #a escapemap_castle_elevator 0
+/scoreboard players set #active escapemap_castle_elevator 1
+/scoreboard players add #cycle escapemap_castle_elevator 1
+/execute if score #cycle escapemap_castle_elevator >= #max_cycles escapemap_castle_elevator run function escapemap:puzzles/castle/layer2/elevators/elevator/arrive
+
+#file: ./elevator/finish_b
+/execute if score #dir_sign escapemap_castle_elevator matches 1 run execute as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_a] at @s run tp @s ~ ~2 ~
+/execute if score #dir_sign escapemap_castle_elevator matches -1 run execute as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_b] at @s run tp @s ~ ~-2 ~
+/execute as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_b,limit=1] at @s run function escapemap:puzzles/castle/layer2/elevators/elevator/nudge_players
+/execute if score #dir_sign escapemap_castle_elevator matches 1 as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_b] run data merge entity @s {Peek:0b,AttachFace:0b}
+/execute if score #dir_sign escapemap_castle_elevator matches -1 as @e[type=minecraft:shulker,tag=escapemap_castle_elevator_b] run data merge entity @s {Peek:100b,AttachFace:0b}
+/scoreboard players set #b escapemap_castle_elevator 0
+/scoreboard players set #active escapemap_castle_elevator 0
+/scoreboard players add #cycle escapemap_castle_elevator 1
+/execute if score #cycle escapemap_castle_elevator >= #max_cycles escapemap_castle_elevator run function escapemap:puzzles/castle/layer2/elevators/elevator/arrive
+
+#file: ./elevator/nudge_players
+/execute as @a[x=-167.5,y=-59,z=-47.5,dx=10,dy=18,dz=10] at @s run tp @s ~ ~0.1 ~
+
+#file: ./elevator/arrive
+/scoreboard players set #running escapemap_castle_elevator 0
+/scoreboard players operation #current_station escapemap_castle_elevator = #target_station escapemap_castle_elevator
+/execute if score #current_station escapemap_castle_elevator matches 0 run function escapemap:puzzles/castle/layer2/elevators/elevator/place_station_0_blocks
+/execute if score #current_station escapemap_castle_elevator matches 1 run function escapemap:puzzles/castle/layer2/elevators/elevator/place_station_1_blocks
+/execute if score #current_station escapemap_castle_elevator matches 2 run function escapemap:puzzles/castle/layer2/elevators/elevator/place_station_2_blocks
+/execute if score #current_station escapemap_castle_elevator matches 3 run function escapemap:puzzles/castle/layer2/elevators/elevator/place_station_3_blocks
+/execute as @a[x=-167.5,y=-59,z=-47.5,dx=10,dy=18,dz=10] at @s run tp @s ~ ~0.1 ~
+/function escapemap:puzzles/castle/layer2/elevators/elevator_listener/end
+/execute as @e[type=minecraft:shulker,tag=escapemap_castle_elevator] run data merge entity @s {Peek:0b,AttachFace:0b}
+/function escapemap:puzzles/castle/layer2/elevators/elevator/despawn_entities
+
+#file: ./elevator/despawn_entities
+/execute as @e[tag=escapemap_castle_elevator] at @s run tp @s 0 -64 0
+/kill @e[type=minecraft:shulker,tag=escapemap_castle_elevator]
+/kill @e[type=minecraft:block_display,tag=escapemap_castle_elevator_display]
+
+#file: ./elevator/stop
+/scoreboard players set #running escapemap_castle_elevator 0
+/execute as @e[type=minecraft:shulker,tag=escapemap_castle_elevator] run data merge entity @s {Peek:0b,AttachFace:0b}
+/kill @e[type=minecraft:shulker,tag=escapemap_castle_elevator]
+/kill @e[type=minecraft:block_display,tag=escapemap_castle_elevator_display]
+
+#file: ./elevator/cleanup
+/scoreboard players set #running escapemap_castle_elevator 0
+/function escapemap:puzzles/castle/layer2/elevators/elevator/despawn_entities

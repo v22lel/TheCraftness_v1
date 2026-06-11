@@ -1,0 +1,11 @@
+#file: ./load
+/function escapemap:puzzles/castle/layer2/well/load
+/function escapemap:puzzles/castle/layer2/elevators/controller/load
+
+#file: ./reset
+/function escapemap:puzzles/castle/layer2/well/reset
+/function escapemap:puzzles/castle/layer2/elevators/controller/reset
+
+#file: ./tick
+/function escapemap:puzzles/castle/layer2/well/tick
+/function escapemap:puzzles/castle/layer2/elevators/controller/tick

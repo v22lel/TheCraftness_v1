@@ -1,0 +1,32 @@
+{
+  "namespace": "escapemap",
+  "id": "nexus_lift",
+  "path_prefix": "mechanical/elevators",
+  "x": 11,
+  "z": -16,
+  "stations": [
+    { "name": "bottom", "y": -25.0 },
+    { "name": "middle", "y": -20.0 },
+    { "name": "top", "y": -15.0 }
+  ],
+  "scale": 1.0,
+  "tick_divisor": 2,
+  "allow_overshoot": false,
+  "player_margin": 0.5,
+  "display_y_offset": 1.0,
+  "display_scale": 1.0,
+  "display_y_scale": 0.08,
+  "color_a": 14,
+  "color_b": 15,
+  "call_listeners": true,
+  "despawn_x": 0,
+  "despawn_y": -64,
+  "despawn_z": 0,
+  "tiles": [
+    { "rel_x": 0, "rel_z": 0, "block": "minecraft:crafter[orientation=west_up]" },
+    { "rel_x": 1, "rel_z": 0, "block": "minecraft:polished_blackstone_slab[type=top]" },
+    { "rel_x": -1, "rel_z": 0, "block": "minecraft:polished_blackstone_slab[type=top]" },
+    { "rel_x": 0, "rel_z": 1, "block": "minecraft:polished_blackstone_slab[type=top]" },
+    { "rel_x": 0, "rel_z": -1, "block": "minecraft:polished_blackstone_slab[type=top]" }
+  ]
+}

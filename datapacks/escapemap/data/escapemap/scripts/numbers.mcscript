@@ -1,0 +1,11 @@
+#file: ./numbers/load
+modaljs genNumbers() {
+    var numbers = "";
+    for (let i = 0; i < 1000; i++) {
+        numbers += `scoreboard players set ${i} numbers ${i}\n`;
+    }
+    return numbers;
+}
+
+var numbers
+genNumbers()

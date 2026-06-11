@@ -1,0 +1,111 @@
+#file: ./load
+
+var radiation
+var rad_tier
+var rad_div
+var rad_timer timer = 0
+var rad_roll
+
+#file: ./tick
+as (@a) {
+    if (area @s == 1 && radiation @s < 500) {
+        radiation @s += 1
+        if (radiation @s == 100) {
+            rad_tier @s = 1
+            /execute as @s run function escapemap:puzzles/radiation/apply_effects
+        }
+        if (radiation @s == 200) {
+            rad_tier @s = 2
+            /execute as @s run function escapemap:puzzles/radiation/apply_effects
+        }
+        if (radiation @s == 300) {
+            rad_tier @s = 3
+            /execute as @s run function escapemap:puzzles/radiation/apply_effects
+        }
+    }
+    unless (area @s == 1) {
+        if (radiation @s > 1) {
+            radiation @s -= 2
+            if ('score @s radiation matches 97..99') {
+                rad_tier @s = 0
+                /execute as @s run function escapemap:puzzles/radiation/apply_effects
+            }
+            if ('score @s radiation matches 197..199') {
+                rad_tier @s = 1
+                /execute as @s run function escapemap:puzzles/radiation/apply_effects
+            }
+            if ('score @s radiation matches 297..299') {
+                rad_tier @s = 2
+                /execute as @s run function escapemap:puzzles/radiation/apply_effects
+            }
+        }
+        if (radiation @s == 1) {
+            radiation @s = 0
+        }
+    }
+    /scoreboard players operation @s rad_div = @s radiation
+    /scoreboard players operation @s rad_div /= 5 numbers
+}
+
+rad_timer timer += 1
+if (rad_timer timer == 100) {
+    as (@a[scores={rad_tier=1..}]) {
+        /function escapemap:puzzles/radiation/radiation_tick
+    }
+    rad_timer timer = 0
+}
+
+#file: ./apply_effects
+/attribute @s minecraft:block_interaction_range modifier remove radiation
+
+if (rad_tier @s == 1) {
+    /attribute @s minecraft:block_interaction_range modifier add radiation -1.0 add_value
+}
+
+if (rad_tier @s == 2) {
+    /attribute @s minecraft:block_interaction_range modifier add radiation -2.0 add_value
+}
+
+if (rad_tier @s == 3) {
+    /attribute @s minecraft:block_interaction_range modifier add radiation -3.0 add_value
+}
+
+#file: ./radiation_tick
+/execute store result score @s rad_roll run function escapemap:explicit_randomness/roll {range:'1..6'}
+/attribute @s minecraft:movement_speed modifier remove radiation
+
+if (rad_tier @s >= 1) {
+    if (rad_roll @s == 1) {
+        /attribute @s minecraft:movement_speed modifier add radiation -0.01 add_value
+    }
+    if (rad_roll @s == 2) {
+        /attribute @s minecraft:movement_speed modifier add radiation -0.02 add_value
+    }
+}
+
+if (rad_tier @s >= 2) {
+    if (rad_roll @s == 2) {
+        /attribute @s minecraft:movement_speed modifier add radiation -0.03 add_value
+    }
+    if (rad_roll @s == 4) {
+        /attribute @s minecraft:movement_speed modifier add radiation -0.04 add_value
+    }
+}
+
+if (rad_tier @s >= 3) {
+    if (rad_roll @s == 5) {
+        /attribute @s minecraft:movement_speed modifier add radiation -0.05 add_value
+    }
+    if (rad_roll @s == 6) {
+        /attribute @s minecraft:movement_speed modifier add radiation -0.06 add_value
+    }
+}
+
+#file: ./reset
+radiation @a = 0
+rad_tier @a = 0
+rad_div @a = 0
+as (@a) {
+    /attribute @s minecraft:block_interaction_range modifier remove radiation
+    /attribute @s minecraft:movement_speed modifier remove radiation
+}

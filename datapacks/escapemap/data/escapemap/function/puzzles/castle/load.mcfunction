@@ -6,6 +6,7 @@
 ######
 execute as @a run advancement revoke @s only escapemap:cauldron_changed
 execute as @a run advancement revoke @s only escapemap:itemframe_use
+function escapemap:puzzles/castle/layer2/load
 function escapemap:puzzles/castle/tutorial/load
 function escapemap:puzzles/castle/pottery/load
 function escapemap:puzzles/castle/hay1/load

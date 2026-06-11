@@ -2200,5 +2200,53 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/chiseled_resin_bricks": {
+    "criteria": {
+      "has_resin_brick_slab": "2026-06-10 12:38:11 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/cyan_dye_from_pitcher_plant": {
+    "criteria": {
+      "has_pitcher_plant": "2026-06-10 13:10:07 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/suspicious_stew_from_torchflower": {
+    "criteria": {
+      "has_torchflower": "2026-06-10 13:11:15 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/orange_dye_from_torchflower": {
+    "criteria": {
+      "has_torchflower": "2026-06-10 13:11:15 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/orange_bed": {
+    "criteria": {
+      "has_orange_wool": "2026-06-10 13:44:52 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/orange_banner": {
+    "criteria": {
+      "has_orange_wool": "2026-06-10 13:44:52 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/orange_carpet": {
+    "criteria": {
+      "has_orange_wool": "2026-06-10 13:44:52 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/who_needs_rockets": {
+    "criteria": {
+      "who_needs_rockets": "2026-06-10 14:41:22 +0200"
+    },
+    "done": true
+  },
   "DataVersion": 4189
 }

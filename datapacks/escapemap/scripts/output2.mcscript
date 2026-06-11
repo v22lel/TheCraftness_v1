@@ -1,0 +1,199 @@
+#file: ./elevator/load
+/scoreboard objectives add escapemap_nexus_lift dummy
+/scoreboard players set #running escapemap_nexus_lift 0
+/scoreboard players set #tick_divisor escapemap_nexus_lift 2
+/scoreboard players set #current_station escapemap_nexus_lift 0
+
+#file: ./elevator/reset
+/scoreboard players set #running escapemap_nexus_lift 0
+/function escapemap:mechanical/elevators/elevator/despawn_entities
+/scoreboard players set #current_station escapemap_nexus_lift 0
+/function escapemap:mechanical/elevators/elevator/place_station_0_blocks
+
+#file: ./elevator/place_station_0_blocks
+/setblock 11 -25 -16 minecraft:crafter[orientation=west_up]
+/setblock 12 -25 -16 minecraft:polished_blackstone_slab[type=top]
+/setblock 10 -25 -16 minecraft:polished_blackstone_slab[type=top]
+/setblock 11 -25 -15 minecraft:polished_blackstone_slab[type=top]
+/setblock 11 -25 -17 minecraft:polished_blackstone_slab[type=top]
+
+#file: ./elevator/clear_station_0_blocks
+/setblock 11 -25 -16 minecraft:air
+/setblock 12 -25 -16 minecraft:air
+/setblock 10 -25 -16 minecraft:air
+/setblock 11 -25 -15 minecraft:air
+/setblock 11 -25 -17 minecraft:air
+
+#file: ./elevator/place_station_1_blocks
+/setblock 11 -20 -16 minecraft:crafter[orientation=west_up]
+/setblock 12 -20 -16 minecraft:polished_blackstone_slab[type=top]
+/setblock 10 -20 -16 minecraft:polished_blackstone_slab[type=top]
+/setblock 11 -20 -15 minecraft:polished_blackstone_slab[type=top]
+/setblock 11 -20 -17 minecraft:polished_blackstone_slab[type=top]
+
+#file: ./elevator/clear_station_1_blocks
+/setblock 11 -20 -16 minecraft:air
+/setblock 12 -20 -16 minecraft:air
+/setblock 10 -20 -16 minecraft:air
+/setblock 11 -20 -15 minecraft:air
+/setblock 11 -20 -17 minecraft:air
+
+#file: ./elevator/place_station_2_blocks
+/setblock 11 -15 -16 minecraft:crafter[orientation=west_up]
+/setblock 12 -15 -16 minecraft:polished_blackstone_slab[type=top]
+/setblock 10 -15 -16 minecraft:polished_blackstone_slab[type=top]
+/setblock 11 -15 -15 minecraft:polished_blackstone_slab[type=top]
+/setblock 11 -15 -17 minecraft:polished_blackstone_slab[type=top]
+
+#file: ./elevator/clear_station_2_blocks
+/setblock 11 -15 -16 minecraft:air
+/setblock 12 -15 -16 minecraft:air
+/setblock 10 -15 -16 minecraft:air
+/setblock 11 -15 -15 minecraft:air
+/setblock 11 -15 -17 minecraft:air
+
+#file: ./elevator/go_to_bottom
+/execute if score #running escapemap_nexus_lift matches 0 unless score #current_station escapemap_nexus_lift matches 0 run scoreboard players set #target_station escapemap_nexus_lift 0
+/execute if score #running escapemap_nexus_lift matches 0 unless score #current_station escapemap_nexus_lift matches 0 run function escapemap:mechanical/elevators/elevator/prepare_trip
+
+#file: ./elevator/go_to_middle
+/execute if score #running escapemap_nexus_lift matches 0 unless score #current_station escapemap_nexus_lift matches 1 run scoreboard players set #target_station escapemap_nexus_lift 1
+/execute if score #running escapemap_nexus_lift matches 0 unless score #current_station escapemap_nexus_lift matches 1 run function escapemap:mechanical/elevators/elevator/prepare_trip
+
+#file: ./elevator/go_to_top
+/execute if score #running escapemap_nexus_lift matches 0 unless score #current_station escapemap_nexus_lift matches 2 run scoreboard players set #target_station escapemap_nexus_lift 2
+/execute if score #running escapemap_nexus_lift matches 0 unless score #current_station escapemap_nexus_lift matches 2 run function escapemap:mechanical/elevators/elevator/prepare_trip
+
+#file: ./elevator/prepare_trip
+/scoreboard players set #running escapemap_nexus_lift 1
+/function escapemap:mechanical/elevators/elevator_listener/start
+/execute if score #current_station escapemap_nexus_lift matches 0 if score #target_station escapemap_nexus_lift matches 1 run scoreboard players set #dir_sign escapemap_nexus_lift 1
+/execute if score #current_station escapemap_nexus_lift matches 0 if score #target_station escapemap_nexus_lift matches 1 run scoreboard players set #max_cycles escapemap_nexus_lift 5
+/execute if score #current_station escapemap_nexus_lift matches 0 if score #target_station escapemap_nexus_lift matches 2 run scoreboard players set #dir_sign escapemap_nexus_lift 1
+/execute if score #current_station escapemap_nexus_lift matches 0 if score #target_station escapemap_nexus_lift matches 2 run scoreboard players set #max_cycles escapemap_nexus_lift 10
+/execute if score #current_station escapemap_nexus_lift matches 1 if score #target_station escapemap_nexus_lift matches 0 run scoreboard players set #dir_sign escapemap_nexus_lift -1
+/execute if score #current_station escapemap_nexus_lift matches 1 if score #target_station escapemap_nexus_lift matches 0 run scoreboard players set #max_cycles escapemap_nexus_lift 5
+/execute if score #current_station escapemap_nexus_lift matches 1 if score #target_station escapemap_nexus_lift matches 2 run scoreboard players set #dir_sign escapemap_nexus_lift 1
+/execute if score #current_station escapemap_nexus_lift matches 1 if score #target_station escapemap_nexus_lift matches 2 run scoreboard players set #max_cycles escapemap_nexus_lift 5
+/execute if score #current_station escapemap_nexus_lift matches 2 if score #target_station escapemap_nexus_lift matches 0 run scoreboard players set #dir_sign escapemap_nexus_lift -1
+/execute if score #current_station escapemap_nexus_lift matches 2 if score #target_station escapemap_nexus_lift matches 0 run scoreboard players set #max_cycles escapemap_nexus_lift 10
+/execute if score #current_station escapemap_nexus_lift matches 2 if score #target_station escapemap_nexus_lift matches 1 run scoreboard players set #dir_sign escapemap_nexus_lift -1
+/execute if score #current_station escapemap_nexus_lift matches 2 if score #target_station escapemap_nexus_lift matches 1 run scoreboard players set #max_cycles escapemap_nexus_lift 5
+/execute if score #current_station escapemap_nexus_lift matches 0 run function escapemap:mechanical/elevators/elevator/clear_station_0_blocks
+/execute if score #current_station escapemap_nexus_lift matches 1 run function escapemap:mechanical/elevators/elevator/clear_station_1_blocks
+/execute if score #current_station escapemap_nexus_lift matches 2 run function escapemap:mechanical/elevators/elevator/clear_station_2_blocks
+/execute if score #current_station escapemap_nexus_lift matches 0 run execute positioned 11 -25 -16 run function escapemap:mechanical/elevators/elevator/summon_entities
+/execute if score #current_station escapemap_nexus_lift matches 1 run execute positioned 11 -20 -16 run function escapemap:mechanical/elevators/elevator/summon_entities
+/execute if score #current_station escapemap_nexus_lift matches 2 run execute positioned 11 -15 -16 run function escapemap:mechanical/elevators/elevator/summon_entities
+/function escapemap:mechanical/elevators/elevator/calculate_distance
+/execute as @a[x=9.5,y=-27,z=-17.5,dx=4,dy=16,dz=4] at @s run tp @s ~ ~0.1 ~
+
+#file: ./elevator/summon_entities
+/summon minecraft:shulker 11.5 ~ -15.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker 11.5 ~-1 -15.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker 12.5 ~ -15.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker 12.5 ~-1 -15.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker 10.5 ~ -15.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker 10.5 ~-1 -15.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker 11.5 ~ -14.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker 11.5 ~-1 -14.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker 11.5 ~ -16.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker 11.5 ~-1 -16.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:block_display 11.5 ~1 -15.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_display"],block_state:{Name:"minecraft:crafter",Properties:{orientation:"west_up"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display 12.5 ~1 -15.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_display"],block_state:{Name:"minecraft:polished_blackstone_slab",Properties:{type:"top"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display 10.5 ~1 -15.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_display"],block_state:{Name:"minecraft:polished_blackstone_slab",Properties:{type:"top"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display 11.5 ~1 -14.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_display"],block_state:{Name:"minecraft:polished_blackstone_slab",Properties:{type:"top"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display 11.5 ~1 -16.5 {Tags:["escapemap_nexus_lift","escapemap_nexus_lift_display"],block_state:{Name:"minecraft:polished_blackstone_slab",Properties:{type:"top"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,0f,-0.5f],scale:[1f,0.08f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/execute if score #dir_sign escapemap_nexus_lift matches -1 as @e[type=minecraft:shulker,tag=escapemap_nexus_lift] at @s run tp @s ~ ~-1.0 ~
+/execute if score #dir_sign escapemap_nexus_lift matches -1 run data merge entity @e[type=minecraft:shulker,tag=escapemap_nexus_lift,limit=1] {Peek:100b}
+/execute if score #dir_sign escapemap_nexus_lift matches -1 as @e[type=minecraft:shulker,tag=escapemap_nexus_lift] run data merge entity @s {Peek:100b}
+
+/function escapemap:mechanical/elevators/elevator/calculate_distance
+/scoreboard players set #a escapemap_nexus_lift 0
+/scoreboard players set #b escapemap_nexus_lift 0
+/scoreboard players set #active escapemap_nexus_lift 0
+/scoreboard players set #cycle escapemap_nexus_lift 0
+/scoreboard players set #tick escapemap_nexus_lift 0
+
+#file: ./elevator/tick
+/execute if score #running escapemap_nexus_lift matches 1 run function escapemap:mechanical/elevators/elevator/force_attach_face
+/scoreboard players set #do_step escapemap_nexus_lift 0
+/execute if score #running escapemap_nexus_lift matches 1 run scoreboard players add #tick escapemap_nexus_lift 1
+/execute if score #running escapemap_nexus_lift matches 1 if score #tick escapemap_nexus_lift >= #tick_divisor escapemap_nexus_lift run scoreboard players set #do_step escapemap_nexus_lift 1
+/execute if score #do_step escapemap_nexus_lift matches 1 run scoreboard players set #tick escapemap_nexus_lift 0
+/execute if score #do_step escapemap_nexus_lift matches 1 if score #active escapemap_nexus_lift matches 0 run function escapemap:mechanical/elevators/elevator/step_a
+/execute if score #do_step escapemap_nexus_lift matches 1 if score #active escapemap_nexus_lift matches 1 run function escapemap:mechanical/elevators/elevator/step_b
+
+#file: ./elevator/force_attach_face
+/execute as @e[type=minecraft:shulker,tag=escapemap_nexus_lift] run data merge entity @s {AttachFace:0b}
+
+#file: ./elevator/step_a
+/scoreboard players add #a escapemap_nexus_lift 1
+/execute if score #dir_sign escapemap_nexus_lift matches 1 as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_a] store result entity @s Peek byte 1 run scoreboard players get #a escapemap_nexus_lift
+/scoreboard players set #peek_tmp escapemap_nexus_lift 100
+/execute if score #dir_sign escapemap_nexus_lift matches -1 run scoreboard players operation #peek_tmp escapemap_nexus_lift -= #a escapemap_nexus_lift
+/execute if score #dir_sign escapemap_nexus_lift matches -1 as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_a] store result entity @s Peek byte 1 run scoreboard players get #peek_tmp escapemap_nexus_lift
+/execute if score #dir_sign escapemap_nexus_lift matches 1 run execute as @e[type=minecraft:block_display,tag=escapemap_nexus_lift_display] at @s run tp @s ~ ~0.01 ~
+/execute if score #dir_sign escapemap_nexus_lift matches -1 run execute as @e[type=minecraft:block_display,tag=escapemap_nexus_lift_display] at @s run tp @s ~ ~-0.01 ~
+/execute if score #a escapemap_nexus_lift matches 100.. run function escapemap:mechanical/elevators/elevator/finish_a
+
+#file: ./elevator/step_b
+/scoreboard players add #b escapemap_nexus_lift 1
+/execute if score #dir_sign escapemap_nexus_lift matches 1 as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_b] store result entity @s Peek byte 1 run scoreboard players get #b escapemap_nexus_lift
+/scoreboard players set #peek_tmp escapemap_nexus_lift 100
+/execute if score #dir_sign escapemap_nexus_lift matches -1 run scoreboard players operation #peek_tmp escapemap_nexus_lift -= #b escapemap_nexus_lift
+/execute if score #dir_sign escapemap_nexus_lift matches -1 as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_b] store result entity @s Peek byte 1 run scoreboard players get #peek_tmp escapemap_nexus_lift
+/execute if score #dir_sign escapemap_nexus_lift matches 1 run execute as @e[type=minecraft:block_display,tag=escapemap_nexus_lift_display] at @s run tp @s ~ ~0.01 ~
+/execute if score #dir_sign escapemap_nexus_lift matches -1 run execute as @e[type=minecraft:block_display,tag=escapemap_nexus_lift_display] at @s run tp @s ~ ~-0.01 ~
+/execute if score #b escapemap_nexus_lift matches 100.. run function escapemap:mechanical/elevators/elevator/finish_b
+
+#file: ./elevator/finish_a
+/execute if score #dir_sign escapemap_nexus_lift matches 1 run execute as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_b] at @s run tp @s ~ ~2 ~
+/execute if score #dir_sign escapemap_nexus_lift matches -1 run execute as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_a] at @s run tp @s ~ ~-2 ~
+/execute as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_a,limit=1] at @s run function escapemap:mechanical/elevators/elevator/nudge_players
+/execute if score #dir_sign escapemap_nexus_lift matches 1 as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_a] run data merge entity @s {Peek:0b,AttachFace:0b}
+/execute if score #dir_sign escapemap_nexus_lift matches -1 as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_a] run data merge entity @s {Peek:100b,AttachFace:0b}
+/scoreboard players set #a escapemap_nexus_lift 0
+/scoreboard players set #active escapemap_nexus_lift 1
+/scoreboard players add #cycle escapemap_nexus_lift 1
+/execute if score #cycle escapemap_nexus_lift >= #max_cycles escapemap_nexus_lift run function escapemap:mechanical/elevators/elevator/arrive
+
+#file: ./elevator/finish_b
+/execute if score #dir_sign escapemap_nexus_lift matches 1 run execute as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_a] at @s run tp @s ~ ~2 ~
+/execute if score #dir_sign escapemap_nexus_lift matches -1 run execute as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_b] at @s run tp @s ~ ~-2 ~
+/execute as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_b,limit=1] at @s run function escapemap:mechanical/elevators/elevator/nudge_players
+/execute if score #dir_sign escapemap_nexus_lift matches 1 as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_b] run data merge entity @s {Peek:0b,AttachFace:0b}
+/execute if score #dir_sign escapemap_nexus_lift matches -1 as @e[type=minecraft:shulker,tag=escapemap_nexus_lift_b] run data merge entity @s {Peek:100b,AttachFace:0b}
+/scoreboard players set #b escapemap_nexus_lift 0
+/scoreboard players set #active escapemap_nexus_lift 0
+/scoreboard players add #cycle escapemap_nexus_lift 1
+/execute if score #cycle escapemap_nexus_lift >= #max_cycles escapemap_nexus_lift run function escapemap:mechanical/elevators/elevator/arrive
+
+#file: ./elevator/nudge_players
+/execute as @a[x=9.5,y=-27,z=-17.5,dx=4,dy=16,dz=4] at @s run tp @s ~ ~0.1 ~
+
+#file: ./elevator/arrive
+/scoreboard players set #running escapemap_nexus_lift 0
+/scoreboard players operation #current_station escapemap_nexus_lift = #target_station escapemap_nexus_lift
+/execute if score #current_station escapemap_nexus_lift matches 0 run function escapemap:mechanical/elevators/elevator/place_station_0_blocks
+/execute if score #current_station escapemap_nexus_lift matches 1 run function escapemap:mechanical/elevators/elevator/place_station_1_blocks
+/execute if score #current_station escapemap_nexus_lift matches 2 run function escapemap:mechanical/elevators/elevator/place_station_2_blocks
+/execute as @a[x=9.5,y=-27,z=-17.5,dx=4,dy=16,dz=4] at @s run tp @s ~ ~0.1 ~
+/function escapemap:mechanical/elevators/elevator_listener/end
+/execute as @e[type=minecraft:shulker,tag=escapemap_nexus_lift] run data merge entity @s {Peek:0b,AttachFace:0b}
+/function escapemap:mechanical/elevators/elevator/despawn_entities
+
+#file: ./elevator/despawn_entities
+/execute as @e[tag=escapemap_nexus_lift] at @s run tp @s 0 -64 0
+/kill @e[type=minecraft:shulker,tag=escapemap_nexus_lift]
+/kill @e[type=minecraft:block_display,tag=escapemap_nexus_lift_display]
+
+#file: ./elevator/stop
+/scoreboard players set #running escapemap_nexus_lift 0
+/execute as @e[type=minecraft:shulker,tag=escapemap_nexus_lift] run data merge entity @s {Peek:0b,AttachFace:0b}
+/kill @e[type=minecraft:shulker,tag=escapemap_nexus_lift]
+/kill @e[type=minecraft:block_display,tag=escapemap_nexus_lift_display]
+
+#file: ./elevator/cleanup
+/scoreboard players set #running escapemap_nexus_lift 0
+/function escapemap:mechanical/elevators/elevator/despawn_entities

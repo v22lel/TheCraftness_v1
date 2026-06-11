@@ -1,6 +1,7 @@
 
 #file: ./attic/reset
-/setblock -31 -34 68 spruce_slab[type=bottom]
+/setblock -31 -34 68 resin_brick_slab[type=bottom]
+/setblock -31 -36 68 resin_brick_wall
 /kill @e[tag=attic_breakable]
 /summon minecraft:interaction -30.5 -36 68.15 {width:0.5f,height:1f,Tags:["attic_breakable"]}
 /setblock -34 -34 64 minecraft:oak_button[face=ceiling]
@@ -25,4 +26,5 @@ if('entity @e[tag=attic_breakable,nbt={attack:{}}]') {
 }
 
 #file: ./attic/break
-/setblock -31 -34 68 air
+/setblock -31 -34 68 minecraft:sculk_vein[down=true,up=false,east=false,north=false,south=false,west=false]
+/setblock -31 -36 68 mossy_cobblestone_wall

@@ -1,0 +1,13 @@
+#file: ./explicit_randomness/load
+var explicit_randomness
+
+#file: ./explicit_randomness/enable
+explicit_randomness value = 1
+
+#file: ./explicit_randomness/disable
+explicit_randomness value = 0
+
+#file: ./explicit_randomness/roll
+'$execute store result score cache explicit_randomness if score value explicit_randomness matches 0 run random value $(range)'
+'$execute store result score cache explicit_randomness if score value explicit_randomness matches 1 run random roll $(range)'
+'return run scoreboard players get cache explicit_randomness'

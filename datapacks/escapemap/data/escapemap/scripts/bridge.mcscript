@@ -1,0 +1,9 @@
+#file: ./bridge/reset
+/kill @e[type=minecraft:block_display,tag=lighthouse_bridge]
+/execute positioned -90 -40 -16 run summon minecraft:block_display ~ ~ ~ {Tags:["lighthouse_bridge"],block_state:{Name:"minecraft:stone"}}
+
+#file: ./bridge/extend
+/execute as @e[type=minecraft:block_display,tag=lighthouse_bridge,limit=1] run data merge entity @s {start_interpolation:0,interpolation_duration:2400,transformation:{translation:[0f,0f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f]}}
+
+#file: ./bridge/retract
+/execute as @e[type=minecraft:block_display,tag=lighthouse_bridge,limit=1] run data merge entity @s {start_interpolation:0,interpolation_duration:2400,transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f]}}
