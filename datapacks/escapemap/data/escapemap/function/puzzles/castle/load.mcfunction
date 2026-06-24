@@ -22,3 +22,4 @@ function escapemap:puzzles/castle/targetsrev/load
 function escapemap:puzzles/castle/waterarrows/load
 function escapemap:puzzles/castle/secrets/walltop/load
 function escapemap:puzzles/castle/towers/load
+function escapemap:puzzles/castle/tower/load

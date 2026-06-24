@@ -2,11 +2,13 @@
 /function escapemap:puzzles/castle/tower/carpets/load
 /function escapemap:puzzles/castle/tower/lecterns/load
 /function escapemap:puzzles/castle/tower/door/load
+/function escapemap:puzzles/castle/tower/ontopofroof/reset
 
 #file: ./reset
 /function escapemap:puzzles/castle/tower/carpets/reset
 /function escapemap:puzzles/castle/tower/lecterns/reset
 /function escapemap:puzzles/castle/tower/door/reset
+/function escapemap:puzzles/castle/tower/ontopofroof/reset
 
 #file: ./tick
 /function escapemap:puzzles/castle/tower/lecterns/tick

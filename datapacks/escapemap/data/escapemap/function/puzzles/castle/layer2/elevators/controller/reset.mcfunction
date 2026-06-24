@@ -7,3 +7,5 @@
 scoreboard players set C crafters_completed 0
 fill -164 -45 -42 -162 -45 -44 air
 function escapemap:puzzles/castle/layer2/elevators/elevator/reset
+setblock -162 -56 -39 stone_button[facing=north]
+setblock -162 -56 -38 minecraft:waxed_oxidized_copper_bulb[lit=false,powered=false]

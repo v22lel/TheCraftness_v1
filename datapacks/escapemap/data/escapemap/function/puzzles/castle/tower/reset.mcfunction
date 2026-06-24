@@ -7,3 +7,4 @@
 function escapemap:puzzles/castle/tower/carpets/reset
 function escapemap:puzzles/castle/tower/lecterns/reset
 function escapemap:puzzles/castle/tower/door/reset
+function escapemap:puzzles/castle/tower/ontopofroof/reset

@@ -27,6 +27,7 @@ var castle_puzzles_completed
 /function escapemap:puzzles/castle/secrets/walltop/load
 
 /function escapemap:puzzles/castle/towers/load
+/function escapemap:puzzles/castle/tower/load
 
 #file: ./reset
 castle_puzzles_completed C = 0
@@ -52,6 +53,7 @@ castle_puzzles_completed C = 0
 /function escapemap:puzzles/castle/secrets/walltop/reset
 
 /function escapemap:puzzles/castle/towers/reset
+/function escapemap:puzzles/castle/tower/reset
 
 //staircase loot
 /clone -125 -48 116 -125 -48 116 -178 -37 -57
@@ -92,6 +94,7 @@ castle_puzzles_completed C = 0
 /function escapemap:puzzles/castle/waterarrows/onitemframe
 
 /function escapemap:puzzles/castle/towers/onitemframe
+/function escapemap:puzzles/castle/tower/ontopofroof/onitemframe
 
 #file: ./onpuzzlecomplete
 /scoreboard players add C castle_puzzles_completed 1

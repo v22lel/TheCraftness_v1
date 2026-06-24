@@ -19,6 +19,7 @@ function escapemap:puzzles/castle/targetsrev/reset
 function escapemap:puzzles/castle/waterarrows/reset
 function escapemap:puzzles/castle/secrets/walltop/reset
 function escapemap:puzzles/castle/towers/reset
+function escapemap:puzzles/castle/tower/reset
 clone -125 -48 116 -125 -48 116 -178 -37 -57
 setblock -180 -37 -19 air
 setblock -156 -33 1 air

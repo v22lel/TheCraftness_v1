@@ -1,6 +1,8 @@
 
 #file: ./reset
 
+sprint @a = 0
+
 /function escapemap:containers/reset
 
 /function escapemap:placements/reset

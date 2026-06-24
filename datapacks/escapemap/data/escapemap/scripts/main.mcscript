@@ -15,7 +15,7 @@ as (@a) {
     /function escapemap:area/tick
 }
 
-as (@a[gamemode=adventure]) {
+as (@a[gamemode=adventure,scores={sprint=0}]) {
     /attribute @s minecraft:movement_speed modifier remove minecraft:sprinting
 }
 

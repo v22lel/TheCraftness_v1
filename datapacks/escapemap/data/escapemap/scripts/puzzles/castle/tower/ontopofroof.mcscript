@@ -1,0 +1,33 @@
+#file: ./ontopofroof/load
+var castle_tower_top_complete
+
+#file: ./ontopofroof/reset
+castle_tower_top_complete P = 0
+/data merge entity @e[limit=1,tag=castle_tower_top_frames,tag=frame1] {ItemRotation:5b}
+/data merge entity @e[limit=1,tag=castle_tower_top_frames,tag=frame2] {ItemRotation:2b}
+/data merge entity @e[limit=1,tag=castle_tower_top_frames,tag=frame3] {ItemRotation:7b}
+/data merge entity @e[limit=1,tag=castle_tower_top_frames,tag=frame4] {ItemRotation:3b}
+
+/function escapemap:laser/castle/reset
+
+#file: ./ontopofroof/complete
+castle_tower_top_complete P = 1
+/function escapemap:laser/castle/turn_on
+
+#file: ./ontopofroof/check
+castle_tower_top_complete C = 0
+
+/execute if entity @e[tag=castle_tower_top_frames,tag=frame1,nbt={ItemRotation:0b}] run scoreboard players add C castle_tower_top_complete 1
+/execute if entity @e[tag=castle_tower_top_frames,tag=frame2,nbt={ItemRotation:6b}] run scoreboard players add C castle_tower_top_complete 1
+/execute if entity @e[tag=castle_tower_top_frames,tag=frame3,nbt={ItemRotation:4b}] run scoreboard players add C castle_tower_top_complete 1
+/execute if entity @e[tag=castle_tower_top_frames,tag=frame4,nbt={ItemRotation:2b}] run scoreboard players add C castle_tower_top_complete 1
+
+if(castle_tower_top_complete C == 4) {
+    /function escapemap:puzzles/castle/tower/ontopofroof/complete
+}
+
+#file: ./ontopofroof/onitemframe
+if(castle_tower_top_complete P == 0) {
+    /function escapemap:puzzles/castle/tower/ontopofroof/check
+}
+

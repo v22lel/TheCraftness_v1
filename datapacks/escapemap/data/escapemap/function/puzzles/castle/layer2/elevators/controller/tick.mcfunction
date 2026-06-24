@@ -41,3 +41,4 @@ execute if score C crafters_completed matches 4 if score #current_station escape
 execute if score C crafters_completed matches 4 if score #current_station escapemap_castle_elevator matches 3 if block -163 -57 -43 crafter{disabled_slots:[I;4]} run function escapemap:puzzles/castle/layer2/elevators/elevator/go_to_floor2
 execute if score C crafters_completed matches 4 if score #current_station escapemap_castle_elevator matches 3 if block -163 -57 -43 crafter{disabled_slots:[I;0,1,3,5,7,8]} run function escapemap:puzzles/castle/layer2/elevators/elevator/go_to_floor3
 execute if score C crafters_completed matches 4 if score #current_station escapemap_castle_elevator matches 3 if block -163 -57 -43 crafter{disabled_slots:[I;1,3,5,6]} run function escapemap:puzzles/castle/layer2/elevators/elevator/go_to_floor4
+

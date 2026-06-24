@@ -1,5 +1,7 @@
 #file: ./load
 
+var sprint
+
 /function escapemap:numbers/load
 /function escapemap:spyglass/load
 /function escapemap:area/load

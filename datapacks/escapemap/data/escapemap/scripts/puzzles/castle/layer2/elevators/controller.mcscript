@@ -24,6 +24,10 @@ crafters_completed C = 0
 /fill -164 -45 -42 -162 -45 -44 air
 /function escapemap:puzzles/castle/layer2/elevators/elevator/reset
 
+//button for compl
+/setblock -162 -56 -39 stone_button[facing=north]
+/setblock -162 -56 -38 minecraft:waxed_oxidized_copper_bulb[lit=false,powered=false]
+
 #file: ./controller/tick
 /function escapemap:puzzles/castle/layer2/elevators/elevator/tick
 
@@ -63,3 +67,7 @@ if('score C crafters_completed matches 4' && 'score #current_station escapemap_c
 if('score C crafters_completed matches 4' && 'score #current_station escapemap_castle_elevator matches 3'){
     driveElevator('-163 -57 -43')
 }
+
+#file: ./controller/complete
+/setblock -162 -56 -39 air
+/function escapemap:puzzles/complete

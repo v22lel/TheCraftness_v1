@@ -6,6 +6,7 @@
 ######
 function escapemap:mcscript/load
 
+
 function escapemap:numbers/load
 function escapemap:spyglass/load
 function escapemap:area/load
