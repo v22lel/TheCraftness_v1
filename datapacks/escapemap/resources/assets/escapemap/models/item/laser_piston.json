@@ -1,0 +1,24 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"texture_size": [128, 128],
+	"textures": {
+		"0": "escapemap:block/laser"
+	},
+	"elements": [
+		{
+			"name": "piston2",
+			"from": [6, -16, 6],
+			"to": [10, 23, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7, 8]},
+			"faces": {
+				"north": {"uv": [7.375, 0, 7.875, 4], "texture": "#0"},
+				"east": {"uv": [7.75, 0, 8.25, 4], "texture": "#0"},
+				"south": {"uv": [8.125, 0, 8.625, 4], "texture": "#0"},
+				"west": {"uv": [8.5, 0, 9, 4], "texture": "#0"},
+				"up": {"uv": [9, 0, 9.5, 0.5], "texture": "#0"},
+				"down": {"uv": [9, 0, 9.5, 0.5], "texture": "#0"}
+			}
+		}
+	]
+}

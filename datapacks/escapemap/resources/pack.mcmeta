@@ -1,7 +1,10 @@
 {
-  "pack": {
-    "pack_format": 40,
-    "description": "EscapeMap custom resourcepack",
-    "supported_formats": {"min_inclusive": 21, "max_inclusive": 99}
-  }
+	"pack": {
+		"pack_format": 46,
+		"description": "EscapeMap custom resourcepack",
+		"supported_formats": {
+			"min_inclusive": 46,
+			"max_inclusive": 54
+		}
+	}
 }
