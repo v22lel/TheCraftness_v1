@@ -49,6 +49,7 @@ as (@a) {
 
 rad_timer timer += 1
 if (rad_timer timer == 100) {
+    /execute as @a run attribute @s minecraft:movement_speed modifier remove radiation
     as (@a[scores={rad_tier=1..}]) {
         /function escapemap:puzzles/radiation/radiation_tick
     }
@@ -72,7 +73,6 @@ if (rad_tier @s == 3) {
 
 #file: ./radiation_tick
 /execute store result score @s rad_roll run function escapemap:explicit_randomness/roll {range:'1..6'}
-/attribute @s minecraft:movement_speed modifier remove radiation
 
 if (rad_tier @s >= 1) {
     if (rad_roll @s == 1) {

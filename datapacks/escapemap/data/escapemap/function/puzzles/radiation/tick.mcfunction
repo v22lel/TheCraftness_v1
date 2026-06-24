@@ -22,6 +22,7 @@ execute as @a unless score @s area matches 1 if score @s radiation matches 1 run
 execute as @a run scoreboard players operation @s rad_div = @s radiation
 execute as @a run scoreboard players operation @s rad_div /= 5 numbers
 scoreboard players add timer rad_timer 1
+execute if score timer rad_timer matches 100 as @a run attribute @s minecraft:movement_speed modifier remove radiation
 execute if score timer rad_timer matches 100 as @a[scores={rad_tier=1..}] run function escapemap:puzzles/radiation/radiation_tick
 execute if score timer rad_timer matches 100 run scoreboard players set timer rad_timer 0
 
