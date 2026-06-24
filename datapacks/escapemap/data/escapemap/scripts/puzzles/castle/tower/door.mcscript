@@ -10,23 +10,28 @@ castle_tower_door_complete P = 0
 /setblock -163 -28 -50 air
 /setblock -163 -27 -50 air
 
+/setblock -164 -28 -48 air
+/setblock -164 -28 -48 crafter[orientation=down_east]
+
+/setblock -164 -27 -50 air
+/setblock -164 -27 -50 crafter[orientation=down_east]
+
+/setblock -164 -28 -50 minecraft:waxed_oxidized_copper_bulb[lit=false,powered=false]
+
 #file: ./door/tick
 if(castle_tower_door_complete P == 0) {
     /function escapemap:puzzles/castle/tower/door/check
 }
 
 #file: ./door/check
-castle_tower_door_complete C = 0
-
-
-if(castle_tower_door_complete C == 2) {
-    /function escapemap:puzzles/castle/tower/door/complete
-}
+'execute if block -164 -28 -48 minecraft:crafter{disabled_slots:[I;0,4,8]} if block -164 -27 -50 crafter{disabled_slots:[I;3,4,5,6,8]} run function escapemap:puzzles/castle/tower/door/complete'
 
 #file: ./door/complete
 castle_tower_door_complete P = 1
-/function escapemap:rsod {pos: '-163 -28 -48', facing: 'up'}
-/function escapemap:rsod {pos: '-163 -28 -49', facing: 'up'}
-/function escapemap:rsod {pos: '-163 -28 -50', facing: 'up'}
-/function escapemap:rsod {pos: '-163 -28 -50', facing: 'up'}
-/function escapemap:rsod {pos: '-163 -27 -50', facing: 'east'}
+/function escapemap:rsod {pos: '-163 -28 -48', facing: 'east', face: 'wall'}
+/function escapemap:rsod {pos: '-163 -28 -49', facing: 'east', face: 'floor'}
+/function escapemap:rsod {pos: '-163 -28 -50', facing: 'east', face: 'wall'}
+/function escapemap:rsod {pos: '-163 -28 -50', facing: 'east', face: 'wall'}
+/function escapemap:rsod {pos: '-163 -27 -50', facing: 'east', face: 'wall'}
+
+/function escapemap:puzzles/complete

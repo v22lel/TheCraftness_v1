@@ -1,10 +1,13 @@
 #file: ./load
 /function escapemap:puzzles/castle/tower/carpets/load
 /function escapemap:puzzles/castle/tower/lecterns/load
+/function escapemap:puzzles/castle/tower/door/load
 
 #file: ./reset
 /function escapemap:puzzles/castle/tower/carpets/reset
 /function escapemap:puzzles/castle/tower/lecterns/reset
+/function escapemap:puzzles/castle/tower/door/reset
 
 #file: ./tick
 /function escapemap:puzzles/castle/tower/lecterns/tick
+/function escapemap:puzzles/castle/tower/door/tick

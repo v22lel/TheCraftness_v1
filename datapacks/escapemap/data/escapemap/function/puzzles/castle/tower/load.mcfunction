@@ -6,3 +6,4 @@
 ######
 function escapemap:puzzles/castle/tower/carpets/load
 function escapemap:puzzles/castle/tower/lecterns/load
+function escapemap:puzzles/castle/tower/door/load

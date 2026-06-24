@@ -37,23 +37,17 @@ scoreboard objectives add numbers dummy
 # it is used by the compiler!
 scoreboard objectives add place0 dummy
 
-# Extended from functions/puzzles/castle/farm.mcscript
-# to data/escapemap/functions/mcscript/load.mcfunction
-# please do not touch this file!
-# it is used by the compiler!
-scoreboard objectives add puzzle_castle_farm_complete dummy
-
 # Extended from functions/puzzles/castle/common.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
 # please do not touch this file!
 # it is used by the compiler!
 scoreboard objectives add castle_puzzles_completed dummy
 
-# Extended from functions/puzzles/castle/hay1.mcscript
+# Extended from functions/puzzles/castle/farm.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
 # please do not touch this file!
 # it is used by the compiler!
-scoreboard objectives add puzzle_castle_hay1_complete dummy
+scoreboard objectives add puzzle_castle_farm_complete dummy
 
 # Extended from functions/puzzles/castle/hay2.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
@@ -66,6 +60,12 @@ scoreboard objectives add puzzle_castle_hay2_complete dummy
 # please do not touch this file!
 # it is used by the compiler!
 scoreboard objectives add puzzle_castle_hay3_complete dummy
+
+# Extended from functions/puzzles/castle/hay1.mcscript
+# to data/escapemap/functions/mcscript/load.mcfunction
+# please do not touch this file!
+# it is used by the compiler!
+scoreboard objectives add puzzle_castle_hay1_complete dummy
 
 # Extended from castle/layer2/elevators/controller.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
@@ -85,23 +85,11 @@ scoreboard objectives add puzzle_castle_hay4_complete dummy
 # it is used by the compiler!
 scoreboard objectives add puzzle_castle2_well_complete dummy
 
-# Extended from puzzles/castle/secrets/wall_top.mcscript
-# to data/escapemap/functions/mcscript/load.mcfunction
-# please do not touch this file!
-# it is used by the compiler!
-scoreboard objectives add secrets_castle_walltop_complete dummy
-
 # Extended from functions/puzzles/castle/pottery.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
 # please do not touch this file!
 # it is used by the compiler!
 scoreboard objectives add puzzle_castle_pottery_complete dummy
-
-# Extended from functions/puzzles/castle/smith.mcscript
-# to data/escapemap/functions/mcscript/load.mcfunction
-# please do not touch this file!
-# it is used by the compiler!
-scoreboard objectives add puzzle_castle_smith_complete dummy
 
 # Extended from functions/puzzles/castle/targets.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
@@ -109,11 +97,11 @@ scoreboard objectives add puzzle_castle_smith_complete dummy
 # it is used by the compiler!
 scoreboard objectives add puzzle_castle_targets_complete dummy
 
-# Extended from puzzles/castle/tower/carpets.mcscript
+# Extended from functions/puzzles/castle/smith.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
 # please do not touch this file!
 # it is used by the compiler!
-scoreboard objectives add carpets_progress dummy
+scoreboard objectives add puzzle_castle_smith_complete dummy
 
 # Extended from functions/puzzles/castle/targets_rev.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
@@ -121,11 +109,35 @@ scoreboard objectives add carpets_progress dummy
 # it is used by the compiler!
 scoreboard objectives add puzzle_castle_targets_rev_complete dummy
 
+# Extended from puzzles/castle/tower/carpets.mcscript
+# to data/escapemap/functions/mcscript/load.mcfunction
+# please do not touch this file!
+# it is used by the compiler!
+scoreboard objectives add carpets_progress dummy
+
+# Extended from puzzles/castle/secrets/wall_top.mcscript
+# to data/escapemap/functions/mcscript/load.mcfunction
+# please do not touch this file!
+# it is used by the compiler!
+scoreboard objectives add secrets_castle_walltop_complete dummy
+
 # Extended from puzzles/castle/tower/lecterns.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
 # please do not touch this file!
 # it is used by the compiler!
 scoreboard objectives add castle_lecterns_completed dummy
+
+# Extended from puzzles/castle/tower/door.mcscript
+# to data/escapemap/functions/mcscript/load.mcfunction
+# please do not touch this file!
+# it is used by the compiler!
+scoreboard objectives add castle_tower_door_complete dummy
+
+# Extended from functions/puzzles/castle/tutorial.mcscript
+# to data/escapemap/functions/mcscript/load.mcfunction
+# please do not touch this file!
+# it is used by the compiler!
+scoreboard objectives add puzzle_castle_tutorial_complete dummy
 
 # Extended from functions/puzzles/castle/towers.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
@@ -146,12 +158,6 @@ scoreboard objectives add puzzle_castle_water_arrows_complete dummy
 scoreboard objectives add puzzle_basement_complete dummy
 scoreboard objectives add puzzle_basement_secret_complete dummy
 
-# Extended from puzzles/castle/tower/door.mcscript
-# to data/escapemap/functions/mcscript/load.mcfunction
-# please do not touch this file!
-# it is used by the compiler!
-scoreboard objectives add castle_tower_door_complete dummy
-
 # Extended from escapemap/functions/puzzles/common.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
 # please do not touch this file!
@@ -159,12 +165,6 @@ scoreboard objectives add castle_tower_door_complete dummy
 scoreboard objectives add puzzles_complete dummy
 scoreboard objectives add secrets_complete dummy
 scoreboard objectives add super_secrets_complete dummy
-
-# Extended from functions/puzzles/castle/tutorial.mcscript
-# to data/escapemap/functions/mcscript/load.mcfunction
-# please do not touch this file!
-# it is used by the compiler!
-scoreboard objectives add puzzle_castle_tutorial_complete dummy
 
 # Extended from functions/puzzles/radiation/common.mcscript
 # to data/escapemap/functions/mcscript/load.mcfunction
