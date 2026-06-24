@@ -6,3 +6,4 @@
 ######
 scoreboard players add C castle_puzzles_completed 1
 execute if score C castle_puzzles_completed matches 11.. run setblock -156 -33 1 redstone_torch
+

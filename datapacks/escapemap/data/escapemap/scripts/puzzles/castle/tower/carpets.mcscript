@@ -1,0 +1,44 @@
+const carpet_req = 16
+
+#file: ./carpets/load
+var carpets_progress P = 0
+
+#file: ./carpets/reset
+carpets_progress P = 0
+/setblock -166 -46 -24 minecraft:waxed_oxidized_copper_bulb[lit=false,powered=false]
+//trapdoor in big boy tower
+/setblock -163 -13 -53 minecraft:iron_trapdoor[half=top]
+
+#file: ./carpets/reset_progress
+if(carpets_progress P < 22222) {
+    carpets_progress P = 0
+}
+
+#file: ./carpets/step_right
+if(carpets_progress P < 22222) {
+    /scoreboard players add P carpets_progress 1
+}
+
+#file: ./carpets/step_finish
+if(carpets_progress P < 22222) {
+    /scoreboard players add P carpets_progress 1
+}
+
+/function escapemap:puzzles/castle/tower/carpets/check
+
+#file: ./carpets/step_wrong
+if(carpets_progress P < 22222) {
+    /scoreboard players add P carpets_progress 17
+}
+
+#file: ./carpets/check
+if(carpets_progress P == $(carpet_req)) {
+    /function escapemap:puzzles/castle/tower/carpets/complete
+    carpets_progress P = 22222
+}
+
+#file: ./carpets/complete
+/setblock -166 -46 -24 minecraft:waxed_oxidized_copper_bulb[lit=true,powered=false]
+/function escapemap:puzzles/complete
+//trapdoor in bigboy tower again
+/setblock -163 -13 -53 minecraft:iron_trapdoor[half=top,powered=true,open=true]

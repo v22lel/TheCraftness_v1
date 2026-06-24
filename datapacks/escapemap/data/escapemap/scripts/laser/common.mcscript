@@ -1,0 +1,21 @@
+#file: ./load
+var lasers_complete @a = 0
+
+// imagine this is your code
+
+#file: ./complete_laser
+/function escapemap:laser/animation
+/schedule escapemap:thingy/enable_laser 200 replace
+
+#file: ./enable_laser
+/function escapemap:laser/complete {p:"90 -25 90",tag:"mytesttag"}
+
+// end of your code
+
+#file: ./complete
+'$execute unless entity @e[tag=$(tag)] run scoreboard players add @a lasers_complete 1'
+'$execute unless entity @e[tag=$(tag)] run summon end_crystal $(p) {HasVisualFire:0b,NoGravity:1b,Silent:1b,Invulnerable:1b,ShowBottom:0b,Tags:["crystal_laser","$(tag)"],beam_target:[I;46,24,-60]}'
+
+#file: ./reset
+lasers_complete @a = 0
+/kill @e[tag=crystal_laser]

@@ -8,7 +8,6 @@ var super_secrets_complete
 /function escapemap:puzzles/castle/load
 /function escapemap:puzzles/radiation/load
 
-// TODO: sounds
 #file: ./complete
 puzzles_complete @a += 1
 /execute as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~

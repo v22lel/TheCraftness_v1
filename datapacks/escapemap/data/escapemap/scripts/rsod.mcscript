@@ -1,0 +1,2 @@
+#file: ./rsod
+'$setblock $(pos) minecraft:jungle_button[facing=$(facing),powered=true]'

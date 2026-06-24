@@ -1,0 +1,50 @@
+var castle_lecterns_completed
+
+modal testLectern(pos, page) {
+    if('data block $(pos) {Page: $(page)}') {
+        castle_lecterns_completed C += 1
+    }
+}
+
+modal resetLectern(pos, page) {
+    /data merge block $(pos) {Page: $(page)}
+}
+
+#file: ./lecterns/load
+
+#file: ./lecterns/reset
+castle_lecterns_completed P = 0
+/setblock -163 -24 -47 minecraft:waxed_oxidized_copper_bulb[powered=false,lit=false]
+/setblock -163 -23 -48 minecraft:iron_trapdoor[open=true]
+/setblock -163 -21 -48 barrier
+
+resetLectern('-160 -24 -52', '2')
+resetLectern('-160 -24 -50', '0')
+resetLectern('-161 -24 -48', '1')
+resetLectern('-166 -24 -48', '1')
+resetLectern('-166 -24 -50', '0')
+resetLectern('-166 -24 -52', '2')
+
+#file: ./lecterns/tick
+if(castle_lecterns_completed P == 0) {
+    /function escapemap:puzzles/castle/tower/lecterns/check
+}
+
+#file: ./lecterns/check
+castle_lecterns_completed C = 0
+testLectern('-160 -24 -52', '0')
+testLectern('-160 -24 -50', '1')
+testLectern('-161 -24 -48', '2')
+testLectern('-166 -24 -48', '0')
+testLectern('-166 -24 -50', '2')
+testLectern('-166 -24 -52', '1')
+if(castle_lecterns_completed C == 6) {
+    /function escapemap:puzzles/castle/tower/lecterns/complete
+}
+
+#file: ./lecterns/complete
+castle_lecterns_completed P = 1
+/setblock -163 -24 -47 minecraft:waxed_oxidized_copper_bulb[powered=false,lit=true]
+/setblock -163 -23 -48 minecraft:iron_trapdoor
+/setblock -163 -21 -48 air
+/function escapemap:puzzles/complete

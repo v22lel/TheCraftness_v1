@@ -3,6 +3,8 @@ var castle_puzzles_completed
 #file: ./load
 /execute as @a run advancement revoke @s only escapemap:cauldron_changed
 /execute as @a run advancement revoke @s only escapemap:itemframe_use
+/execute as @a run advancement revoke @s only escapemap:composter_changed
+/execute as @a run advancement revoke @s only escapemap:armorstand_interaction
 
 /function escapemap:puzzles/castle/layer2/load
 
@@ -61,6 +63,7 @@ castle_puzzles_completed C = 0
 
 #file: ./tick
 /function escapemap:puzzles/castle/layer2/tick
+/function escapemap:puzzles/castle/tower/tick
 
 #file: ./oncauldron
 /advancement revoke @s only escapemap:cauldron_changed
@@ -96,3 +99,6 @@ castle_puzzles_completed C = 0
 if('score C castle_puzzles_completed matches 11..') {
     /setblock -156 -33 1 redstone_torch
 }
+
+#file: ./onarmorstandinteract
+/advancement revoke @s only escapemap:armorstand_interaction

@@ -1,0 +1,32 @@
+//the door in the big boy tower with the 2 thingies
+#file: ./door/load
+var castle_tower_door_complete
+
+#file: ./door/reset
+castle_tower_door_complete P = 0
+/setblock -163 -28 -48 air
+/setblock -163 -28 -49 air
+/setblock -163 -28 -50 air
+/setblock -163 -28 -50 air
+/setblock -163 -27 -50 air
+
+#file: ./door/tick
+if(castle_tower_door_complete P == 0) {
+    /function escapemap:puzzles/castle/tower/door/check
+}
+
+#file: ./door/check
+castle_tower_door_complete C = 0
+
+
+if(castle_tower_door_complete C == 2) {
+    /function escapemap:puzzles/castle/tower/door/complete
+}
+
+#file: ./door/complete
+castle_tower_door_complete P = 1
+/function escapemap:rsod {pos: '-163 -28 -48', facing: 'up'}
+/function escapemap:rsod {pos: '-163 -28 -49', facing: 'up'}
+/function escapemap:rsod {pos: '-163 -28 -50', facing: 'up'}
+/function escapemap:rsod {pos: '-163 -28 -50', facing: 'up'}
+/function escapemap:rsod {pos: '-163 -27 -50', facing: 'east'}
