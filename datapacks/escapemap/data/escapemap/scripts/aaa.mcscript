@@ -47,3 +47,13 @@ const basement = Map{
     "dy":"10",
     "dz":"12"
 }
+
+const mini_cave_id = 6
+const mini_cave = Map{
+    "x":"14",
+    "y":"-28",
+    "z":"-91",
+    "dx":"18",
+    "dy":"12",
+    "dz":"16"
+}

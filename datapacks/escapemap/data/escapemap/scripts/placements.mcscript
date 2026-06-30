@@ -16,6 +16,9 @@ if('block -140 -42 122 #slabs' && 'entity @a[scores={place0=0}]') {
 #file: ./placements/reset
 place0 @a = 0
 
+// mini cave
+/setblock 28 -23 -80 dead_brain_coral_block
+
 //spawn slab
 /setblock -140 -40 122 barrier
 /setblock -140 -40 123 barrier

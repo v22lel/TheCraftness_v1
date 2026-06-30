@@ -1,0 +1,18 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:can_break": {
+        "blocks": [
+          "minecraft:dead_brain_coral_block"
+        ]
+      },
+      "minecraft:custom_data": {
+        "puzzle": {
+          "persistent": true,
+          "id": "multitool"
+        }
+      }
+    }
+  }
+]

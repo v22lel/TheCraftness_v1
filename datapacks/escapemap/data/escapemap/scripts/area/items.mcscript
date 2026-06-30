@@ -37,6 +37,9 @@ modifyInventory('minecraft:shears[minecraft:custom_data~{puzzle:{id:"multitool"}
 #file: ./items/multitool_spawn_tutorial
 modifyInventory('minecraft:shears[minecraft:custom_data~{puzzle:{id:"multitool"}}]', 'escapemap:multitool/spawn_tutorial')
 
+#file: ./items/multitool_mini_cave
+modifyInventory('minecraft:shears[minecraft:custom_data~{puzzle:{id:"multitool"}}]', 'escapemap:multitool/mini_cave')
+
 #file: ./items/village_yard_redstone_neutral
 modifyInventory('minecraft:redstone[minecraft:custom_data~{puzzle:{id:"village_yard"}}]', 'escapemap:village_yard_redstone/neutral')
 
