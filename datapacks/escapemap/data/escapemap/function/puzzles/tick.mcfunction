@@ -9,3 +9,4 @@ function escapemap:puzzles/spawn/tick
 function escapemap:puzzles/red_candle/tick
 function escapemap:puzzles/castle/tick
 function escapemap:puzzles/radiation/tick
+function escapemap:puzzles/desert/tick

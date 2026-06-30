@@ -1,0 +1,73 @@
+#file: ./faucet_controller/load
+var faucet_progress
+var handle_cooldown
+var faucet_ticker
+var faucet_complete
+
+#file: ./faucet_controller/reset
+faucet_progress F = 0
+handle_cooldown F = 0
+faucet_ticker F = 0
+faucet_complete P = 0
+/function escapemap:puzzles/desert/faucet/kill
+/function escapemap:puzzles/desert/faucet/spawn
+/setblock -178 -38 67 water
+/setblock -178 -38 69 minecraft:waxed_oxidized_copper_bulb[lit=false]
+
+#file: ./faucet_controller/tick
+if ('score F handle_cooldown matches 1..'){
+    handle_cooldown F -= 1
+    faucet_progress F += 1
+}
+
+if ('score F faucet_progress matches 2400..' && 'score P faucet_complete matches 0'){
+    faucet_progress F = 2400
+    /function escapemap:puzzles/desert/faucet_controller/complete
+    faucet_complete P = 1
+}
+
+faucet_ticker F += 1
+if ('score F faucet_ticker matches 13..') {
+    faucet_ticker F = 1
+}
+
+if ('score F faucet_progress matches ..200') {
+    /execute positioned -178 -35.7 67.65 run particle minecraft:snowflake ~ ~ ~ 0 -2 0 0.1 0 normal
+}
+
+if ('score F faucet_progress matches 201..400' && 'score F faucet_ticker matches ..10') {
+    /execute positioned -178 -35.7 67.65 run particle minecraft:snowflake ~ ~ ~ 0 -2 0 0.1 0 normal
+}
+
+if ('score F faucet_progress matches 401..700' && 'score F faucet_ticker matches ..8') {
+    /execute positioned -178 -35.7 67.65 run particle minecraft:snowflake ~ ~ ~ 0 -2 0 0.1 0 normal
+}
+
+if ('score F faucet_progress matches 701..1000' && 'score F faucet_ticker matches ..6') {
+    /execute positioned -178 -35.7 67.65 run particle minecraft:snowflake ~ ~ ~ 0 -2 0 0.1 0 normal
+}
+
+if ('score F faucet_progress matches 1001..1300' && 'score F faucet_ticker matches ..4') {
+    /execute positioned -178 -35.7 67.65 run particle minecraft:snowflake ~ ~ ~ 0 -2 0 0.1 0 normal
+}
+
+if ('score F faucet_progress matches 1301..1700' && 'score F faucet_ticker matches ..3') {
+    /execute positioned -178 -35.7 67.65 run particle minecraft:snowflake ~ ~ ~ 0 -2 0 0.1 0 normal
+}
+
+if ('score F faucet_progress matches 1701..2100' && 'score F faucet_ticker matches ..2') {
+    /execute positioned -178 -35.7 67.65 run particle minecraft:snowflake ~ ~ ~ 0 -2 0 0.1 0 normal
+}
+
+if ('score F faucet_progress matches 2101..2399' && 'score F faucet_ticker matches 1') {
+    /execute positioned -178 -35.7 67.65 run particle minecraft:snowflake ~ ~ ~ 0 -2 0 0.1 0 normal
+}
+
+#file: ./faucet_controller/onrotate
+/execute positioned -178 -36 68 run playsound minecraft:item.spyglass.use master @a
+handle_cooldown F = 20
+
+#file: ./faucet_controller/complete
+/setblock -178 -38 67 air
+/setblock -178 -38 69 minecraft:waxed_oxidized_copper_bulb[lit=true]
+/function escapemap:puzzles/complete

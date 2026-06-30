@@ -1,0 +1,22 @@
+#file: ./shore_door/load
+var desert_shore_door_complete
+
+#file: ./shore_door/reset
+desert_shore_door_complete P = 0
+
+/setblock -200 -41 29 minecraft:waxed_oxidized_copper_bulb[lit=false]
+
+/setblock -202 -43 30 lever[powered=false,facing=west]
+/setblock -200 -43 30 minecraft:redstone_wall_torch[lit=true,facing=east]
+
+/clone -125 -48 115 -125 -48 115 -196 -40 30
+
+#file: ./shore_door/complete
+if(desert_shore_door_complete P == 0) {
+    /setblock -200 -41 29 minecraft:waxed_oxidized_copper_bulb[lit=true]
+    /function escapemap:puzzles/complete
+
+    /setblock -202 -43 30 lever[powered=true,facing=west]
+    /setblock -200 -43 30 minecraft:redstone_wall_torch[lit=false,facing=east]
+}
+desert_shore_door_complete P = 1

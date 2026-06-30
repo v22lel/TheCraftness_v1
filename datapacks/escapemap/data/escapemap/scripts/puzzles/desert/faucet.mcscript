@@ -1,0 +1,35 @@
+#file: ./faucet/spawn
+/kill @e[tag=escapemap_faucet_base]
+/kill @e[tag=escapemap_faucet_handle]
+/kill @e[tag=faucet_interaction]
+// Spawn Faucet Base facing specified orientation
+'summon minecraft:item_display -177.500 -36.500 68.200 {Rotation:[180.0f,0f],Tags:["faucet_part","escapemap_faucet_base"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model": "escapemap:faucet_base"}},item_display:"fixed",brightness:{block:15,sky:15}}'
+// Spawn Interaction Zone elevated near the physical handle location
+'summon minecraft:interaction -177.500 -35.400 68.200 {Tags:["faucet_interaction"],width:0.5f,height:0.2f}'
+
+#file: ./faucet/attach_handle
+// Clear 1 specific custom paper model handle item out of the active main hand
+// Spawns the separate handle display matching the base facing orientation
+'execute as @p if items entity @s weapon.mainhand minecraft:paper[minecraft:item_model="escapemap:faucet_handle"] run summon minecraft:item_display -177.500 -34.800 68.200 {Rotation:[180.0f,0f],Tags:["faucet_part","escapemap_faucet_handle"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model": "escapemap:faucet_handle"}},item_display:"fixed",brightness:{block:15,sky:15}}'
+// Set target state flags
+'execute as @p if items entity @s weapon.mainhand minecraft:paper[minecraft:item_model="escapemap:faucet_handle"] run tag @e[tag=escapemap_faucet_base,limit=1] add handle_attached'
+'execute as @p if items entity @s weapon.mainhand minecraft:paper[minecraft:item_model="escapemap:faucet_handle"] run title @s actionbar {"text":"Handle fixed onto the faucet.","color":"blue"}'
+'execute as @p if items entity @s weapon.mainhand minecraft:paper[minecraft:item_model="escapemap:faucet_handle"] run clear @s minecraft:paper[minecraft:item_model="escapemap:faucet_handle"] 1'
+
+#file: ./faucet/main_tick
+// Evaluate clicks based on interaction block component presence
+'execute as @e[tag=faucet_interaction,nbt={interaction:{}}] at @s as @e[tag=escapemap_faucet_base,tag=!handle_attached,limit=1] run function escapemap:puzzles/desert/faucet/attach_handle'
+'execute as @e[tag=faucet_interaction,nbt={interaction:{}}] at @s if entity @e[tag=escapemap_faucet_base,tag=handle_attached,limit=1] run function escapemap:puzzles/desert/faucet/rotate_handle'
+// Purge structural interaction entry to capture future events
+'execute as @e[tag=faucet_interaction,nbt={interaction:{}}] run data remove entity @s interaction'
+
+#file: ./faucet/rotate_handle
+'execute as @e[tag=escapemap_faucet_handle,limit=1] at @s run tp @s ~ ~ ~ ~2.0 ~'
+// Global external callback signal execution
+/function escapemap:puzzles/desert/faucet_controller/onrotate
+
+#file: ./faucet/kill
+/kill @e[tag=escapemap_faucet_base]
+/kill @e[tag=escapemap_faucet_handle]
+/kill @e[tag=faucet_interaction]
+

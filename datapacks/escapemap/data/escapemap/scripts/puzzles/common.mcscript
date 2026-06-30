@@ -7,6 +7,7 @@ var super_secrets_complete
 /function escapemap:puzzles/red_candle/load
 /function escapemap:puzzles/castle/load
 /function escapemap:puzzles/radiation/load
+/function escapemap:puzzles/desert/load
 
 #file: ./complete
 puzzles_complete @a += 1
@@ -29,6 +30,7 @@ super_secrets_complete @a += 1
 /function escapemap:puzzles/red_candle/tick
 /function escapemap:puzzles/castle/tick
 /function escapemap:puzzles/radiation/tick
+/function escapemap:puzzles/desert/tick
 
 #file: ./reset
 puzzles_complete @a = 0
@@ -40,3 +42,4 @@ super_secrets_complete @a = 0
 /function escapemap:puzzles/red_candle/reset
 /function escapemap:puzzles/spawn/reset
 /function escapemap:puzzles/radiation/reset
+/function escapemap:puzzles/desert/reset

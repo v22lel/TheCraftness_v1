@@ -4138,5 +4138,17 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/book": {
+    "criteria": {
+      "has_paper": "2026-06-30 16:41:41 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cartography_table": {
+    "criteria": {
+      "has_paper": "2026-06-30 16:41:41 +0200"
+    },
+    "done": true
+  },
   "DataVersion": 4189
 }
