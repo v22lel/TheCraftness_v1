@@ -1,0 +1,45 @@
+#file: ./ruins/load
+var ruins_complete
+
+#file: ./ruins/leaves_update
+/execute unless block -182 -35 63 pale_oak_leaves run setblock -182 -36 63 red_terracotta
+/execute if block -182 -35 63 pale_oak_leaves run setblock -182 -36 63 redstone_block
+/execute unless block -182 -35 63 pale_oak_leaves unless block -184 -36 64 redstone_wire[power=5] run setblock -183 -32 63 barrier
+/execute if block -182 -35 63 pale_oak_leaves run setblock -183 -32 63 air
+
+/execute unless block -185 -36 62 pale_oak_leaves run setblock -185 -37 62 red_terracotta
+/execute if block -185 -36 62 pale_oak_leaves run setblock -185 -37 62 redstone_block
+/execute unless block -185 -36 62 air run setblock -185 -34 62 air
+/execute if block -185 -36 62 air run setblock -185 -34 62 barrier
+
+/execute unless block -185 -36 58 air run setblock -185 -34 58 air
+/execute if block -185 -36 58 air run setblock -185 -34 58 barrier
+
+/execute unless block -178 -34 64 air run setblock -178 -32 64 air
+/execute if block -178 -34 64 air run setblock -178 -32 64 barrier
+/execute if block -178 -34 64 pale_oak_leaves run setblock -178 -34 64 oak_leaves
+
+
+#file: ./ruins/reset
+ruins_complete R = 0
+
+/setblock -185 -36 62 air
+/setblock -185 -36 58 air
+/setblock -182 -35 63 air
+/setblock -178 -34 64 air
+/function escapemap:puzzles/desert/ruins/leaves_update
+
+/setblock -182 -30 64 waxed_oxidized_copper_bulb[lit=false,powered=false]
+/setblock -181 -31 64 stone_button[facing=east]
+
+// wall
+/clone -125 -48 114 -125 -48 114 -178 -32 53
+// slab
+/clone -125 -48 113 -125 -48 113 -191 -29 51
+
+#file: ./ruins/check
+if (ruins_complete R == 0 && 'block -182 -30 64 waxed_oxidized_copper_bulb[lit=true]') {
+    /setblock -181 -31 64 air
+    /function escapemap:puzzles/complete
+    ruins_complete R = 1
+}

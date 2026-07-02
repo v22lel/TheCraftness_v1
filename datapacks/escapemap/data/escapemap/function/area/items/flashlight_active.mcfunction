@@ -175,3 +175,4 @@ execute if items entity @s inventory.24 minecraft:soul_torch[minecraft:custom_da
 execute if items entity @s inventory.25 minecraft:soul_torch[minecraft:custom_data~{puzzle:{id:"flashlight"}}] run item modify entity @s inventory.25 escapemap:flashlight/active
 
 execute if items entity @s inventory.26 minecraft:soul_torch[minecraft:custom_data~{puzzle:{id:"flashlight"}}] run item modify entity @s inventory.26 escapemap:flashlight/active
+

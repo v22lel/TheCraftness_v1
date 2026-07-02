@@ -12,3 +12,4 @@ function escapemap:puzzles/red_candle/load
 function escapemap:puzzles/castle/load
 function escapemap:puzzles/radiation/load
 function escapemap:puzzles/desert/load
+execute as @a run advancement revoke @s only escapemap:press_button

@@ -1,0 +1,14 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "!minecraft:can_place_on": {},
+      "minecraft:custom_data": {
+        "puzzle": {
+          "persistent": true,
+          "id": "desert_wall"
+        }
+      }
+    }
+  }
+]

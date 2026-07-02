@@ -10,7 +10,7 @@
 #file: ./spawn/load
 var spawn_secret
 
-#file: ./spawn/tick
+#file: ./spawn/leaves_check
 if('block -119 -36 99 air' && 'entity @a[scores={spawn_secret=0}]') {
     /function escapemap:puzzles/spawn/secret_complete
     spawn_secret @a = 1

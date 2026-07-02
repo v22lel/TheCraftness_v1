@@ -1,14 +1,36 @@
 #file: ./load
 /function escapemap:puzzles/desert/faucet_controller/load
 /function escapemap:puzzles/desert/shore_door/load
+/function escapemap:puzzles/desert/ruins/load
+/function escapemap:puzzles/desert/lights/pp1/load
+
+/scoreboard objectives add desert_break minecraft.mined:minecraft.pale_oak_leaves
+/scoreboard players set @a desert_break 0
+/execute as @a run advancement revoke @s only escapemap:place_leaves
 
 #file: ./reset
 /function escapemap:puzzles/desert/faucet_controller/reset
 /function escapemap:puzzles/desert/shore_door/reset
+/function escapemap:puzzles/desert/ruins/reset
+/function escapemap:puzzles/desert/lights/pp1/reset
+/function escapemap:puzzles/desert/depths/reset
 
 #file: ./tick
 /function escapemap:puzzles/desert/faucet/main_tick
 /function escapemap:puzzles/desert/faucet_controller/tick
+
+/execute as @a[scores={desert_break=1..},limit=1] run function escapemap:puzzles/desert/leaves_broken
+
+#file: ./leaves_broken
+/scoreboard players set @a desert_break 0
+/function escapemap:puzzles/spawn/leaves_check
+/function escapemap:puzzles/desert/ruins/leaves_update
+/function escapemap:puzzles/desert/depths/leaves_update
+
+#file: ./leaves_placed
+/advancement revoke @s only escapemap:place_leaves
+/function escapemap:puzzles/desert/ruins/leaves_update
+/function escapemap:puzzles/desert/depths/leaves_update
 
 //idea for desert:
 //have multiple structures with broken walls and then at the bottom a plan

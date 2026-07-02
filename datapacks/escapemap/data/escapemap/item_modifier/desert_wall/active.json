@@ -1,0 +1,21 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:can_place_on": {
+        "predicates": [
+          {
+            "blocks": "minecraft:red_sandstone"
+          }
+        ],
+        "show_in_tooltip": true
+      },
+      "minecraft:custom_data": {
+        "puzzle": {
+          "persistent": true,
+          "id": "desert_wall"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,46 @@
+#file: ./leaves_update
+// -169 -51 46
+
+if ('block -169 -51 46 pale_oak_leaves') {
+    /execute if block -169 -52 46 red_terracotta run playsound minecraft:desert.door master @a -176 -50 45
+    /setblock -169 -52 46 redstone_block
+    /setblock -178 -50 52 jungle_button[facing=west,powered=true]
+    /setblock -176 -47 52 jungle_button[face=floor,powered=true]
+    /setblock -176 -51 52 air
+    /setblock -176 -51 52 air destroy
+    /setblock -176 -49 51 air destroy
+    /setblock -176 -51 52 sandstone_slab[type=top]
+    /setblock -169 -49 46 air
+    /fill -176 -50 45 -176 -49 44 air
+}
+
+unless ('block -169 -51 46 pale_oak_leaves') {
+    /execute if block -169 -52 46 redstone_block run playsound minecraft:desert.door master @a -176 -50 45
+    /setblock -169 -52 46 red_terracotta
+    /setblock -178 -50 52 air
+    /setblock -176 -47 52 air
+    /setblock -176 -51 52 air
+    /setblock -176 -51 52 air destroy
+    /setblock -176 -49 51 air destroy
+    /setblock -176 -51 52 sandstone_slab[type=top]
+    /setblock -169 -49 46 barrier
+    /clone -177 -45 44 -177 -44 43 -176 -50 44
+}
+
+/execute if block -169 -50 50 pale_oak_leaves run setblock -169 -48 50 air
+/execute unless block -169 -50 50 pale_oak_leaves run setblock -169 -48 50 barrier
+
+/execute if block -169 -49 54 pale_oak_leaves run setblock -169 -47 54 air
+/execute unless block -169 -49 54 pale_oak_leaves run setblock -169 -47 54 barrier
+
+#file: ./reset
+/setblock -177 -49 52 lever[powered=false,face=floor]
+
+/setblock -169 -51 46 air
+/setblock -169 -50 50 air
+/setblock -169 -49 54 air
+
+/function escapemap:puzzles/desert/depths/leaves_update
+
+/function escapemap:puzzles/desert/depths/pp3/reset
+/function escapemap:puzzles/desert/depths/pp4/reset

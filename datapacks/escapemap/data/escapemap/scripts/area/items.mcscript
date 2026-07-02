@@ -64,3 +64,15 @@ modifyInventory('minecraft:soul_torch[minecraft:custom_data~{puzzle:{id:"flashli
 #file: ./items/flashlight_active
 modifyInventory('minecraft:tropical_fish[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/active')
 modifyInventory('minecraft:soul_torch[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/active')
+
+#file: ./items/desert_leaves_neutral
+modifyInventory('minecraft:pale_oak_leaves[minecraft:custom_data~{puzzle:{id:"desert_leaves"}}]', 'escapemap:desert_leaves/neutral')
+
+#file: ./items/desert_leaves_active
+modifyInventory('minecraft:pale_oak_leaves[minecraft:custom_data~{puzzle:{id:"desert_leaves"}}]', 'escapemap:desert_leaves/active')
+
+#file: ./items/desert_wall_neutral
+modifyInventory('minecraft:sandstone_wall[minecraft:custom_data~{puzzle:{id:"desert_wall"}}]', 'escapemap:desert_wall/neutral')
+
+#file: ./items/desert_wall_active
+modifyInventory('minecraft:sandstone_wall[minecraft:custom_data~{puzzle:{id:"desert_wall"}}]', 'escapemap:desert_wall/active')

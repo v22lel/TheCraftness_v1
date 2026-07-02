@@ -1,0 +1,33 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:can_place_on": {
+        "predicates": [
+          {
+            "blocks": "minecraft:red_sandstone"
+          },
+          {
+            "blocks": "minecraft:red_sandstone_slab"
+          },
+          {
+            "blocks": "minecraft:red_terracotta"
+          }
+        ],
+        "show_in_tooltip": false
+      },
+      "minecraft:custom_data": {
+        "puzzle": {
+          "persistent": true,
+          "id": "desert_leaves"
+        }
+      },
+      "minecraft:lore": [
+        "\" \"",
+        "{\"color\":\"gray\",\"italic\":false,\"text\":\"Can be placed on:\"}",
+        "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"Red Sandstone\"}",
+        "{\"color\":\"dark_gray\",\"italic\":false,\"text\":\"Red Terracotta\"}"
+      ]
+    }
+  }
+]

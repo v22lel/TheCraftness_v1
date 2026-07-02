@@ -6,9 +6,12 @@
 /execute if score @s area matches 4 run function escapemap:area/areas/castle
 /execute if score @s area matches 5 run function escapemap:area/areas/basement
 /execute if score @s area matches 6 run function escapemap:area/areas/mini_cave
+/execute if score @s area matches 7 run function escapemap:area/areas/desert
 
-/execute if score @s area matches 0 run function escapemap:area/freeze_items
-/execute unless score @s area matches 0 run function escapemap:area/unfreeze_items
+// this WILL be necessary if ever two separate SAME items have two different ids and uses
+// honestly i dont know if this is necessary
+//execute if score @s area matches 0 run function escapemap:area/freeze_items
+//execute unless score @s area matches 0 run function escapemap:area/unfreeze_items
 
 #file: ./freeze_items
 /execute as @e[type=item] if items entity @s contents *[minecraft:custom_data~{puzzle:{id:"ground"}}] run data modify entity @s PickupDelay set value 32767s
@@ -21,6 +24,8 @@
 /function escapemap:area/items/village_yard_redstone_neutral
 /function escapemap:area/items/castle_stair_neutral
 /function escapemap:area/items/flashlight_active
+/function escapemap:area/items/desert_leaves_neutral
+/function escapemap:area/items/desert_wall_neutral
 
 #file: ./areas/village_yard
 /function escapemap:area/items/multitool_village_yard
@@ -40,6 +45,11 @@
 
 #file: ./areas/mini_cave
 /function escapemap:area/items/multitool_mini_cave
+
+#file: ./areas/desert
+/function escapemap:area/items/desert_leaves_active
+/function escapemap:area/items/desert_wall_active
+/function escapemap:area/items/multitool_spawn_tutorial
 
 #file: ./areas/inventory_changed
 /function escapemap:area/areas/changed

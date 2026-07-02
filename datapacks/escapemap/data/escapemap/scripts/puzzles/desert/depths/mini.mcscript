@@ -1,0 +1,76 @@
+var desert_pp4
+
+modal togglePressurePlate4(rspos, pppos) {
+    /data modify storage escapemap:tmp isStone set value 0b
+    /execute if block $(rspos) minecraft:redstone_wire positioned $(pppos) unless entity @e[tag=pp4_fake,distance=..1] run data modify storage escapemap:tmp isStone set value 1b
+
+    /execute if block $(rspos) redstone_wire if data storage escapemap:tmp {isStone:1b} positioned $(pppos) run summon minecraft:block_display ~-0.5 ~-0.5 ~-0.5 {Tags:["pp4_fake"],block_state:{Name:"minecraft:light_weighted_pressure_plate"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.025f,0.0f,-0.025f],scale:[1.05f,1.05f,1.05f]}}
+    /execute if block $(rspos) redstone_wire if data storage escapemap:tmp {isStone:0b} positioned $(pppos) as @e[tag=pp4_fake,distance=..1] run kill @s
+}
+
+modal toggleSelf4(pos) {
+    /data modify storage escapemap:tmp isStone set value 0b
+    /execute positioned $(pos) unless entity @e[tag=pp4_fake,distance=..1] run data modify storage escapemap:tmp isStone set value 1b
+
+    /execute if data storage escapemap:tmp {isStone:1b} positioned $(pos) run summon minecraft:block_display ~-0.5 ~-0.5 ~-0.5 {Tags:["pp4_fake"],block_state:{Name:"minecraft:light_weighted_pressure_plate"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.025f,0.0f,-0.025f],scale:[1.05f,1.05f,1.05f]}}
+    /execute if data storage escapemap:tmp {isStone:0b} positioned $(pos) as @e[tag=pp4_fake,distance=..1] run kill @s
+}
+
+#file: ./pp4/reset
+desert_pp4 C = 0
+desert_pp4 P = 0
+/kill @e[tag=pp4_fake]
+/setblock -177 -49 44 minecraft:waxed_oxidized_copper_bulb[lit=false]
+
+/setblock -178 -50 44 sandstone_stairs[facing=south,shape=straight]
+/setblock -178 -49 44 sandstone_stairs[facing=south,shape=straight,half=top]
+/setblock -178 -50 45 sandstone_stairs[facing=north,shape=straight]
+/setblock -178 -49 45 sandstone_stairs[facing=north,shape=straight,half=top]
+
+/kill @e[tag=door_stair_pp4]
+
+#file: ./pp4/toggle
+togglePressurePlate4("~ ~2 ~-1", "~ ~2 ~-2")
+togglePressurePlate4("~ ~2 ~1", "~ ~2 ~2")
+togglePressurePlate4("~-1 ~2 ~", "~-2 ~2 ~")
+togglePressurePlate4("~1 ~2 ~", "~2 ~2 ~")
+toggleSelf4("~ ~2 ~")
+
+desert_pp4 C = 0
+/execute as @e[tag=pp4_fake] run scoreboard players add C desert_pp4 1
+if(desert_pp4 C == 9){
+    /function escapemap:puzzles/desert/depths/pp4/complete
+}
+
+#file: ./pp4/complete
+if(desert_pp4 P == 0) {
+    /function escapemap:puzzles/complete
+    /setblock -177 -49 44 minecraft:waxed_oxidized_copper_bulb[lit=true]
+    /schedule function escapemap:puzzles/desert/depths/pp4/door 5s
+}
+desert_pp4 P = 1
+
+#file: ./pp4/door
+/playsound minecraft:desert.door master @a -178 -49 44
+/particle minecraft:dust{color:[1,1,1], scale:4f} -178 -49 44
+/particle minecraft:dust{color:[1,1,1], scale:4f} -178 -49 45
+
+/fill -178 -50 44 -178 -49 45 air
+
+/summon minecraft:block_display -178 -49 44 {Tags:["door_stair_pp4"],block_state:{Name:"minecraft:sandstone_stairs",Properties:{facing:"south",shape:"straight",half:"top"}},transformation:{translation:[-0.5f,0f,-0.5f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]},interpolation_duration:200}
+/summon minecraft:block_display -178 -50 44 {Tags:["door_stair_pp4"],block_state:{Name:"minecraft:sandstone_stairs",Properties:{facing:"south",shape:"straight"}},transformation:{translation:[-0.5f,0f,-0.5f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]},interpolation_duration:200}
+/summon minecraft:block_display -178 -49 45 {Tags:["door_stair_pp4"],block_state:{Name:"minecraft:sandstone_stairs",Properties:{facing:"north",shape:"straight",half:"top"}},transformation:{translation:[-0.5f,0f,-0.5f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]},interpolation_duration:200}
+/summon minecraft:block_display -178 -50 45 {Tags:["door_stair_pp4"],block_state:{Name:"minecraft:sandstone_stairs",Properties:{facing:"north",shape:"straight"}},transformation:{translation:[-0.5f,0f,-0.5f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]},interpolation_duration:200}
+/schedule function escapemap:puzzles/desert/depths/pp4/door_start 1t replace
+
+/setblock -178 -49 44 barrier
+/setblock -178 -49 45 barrier
+
+#file: ./pp4/door_start
+/execute as @e[type=minecraft:block_display,tag=door_stair_pp4] run data merge entity @s {start_interpolation:0,transformation:{translation:[-0.5f,-2f,-0.5f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]}}
+/schedule function escapemap:puzzles/desert/depths/pp4/door_clear 200t replace
+
+#file: ./pp4/door_clear
+/kill @e[tag=door_stair_pp4]
+/setblock -178 -49 44 air
+/setblock -178 -49 45 air

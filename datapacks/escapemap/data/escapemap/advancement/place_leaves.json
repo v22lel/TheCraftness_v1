@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "place_leaves": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:pale_oak_leaves",
+                  "minecraft:sandstone_wall"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "escapemap:puzzles/desert/leaves_placed"
+  }
+}

@@ -57,3 +57,13 @@ const mini_cave = Map{
     "dy":"12",
     "dz":"16"
 }
+
+const desert_id = 7
+const desert = Map{
+    "x":"-201",
+    "y":"-55",
+    "z":"20",
+    "dx":"50",
+    "dy":"32",
+    "dz":"51"
+}

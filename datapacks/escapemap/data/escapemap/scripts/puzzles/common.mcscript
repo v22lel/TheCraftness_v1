@@ -9,6 +9,8 @@ var super_secrets_complete
 /function escapemap:puzzles/radiation/load
 /function escapemap:puzzles/desert/load
 
+/execute as @a run advancement revoke @s only escapemap:press_button
+
 #file: ./complete
 puzzles_complete @a += 1
 /execute as @a at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~
@@ -26,7 +28,6 @@ super_secrets_complete @a += 1
 #file: ./tick
 /function escapemap:puzzles/actionbar/tick
 
-/function escapemap:puzzles/spawn/tick
 /function escapemap:puzzles/red_candle/tick
 /function escapemap:puzzles/castle/tick
 /function escapemap:puzzles/radiation/tick
@@ -43,3 +44,8 @@ super_secrets_complete @a = 0
 /function escapemap:puzzles/spawn/reset
 /function escapemap:puzzles/radiation/reset
 /function escapemap:puzzles/desert/reset
+
+#file: ./button_press
+/function escapemap:puzzles/desert/ruins/check
+/function escapemap:puzzles/red_candle/attic/check
+/advancement revoke @s only escapemap:press_button

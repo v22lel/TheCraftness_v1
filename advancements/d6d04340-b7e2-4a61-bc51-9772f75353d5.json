@@ -3798,6 +3798,7 @@
   },
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
+      "golden_apple": "2026-07-02 07:00:44 +0200",
       "tropical_fish": "2026-06-10 16:03:15 +0200"
     },
     "done": false
@@ -4147,6 +4148,18 @@
   "minecraft:recipes/decorations/cartography_table": {
     "criteria": {
       "has_paper": "2026-06-30 16:41:41 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/mangrove_wood": {
+    "criteria": {
+      "has_log": "2026-07-02 07:41:22 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/gray_glazed_terracotta": {
+    "criteria": {
+      "has_gray_terracotta": "2026-07-02 10:30:04 +0200"
     },
     "done": true
   },

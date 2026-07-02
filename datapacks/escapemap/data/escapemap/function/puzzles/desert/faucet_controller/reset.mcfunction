@@ -12,3 +12,19 @@ function escapemap:puzzles/desert/faucet/kill
 function escapemap:puzzles/desert/faucet/spawn
 setblock -178 -38 67 water
 setblock -178 -38 69 minecraft:waxed_oxidized_copper_bulb[lit=false]
+setblock -177 -37 67 barrier
+setblock -176 -37 67 barrier
+setblock -175 -37 67 barrier
+setblock -174 -37 66 barrier
+setblock -174 -38 60 barrier
+setblock -174 -38 59 barrier
+setblock -174 -38 58 barrier
+setblock -174 -43 47 barrier
+setblock -175 -43 48 barrier
+setblock -175 -43 49 barrier
+setblock -175 -42 49 barrier
+setblock -174 -43 50 barrier
+setblock -174 -42 50 barrier
+setblock -174 -43 53 barrier
+setblock -175 -43 54 barrier
+setblock -176 -43 54 barrier

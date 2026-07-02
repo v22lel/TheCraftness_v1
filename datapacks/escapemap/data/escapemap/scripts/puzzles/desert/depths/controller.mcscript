@@ -1,0 +1,57 @@
+var desert_pp3
+
+modal togglePressurePlate3(sspos, pppos) {
+    /data modify storage escapemap:tmp isStone set value 0b
+    /execute unless block $(sspos) sandstone_slab positioned $(pppos) unless entity @e[tag=pp3_fake,distance=..1] run data modify storage escapemap:tmp isStone set value 1b
+
+    /execute unless block $(sspos) sandstone_slab if block $(pppos) stone_pressure_plate if data storage escapemap:tmp {isStone:1b} positioned $(pppos) run summon minecraft:block_display ~-0.5 ~-0.5 ~-0.5 {Tags:["pp3_fake"],block_state:{Name:"minecraft:light_weighted_pressure_plate"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.025f,0.0f,-0.025f],scale:[1.05f,1.05f,1.05f]}}
+    /execute unless block $(sspos) sandstone_slab if block $(pppos) stone_pressure_plate if data storage escapemap:tmp {isStone:0b} positioned $(pppos) as @e[tag=pp3_fake,distance=..1] run kill @s
+}
+
+modal toggleSelf3(pos) {
+    /data modify storage escapemap:tmp isStone set value 0b
+    /execute positioned $(pos) unless entity @e[tag=pp3_fake,distance=..1] run data modify storage escapemap:tmp isStone set value 1b
+
+    /execute if data storage escapemap:tmp {isStone:1b} positioned $(pos) run summon minecraft:block_display ~-0.5 ~-0.5 ~-0.5 {Tags:["pp3_fake"],block_state:{Name:"minecraft:light_weighted_pressure_plate"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.025f,0.0f,-0.025f],scale:[1.05f,1.05f,1.05f]}}
+    /execute if data storage escapemap:tmp {isStone:0b} positioned $(pos) as @e[tag=pp3_fake,distance=..1] run kill @s
+}
+
+modal spawnDefault3(pos) {
+    /execute positioned $(pos) run summon minecraft:block_display ~-0.5 ~ ~-0.5 {Tags:["pp3_fake"],block_state:{Name:"minecraft:light_weighted_pressure_plate"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.025f,0.0f,-0.025f],scale:[1.05f,1.05f,1.05f]}}
+}
+
+#file: ./pp3/reset
+desert_pp3 C = 0
+desert_pp3 P = 0
+/kill @e[tag=pp3_fake]
+
+spawnDefault3('-176 -50 55')
+spawnDefault3('-176 -50 53')
+spawnDefault3('-174 -50 53')
+spawnDefault3('-172 -50 53')
+spawnDefault3('-170 -50 51')
+spawnDefault3('-168 -50 53')
+spawnDefault3('-168 -50 47')
+spawnDefault3('-172 -50 47')
+spawnDefault3('-174 -50 49')
+
+#file: ./pp3/toggle
+togglePressurePlate3("~ ~1 ~-1", "~ ~2 ~-2")
+togglePressurePlate3("~ ~1 ~1", "~ ~2 ~2")
+togglePressurePlate3("~-1 ~1 ~", "~-2 ~2 ~")
+togglePressurePlate3("~1 ~1 ~", "~2 ~2 ~")
+toggleSelf3("~ ~2 ~")
+
+desert_pp3 C = 0
+/execute as @e[tag=pp3_fake] run scoreboard players add C desert_pp3 1
+if(desert_pp3 C == 25){
+    /function escapemap:puzzles/desert/depths/pp3/complete
+}
+
+#file: ./pp3/complete
+if(desert_pp3 P == 0) {
+    /function escapemap:puzzles/complete
+    /setblock -164 -42 51 minecraft:waxed_oxidized_copper_bulb[lit=true]
+    //schedule function escapemap:puzzles/desert/depths/pp3/door 10s
+}
+desert_pp3 P = 1

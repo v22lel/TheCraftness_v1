@@ -10,3 +10,11 @@
 #file: ./items/castle_stair
 /give @s minecraft:oak_stairs[minecraft:custom_data={puzzle:{id:"castle_stair","persistent":1b}}] 1
 
+#file: ./items/desert_leaves
+/give @s minecraft:pale_oak_leaves[minecraft:custom_data={puzzle:{id:"desert_leaves","persistent":1b}}] 1
+
+#file: ./items/desert_wall
+/give @s minecraft:sandstone_wall[minecraft:custom_data={puzzle:{id:"desert_wall","persistent":1b}}] 1
+
+#file: ./items/boat_slab
+/give @s sandstone_slab[can_place_on={predicates:[{blocks:"black_glazed_terracotta"}],show_in_tooltip:true},custom_data={puzzle:{id:"boat_slab",persistent:1b}}] 1

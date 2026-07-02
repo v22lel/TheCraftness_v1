@@ -7,3 +7,11 @@
 setblock -178 -38 67 air
 setblock -178 -38 69 minecraft:waxed_oxidized_copper_bulb[lit=true]
 function escapemap:puzzles/complete
+setblock -177 -37 67 air
+setblock -176 -37 67 air
+setblock -175 -37 67 air
+setblock -174 -37 66 air
+setblock -174 -38 60 air
+setblock -174 -38 59 air
+setblock -174 -38 58 air
+schedule function escapemap:puzzles/desert/faucet_controller/complete_delay 260 replace

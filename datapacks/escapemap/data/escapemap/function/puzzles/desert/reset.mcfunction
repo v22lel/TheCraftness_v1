@@ -6,3 +6,6 @@
 ######
 function escapemap:puzzles/desert/faucet_controller/reset
 function escapemap:puzzles/desert/shore_door/reset
+function escapemap:puzzles/desert/ruins/reset
+function escapemap:puzzles/desert/lights/pp1/reset
+function escapemap:puzzles/desert/depths/reset

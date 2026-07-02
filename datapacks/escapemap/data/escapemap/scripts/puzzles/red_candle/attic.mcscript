@@ -1,23 +1,33 @@
+#file: ./attic/load
+var attic_complete
 
 #file: ./attic/reset
+attic_complete P = 0
+attic_complete S = 0
+
 /setblock -31 -34 68 resin_brick_slab[type=bottom]
 /setblock -31 -36 68 resin_brick_wall
 /kill @e[tag=attic_breakable]
 /summon minecraft:interaction -30.5 -36 68.15 {width:0.5f,height:1f,Tags:["attic_breakable"]}
-/setblock -34 -34 64 minecraft:oak_button[face=ceiling]
+/setblock -34 -34 63 stone_button[face=ceiling]
 /setblock -34 -33 63 minecraft:waxed_oxidized_copper_bulb[lit=false]
 
-/setblock -34 -31 66 stone_button[facing=south]
-/setblock -34 -31 64 waxed_copper_bulb[powered=false,lit=false]
+/setblock -34 -31 64 stone_button[face=floor]
+/setblock -34 -32 64 waxed_copper_bulb[powered=false,lit=false]
 /setblock -31 -37 61 soul_campfire[lit=false]
 
-#file: ./attic/complete
-/function escapemap:puzzles/complete
-/setblock -34 -34 64 air
+#file: ./attic/check
+if (attic_complete P == 0 && 'block -34 -33 63 waxed_oxidized_copper_bulb[lit=true]') {
+    /setblock -34 -34 63 air
+    /function escapemap:puzzles/complete
+    attic_complete P = 1
+}
 
-#file: ./attic/secret_complete
-/function escapemap:puzzles/secret_complete {p:"-31 -37 61"}
-/setblock -34 -31 66 air
+if (attic_complete S == 0 && 'block -34 -32 64 waxed_copper_bulb[lit=true]') {
+    /setblock -34 -31 64 air
+    /function escapemap:puzzles/secret_complete {p:"-31 -37 61"}
+    attic_complete S = 1
+}
 
 #file: ./attic/tick
 if('entity @e[tag=attic_breakable,nbt={attack:{}}]') {

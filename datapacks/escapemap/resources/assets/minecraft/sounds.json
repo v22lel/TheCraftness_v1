@@ -16,5 +16,10 @@
       "minecraft:geiger"
     ],
     "stream": true
+  },
+  "desert.door": {
+    "sounds": [
+      "minecraft:ambient/cave/cave18"
+    ]
   }
 }

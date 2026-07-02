@@ -1,5 +1,6 @@
 #file: ./load
 /function escapemap:puzzles/red_candle/elevator/load
+/function escapemap:puzzles/red_candle/attic/load
 
 #file: ./reset
 /function escapemap:puzzles/red_candle/fences/reset
