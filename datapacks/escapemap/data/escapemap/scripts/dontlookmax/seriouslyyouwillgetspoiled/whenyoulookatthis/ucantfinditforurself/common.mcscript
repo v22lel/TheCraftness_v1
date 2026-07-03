@@ -3,6 +3,8 @@
 
 #file: ./../../../../zzz/reset
 /function escapemap:zzz/test/reset
+/function escapemap:zzz/test2/reset
 
 #file: ./../../../../zzz/tick
 /function escapemap:zzz/test/tick
+/function escapemap:zzz/test2/tick
