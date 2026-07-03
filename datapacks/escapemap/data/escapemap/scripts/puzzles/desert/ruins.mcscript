@@ -23,6 +23,10 @@ var ruins_complete
 #file: ./ruins/reset
 ruins_complete R = 0
 
+/setblock -194 -36 63 minecraft:lever[facing=west,powered=false]
+/setblock -194 -37 63 air
+/setblock -194 -37 63 air destroy
+/setblock -194 -37 63 sandstone_stairs[facing=east]
 /setblock -185 -36 62 air
 /setblock -185 -36 58 air
 /setblock -182 -35 63 air

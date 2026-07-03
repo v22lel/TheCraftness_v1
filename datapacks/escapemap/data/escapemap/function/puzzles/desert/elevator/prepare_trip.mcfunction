@@ -12,7 +12,7 @@ execute if score #current_station escapemap_desert_elevator matches 1 if score #
 execute if score #current_station escapemap_desert_elevator matches 1 if score #target_station escapemap_desert_elevator matches 0 run scoreboard players set #max_cycles escapemap_desert_elevator 13
 execute if score #current_station escapemap_desert_elevator matches 0 run function escapemap:puzzles/desert/elevator/clear_station_0_blocks
 execute if score #current_station escapemap_desert_elevator matches 1 run function escapemap:puzzles/desert/elevator/clear_station_1_blocks
-execute if score #current_station escapemap_desert_elevator matches 0 positioned -169 -51 -31 run function escapemap:puzzles/desert/elevator/summon_entities
-execute if score #current_station escapemap_desert_elevator matches 1 positioned -169 -38 -31 run function escapemap:puzzles/desert/elevator/summon_entities
+execute if score #current_station escapemap_desert_elevator matches 0 positioned -169 -51 31 run function escapemap:puzzles/desert/elevator/summon_entities
+execute if score #current_station escapemap_desert_elevator matches 1 positioned -169 -38 31 run function escapemap:puzzles/desert/elevator/summon_entities
 function escapemap:puzzles/desert/elevator/calculate_distance
-execute as @a[x=-171.5,y=-53,z=-33.5,dx=6,dy=19,dz=6] at @s run tp @s ~ ~0.1 ~
+execute as @a[x=-171.5,y=-53,z=28.5,dx=6,dy=19,dz=6] at @s run tp @s ~ ~0.1 ~

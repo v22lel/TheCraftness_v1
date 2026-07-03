@@ -12,5 +12,8 @@ rmdir /s /q #FILE~1
 
 python .\scripts\post_compile.py
 
+rmdir /s /q ".\functions"
+rmdir /s /q ".\elevator"
+
 echo Done.
 endlocal

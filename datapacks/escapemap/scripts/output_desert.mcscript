@@ -12,192 +12,192 @@
 /function escapemap:puzzles/desert/elevator/clear_station_1_blocks
 
 #file: ./elevator/place_station_0_blocks
-/setblock -169 -51 -31 minecraft:polished_andesite
-/setblock -169 -51 -32 minecraft:polished_andesite
-/setblock -169 -51 -33 minecraft:polished_andesite
-/setblock -169 -51 -30 minecraft:polished_andesite
-/setblock -169 -51 -29 minecraft:polished_andesite
-/setblock -168 -51 -31 minecraft:polished_andesite
-/setblock -168 -51 -32 minecraft:polished_andesite
-/setblock -168 -51 -33 minecraft:polished_andesite
-/setblock -168 -51 -30 minecraft:polished_andesite
-/setblock -168 -51 -29 minecraft:polished_andesite
-/setblock -170 -51 -31 minecraft:polished_andesite
-/setblock -170 -51 -32 minecraft:polished_andesite
-/setblock -170 -51 -33 minecraft:polished_andesite
-/setblock -170 -51 -30 minecraft:polished_andesite
-/setblock -170 -51 -29 minecraft:polished_andesite
-/setblock -171 -51 -32 minecraft:polished_andesite
-/setblock -171 -51 -33 minecraft:polished_andesite
-/setblock -171 -51 -30 minecraft:polished_andesite
-/setblock -167 -51 -32 minecraft:polished_andesite
-/setblock -167 -51 -33 minecraft:polished_andesite
-/setblock -167 -51 -30 minecraft:polished_andesite
-/setblock -168 -50 -30 minecraft:deepslate_tile_wall
-/setblock -168 -49 -30 minecraft:deepslate_tile_wall
-/setblock -168 -48 -30 minecraft:deepslate_tile_wall
-/setblock -170 -50 -30 minecraft:deepslate_tile_wall
-/setblock -170 -49 -30 minecraft:deepslate_tile_wall
-/setblock -170 -48 -30 minecraft:deepslate_tile_wall
-/setblock -170 -50 -32 minecraft:deepslate_tile_wall
-/setblock -170 -49 -32 minecraft:deepslate_tile_wall
-/setblock -170 -48 -32 minecraft:deepslate_tile_wall
-/setblock -168 -50 -32 minecraft:deepslate_tile_wall
-/setblock -168 -49 -32 minecraft:deepslate_tile_wall
-/setblock -168 -48 -32 minecraft:deepslate_tile_wall
-/setblock -169 -50 -30 minecraft:iron_bars
-/setblock -169 -49 -30 minecraft:iron_bars
-/setblock -169 -48 -30 minecraft:deepslate_tile_wall
-/setblock -169 -50 -32 minecraft:iron_bars
-/setblock -169 -49 -32 minecraft:iron_bars
-/setblock -169 -48 -32 minecraft:deepslate_tile_wall
-/setblock -168 -50 -31 minecraft:iron_bars
-/setblock -168 -49 -31 minecraft:iron_bars
-/setblock -168 -48 -31 minecraft:deepslate_tile_wall
-/setblock -170 -50 -31 minecraft:iron_bars
-/setblock -170 -49 -31 minecraft:iron_bars
-/setblock -170 -48 -31 minecraft:deepslate_tile_wall
+/setblock -169 -51 31 minecraft:polished_andesite
+/setblock -169 -51 30 minecraft:polished_andesite
+/setblock -169 -51 29 minecraft:polished_andesite
+/setblock -169 -51 32 minecraft:polished_andesite
+/setblock -169 -51 33 minecraft:polished_andesite
+/setblock -168 -51 31 minecraft:polished_andesite
+/setblock -168 -51 30 minecraft:polished_andesite
+/setblock -168 -51 29 minecraft:polished_andesite
+/setblock -168 -51 32 minecraft:polished_andesite
+/setblock -168 -51 33 minecraft:polished_andesite
+/setblock -170 -51 31 minecraft:polished_andesite
+/setblock -170 -51 30 minecraft:polished_andesite
+/setblock -170 -51 29 minecraft:polished_andesite
+/setblock -170 -51 32 minecraft:polished_andesite
+/setblock -170 -51 33 minecraft:polished_andesite
+/setblock -171 -51 30 minecraft:polished_andesite
+/setblock -171 -51 31 minecraft:polished_andesite
+/setblock -171 -51 32 minecraft:polished_andesite
+/setblock -167 -51 30 minecraft:polished_andesite
+/setblock -167 -51 31 minecraft:polished_andesite
+/setblock -167 -51 32 minecraft:polished_andesite
+/setblock -168 -50 32 minecraft:deepslate_tile_wall[north=tall,west=tall]
+/setblock -168 -49 32 minecraft:deepslate_tile_wall[north=tall,west=tall]
+/setblock -168 -48 32 minecraft:deepslate_tile_wall[north=low,west=low]
+/setblock -170 -50 32 minecraft:deepslate_tile_wall[north=tall,east=tall]
+/setblock -170 -49 32 minecraft:deepslate_tile_wall[north=tall,east=tall]
+/setblock -170 -48 32 minecraft:deepslate_tile_wall[north=low,east=low]
+/setblock -170 -50 30 minecraft:deepslate_tile_wall[south=tall,east=tall]
+/setblock -170 -49 30 minecraft:deepslate_tile_wall[south=tall,east=tall]
+/setblock -170 -48 30 minecraft:deepslate_tile_wall[south=low,east=low]
+/setblock -168 -50 30 minecraft:deepslate_tile_wall[south=tall,west=tall]
+/setblock -168 -49 30 minecraft:deepslate_tile_wall[south=tall,west=tall]
+/setblock -168 -48 30 minecraft:deepslate_tile_wall[south=low,west=low]
+/setblock -169 -50 32 minecraft:iron_bars[east=true,west=true]
+/setblock -169 -49 32 minecraft:iron_bars[east=true,west=true]
+/setblock -169 -48 32 minecraft:deepslate_tile_wall[east=low,west=low]
+/setblock -169 -50 30 minecraft:iron_bars[east=true,west=true]
+/setblock -169 -49 30 minecraft:iron_bars[east=true,west=true]
+/setblock -169 -48 30 minecraft:deepslate_tile_wall[east=low,west=low]
+/setblock -168 -50 31 minecraft:iron_bars[north=true,south=true]
+/setblock -168 -49 31 minecraft:iron_bars[north=true,south=true]
+/setblock -168 -48 31 minecraft:deepslate_tile_wall[north=low,south=low]
+/setblock -170 -50 31 minecraft:iron_bars[north=true,south=true]
+/setblock -170 -49 31 minecraft:iron_bars[north=true,south=true]
+/setblock -170 -48 31 minecraft:deepslate_tile_wall[north=low,south=low]
 
 #file: ./elevator/clear_station_0_blocks
-/setblock -169 -51 -31 minecraft:air
-/setblock -169 -51 -32 minecraft:air
-/setblock -169 -51 -33 minecraft:air
-/setblock -169 -51 -30 minecraft:air
-/setblock -169 -51 -29 minecraft:air
-/setblock -168 -51 -31 minecraft:air
-/setblock -168 -51 -32 minecraft:air
-/setblock -168 -51 -33 minecraft:air
-/setblock -168 -51 -30 minecraft:air
-/setblock -168 -51 -29 minecraft:air
-/setblock -170 -51 -31 minecraft:air
-/setblock -170 -51 -32 minecraft:air
-/setblock -170 -51 -33 minecraft:air
-/setblock -170 -51 -30 minecraft:air
-/setblock -170 -51 -29 minecraft:air
-/setblock -171 -51 -32 minecraft:air
-/setblock -171 -51 -33 minecraft:air
-/setblock -171 -51 -30 minecraft:air
-/setblock -167 -51 -32 minecraft:air
-/setblock -167 -51 -33 minecraft:air
-/setblock -167 -51 -30 minecraft:air
-/setblock -168 -50 -30 minecraft:air
-/setblock -168 -49 -30 minecraft:air
-/setblock -168 -48 -30 minecraft:air
-/setblock -170 -50 -30 minecraft:air
-/setblock -170 -49 -30 minecraft:air
-/setblock -170 -48 -30 minecraft:air
-/setblock -170 -50 -32 minecraft:air
-/setblock -170 -49 -32 minecraft:air
-/setblock -170 -48 -32 minecraft:air
-/setblock -168 -50 -32 minecraft:air
-/setblock -168 -49 -32 minecraft:air
-/setblock -168 -48 -32 minecraft:air
-/setblock -169 -50 -30 minecraft:air
-/setblock -169 -49 -30 minecraft:air
-/setblock -169 -48 -30 minecraft:air
-/setblock -169 -50 -32 minecraft:air
-/setblock -169 -49 -32 minecraft:air
-/setblock -169 -48 -32 minecraft:air
-/setblock -168 -50 -31 minecraft:air
-/setblock -168 -49 -31 minecraft:air
-/setblock -168 -48 -31 minecraft:air
-/setblock -170 -50 -31 minecraft:air
-/setblock -170 -49 -31 minecraft:air
-/setblock -170 -48 -31 minecraft:air
+/setblock -169 -51 31 minecraft:air
+/setblock -169 -51 30 minecraft:air
+/setblock -169 -51 29 minecraft:air
+/setblock -169 -51 32 minecraft:air
+/setblock -169 -51 33 minecraft:air
+/setblock -168 -51 31 minecraft:air
+/setblock -168 -51 30 minecraft:air
+/setblock -168 -51 29 minecraft:air
+/setblock -168 -51 32 minecraft:air
+/setblock -168 -51 33 minecraft:air
+/setblock -170 -51 31 minecraft:air
+/setblock -170 -51 30 minecraft:air
+/setblock -170 -51 29 minecraft:air
+/setblock -170 -51 32 minecraft:air
+/setblock -170 -51 33 minecraft:air
+/setblock -171 -51 30 minecraft:air
+/setblock -171 -51 31 minecraft:air
+/setblock -171 -51 32 minecraft:air
+/setblock -167 -51 30 minecraft:air
+/setblock -167 -51 31 minecraft:air
+/setblock -167 -51 32 minecraft:air
+/setblock -168 -50 32 minecraft:air
+/setblock -168 -49 32 minecraft:air
+/setblock -168 -48 32 minecraft:air
+/setblock -170 -50 32 minecraft:air
+/setblock -170 -49 32 minecraft:air
+/setblock -170 -48 32 minecraft:air
+/setblock -170 -50 30 minecraft:air
+/setblock -170 -49 30 minecraft:air
+/setblock -170 -48 30 minecraft:air
+/setblock -168 -50 30 minecraft:air
+/setblock -168 -49 30 minecraft:air
+/setblock -168 -48 30 minecraft:air
+/setblock -169 -50 32 minecraft:air
+/setblock -169 -49 32 minecraft:air
+/setblock -169 -48 32 minecraft:air
+/setblock -169 -50 30 minecraft:air
+/setblock -169 -49 30 minecraft:air
+/setblock -169 -48 30 minecraft:air
+/setblock -168 -50 31 minecraft:air
+/setblock -168 -49 31 minecraft:air
+/setblock -168 -48 31 minecraft:air
+/setblock -170 -50 31 minecraft:air
+/setblock -170 -49 31 minecraft:air
+/setblock -170 -48 31 minecraft:air
 
 #file: ./elevator/place_station_1_blocks
-/setblock -169 -38 -31 minecraft:polished_andesite
-/setblock -169 -38 -32 minecraft:polished_andesite
-/setblock -169 -38 -33 minecraft:polished_andesite
-/setblock -169 -38 -30 minecraft:polished_andesite
-/setblock -169 -38 -29 minecraft:polished_andesite
-/setblock -168 -38 -31 minecraft:polished_andesite
-/setblock -168 -38 -32 minecraft:polished_andesite
-/setblock -168 -38 -33 minecraft:polished_andesite
-/setblock -168 -38 -30 minecraft:polished_andesite
-/setblock -168 -38 -29 minecraft:polished_andesite
-/setblock -170 -38 -31 minecraft:polished_andesite
-/setblock -170 -38 -32 minecraft:polished_andesite
-/setblock -170 -38 -33 minecraft:polished_andesite
-/setblock -170 -38 -30 minecraft:polished_andesite
-/setblock -170 -38 -29 minecraft:polished_andesite
-/setblock -171 -38 -32 minecraft:polished_andesite
-/setblock -171 -38 -33 minecraft:polished_andesite
-/setblock -171 -38 -30 minecraft:polished_andesite
-/setblock -167 -38 -32 minecraft:polished_andesite
-/setblock -167 -38 -33 minecraft:polished_andesite
-/setblock -167 -38 -30 minecraft:polished_andesite
-/setblock -168 -37 -30 minecraft:deepslate_tile_wall
-/setblock -168 -36 -30 minecraft:deepslate_tile_wall
-/setblock -168 -35 -30 minecraft:deepslate_tile_wall
-/setblock -170 -37 -30 minecraft:deepslate_tile_wall
-/setblock -170 -36 -30 minecraft:deepslate_tile_wall
-/setblock -170 -35 -30 minecraft:deepslate_tile_wall
-/setblock -170 -37 -32 minecraft:deepslate_tile_wall
-/setblock -170 -36 -32 minecraft:deepslate_tile_wall
-/setblock -170 -35 -32 minecraft:deepslate_tile_wall
-/setblock -168 -37 -32 minecraft:deepslate_tile_wall
-/setblock -168 -36 -32 minecraft:deepslate_tile_wall
-/setblock -168 -35 -32 minecraft:deepslate_tile_wall
-/setblock -169 -37 -30 minecraft:iron_bars
-/setblock -169 -36 -30 minecraft:iron_bars
-/setblock -169 -35 -30 minecraft:deepslate_tile_wall
-/setblock -169 -37 -32 minecraft:iron_bars
-/setblock -169 -36 -32 minecraft:iron_bars
-/setblock -169 -35 -32 minecraft:deepslate_tile_wall
-/setblock -168 -37 -31 minecraft:iron_bars
-/setblock -168 -36 -31 minecraft:iron_bars
-/setblock -168 -35 -31 minecraft:deepslate_tile_wall
-/setblock -170 -37 -31 minecraft:iron_bars
-/setblock -170 -36 -31 minecraft:iron_bars
-/setblock -170 -35 -31 minecraft:deepslate_tile_wall
+/setblock -169 -38 31 minecraft:polished_andesite
+/setblock -169 -38 30 minecraft:polished_andesite
+/setblock -169 -38 29 minecraft:polished_andesite
+/setblock -169 -38 32 minecraft:polished_andesite
+/setblock -169 -38 33 minecraft:polished_andesite
+/setblock -168 -38 31 minecraft:polished_andesite
+/setblock -168 -38 30 minecraft:polished_andesite
+/setblock -168 -38 29 minecraft:polished_andesite
+/setblock -168 -38 32 minecraft:polished_andesite
+/setblock -168 -38 33 minecraft:polished_andesite
+/setblock -170 -38 31 minecraft:polished_andesite
+/setblock -170 -38 30 minecraft:polished_andesite
+/setblock -170 -38 29 minecraft:polished_andesite
+/setblock -170 -38 32 minecraft:polished_andesite
+/setblock -170 -38 33 minecraft:polished_andesite
+/setblock -171 -38 30 minecraft:polished_andesite
+/setblock -171 -38 31 minecraft:polished_andesite
+/setblock -171 -38 32 minecraft:polished_andesite
+/setblock -167 -38 30 minecraft:polished_andesite
+/setblock -167 -38 31 minecraft:polished_andesite
+/setblock -167 -38 32 minecraft:polished_andesite
+/setblock -168 -37 32 minecraft:deepslate_tile_wall[north=tall,west=tall]
+/setblock -168 -36 32 minecraft:deepslate_tile_wall[north=tall,west=tall]
+/setblock -168 -35 32 minecraft:deepslate_tile_wall[north=low,west=low]
+/setblock -170 -37 32 minecraft:deepslate_tile_wall[north=tall,east=tall]
+/setblock -170 -36 32 minecraft:deepslate_tile_wall[north=tall,east=tall]
+/setblock -170 -35 32 minecraft:deepslate_tile_wall[north=low,east=low]
+/setblock -170 -37 30 minecraft:deepslate_tile_wall[south=tall,east=tall]
+/setblock -170 -36 30 minecraft:deepslate_tile_wall[south=tall,east=tall]
+/setblock -170 -35 30 minecraft:deepslate_tile_wall[south=low,east=low]
+/setblock -168 -37 30 minecraft:deepslate_tile_wall[south=tall,west=tall]
+/setblock -168 -36 30 minecraft:deepslate_tile_wall[south=tall,west=tall]
+/setblock -168 -35 30 minecraft:deepslate_tile_wall[south=low,west=low]
+/setblock -169 -37 32 minecraft:iron_bars[east=true,west=true]
+/setblock -169 -36 32 minecraft:iron_bars[east=true,west=true]
+/setblock -169 -35 32 minecraft:deepslate_tile_wall[east=low,west=low]
+/setblock -169 -37 30 minecraft:iron_bars[east=true,west=true]
+/setblock -169 -36 30 minecraft:iron_bars[east=true,west=true]
+/setblock -169 -35 30 minecraft:deepslate_tile_wall[east=low,west=low]
+/setblock -168 -37 31 minecraft:iron_bars[north=true,south=true]
+/setblock -168 -36 31 minecraft:iron_bars[north=true,south=true]
+/setblock -168 -35 31 minecraft:deepslate_tile_wall[north=low,south=low]
+/setblock -170 -37 31 minecraft:iron_bars[north=true,south=true]
+/setblock -170 -36 31 minecraft:iron_bars[north=true,south=true]
+/setblock -170 -35 31 minecraft:deepslate_tile_wall[north=low,south=low]
 
 #file: ./elevator/clear_station_1_blocks
-/setblock -169 -38 -31 minecraft:air
-/setblock -169 -38 -32 minecraft:air
-/setblock -169 -38 -33 minecraft:air
-/setblock -169 -38 -30 minecraft:air
-/setblock -169 -38 -29 minecraft:air
-/setblock -168 -38 -31 minecraft:air
-/setblock -168 -38 -32 minecraft:air
-/setblock -168 -38 -33 minecraft:air
-/setblock -168 -38 -30 minecraft:air
-/setblock -168 -38 -29 minecraft:air
-/setblock -170 -38 -31 minecraft:air
-/setblock -170 -38 -32 minecraft:air
-/setblock -170 -38 -33 minecraft:air
-/setblock -170 -38 -30 minecraft:air
-/setblock -170 -38 -29 minecraft:air
-/setblock -171 -38 -32 minecraft:air
-/setblock -171 -38 -33 minecraft:air
-/setblock -171 -38 -30 minecraft:air
-/setblock -167 -38 -32 minecraft:air
-/setblock -167 -38 -33 minecraft:air
-/setblock -167 -38 -30 minecraft:air
-/setblock -168 -37 -30 minecraft:air
-/setblock -168 -36 -30 minecraft:air
-/setblock -168 -35 -30 minecraft:air
-/setblock -170 -37 -30 minecraft:air
-/setblock -170 -36 -30 minecraft:air
-/setblock -170 -35 -30 minecraft:air
-/setblock -170 -37 -32 minecraft:air
-/setblock -170 -36 -32 minecraft:air
-/setblock -170 -35 -32 minecraft:air
-/setblock -168 -37 -32 minecraft:air
-/setblock -168 -36 -32 minecraft:air
-/setblock -168 -35 -32 minecraft:air
-/setblock -169 -37 -30 minecraft:air
-/setblock -169 -36 -30 minecraft:air
-/setblock -169 -35 -30 minecraft:air
-/setblock -169 -37 -32 minecraft:air
-/setblock -169 -36 -32 minecraft:air
-/setblock -169 -35 -32 minecraft:air
-/setblock -168 -37 -31 minecraft:air
-/setblock -168 -36 -31 minecraft:air
-/setblock -168 -35 -31 minecraft:air
-/setblock -170 -37 -31 minecraft:air
-/setblock -170 -36 -31 minecraft:air
-/setblock -170 -35 -31 minecraft:air
+/setblock -169 -38 31 minecraft:air
+/setblock -169 -38 30 minecraft:air
+/setblock -169 -38 29 minecraft:air
+/setblock -169 -38 32 minecraft:air
+/setblock -169 -38 33 minecraft:air
+/setblock -168 -38 31 minecraft:air
+/setblock -168 -38 30 minecraft:air
+/setblock -168 -38 29 minecraft:air
+/setblock -168 -38 32 minecraft:air
+/setblock -168 -38 33 minecraft:air
+/setblock -170 -38 31 minecraft:air
+/setblock -170 -38 30 minecraft:air
+/setblock -170 -38 29 minecraft:air
+/setblock -170 -38 32 minecraft:air
+/setblock -170 -38 33 minecraft:air
+/setblock -171 -38 30 minecraft:air
+/setblock -171 -38 31 minecraft:air
+/setblock -171 -38 32 minecraft:air
+/setblock -167 -38 30 minecraft:air
+/setblock -167 -38 31 minecraft:air
+/setblock -167 -38 32 minecraft:air
+/setblock -168 -37 32 minecraft:air
+/setblock -168 -36 32 minecraft:air
+/setblock -168 -35 32 minecraft:air
+/setblock -170 -37 32 minecraft:air
+/setblock -170 -36 32 minecraft:air
+/setblock -170 -35 32 minecraft:air
+/setblock -170 -37 30 minecraft:air
+/setblock -170 -36 30 minecraft:air
+/setblock -170 -35 30 minecraft:air
+/setblock -168 -37 30 minecraft:air
+/setblock -168 -36 30 minecraft:air
+/setblock -168 -35 30 minecraft:air
+/setblock -169 -37 32 minecraft:air
+/setblock -169 -36 32 minecraft:air
+/setblock -169 -35 32 minecraft:air
+/setblock -169 -37 30 minecraft:air
+/setblock -169 -36 30 minecraft:air
+/setblock -169 -35 30 minecraft:air
+/setblock -168 -37 31 minecraft:air
+/setblock -168 -36 31 minecraft:air
+/setblock -168 -35 31 minecraft:air
+/setblock -170 -37 31 minecraft:air
+/setblock -170 -36 31 minecraft:air
+/setblock -170 -35 31 minecraft:air
 
 #file: ./elevator/go_to_bottom
 /execute if score #running escapemap_desert_elevator matches 0 unless score #current_station escapemap_desert_elevator matches 0 run scoreboard players set #target_station escapemap_desert_elevator 0
@@ -216,147 +216,147 @@
 /execute if score #current_station escapemap_desert_elevator matches 1 if score #target_station escapemap_desert_elevator matches 0 run scoreboard players set #max_cycles escapemap_desert_elevator 13
 /execute if score #current_station escapemap_desert_elevator matches 0 run function escapemap:puzzles/desert/elevator/clear_station_0_blocks
 /execute if score #current_station escapemap_desert_elevator matches 1 run function escapemap:puzzles/desert/elevator/clear_station_1_blocks
-/execute if score #current_station escapemap_desert_elevator matches 0 run execute positioned -169 -51 -31 run function escapemap:puzzles/desert/elevator/summon_entities
-/execute if score #current_station escapemap_desert_elevator matches 1 run execute positioned -169 -38 -31 run function escapemap:puzzles/desert/elevator/summon_entities
+/execute if score #current_station escapemap_desert_elevator matches 0 run execute positioned -169 -51 31 run function escapemap:puzzles/desert/elevator/summon_entities
+/execute if score #current_station escapemap_desert_elevator matches 1 run execute positioned -169 -38 31 run function escapemap:puzzles/desert/elevator/summon_entities
 /function escapemap:puzzles/desert/elevator/calculate_distance
-/execute as @a[x=-171.5,y=-53,z=-33.5,dx=6,dy=19,dz=6] at @s run tp @s ~ ~0.1 ~
+/execute as @a[x=-171.5,y=-53,z=28.5,dx=6,dy=19,dz=6] at @s run tp @s ~ ~0.1 ~
 
 #file: ./elevator/summon_entities
-/summon minecraft:shulker -168.5 ~0 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~-1 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~0 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~-1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~0 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~-1 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~0 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~-1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~0 -28.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~-1 -28.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~0 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~-1 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~0 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~-1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~0 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~-1 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~0 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~-1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~0 -28.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~-1 -28.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~0 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~-1 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~0 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~-1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~0 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~-1 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~0 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~-1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~0 -28.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~-1 -28.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -170.5 ~0 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -170.5 ~-1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -170.5 ~0 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -170.5 ~-1 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -170.5 ~0 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -170.5 ~-1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -166.5 ~0 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -166.5 ~-1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -166.5 ~0 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -166.5 ~-1 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -166.5 ~0 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -166.5 ~-1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~0 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~2 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~3 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~2 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~0 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~2 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~3 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~2 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~0 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~2 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~3 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~2 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~0 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~2 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~3 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~2 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~0 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~2 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~3 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~2 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~0 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~2 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~3 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -168.5 ~2 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~1 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~0 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~2 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~1 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~3 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -167.5 ~2 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~1 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~0 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~2 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~1 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~3 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:shulker -169.5 ~2 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
-/summon minecraft:block_display -168.5 ~1 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -168.5 ~1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -168.5 ~1 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -168.5 ~1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -168.5 ~1 -28.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~1 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~1 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~1 -28.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~1 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~1 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~1 -28.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -170.5 ~1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -170.5 ~1 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -170.5 ~1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -166.5 ~1 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -166.5 ~1 -32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -166.5 ~1 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~2 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~3 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~4 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~2 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~3 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~4 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~2 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~3 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~4 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~2 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~3 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~4 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -168.5 ~2 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -168.5 ~3 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -168.5 ~4 -29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -168.5 ~2 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -168.5 ~3 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -168.5 ~4 -31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~2 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~3 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -167.5 ~4 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~2 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~3 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
-/summon minecraft:block_display -169.5 ~4 -30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1.5f,-0.5f],scale:[1f,1.5f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:shulker -168.5 ~0 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~-1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~0 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~-1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~0 29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~-1 29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~0 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~-1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~0 33.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~-1 33.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~0 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~-1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~0 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~-1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~0 29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~-1 29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~0 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~-1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~0 33.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~-1 33.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~0 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~-1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~0 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~-1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~0 29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~-1 29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~0 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~-1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~0 33.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~-1 33.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -170.5 ~0 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -170.5 ~-1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -170.5 ~0 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -170.5 ~-1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -170.5 ~0 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -170.5 ~-1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~0 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~-1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~0 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~-1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~0 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -166.5 ~-1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~0 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~2 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~3 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~2 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~0 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~2 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~3 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~2 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~0 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~2 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~3 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~2 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~0 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~2 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~3 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~2 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~0 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~2 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~3 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~2 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~0 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~2 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~3 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -168.5 ~2 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~0 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~2 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~3 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -167.5 ~2 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~0 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~2 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~3 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_a"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:14b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:shulker -169.5 ~2 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_b"],NoAI:1b,Silent:1b,Invulnerable:1b,PersistenceRequired:1b,Peek:0b,AttachFace:0b,Color:15b,active_effects:[{id:"minecraft:invisibility",amplifier:0b,duration:2147483647,show_particles:0b}],attributes:[{id:"minecraft:scale",base:1}]}
+/summon minecraft:block_display -168.5 ~1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -168.5 ~1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -168.5 ~1 29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -168.5 ~1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -168.5 ~1 33.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~1 29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~1 33.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~1 29.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~1 33.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -170.5 ~1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -170.5 ~1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -170.5 ~1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -166.5 ~1 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -166.5 ~1 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -166.5 ~1 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:polished_andesite"},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~2 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{north:"tall",west:"tall"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~3 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{north:"tall",west:"tall"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~4 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{north:"low",west:"low"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~2 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{north:"tall",east:"tall"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~3 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{north:"tall",east:"tall"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~4 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{north:"low",east:"low"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~2 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{south:"tall",east:"tall"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~3 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{south:"tall",east:"tall"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~4 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{south:"low",east:"low"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~2 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{south:"tall",west:"tall"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~3 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{south:"tall",west:"tall"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~4 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{south:"low",west:"low"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -168.5 ~2 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars",Properties:{east:"true",west:"true"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -168.5 ~3 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars",Properties:{east:"true",west:"true"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -168.5 ~4 32.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{east:"low",west:"low"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -168.5 ~2 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars",Properties:{east:"true",west:"true"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -168.5 ~3 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars",Properties:{east:"true",west:"true"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -168.5 ~4 30.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{east:"low",west:"low"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~2 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars",Properties:{north:"true",south:"true"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~3 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars",Properties:{north:"true",south:"true"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -167.5 ~4 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{north:"low",south:"low"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~2 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars",Properties:{north:"true",south:"true"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~3 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:iron_bars",Properties:{north:"true",south:"true"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
+/summon minecraft:block_display -169.5 ~4 31.5 {Tags:["escapemap_desert_elevator","escapemap_desert_elevator_display"],block_state:{Name:"minecraft:deepslate_tile_wall",Properties:{north:"low",south:"low"}},interpolation_duration:1,teleport_duration:1,transformation:{translation:[-0.5f,-1f,-0.5f],scale:[1f,1f,1f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f]}}
 /execute if score #dir_sign escapemap_desert_elevator matches -1 as @e[type=minecraft:shulker,tag=escapemap_desert_elevator] at @s run tp @s ~ ~-1.0 ~
 /execute if score #dir_sign escapemap_desert_elevator matches -1 run data merge entity @e[type=minecraft:shulker,tag=escapemap_desert_elevator,limit=1] {Peek:100b}
 /execute if score #dir_sign escapemap_desert_elevator matches -1 as @e[type=minecraft:shulker,tag=escapemap_desert_elevator] run data merge entity @s {Peek:100b}
@@ -423,14 +423,14 @@
 /execute if score #cycle escapemap_desert_elevator >= #max_cycles escapemap_desert_elevator run function escapemap:puzzles/desert/elevator/arrive
 
 #file: ./elevator/nudge_players
-/execute as @a[x=-171.5,y=-53,z=-33.5,dx=6,dy=19,dz=6] at @s run tp @s ~ ~0.1 ~
+/execute as @a[x=-171.5,y=-53,z=28.5,dx=6,dy=19,dz=6] at @s run tp @s ~ ~0.1 ~
 
 #file: ./elevator/arrive
 /scoreboard players set #running escapemap_desert_elevator 0
 /scoreboard players operation #current_station escapemap_desert_elevator = #target_station escapemap_desert_elevator
 /execute if score #current_station escapemap_desert_elevator matches 0 run function escapemap:puzzles/desert/elevator/place_station_0_blocks
 /execute if score #current_station escapemap_desert_elevator matches 1 run function escapemap:puzzles/desert/elevator/place_station_1_blocks
-/execute as @a[x=-171.5,y=-53,z=-33.5,dx=6,dy=19,dz=6] at @s run tp @s ~ ~0.1 ~
+/execute as @a[x=-171.5,y=-53,z=28.5,dx=6,dy=19,dz=6] at @s run tp @s ~ ~0.1 ~
 /function escapemap:puzzles/desert/elevator_listener/end
 /execute as @e[type=minecraft:shulker,tag=escapemap_desert_elevator] run data merge entity @s {Peek:0b,AttachFace:0b}
 /function escapemap:puzzles/desert/elevator/despawn_entities

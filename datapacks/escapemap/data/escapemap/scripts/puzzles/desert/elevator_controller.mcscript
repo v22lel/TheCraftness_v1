@@ -1,0 +1,43 @@
+#file: ./elevator_controller/load
+/function escapemap:puzzles/desert/elevator/load
+
+#file: ./elevator_controller/reset
+/function escapemap:laser/desert/reset
+/function escapemap:laser/desert/kill
+/function escapemap:puzzles/desert/elevator/reset
+/fill -170 -49 31 -170 -50 31 air
+/setblock -171 -49 31 air
+
+
+//button setup
+/setblock -169 -48 31 stone_button[facing=east,face=ceiling]
+/setblock -169 -47 31 barrier
+/setblock -169 -46 31 command_block[facing=up]{Command:"/function escapemap:puzzles/desert/elevator_controller/start"}
+
+/kill @e[type=minecraft:item_display,tag=desert_laser_dummy]
+/summon minecraft:item_display -168.500000 -45.500000 31.500000 {Tags:["desert_laser_dummy"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"escapemap:laser_body"}},item_display:"fixed",brightness:{block:15,sky:15},transformation:{translation:[0.000000f,0.000000f,0.000000f],scale:[1.000000f,1.000000f,1.000000f],left_rotation:[0.000000f,0.000000f,0.000000f,1.000000f],right_rotation:[0.000000f,0.000000f,0.000000f,1.000000f]}}
+/summon minecraft:item_display -168.500000 -45.500000 31.500000 {Tags:["desert_laser_dummy"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"escapemap:laser_flap1"}},item_display:"fixed",brightness:{block:15,sky:15},transformation:{translation:[0.000000f,0.000000f,0.000000f],scale:[1.000000f,1.000000f,1.000000f],left_rotation:[0.000000f,0.000000f,0.000000f,1.000000f],right_rotation:[0.000000f,0.000000f,0.000000f,1.000000f]}}
+/summon minecraft:item_display -168.500000 -45.500000 31.500000 {Tags:["desert_laser_dummy"],item:{id:"minecraft:paper",count:1,components:{"minecraft:item_model":"escapemap:laser_flap2"}},item_display:"fixed",brightness:{block:15,sky:15},transformation:{translation:[0.000000f,0.000000f,0.000000f],scale:[1.000000f,1.000000f,1.000000f],left_rotation:[0.000000f,0.000000f,0.000000f,1.000000f],right_rotation:[0.000000f,0.000000f,0.000000f,1.000000f]}}
+
+//top barriers
+/fill -167 -36 29 -171 -36 33 barrier replace air
+/fill -170 -36 32 -168 -36 30 air
+
+#file: ./elevator_controller/start
+/function escapemap:puzzles/desert/elevator/go_to_top
+//top barriers
+/fill -167 -36 29 -171 -36 33 air replace barrier
+/fill -169 -48 31 -169 -46 31 air
+
+/tp @p -169 -49 31
+
+#file: ./elevator_listener/start
+/execute as @e[type=minecraft:item_display,tag=desert_laser_dummy] run data merge entity @s {start_interpolation:-1,interpolation_duration:2600,transformation:{translation:[0.000000f,13.000000f,0.000000f],scale:[1.000000f,1.000000f,1.000000f],left_rotation:[0.000000f,0.000000f,0.000000f,1.000000f],right_rotation:[0.000000f,0.000000f,0.000000f,1.000000f]}}
+
+#file: ./elevator_listener/end
+/kill @e[type=minecraft:item_display,tag=desert_laser_dummy]
+/function escapemap:laser/desert/spawn
+/function escapemap:laser/desert/turn_on
+/fill -170 -37 31 -170 -36 31 air
+
+/setblock -171 -49 31 barrier

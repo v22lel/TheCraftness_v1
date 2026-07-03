@@ -16,3 +16,7 @@ execute positioned -168 -50 53 run summon minecraft:block_display ~-0.5 ~ ~-0.5 
 execute positioned -168 -50 47 run summon minecraft:block_display ~-0.5 ~ ~-0.5 {Tags:["pp3_fake"],block_state:{Name:"minecraft:light_weighted_pressure_plate"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.025f,0.0f,-0.025f],scale:[1.05f,1.05f,1.05f]}}
 execute positioned -172 -50 47 run summon minecraft:block_display ~-0.5 ~ ~-0.5 {Tags:["pp3_fake"],block_state:{Name:"minecraft:light_weighted_pressure_plate"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.025f,0.0f,-0.025f],scale:[1.05f,1.05f,1.05f]}}
 execute positioned -174 -50 49 run summon minecraft:block_display ~-0.5 ~ ~-0.5 {Tags:["pp3_fake"],block_state:{Name:"minecraft:light_weighted_pressure_plate"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.025f,0.0f,-0.025f],scale:[1.05f,1.05f,1.05f]}}
+setblock -181 -49 51 sandstone_stairs[facing=west,shape=straight,half=top]
+setblock -181 -50 51 sandstone_stairs[facing=west,shape=straight]
+setblock -182 -49 51 sandstone_stairs[facing=east,shape=straight,half=top]
+setblock -182 -50 51 sandstone_stairs[facing=east,shape=straight]

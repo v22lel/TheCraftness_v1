@@ -35,6 +35,11 @@ spawnDefault3('-168 -50 47')
 spawnDefault3('-172 -50 47')
 spawnDefault3('-174 -50 49')
 
+/setblock -181 -49 51 sandstone_stairs[facing=west,shape=straight,half=top]
+/setblock -181 -50 51 sandstone_stairs[facing=west,shape=straight]
+/setblock -182 -49 51 sandstone_stairs[facing=east,shape=straight,half=top]
+/setblock -182 -50 51 sandstone_stairs[facing=east,shape=straight]
+
 #file: ./pp3/toggle
 togglePressurePlate3("~ ~1 ~-1", "~ ~2 ~-2")
 togglePressurePlate3("~ ~1 ~1", "~ ~2 ~2")

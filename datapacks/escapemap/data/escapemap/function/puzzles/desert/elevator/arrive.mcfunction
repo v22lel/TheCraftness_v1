@@ -8,7 +8,7 @@ scoreboard players set #running escapemap_desert_elevator 0
 scoreboard players operation #current_station escapemap_desert_elevator = #target_station escapemap_desert_elevator
 execute if score #current_station escapemap_desert_elevator matches 0 run function escapemap:puzzles/desert/elevator/place_station_0_blocks
 execute if score #current_station escapemap_desert_elevator matches 1 run function escapemap:puzzles/desert/elevator/place_station_1_blocks
-execute as @a[x=-171.5,y=-53,z=-33.5,dx=6,dy=19,dz=6] at @s run tp @s ~ ~0.1 ~
+execute as @a[x=-171.5,y=-53,z=28.5,dx=6,dy=19,dz=6] at @s run tp @s ~ ~0.1 ~
 function escapemap:puzzles/desert/elevator_listener/end
 execute as @e[type=minecraft:shulker,tag=escapemap_desert_elevator] run data merge entity @s {Peek:0b,AttachFace:0b}
 function escapemap:puzzles/desert/elevator/despawn_entities

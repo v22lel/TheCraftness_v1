@@ -10,4 +10,4 @@ function escapemap:puzzles/desert/ruins/reset
 function escapemap:puzzles/desert/lights/reset
 function escapemap:puzzles/desert/depths/reset
 function escapemap:puzzles/desert/corridor/reset
-function escapemap:puzzles/desert/elevator/reset
+function escapemap:puzzles/desert/elevator_controller/reset
