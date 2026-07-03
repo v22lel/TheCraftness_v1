@@ -7,7 +7,8 @@
 function escapemap:puzzles/desert/faucet_controller/load
 function escapemap:puzzles/desert/shore_door/load
 function escapemap:puzzles/desert/ruins/load
-function escapemap:puzzles/desert/lights/pp1/load
+function escapemap:puzzles/desert/lights/load
+function escapemap:puzzles/desert/elevator/load
 scoreboard objectives add desert_break minecraft.mined:minecraft.pale_oak_leaves
 scoreboard players set @a desert_break 0
 execute as @a run advancement revoke @s only escapemap:place_leaves

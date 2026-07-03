@@ -10,6 +10,7 @@
 /function escapemap:badending/tick
 //TEST
 /function escapemap:mechanical/elevators/elevator/tick
+/function escapemap:zzz/tick
 
 as (@a) {
     /function escapemap:area/tick

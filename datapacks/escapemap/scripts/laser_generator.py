@@ -154,7 +154,7 @@ class LaserInstance:
 # x,z + 0.5
 # y + 2.5
 
-LASER = LaserInstance(
+CASTLE_LASER = LaserInstance(
         laser_id="castle",
         x=-162.5,
         y=-10.5,
@@ -170,6 +170,25 @@ LASER = LaserInstance(
         aim_pitch_duration_seconds=2.5,
         aim_pitch_substeps=30,
 )
+
+DESERT_LASER = LaserInstance(
+    laser_id="desert",
+    x=-168.5,
+    y=-32.5,
+    z=31.5,
+    target_yaw_degrees=-112.8 * CUSTOM_ROTATION_FIX,
+    target_pitch_degrees=-13.3 * CUSTOM_ROTATION_FIX,
+
+    aim_yaw_delay_seconds=2.5,
+    aim_yaw_duration_seconds=15,
+    aim_yaw_substeps=100,
+
+    aim_pitch_delay_seconds=2.5,
+    aim_pitch_duration_seconds=5,
+    aim_pitch_substeps=50,
+)
+
+LASER = DESERT_LASER
 
 
 # ============================================================

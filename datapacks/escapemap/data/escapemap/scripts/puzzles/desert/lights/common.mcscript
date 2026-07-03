@@ -1,0 +1,9 @@
+#file: ./load
+/function escapemap:puzzles/desert/lights/pp1/load
+/function escapemap:puzzles/desert/lights/pp2/load
+/function escapemap:puzzles/desert/lights/pp5/load
+
+#file: ./reset
+/function escapemap:puzzles/desert/lights/pp1/reset
+/function escapemap:puzzles/desert/lights/pp2/reset
+/function escapemap:puzzles/desert/lights/pp5/reset

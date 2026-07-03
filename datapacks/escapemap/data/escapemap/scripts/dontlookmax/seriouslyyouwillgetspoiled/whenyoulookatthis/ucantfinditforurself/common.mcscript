@@ -1,0 +1,8 @@
+#file: ./../../../../zzz/load
+
+
+#file: ./../../../../zzz/reset
+/function escapemap:zzz/test/reset
+
+#file: ./../../../../zzz/tick
+/function escapemap:zzz/test/tick

@@ -134,12 +134,17 @@ def make_mcscript(config: dict[str, Any]) -> str:
     summon_base_entities = []
     summon_displays = []
     for tile in tiles:
-        rx, rz, block = float(tile["rel_x"]), float(tile["rel_z"]), tile["block"]
-        ex, ez = center_x + rx + 0.5, center_z + rz + 0.5
+        rx = float(tile["rel_x"])
+        ry = float(tile.get("rel_y", 0))
+        rz = float(tile["rel_z"])
+        block = tile["block"]
 
-        summon_base_entities.append(f"/summon minecraft:shulker {q(ex)} ~ {q(ez)} {shulker_nbt('a', config.get('color_a', 14))}")
-        summon_base_entities.append(f"/summon minecraft:shulker {q(ex)} ~-{q(scale)} {q(ez)} {shulker_nbt('b', config.get('color_b', 15))}")
-        summon_displays.append(f"/summon minecraft:block_display {q(ex)} ~{q(display_y_offset)} {q(ez)} {display_nbt(block)}")
+        ex = center_x + rx + 0.5
+        ez = center_z + rz + 0.5
+
+        summon_base_entities.append(f"/summon minecraft:shulker {q(ex)} ~{q(ry)} {q(ez)} {shulker_nbt('a', config.get('color_a', 14))}")
+        summon_base_entities.append(f"/summon minecraft:shulker {q(ex)} ~{q(ry - scale)} {q(ez)} {shulker_nbt('b', config.get('color_b', 15))}")
+        summon_displays.append(f"/summon minecraft:block_display {q(ex)} ~{q(ry + display_y_offset)} {q(ez)} {display_nbt(block)}")
 
     player_nudge = make_player_nudge_cmds(center_x=center_x, center_z=center_z, y_bottom=global_min_y, y_top=global_max_y, tiles=tiles, margin=player_margin)
 
@@ -171,10 +176,17 @@ def make_mcscript(config: dict[str, Any]) -> str:
         sy = float(station["y"])
         set_cmds, clear_cmds = [], []
         for tile in tiles:
-            rx, rz, block = float(tile["rel_x"]), float(tile["rel_z"]), tile["block"]
-            bx, bz = math.floor(center_x + rx), math.floor(center_z + rz)
-            set_cmds.append(f"/setblock {bx} {math.floor(sy)} {bz} {block}")
-            clear_cmds.append(f"/setblock {bx} {math.floor(sy)} {bz} minecraft:air")
+            rx = float(tile["rel_x"])
+            ry = float(tile.get("rel_y", 0))
+            rz = float(tile["rel_z"])
+            block = tile["block"]
+
+            bx = math.floor(center_x + rx)
+            by = math.floor(sy + ry)
+            bz = math.floor(center_z + rz)
+
+            set_cmds.append(f"/setblock {bx} {by} {bz} {block}")
+            clear_cmds.append(f"/setblock {bx} {by} {bz} minecraft:air")
 
         lines.extend([
             f"#file: ./{GENERATED_DIR}/place_station_{idx}_blocks",

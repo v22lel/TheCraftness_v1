@@ -1,0 +1,83 @@
+{
+  "namespace": "escapemap",
+  "id": "desert_elevator",
+  "path_prefix": "puzzles/desert/",
+  "x": -169,
+  "z": -31,
+  "stations": [
+    { "name": "bottom", "y": -51 },
+    { "name": "top", "y": -38 }
+  ],
+  "scale": 1.0,
+  "tick_divisor": 2,
+  "allow_overshoot": false,
+  "player_margin": 0.5,
+  "display_y_offset": 1.0,
+  "display_scale": 1.0,
+  "display_y_scale": 1.5,
+  "color_a": 14,
+  "color_b": 15,
+  "call_listeners": true,
+  "despawn_x": 0,
+  "despawn_y": -64,
+  "despawn_z": 0,
+  "tiles": [
+    {"rel_x": 0, "rel_z": 0, "block": "minecraft:polished_andesite" },
+    {"rel_x": 0, "rel_z": -1, "block": "minecraft:polished_andesite" },
+    {"rel_x": 0, "rel_z": -2, "block": "minecraft:polished_andesite" },
+    {"rel_x": 0, "rel_z": 1, "block": "minecraft:polished_andesite" },
+    {"rel_x": 0, "rel_z": 2, "block": "minecraft:polished_andesite" },
+
+    {"rel_x": 1, "rel_z": 0, "block": "minecraft:polished_andesite" },
+    {"rel_x": 1, "rel_z": -1, "block": "minecraft:polished_andesite" },
+    {"rel_x": 1, "rel_z": -2, "block": "minecraft:polished_andesite" },
+    {"rel_x": 1, "rel_z": 1, "block": "minecraft:polished_andesite" },
+    {"rel_x": 1, "rel_z": 2, "block": "minecraft:polished_andesite" },
+
+    {"rel_x": -1, "rel_z": 0, "block": "minecraft:polished_andesite" },
+    {"rel_x": -1, "rel_z": -1, "block": "minecraft:polished_andesite" },
+    {"rel_x": -1, "rel_z": -2, "block": "minecraft:polished_andesite" },
+    {"rel_x": -1, "rel_z": 1, "block": "minecraft:polished_andesite" },
+    {"rel_x": -1, "rel_z": 2, "block": "minecraft:polished_andesite" },
+
+    {"rel_x": -2, "rel_z": -1, "block": "minecraft:polished_andesite" },
+    {"rel_x": -2, "rel_z": -2, "block": "minecraft:polished_andesite" },
+    {"rel_x": -2, "rel_z": 1, "block": "minecraft:polished_andesite" },
+
+    {"rel_x": 2, "rel_z": -1, "block": "minecraft:polished_andesite" },
+    {"rel_x": 2, "rel_z": -2, "block": "minecraft:polished_andesite" },
+    {"rel_x": 2, "rel_z": 1, "block": "minecraft:polished_andesite" },
+
+    {"rel_x": 1, "rel_y": 1, "rel_z": 1, "block": "minecraft:deepslate_tile_wall" },
+    {"rel_x": 1, "rel_y": 2, "rel_z": 1, "block": "minecraft:deepslate_tile_wall" },
+    {"rel_x": 1, "rel_y": 3, "rel_z": 1, "block": "minecraft:deepslate_tile_wall" },
+
+    {"rel_x": -1, "rel_y": 1, "rel_z": 1, "block": "minecraft:deepslate_tile_wall" },
+    {"rel_x": -1, "rel_y": 2, "rel_z": 1, "block": "minecraft:deepslate_tile_wall" },
+    {"rel_x": -1, "rel_y": 3, "rel_z": 1, "block": "minecraft:deepslate_tile_wall" },
+
+    {"rel_x": -1, "rel_y": 1, "rel_z": -1, "block": "minecraft:deepslate_tile_wall" },
+    {"rel_x": -1, "rel_y": 2, "rel_z": -1, "block": "minecraft:deepslate_tile_wall" },
+    {"rel_x": -1, "rel_y": 3, "rel_z": -1, "block": "minecraft:deepslate_tile_wall" },
+
+    {"rel_x": 1, "rel_y": 1, "rel_z": -1, "block": "minecraft:deepslate_tile_wall" },
+    {"rel_x": 1, "rel_y": 2, "rel_z": -1, "block": "minecraft:deepslate_tile_wall" },
+    {"rel_x": 1, "rel_y": 3, "rel_z": -1, "block": "minecraft:deepslate_tile_wall" },
+
+    {"rel_x": 0, "rel_y": 1, "rel_z": 1, "block": "minecraft:iron_bars" },
+    {"rel_x": 0, "rel_y": 2, "rel_z": 1, "block": "minecraft:iron_bars" },
+    {"rel_x": 0, "rel_y": 3, "rel_z": 1, "block": "minecraft:deepslate_tile_wall" },
+
+    {"rel_x": 0, "rel_y": 1, "rel_z": -1, "block": "minecraft:iron_bars" },
+    {"rel_x": 0, "rel_y": 2, "rel_z": -1, "block": "minecraft:iron_bars" },
+    {"rel_x": 0, "rel_y": 3, "rel_z": -1, "block": "minecraft:deepslate_tile_wall" },
+
+    {"rel_x": 1, "rel_y": 1, "rel_z": 0, "block": "minecraft:iron_bars" },
+    {"rel_x": 1, "rel_y": 2, "rel_z": 0, "block": "minecraft:iron_bars" },
+    {"rel_x": 1, "rel_y": 3, "rel_z": 0, "block": "minecraft:deepslate_tile_wall" },
+
+    {"rel_x": -1, "rel_y": 1, "rel_z": 0, "block": "minecraft:iron_bars" },
+    {"rel_x": -1, "rel_y": 2, "rel_z": 0, "block": "minecraft:iron_bars" },
+    {"rel_x": -1, "rel_y": 3, "rel_z": 0, "block": "minecraft:deepslate_tile_wall" }
+  ]
+}

@@ -1,0 +1,52 @@
+var desert_pp5
+
+modal togglePressurePlate5(rspos, pppos) {
+    /data modify storage escapemap:tmp isStone set value 0b
+    /execute if block $(rspos) redstone_wire positioned $(pppos) unless entity @e[tag=pp5_fake,distance=..1] run data modify storage escapemap:tmp isStone set value 1b
+
+    /execute if block $(rspos) redstone_wire if data storage escapemap:tmp {isStone:1b} positioned $(pppos) run summon minecraft:block_display ~-0.5 ~-0.5 ~-0.5 {Tags:["pp5_fake"],block_state:{Name:"minecraft:light_weighted_pressure_plate"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.025f,0.0f,-0.025f],scale:[1.05f,1.05f,1.05f]}}
+    /execute if block $(rspos) redstone_wire if data storage escapemap:tmp {isStone:0b} positioned $(pppos) as @e[tag=pp5_fake,distance=..1] run kill @s
+
+
+    /execute positioned $(rspos) positioned ~ ~-1 ~ if block ~ ~ ~ sandstone positioned $(rspos) positioned ~ ~-1 ~ unless entity @e[tag=pp5_fake,distance=..1] run data modify storage escapemap:tmp isStone set value 1b
+
+    /execute positioned $(rspos) positioned ~ ~-1 ~ if block ~ ~ ~ sandstone if data storage escapemap:tmp {isStone:1b} positioned $(rspos) positioned ~ ~-1 ~ run summon minecraft:block_display ~-0.5 ~-0.5 ~-0.5 {Tags:["pp5_fake"],block_state:{Name:"minecraft:light_weighted_pressure_plate"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.025f,0.0f,-0.025f],scale:[1.05f,1.05f,1.05f]}}
+    /execute positioned $(rspos) positioned ~ ~-1 ~ if block ~ ~ ~ sandstone if data storage escapemap:tmp {isStone:0b} positioned $(rspos) positioned ~ ~-1 ~ as @e[tag=pp5_fake,distance=..1] run kill @s
+}
+
+modal toggleSelf5(pos) {
+    /data modify storage escapemap:tmp isStone set value 0b
+    /execute positioned $(pos) unless entity @e[tag=pp5_fake,distance=..1] run data modify storage escapemap:tmp isStone set value 1b
+
+    /execute if data storage escapemap:tmp {isStone:1b} positioned $(pos) run summon minecraft:block_display ~-0.5 ~-0.5 ~-0.5 {Tags:["pp5_fake"],block_state:{Name:"minecraft:light_weighted_pressure_plate"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.025f,0.0f,-0.025f],scale:[1.05f,1.05f,1.05f]}}
+    /execute if data storage escapemap:tmp {isStone:0b} positioned $(pos) as @e[tag=pp5_fake,distance=..1] run kill @s
+}
+
+#file: ./pp5/load
+
+#file: ./pp5/reset
+desert_pp5 C = 0
+desert_pp5 P = 0
+/kill @e[tag=pp5_fake]
+
+/setblock -152 -44 39 minecraft:waxed_oxidized_copper_bulb[lit=false]
+
+#file: ./pp5/toggle
+togglePressurePlate5("~ ~2 ~-1", "~ ~2 ~-2")
+togglePressurePlate5("~ ~2 ~1", "~ ~2 ~2")
+togglePressurePlate5("~-1 ~2 ~", "~-2 ~2 ~")
+togglePressurePlate5("~1 ~2 ~", "~2 ~2 ~")
+toggleSelf5("~ ~2 ~")
+
+desert_pp5 C = 0
+/execute as @e[tag=pp5_fake] run scoreboard players add C desert_pp5 1
+if(desert_pp5 C == 16){
+    /function escapemap:puzzles/desert/lights/pp5/complete
+}
+
+#file: ./pp5/complete
+if(desert_pp5 P == 0) {
+    /function escapemap:puzzles/complete
+    /setblock -152 -44 39 minecraft:waxed_oxidized_copper_bulb[lit=true]
+}
+desert_pp5 P = 1

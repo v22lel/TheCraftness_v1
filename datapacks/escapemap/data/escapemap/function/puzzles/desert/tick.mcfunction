@@ -6,4 +6,5 @@
 ######
 function escapemap:puzzles/desert/faucet/main_tick
 function escapemap:puzzles/desert/faucet_controller/tick
+function escapemap:puzzles/desert/elevator/tick
 execute as @a[scores={desert_break=1..},limit=1] run function escapemap:puzzles/desert/leaves_broken

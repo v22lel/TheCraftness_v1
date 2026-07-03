@@ -6,5 +6,6 @@
 ######
 execute if score P desert_pp3 matches 0 run function escapemap:puzzles/complete
 execute if score P desert_pp3 matches 0 run setblock -164 -42 51 minecraft:waxed_oxidized_copper_bulb[lit=true]
+execute if score P desert_pp3 matches 0 run schedule function escapemap:puzzles/desert/depths/pp3/door 5s
 
 scoreboard players set P desert_pp3 1

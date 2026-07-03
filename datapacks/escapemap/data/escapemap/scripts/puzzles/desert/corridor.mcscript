@@ -1,0 +1,101 @@
+var desert_corridor
+
+modal toggleLamp(pos) {
+    /data modify storage escapemap:tmp isRedstone set value 0b
+    /execute if block $(pos) redstone_block run data modify storage escapemap:tmp isRedstone set value 1b
+
+    /execute if data storage escapemap:tmp {isRedstone:1b} run setblock $(pos) air
+    /execute if data storage escapemap:tmp {isRedstone:0b} run setblock $(pos) redstone_block
+}
+
+modal rsCheck(pos) {
+    if ('block $(pos) redstone_block') {
+        desert_corridor C += 1
+    }
+}
+
+#file: ./corridor/reset
+desert_corridor C = 0
+desert_corridor P = 0
+/setblock -190 -49 48 air
+/setblock -184 -49 46 air
+/setblock -190 -49 44 air
+/setblock -184 -49 48 air
+/setblock -190 -49 46 air
+/setblock -190 -49 42 air
+/setblock -184 -49 44 air
+/setblock -184 -49 42 air
+/setblock -190 -49 40 air
+/setblock -184 -49 38 air
+/setblock -190 -49 36 air
+/setblock -184 -49 40 air
+/setblock -190 -49 38 air
+/setblock -184 -49 36 air
+/setblock -190 -49 34 air
+/setblock -184 -49 34 air
+/setblock -172 -51 31 waxed_oxidized_copper_bulb[lit=false,powered=false]
+
+#file: ./corridor/check
+desert_corridor C = 0
+rsCheck('-190 -49 48')
+rsCheck('-184 -49 46')
+rsCheck('-190 -49 44')
+rsCheck('-184 -49 48')
+rsCheck('-190 -49 46')
+rsCheck('-190 -49 42')
+rsCheck('-184 -49 44')
+rsCheck('-184 -49 42')
+rsCheck('-190 -49 40')
+rsCheck('-184 -49 38')
+rsCheck('-190 -49 36')
+rsCheck('-184 -49 40')
+rsCheck('-190 -49 38')
+rsCheck('-184 -49 36')
+rsCheck('-190 -49 34')
+rsCheck('-184 -49 34')
+/execute if score C desert_corridor matches 16.. run function escapemap:puzzles/desert/corridor/complete
+
+#file: ./corridor/complete
+if (desert_corridor P == 0) {
+    /function escapemap:puzzles/complete
+    /setblock -172 -51 31 waxed_oxidized_copper_bulb[lit=true]
+    desert_corridor P = 1
+}
+
+#file: ./corridor/line1
+toggleLamp('-190 -49 48')
+toggleLamp('-184 -49 46')
+toggleLamp('-190 -49 44')
+
+#file: ./corridor/line2
+toggleLamp('-184 -49 48')
+
+#file: ./corridor/line3
+toggleLamp('-190 -49 46')
+toggleLamp('-190 -49 42')
+
+#file: ./corridor/line4
+toggleLamp('-184 -49 44')
+
+#file: ./corridor/line5
+toggleLamp('-184 -49 42')
+
+#file: ./corridor/line6
+toggleLamp('-190 -49 40')
+toggleLamp('-184 -49 38')
+toggleLamp('-190 -49 36')
+
+#file: ./corridor/line7
+toggleLamp('-184 -49 40')
+
+#file: ./corridor/line8
+toggleLamp('-190 -49 38')
+toggleLamp('-184 -49 36')
+toggleLamp('-190 -49 34')
+
+#file: ./corridor/line9
+toggleLamp('-184 -49 36')
+toggleLamp('-184 -49 34')
+
+#file: ./corridor/line10
+toggleLamp('-184 -49 34')

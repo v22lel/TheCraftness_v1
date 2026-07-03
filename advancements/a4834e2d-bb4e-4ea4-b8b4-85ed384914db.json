@@ -2356,5 +2356,11 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/magenta_glazed_terracotta": {
+    "criteria": {
+      "has_magenta_terracotta": "2026-07-03 12:06:28 +0200"
+    },
+    "done": true
+  },
   "DataVersion": 4189
 }
