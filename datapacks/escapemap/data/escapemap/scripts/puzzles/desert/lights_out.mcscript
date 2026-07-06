@@ -1,0 +1,56 @@
+var desert_ocd
+
+modal rsCheck2(pos) {
+    if ('block $(pos) redstone_block') {
+        desert_ocd C += 1
+    }
+}
+
+#file: ./ocd/check
+
+desert_ocd C = 0
+/execute as @e[tag=pp1_fake] run scoreboard players add C desert_ocd 1
+// 12
+/execute as @e[tag=pp2_fake] run scoreboard players add C desert_ocd 1
+// 24
+/execute as @e[tag=pp5_fake] run scoreboard players add C desert_ocd 1
+// 40
+/execute as @e[tag=pp4_fake] run scoreboard players add C desert_ocd 1
+// 49
+/execute as @e[tag=pp3_fake] run scoreboard players add C desert_ocd 1
+// 74
+rsCheck2('-190 -49 48')
+rsCheck2('-184 -49 46')
+rsCheck2('-190 -49 44')
+rsCheck2('-184 -49 48')
+rsCheck2('-190 -49 46')
+rsCheck2('-190 -49 42')
+rsCheck2('-184 -49 44')
+rsCheck2('-184 -49 42')
+rsCheck2('-190 -49 40')
+rsCheck2('-184 -49 38')
+rsCheck2('-190 -49 36')
+rsCheck2('-184 -49 40')
+rsCheck2('-190 -49 38')
+rsCheck2('-184 -49 36')
+rsCheck2('-190 -49 34')
+rsCheck2('-184 -49 34')
+// 90
+
+if(desert_ocd C == 90){
+    /function escapemap:puzzles/desert/ocd/complete
+}
+
+#file: ./ocd/complete
+if (desert_ocd P == 0) {
+    /setblock -187 -49 29 waxed_copper_bulb[lit=true]
+    /function escapemap:puzzles/secret_complete {p:"-187 -50 31"}
+}
+desert_ocd P = 1
+
+#file: ./ocd/reset
+desert_ocd C = 0
+desert_ocd P = 0
+
+/setblock -187 -50 31 soul_campfire[lit=false]
+/setblock -187 -49 29 waxed_copper_bulb[lit=false,powered=false]

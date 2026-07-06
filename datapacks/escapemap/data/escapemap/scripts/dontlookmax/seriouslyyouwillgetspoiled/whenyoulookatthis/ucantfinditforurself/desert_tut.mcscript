@@ -1,0 +1,124 @@
+var zzz_desert_tut_progress
+
+#file: ./../../../../zzz/desert_tut/reset
+/function escapemap:zzz/desert_tut/kill
+/function escapemap:zzz/desert_tut/summon0
+zzz_desert_tut_progress P = 0
+
+#file: ./../../../../zzz/desert_tut/kill
+/kill @e[tag=zzz_ia_desert_tut]
+
+#file: ./../../../../zzz/desert_tut/summon0
+/summon interaction -150 -47 46 {Tags:["zzz_ia_desert_tut", "0"],height:1.1f,width:1.1f}
+
+#file: ./../../../../zzz/desert_tut/tick
+/execute as @e[tag=zzz_ia_desert_tut,tag=0] if data entity @s {interaction:{}} run function escapemap:zzz/desert_tut/click_0
+/execute as @e[tag=zzz_ia_desert_tut,tag=1] if data entity @s {interaction:{}} run function escapemap:zzz/desert_tut/click_1
+/execute as @e[tag=zzz_ia_desert_tut,tag=2] if data entity @s {interaction:{}} run function escapemap:zzz/desert_tut/click_2
+/execute as @e[tag=zzz_ia_desert_tut,tag=3] if data entity @s {interaction:{}} run function escapemap:zzz/desert_tut/click_3
+/execute as @e[tag=zzz_ia_desert_tut,tag=4] if data entity @s {interaction:{}} run function escapemap:zzz/desert_tut/click_4
+/execute as @e[tag=zzz_ia_desert_tut,tag=5] if data entity @s {interaction:{}} run function escapemap:zzz/desert_tut/click_5
+/execute if score P zzz_desert_tut_progress matches 0..5 run function escapemap:zzz/desert_tut/particle_0
+/execute if score P zzz_desert_tut_progress matches 1..5 run function escapemap:zzz/desert_tut/particle_1
+/execute if score P zzz_desert_tut_progress matches 2..5 run function escapemap:zzz/desert_tut/particle_2
+/execute if score P zzz_desert_tut_progress matches 3..5 run function escapemap:zzz/desert_tut/particle_3
+/execute if score P zzz_desert_tut_progress matches 4..5 run function escapemap:zzz/desert_tut/particle_4
+/execute if score P zzz_desert_tut_progress matches 5..5 run function escapemap:zzz/desert_tut/particle_5
+
+#file: ./../../../../zzz/desert_tut/complete
+/say complete
+/function escapemap:zzz/desert_tut/kill
+
+#file: ./../../../../zzz/desert_tut/click_0
+/execute as @e[tag=zzz_ia_desert_tut,tag=0] run data remove entity @s interaction
+/kill @e[tag=zzz_ia_desert_tut,tag=1]
+/kill @e[tag=zzz_ia_desert_tut,tag=2]
+/kill @e[tag=zzz_ia_desert_tut,tag=3]
+/kill @e[tag=zzz_ia_desert_tut,tag=4]
+/kill @e[tag=zzz_ia_desert_tut,tag=5]
+/summon interaction -150 -47 39 {Tags:["zzz_ia_desert_tut", "1"],height:1.1f,width:1.1f}
+/scoreboard players set P zzz_desert_tut_progress 1
+/execute if score P zzz_desert_tut_progress matches 6 run function escapemap:zzz/desert_tut/complete
+
+#file: ./../../../../zzz/desert_tut/click_1
+/execute as @e[tag=zzz_ia_desert_tut,tag=1] run data remove entity @s interaction
+/kill @e[tag=zzz_ia_desert_tut,tag=2]
+/kill @e[tag=zzz_ia_desert_tut,tag=3]
+/kill @e[tag=zzz_ia_desert_tut,tag=4]
+/kill @e[tag=zzz_ia_desert_tut,tag=5]
+/summon interaction -158 -47 39 {Tags:["zzz_ia_desert_tut", "2"],height:1.1f,width:1.1f}
+/scoreboard players set P zzz_desert_tut_progress 2
+/execute if score P zzz_desert_tut_progress matches 6 run function escapemap:zzz/desert_tut/complete
+
+#file: ./../../../../zzz/desert_tut/click_2
+/execute as @e[tag=zzz_ia_desert_tut,tag=2] run data remove entity @s interaction
+/kill @e[tag=zzz_ia_desert_tut,tag=3]
+/kill @e[tag=zzz_ia_desert_tut,tag=4]
+/kill @e[tag=zzz_ia_desert_tut,tag=5]
+/summon interaction -158 -47 46 {Tags:["zzz_ia_desert_tut", "3"],height:1.1f,width:1.1f}
+/scoreboard players set P zzz_desert_tut_progress 3
+/execute if score P zzz_desert_tut_progress matches 6 run function escapemap:zzz/desert_tut/complete
+
+#file: ./../../../../zzz/desert_tut/click_3
+/execute as @e[tag=zzz_ia_desert_tut,tag=3] run data remove entity @s interaction
+/kill @e[tag=zzz_ia_desert_tut,tag=4]
+/kill @e[tag=zzz_ia_desert_tut,tag=5]
+/summon interaction -154 -47 46 {Tags:["zzz_ia_desert_tut", "4"],height:1.1f,width:1.1f}
+/scoreboard players set P zzz_desert_tut_progress 4
+/execute if score P zzz_desert_tut_progress matches 6 run function escapemap:zzz/desert_tut/complete
+
+#file: ./../../../../zzz/desert_tut/click_4
+/execute as @e[tag=zzz_ia_desert_tut,tag=4] run data remove entity @s interaction
+/kill @e[tag=zzz_ia_desert_tut,tag=5]
+/summon interaction -154 -47 43 {Tags:["zzz_ia_desert_tut", "5"],height:1.1f,width:1.1f}
+/scoreboard players set P zzz_desert_tut_progress 5
+/execute if score P zzz_desert_tut_progress matches 6 run function escapemap:zzz/desert_tut/complete
+
+#file: ./../../../../zzz/desert_tut/click_5
+/execute as @e[tag=zzz_ia_desert_tut,tag=5] run data remove entity @s interaction
+/scoreboard players set P zzz_desert_tut_progress 6
+/execute if score P zzz_desert_tut_progress matches 6 run function escapemap:zzz/desert_tut/complete
+
+#file: ./../../../../zzz/desert_tut/particle_1
+/particle minecraft:dust{color:[1,1,1],scale:1} -149.5 -46.0 46.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -149.5 -46.0 45.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -149.5 -46.0 44.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -149.5 -46.0 43.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -149.5 -46.0 42.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -149.5 -46.0 41.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -149.5 -46.0 40.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -149.5 -46.0 39.5 0.5 0 0.5 0 1
+
+#file: ./../../../../zzz/desert_tut/particle_2
+/particle minecraft:dust{color:[1,1,1],scale:1} -149.5 -46.0 39.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -150.5 -46.0 39.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -151.5 -46.0 39.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -152.5 -46.0 39.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -153.5 -46.0 39.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -154.5 -46.0 39.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -155.5 -46.0 39.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -156.5 -46.0 39.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -157.5 -46.0 39.5 0.5 0 0.5 0 1
+
+#file: ./../../../../zzz/desert_tut/particle_3
+/particle minecraft:dust{color:[1,1,1],scale:1} -157.5 -46.0 39.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -157.5 -46.0 40.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -157.5 -46.0 41.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -157.5 -46.0 42.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -157.5 -46.0 43.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -157.5 -46.0 44.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -157.5 -46.0 45.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -157.5 -46.0 46.5 0.5 0 0.5 0 1
+
+#file: ./../../../../zzz/desert_tut/particle_4
+/particle minecraft:dust{color:[1,1,1],scale:1} -157.5 -46.0 46.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -156.5 -46.0 46.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -155.5 -46.0 46.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -154.5 -46.0 46.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -153.5 -46.0 46.5 0.5 0 0.5 0 1
+
+#file: ./../../../../zzz/desert_tut/particle_5
+/particle minecraft:dust{color:[1,1,1],scale:1} -153.5 -46.0 46.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -153.5 -46.0 45.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -153.5 -46.0 44.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -153.5 -46.0 43.5 0.5 0 0.5 0 1

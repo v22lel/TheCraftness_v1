@@ -1,0 +1,72 @@
+var desert_cave
+
+modal toggleCavePressurePlate(pos) {
+    /data modify storage escapemap:tmp isStone set value 0b
+    /execute positioned $(pos) unless entity @e[tag=pp_cave_fake,distance=..1] run data modify storage escapemap:tmp isStone set value 1b
+
+    /execute if data storage escapemap:tmp {isStone:1b} positioned $(pos) run summon minecraft:block_display ~-0.5 ~ ~-0.5 {Tags:["pp_cave_fake"],block_state:{Name:"minecraft:light_weighted_pressure_plate"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.025f,0.0f,-0.025f],scale:[1.05f,1.05f,1.05f]}}
+    /execute if data storage escapemap:tmp {isStone:0b} positioned $(pos) as @e[tag=pp_cave_fake,distance=..1] run kill @s
+}
+
+#file: ./cave/reset
+desert_cave C = 0
+desert_cave P = 0
+/kill @e[tag=pp_cave_fake]
+
+/setblock -170 -41 71 minecraft:waxed_copper_bulb[lit=false]
+/setblock -184 -36 71 soul_campfire[lit=false]
+
+#file: ./cave/toggle_green
+toggleCavePressurePlate("-177 -44 68")
+toggleCavePressurePlate("-175 -44 71")
+toggleCavePressurePlate("-174 -43 75")
+toggleCavePressurePlate("-171 -43 72")
+toggleCavePressurePlate("-173 -43 69")
+/function escapemap:puzzles/desert/cave/check
+
+#file: ./cave/toggle_orange
+toggleCavePressurePlate("-175 -44 71")
+toggleCavePressurePlate("-177 -42 74")
+toggleCavePressurePlate("-174 -43 75")
+toggleCavePressurePlate("-171 -43 74")
+toggleCavePressurePlate("-171 -43 72")
+/function escapemap:puzzles/desert/cave/check
+
+#file: ./cave/toggle_green_orange
+toggleCavePressurePlate("-177 -44 68")
+toggleCavePressurePlate("-175 -44 71")
+toggleCavePressurePlate("-174 -43 75")
+toggleCavePressurePlate("-171 -43 72")
+toggleCavePressurePlate("-173 -43 69")
+toggleCavePressurePlate("-177 -42 74")
+toggleCavePressurePlate("-171 -43 74")
+/function escapemap:puzzles/desert/cave/check
+
+#file: ./cave/toggle_blue
+toggleCavePressurePlate("-177 -44 68")
+toggleCavePressurePlate("-171 -42 67")
+toggleCavePressurePlate("-173 -43 69")
+/function escapemap:puzzles/desert/cave/check
+
+#file: ./cave/toggle_green_blue
+toggleCavePressurePlate("-177 -44 68")
+toggleCavePressurePlate("-175 -44 71")
+toggleCavePressurePlate("-174 -43 75")
+toggleCavePressurePlate("-171 -43 72")
+toggleCavePressurePlate("-173 -43 69")
+toggleCavePressurePlate("-171 -42 67")
+/function escapemap:puzzles/desert/cave/check
+
+#file: ./cave/check
+desert_cave C = 0
+/execute as @e[tag=pp_cave_fake] run scoreboard players add C desert_cave 1
+if(desert_cave C == 8){
+    /function escapemap:puzzles/desert/cave/complete
+}
+
+#file: ./cave/complete
+if(desert_cave P == 0) {
+    /function escapemap:puzzles/secret_complete {p:"-184 -36 71"}
+    /setblock -170 -41 71 minecraft:waxed_copper_bulb[lit=true]
+}
+desert_cave P = 1

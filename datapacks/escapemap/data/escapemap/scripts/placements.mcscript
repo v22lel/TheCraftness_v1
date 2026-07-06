@@ -28,3 +28,7 @@ place0 @a = 0
 //spawn trapdoors
 /setblock -131 -38 110 minecraft:oak_trapdoor[facing=east]
 /setblock -131 -38 109 minecraft:oak_trapdoor[facing=east]
+
+//desert one way door
+/setblock -154 -36 26 lever[powered=false,facing=west]
+/setblock -154 -37 25 air destroy

@@ -6,3 +6,6 @@
 ######
 function escapemap:zzz/test/reset
 function escapemap:zzz/test2/reset
+function escapemap:zzz/desert_bushes/reset
+function escapemap:zzz/castle_tower/reset
+function escapemap:zzz/desert_tut/reset

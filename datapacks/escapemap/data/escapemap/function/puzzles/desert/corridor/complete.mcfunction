@@ -6,5 +6,6 @@
 ######
 execute if score P desert_corridor matches 0 run function escapemap:puzzles/complete
 execute if score P desert_corridor matches 0 run setblock -172 -51 31 waxed_oxidized_copper_bulb[lit=true]
-execute if score P desert_corridor matches 0 run scoreboard players set P desert_corridor 1
 
+scoreboard players set P desert_corridor 1
+function escapemap:puzzles/desert/ocd/check

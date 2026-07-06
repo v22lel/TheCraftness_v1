@@ -11,3 +11,6 @@ function escapemap:puzzles/desert/lights/reset
 function escapemap:puzzles/desert/depths/reset
 function escapemap:puzzles/desert/corridor/reset
 function escapemap:puzzles/desert/elevator_controller/reset
+function escapemap:puzzles/desert/ocd/reset
+function escapemap:puzzles/desert/cave/reset
+function escapemap:puzzles/desert/ls1/reset

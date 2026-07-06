@@ -33,6 +33,10 @@ def schedule_function(local_path: str, delay_ticks: int) -> str:
     return f"/schedule function {NAMESPACE}:{function_path(local_path)} {delay_ticks}t"
 
 
+def cancel_function(local_path: str) -> str:
+    return f"/schedule clear {NAMESPACE}:{function_path(local_path)}"
+
+
 def emit_function(local_path: str, commands: list[str]) -> str:
     local_path = local_path.strip("/")
     body = "\n".join(commands)
@@ -131,7 +135,7 @@ CUSTOM_ROTATION_FIX = -1.0
 # Laser instances
 # ============================================================
 
-@dataclass(frozen=True)
+@dataclass(frozen=False)
 class LaserInstance:
     laser_id: str
     x: float
@@ -149,16 +153,18 @@ class LaserInstance:
     aim_pitch_duration_seconds: float
     aim_pitch_substeps: int
 
+    def fix(self):
+        self.x += 0.5
+        self.y += 2.5
+        self.z += 0.5
+
 
 # from block under center of thingy
-# x,z + 0.5
-# y + 2.5
-
 CASTLE_LASER = LaserInstance(
         laser_id="castle",
-        x=-162.5,
-        y=-10.5,
-        z=-49.5,
+        x=-163,
+        y=-13,
+        z=-50,
         target_yaw_degrees=-92.7 * CUSTOM_ROTATION_FIX,
         target_pitch_degrees=-8.8 * CUSTOM_ROTATION_FIX,
 
@@ -173,9 +179,9 @@ CASTLE_LASER = LaserInstance(
 
 DESERT_LASER = LaserInstance(
     laser_id="desert",
-    x=-168.5,
-    y=-32.5,
-    z=31.5,
+    x=-169,
+    y=-35,
+    z=31,
     target_yaw_degrees=-112.8 * CUSTOM_ROTATION_FIX,
     target_pitch_degrees=-13.3 * CUSTOM_ROTATION_FIX,
 
@@ -188,7 +194,25 @@ DESERT_LASER = LaserInstance(
     aim_pitch_substeps=50,
 )
 
-LASER = DESERT_LASER
+LIGHTHOUSE_LASER = LaserInstance(
+    laser_id="lighthouse",
+    x=-88,
+    y=-37,
+    z=-50,
+    target_yaw_degrees=-94.3 * CUSTOM_ROTATION_FIX,
+    target_pitch_degrees=-23.0 * CUSTOM_ROTATION_FIX,
+
+    aim_yaw_delay_seconds=2.5,
+    aim_yaw_duration_seconds=12.5,
+    aim_yaw_substeps=125,
+
+    aim_pitch_delay_seconds=2.5,
+    aim_pitch_duration_seconds=7.5,
+    aim_pitch_substeps=75,
+)
+
+LASER = LIGHTHOUSE_LASER
+LASER.fix()
 
 
 # ============================================================
@@ -548,7 +572,8 @@ def generate_spawn(instance: LaserInstance) -> str:
 
 def generate_reset(instance: LaserInstance) -> str:
     commands = [
-        f"/function escapemap:laser/turn_off {{tag:\"{instance.laser_id}_beam\"}}"
+        f"/function escapemap:laser/turn_off {{tag:\"{instance.laser_id}_beam\"}}",
+        cancel_function(f"{instance.laser_id}/finish")
     ]
 
     for part in PARTS:
@@ -861,7 +886,8 @@ def generate_finish(instance: LaserInstance) -> str:
 def generate_kill(instance: LaserInstance) -> str:
     commands = [
         f"/kill @e[tag={instance.laser_id}]",
-        f"/function escapemap:laser/turn_off {{tag:\"{instance.laser_id}_beam\"}}"
+        f"/function escapemap:laser/turn_off {{tag:\"{instance.laser_id}_beam\"}}",
+        cancel_function(f"{instance.laser_id}/finish")
     ]
 
     return emit_function(f"{instance.laser_id}/kill", commands)

@@ -9,3 +9,4 @@ execute if score P desert_pp1 matches 0 run setblock -164 -42 51 minecraft:waxed
 execute if score P desert_pp1 matches 0 run schedule function escapemap:puzzles/desert/lights/pp1/door 5s
 
 scoreboard players set P desert_pp1 1
+function escapemap:puzzles/desert/ocd/check

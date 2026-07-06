@@ -6,3 +6,4 @@
 ######
 kill @e[tag=desert]
 function escapemap:laser/turn_off {tag:"desert_beam"}
+schedule clear escapemap:laser/desert/finish

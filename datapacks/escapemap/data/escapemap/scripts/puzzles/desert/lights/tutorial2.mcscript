@@ -49,6 +49,7 @@ if(desert_pp2 P == 0) {
     /schedule function escapemap:puzzles/desert/lights/pp2/door 5s
 }
 desert_pp2 P = 1
+/function escapemap:puzzles/desert/ocd/check
 
 #file: ./pp2/door
 /playsound minecraft:desert.door master @a -160 -46 51

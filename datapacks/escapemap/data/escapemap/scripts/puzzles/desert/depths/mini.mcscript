@@ -49,6 +49,7 @@ if(desert_pp4 P == 0) {
     /schedule function escapemap:puzzles/desert/depths/pp4/door 5s
 }
 desert_pp4 P = 1
+/function escapemap:puzzles/desert/ocd/check
 
 #file: ./pp4/door
 /playsound minecraft:desert.door master @a -178 -49 44

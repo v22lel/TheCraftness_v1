@@ -6,7 +6,9 @@
 /function escapemap:laser/desert/kill
 /function escapemap:puzzles/desert/elevator/reset
 /fill -170 -49 31 -170 -50 31 air
-/setblock -171 -49 31 air
+
+/setblock -171 -49 30 air
+/setblock -171 -49 32 air
 
 
 //button setup
@@ -33,11 +35,16 @@
 
 #file: ./elevator_listener/start
 /execute as @e[type=minecraft:item_display,tag=desert_laser_dummy] run data merge entity @s {start_interpolation:-1,interpolation_duration:2600,transformation:{translation:[0.000000f,13.000000f,0.000000f],scale:[1.000000f,1.000000f,1.000000f],left_rotation:[0.000000f,0.000000f,0.000000f,1.000000f],right_rotation:[0.000000f,0.000000f,0.000000f,1.000000f]}}
+/schedule function escapemap:puzzles/desert/elevator_listener/delayed_start 20
+
+#file: ./elevator_listener/delayed_start
+/fill -171 -51 32 -171 -51 30 sandstone_slab[type=bottom]
+/fill -167 -51 30 -167 -51 32 sandstone_slab[type=bottom]
+/setblock -171 -49 30 barrier
+/setblock -171 -49 32 barrier
 
 #file: ./elevator_listener/end
 /kill @e[type=minecraft:item_display,tag=desert_laser_dummy]
 /function escapemap:laser/desert/spawn
 /function escapemap:laser/desert/turn_on
 /fill -170 -37 31 -170 -36 31 air
-
-/setblock -171 -49 31 barrier

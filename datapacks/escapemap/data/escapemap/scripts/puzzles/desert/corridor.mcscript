@@ -59,8 +59,9 @@ rsCheck('-184 -49 34')
 if (desert_corridor P == 0) {
     /function escapemap:puzzles/complete
     /setblock -172 -51 31 waxed_oxidized_copper_bulb[lit=true]
-    desert_corridor P = 1
 }
+desert_corridor P = 1
+/function escapemap:puzzles/desert/ocd/check
 
 #file: ./corridor/line1
 toggleLamp('-190 -49 48')

@@ -8,7 +8,8 @@ function escapemap:laser/desert/reset
 function escapemap:laser/desert/kill
 function escapemap:puzzles/desert/elevator/reset
 fill -170 -49 31 -170 -50 31 air
-setblock -171 -49 31 air
+setblock -171 -49 30 air
+setblock -171 -49 32 air
 setblock -169 -48 31 stone_button[facing=east,face=ceiling]
 setblock -169 -47 31 barrier
 setblock -169 -46 31 command_block[facing=up]{Command:"/function escapemap:puzzles/desert/elevator_controller/start"}

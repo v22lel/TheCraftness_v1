@@ -10,4 +10,6 @@ setblock -140 -40 122 barrier
 setblock -140 -40 123 barrier
 setblock -140 -42 122 air
 setblock -131 -38 110 minecraft:oak_trapdoor[facing=east]
-setblock -131 -38 109 minecraft:oak_trapdoor[facing=east]
+setblock -131 -38 109 minecraft:oak_trapdoor[facing=east]
+setblock -154 -36 26 lever[powered=false,facing=west]
+setblock -154 -37 25 air destroy
