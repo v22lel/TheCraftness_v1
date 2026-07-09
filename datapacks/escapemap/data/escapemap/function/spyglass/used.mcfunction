@@ -6,4 +6,4 @@
 ######
 scoreboard players set @s spyglass_using 1
 execute as @s[scores={spyglass_objective=1..}] run scoreboard players add @s spyglass_ticks 1
-advancement revoke @s only escapemap:using_spyglass
+advancement revoke @s only escapemap:using_spyglass

@@ -1,0 +1,216 @@
+var ep_test_progress
+
+#file: ./test/reset
+/function escapemap:ep/test/kill
+/function escapemap:ep/test/summon0
+ep_test_progress P = 0
+
+#file: ./test/kill
+/kill @e[tag=ep_ia_test]
+
+#file: ./test/summon0
+/summon interaction -165 -6 272 {Tags:["ep_ia_test", "0"],height:1.1f,width:1.1f}
+
+#file: ./test/tick
+/execute as @e[tag=ep_ia_test,tag=0] if data entity @s {interaction:{}} run function escapemap:ep/test/click_0
+/execute as @e[tag=ep_ia_test,tag=1] if data entity @s {interaction:{}} run function escapemap:ep/test/click_1
+/execute as @e[tag=ep_ia_test,tag=2] if data entity @s {interaction:{}} run function escapemap:ep/test/click_2
+/execute as @e[tag=ep_ia_test,tag=3] if data entity @s {interaction:{}} run function escapemap:ep/test/click_3
+/execute as @e[tag=ep_ia_test,tag=4] if data entity @s {interaction:{}} run function escapemap:ep/test/click_4
+/execute as @e[tag=ep_ia_test,tag=5] if data entity @s {interaction:{}} run function escapemap:ep/test/click_5
+/execute if score P ep_test_progress matches 0..5 run function escapemap:ep/test/particle_0
+/execute if score P ep_test_progress matches 1..5 run function escapemap:ep/test/particle_1
+/execute if score P ep_test_progress matches 2..5 run function escapemap:ep/test/particle_2
+/execute if score P ep_test_progress matches 3..5 run function escapemap:ep/test/particle_3
+/execute if score P ep_test_progress matches 4..5 run function escapemap:ep/test/particle_4
+/execute if score P ep_test_progress matches 5..5 run function escapemap:ep/test/particle_5
+
+#file: ./test/complete
+/say complete
+/function escapemap:ep/test/kill
+
+#file: ./test/click_0
+/execute as @e[tag=ep_ia_test,tag=0] run data remove entity @s interaction
+/kill @e[tag=ep_ia_test,tag=1]
+/kill @e[tag=ep_ia_test,tag=2]
+/kill @e[tag=ep_ia_test,tag=3]
+/kill @e[tag=ep_ia_test,tag=4]
+/kill @e[tag=ep_ia_test,tag=5]
+/summon interaction -165 -6 276 {Tags:["ep_ia_test", "1"],height:1.1f,width:1.1f}
+/scoreboard players set P ep_test_progress 1
+/execute if score P ep_test_progress matches 6 run function escapemap:ep/test/complete
+
+#file: ./test/click_1
+/execute as @e[tag=ep_ia_test,tag=1] run data remove entity @s interaction
+/kill @e[tag=ep_ia_test,tag=2]
+/kill @e[tag=ep_ia_test,tag=3]
+/kill @e[tag=ep_ia_test,tag=4]
+/kill @e[tag=ep_ia_test,tag=5]
+/summon interaction -161 -6 276 {Tags:["ep_ia_test", "2"],height:1.1f,width:1.1f}
+/scoreboard players set P ep_test_progress 2
+/execute if score P ep_test_progress matches 6 run function escapemap:ep/test/complete
+
+#file: ./test/click_2
+/execute as @e[tag=ep_ia_test,tag=2] run data remove entity @s interaction
+/kill @e[tag=ep_ia_test,tag=3]
+/kill @e[tag=ep_ia_test,tag=4]
+/kill @e[tag=ep_ia_test,tag=5]
+/summon interaction -161 -6 272 {Tags:["ep_ia_test", "3"],height:1.1f,width:1.1f}
+/scoreboard players set P ep_test_progress 3
+/execute if score P ep_test_progress matches 6 run function escapemap:ep/test/complete
+
+#file: ./test/click_3
+/execute as @e[tag=ep_ia_test,tag=3] run data remove entity @s interaction
+/kill @e[tag=ep_ia_test,tag=4]
+/kill @e[tag=ep_ia_test,tag=5]
+/summon interaction -163 -6 272 {Tags:["ep_ia_test", "4"],height:1.1f,width:1.1f}
+/scoreboard players set P ep_test_progress 4
+/execute if score P ep_test_progress matches 6 run function escapemap:ep/test/complete
+
+#file: ./test/click_4
+/execute as @e[tag=ep_ia_test,tag=4] run data remove entity @s interaction
+/kill @e[tag=ep_ia_test,tag=5]
+/summon interaction -163 -6 274 {Tags:["ep_ia_test", "5"],height:1.1f,width:1.1f}
+/scoreboard players set P ep_test_progress 5
+/execute if score P ep_test_progress matches 6 run function escapemap:ep/test/complete
+
+#file: ./test/click_5
+/execute as @e[tag=ep_ia_test,tag=5] run data remove entity @s interaction
+/scoreboard players set P ep_test_progress 6
+/execute if score P ep_test_progress matches 6 run function escapemap:ep/test/complete
+
+#file: ./test/particle_1
+/particle minecraft:dust{color:[1,1,1],scale:1} -165.0 -5.5 272.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.0 -5.5 272.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -6.0 272.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.0 272.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.5 272.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.5 273.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -165.0 -5.5 273.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.0 -5.5 273.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -6.0 273.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.0 273.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.5 273.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.5 274.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -165.0 -5.5 274.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.0 -5.5 274.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -6.0 274.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.0 274.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.5 274.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.5 275.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -165.0 -5.5 275.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.0 -5.5 275.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -6.0 275.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.0 275.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.5 275.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.5 276.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -165.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -6.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.5 276.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.5 277.0 0.5 0.5 0 0 1
+
+#file: ./test/particle_2
+/particle minecraft:dust{color:[1,1,1],scale:1} -165.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -6.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.5 276.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.5 -5.5 277.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -164.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -163.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -163.5 -6.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -163.5 -5.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -163.5 -5.5 276.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -163.5 -5.5 277.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -163.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -6.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.5 276.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.5 277.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.5 -6.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.5 -5.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.5 -5.5 276.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.5 -5.5 277.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -6.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 276.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 277.0 0.5 0.5 0 0 1
+
+#file: ./test/particle_3
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.0 -5.5 276.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -6.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.0 276.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 276.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 277.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.0 -5.5 275.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.0 -5.5 275.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -6.0 275.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.0 275.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 275.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 276.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.0 -5.5 274.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.0 -5.5 274.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -6.0 274.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.0 274.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 274.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 275.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.0 -5.5 273.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.0 -5.5 273.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -6.0 273.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.0 273.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 273.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 274.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.0 -5.5 272.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.0 -5.5 272.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -6.0 272.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.0 272.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 272.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 273.0 0.5 0.5 0 0 1
+
+#file: ./test/particle_4
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.0 -5.5 272.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.0 -5.5 272.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -6.0 272.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.0 272.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 272.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -160.5 -5.5 273.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.0 -5.5 272.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.0 -5.5 272.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.5 -6.0 272.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.5 -5.0 272.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.5 -5.5 272.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -161.5 -5.5 273.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -163.0 -5.5 272.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.0 -5.5 272.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -6.0 272.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.0 272.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.5 272.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.5 273.0 0.5 0.5 0 0 1
+
+#file: ./test/particle_5
+/particle minecraft:dust{color:[1,1,1],scale:1} -163.0 -5.5 272.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.0 -5.5 272.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -6.0 272.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.0 272.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.5 272.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.5 273.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -163.0 -5.5 273.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.0 -5.5 273.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -6.0 273.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.0 273.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.5 273.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.5 274.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -163.0 -5.5 274.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.0 -5.5 274.5 0 0.5 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -6.0 274.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.0 274.5 0.5 0 0.5 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.5 274.0 0.5 0.5 0 0 1
+/particle minecraft:dust{color:[1,1,1],scale:1} -162.5 -5.5 275.0 0.5 0.5 0 0 1

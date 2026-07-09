@@ -7,4 +7,4 @@
 scoreboard players set C desert_ocd 0
 scoreboard players set P desert_ocd 0
 setblock -187 -50 31 soul_campfire[lit=false]
-setblock -187 -49 29 waxed_copper_bulb[lit=false,powered=false]
+setblock -187 -49 29 waxed_copper_bulb[lit=false,powered=false]

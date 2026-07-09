@@ -21,6 +21,7 @@ areaCheck($(castle), $(castle_id))
 areaCheck($(basement), $(basement_id))
 areaCheck($(mini_cave), $(mini_cave_id))
 areaCheck($(desert), $(desert_id))
+areaCheck($(radiation), $(radiation_id))
 
 /execute as @s unless score @s area = @s old_area run function escapemap:area/areas/changed
 

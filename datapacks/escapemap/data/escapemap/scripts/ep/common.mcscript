@@ -1,0 +1,16 @@
+#file: ./load
+
+
+#file: ./reset
+/function escapemap:ep/test/reset
+/function escapemap:ep/test2/reset
+/function escapemap:ep/desert_bushes/reset
+/function escapemap:ep/castle_tower/reset
+/function escapemap:ep/desert_tut/reset
+
+#file: ./tick
+/function escapemap:ep/test/tick
+/function escapemap:ep/test2/tick
+/function escapemap:ep/desert_bushes/tick
+/function escapemap:ep/castle_tower/tick
+/function escapemap:ep/desert_tut/tick

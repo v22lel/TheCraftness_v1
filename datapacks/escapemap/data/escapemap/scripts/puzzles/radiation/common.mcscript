@@ -8,43 +8,43 @@ var rad_roll
 
 #file: ./tick
 as (@a) {
-    if (area @s == 1 && radiation @s < 500) {
+    if (area @s == 8 && radiation @s < 1000) {
         radiation @s += 1
-        if (radiation @s == 100) {
+        if (radiation @s == 200) {
             rad_tier @s = 1
             /execute as @s run function escapemap:puzzles/radiation/apply_effects
         }
-        if (radiation @s == 200) {
+        if (radiation @s == 400) {
             rad_tier @s = 2
             /execute as @s run function escapemap:puzzles/radiation/apply_effects
         }
-        if (radiation @s == 300) {
+        if (radiation @s == 600) {
             rad_tier @s = 3
             /execute as @s run function escapemap:puzzles/radiation/apply_effects
         }
     }
-    unless (area @s == 1) {
-        if (radiation @s > 1) {
-            radiation @s -= 2
-            if ('score @s radiation matches 97..99') {
+    unless (area @s == 8) {
+        if (radiation @s > 3) {
+            radiation @s -= 4
+            if ('score @s radiation matches 195..199') {
                 rad_tier @s = 0
                 /execute as @s run function escapemap:puzzles/radiation/apply_effects
             }
-            if ('score @s radiation matches 197..199') {
+            if ('score @s radiation matches 395..399') {
                 rad_tier @s = 1
                 /execute as @s run function escapemap:puzzles/radiation/apply_effects
             }
-            if ('score @s radiation matches 297..299') {
+            if ('score @s radiation matches 595..599') {
                 rad_tier @s = 2
                 /execute as @s run function escapemap:puzzles/radiation/apply_effects
             }
         }
-        if (radiation @s == 1) {
+        if ('score @s radiation matches 1..5') {
             radiation @s = 0
         }
     }
     /scoreboard players operation @s rad_div = @s radiation
-    /scoreboard players operation @s rad_div /= 5 numbers
+    /scoreboard players operation @s rad_div /= 10 numbers
 }
 
 rad_timer timer += 1
@@ -60,15 +60,15 @@ if (rad_timer timer == 100) {
 /attribute @s minecraft:block_interaction_range modifier remove radiation
 
 if (rad_tier @s == 1) {
-    /attribute @s minecraft:block_interaction_range modifier add radiation -1.0 add_value
+    /attribute @s minecraft:block_interaction_range modifier add radiation -1.5 add_value
 }
 
 if (rad_tier @s == 2) {
-    /attribute @s minecraft:block_interaction_range modifier add radiation -2.0 add_value
+    /attribute @s minecraft:block_interaction_range modifier add radiation -3.0 add_value
 }
 
 if (rad_tier @s == 3) {
-    /attribute @s minecraft:block_interaction_range modifier add radiation -3.0 add_value
+    /attribute @s minecraft:block_interaction_range modifier add radiation -4.5 add_value
 }
 
 #file: ./radiation_tick

@@ -13,4 +13,5 @@ execute as @s[x= -190 ,y= -80 ,z= -65 ,dx= 40 ,dy= 80 ,dz= 71 ] run scoreboard p
 execute as @s[x= -120 ,y= -50 ,z= 37 ,dx= 14 ,dy= 10 ,dz= 12 ] run scoreboard players set @s area 5
 execute as @s[x= 14 ,y= -28 ,z= -91 ,dx= 18 ,dy= 12 ,dz= 16 ] run scoreboard players set @s area 6
 execute as @s[x= -201 ,y= -55 ,z= 20 ,dx= 50 ,dy= 32 ,dz= 51 ] run scoreboard players set @s area 7
+execute as @s[x= -35 ,y= -38 ,z= -4 ,dx= 36 ,dy= 14 ,dz= 27 ] run scoreboard players set @s area 8
 execute as @s unless score @s area = @s old_area run function escapemap:area/areas/changed

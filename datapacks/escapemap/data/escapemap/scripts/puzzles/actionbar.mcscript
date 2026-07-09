@@ -35,61 +35,61 @@ as (@a[scores={radiation=0,secrets_complete=0}]) {
 }
 
 #file: ./actionbar/radiation/1
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|","color":"green"},{"text":"|||||||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"|","color":"green"},{"text":"|||||||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/2
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||","color":"green"},{"text":"||||||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"||","color":"green"},{"text":"||||||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/3
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||","color":"green"},{"text":"|||||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"|||","color":"green"},{"text":"|||||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/4
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||","color":"green"},{"text":"||||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"||||","color":"green"},{"text":"||||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/5
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||","color":"green"},{"text":"|||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"|||||","color":"green"},{"text":"|||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/6
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||","color":"green"},{"text":"||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"||||||","color":"green"},{"text":"||||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/7
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||","color":"green"},{"text":"|||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"|||||||","color":"green"},{"text":"|||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/8
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||","color":"green"},{"text":"||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"||||||||","color":"green"},{"text":"||||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/9
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||||","color":"green"},{"text":"|||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"|||||||||","color":"green"},{"text":"|||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/10
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||||","color":"green"},{"text":"||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"||||||||||","color":"green"},{"text":"||||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/11
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||||||","color":"green"},{"text":"|||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"|||||||||||","color":"green"},{"text":"|||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/12
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||||||","color":"green"},{"text":"||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"||||||||||||","color":"green"},{"text":"||||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/13
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||||||||","color":"green"},{"text":"|||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"|||||||||||||","color":"green"},{"text":"|||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/14
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||||||||","color":"green"},{"text":"||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"||||||||||||||","color":"green"},{"text":"||||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/15
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||||||||||","color":"green"},{"text":"|||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"|||||||||||||||","color":"green"},{"text":"|||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/16
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||||||||||","color":"green"},{"text":"||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"||||||||||||||||","color":"green"},{"text":"||||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/17
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||||||||||||","color":"green"},{"text":"|||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"|||||||||||||||||","color":"green"},{"text":"|||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/18
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||||||||||||","color":"green"},{"text":"||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"||||||||||||||||||","color":"green"},{"text":"||","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/19
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"|||||||||||||||||||","color":"green"},{"text":"|","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"|||||||||||||||||||","color":"green"},{"text":"|","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
 
 #file: ./actionbar/radiation/20
-/title @s actionbar [{"text":"Radiation: [","color":"white"},{"text":"||||||||||||||||||||","color":"green"},{"text":"","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]
+/title @s actionbar [{"text":"☢: [","color":"white"},{"text":"||||||||||||||||||||","color":"green"},{"text":"","color":"dark_gray"},{"text":"] ","color":"white"},{"score":{"name":"@s","objective":"rad_div"},"color":"white"},{"text":"%","color":"white"}]

@@ -16,6 +16,9 @@ function escapemap:explicit_randomness/disable
 tp @a -135.5 -42.00 127.5
 clear @a
 gamemode adventure @a
+effect give @a resistance infinite 5 true
+effect give @a water_breathing infinite 0 true
+effect give @a instant_health 1 4 true
 execute as @a run attribute @s minecraft:jump_strength modifier add escapemap -0.5 add_value
 execute as @a run attribute @s minecraft:fall_damage_multiplier modifier add escapemap -1 add_value
 say The Craftness Reset
