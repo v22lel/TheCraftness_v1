@@ -7,3 +7,16 @@
 /setblock -7 -39 11 air
 /setblock -7 -43 11 air
 /setblock -7 -44 11 air
+/fill -7 -42 11 -7 -39 11 air
+
+#file: ./lab/pipe2_on
+/setblock -20 -39 3 air
+/setblock -20 -38 3 water
+/setblock -20 -43 3 barrier[waterlogged=true]
+/setblock -20 -44 3 water
+
+#file: ./lab/pipe2_off
+/setblock -20 -43 3 air
+/setblock -20 -44 3 air
+/fill -20 -42 3 -20 -39 3 air
+/setblock -20 -39 3 slime_block

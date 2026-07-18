@@ -26,7 +26,7 @@ super_secrets_complete @a += 1
 
 
 #file: ./tick
-/function escapemap:puzzles/actionbar/tick
+//function escapemap:puzzles/actionbar/tick
 
 /function escapemap:puzzles/red_candle/tick
 /function escapemap:puzzles/castle/tick

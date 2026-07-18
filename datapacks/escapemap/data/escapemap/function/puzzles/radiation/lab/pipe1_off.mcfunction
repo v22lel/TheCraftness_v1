@@ -7,3 +7,4 @@
 setblock -7 -39 11 air
 setblock -7 -43 11 air
 setblock -7 -44 11 air
+fill -7 -42 11 -7 -39 11 air
