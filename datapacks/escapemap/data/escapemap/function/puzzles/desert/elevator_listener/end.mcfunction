@@ -7,4 +7,4 @@
 kill @e[type=minecraft:item_display,tag=desert_laser_dummy]
 function escapemap:laser/desert/spawn
 function escapemap:laser/desert/turn_on
-fill -170 -37 31 -170 -36 31 air
+fill -170 -37 31 -170 -36 31 air

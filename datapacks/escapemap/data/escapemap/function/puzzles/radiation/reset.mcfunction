@@ -8,4 +8,4 @@ scoreboard players set @a radiation 0
 scoreboard players set @a rad_tier 0
 scoreboard players set @a rad_div 0
 execute as @a run attribute @s minecraft:block_interaction_range modifier remove radiation
-execute as @a run attribute @s minecraft:movement_speed modifier remove radiation
+execute as @a run attribute @s minecraft:movement_speed modifier remove radiation

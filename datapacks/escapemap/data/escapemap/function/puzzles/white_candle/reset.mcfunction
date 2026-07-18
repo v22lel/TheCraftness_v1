@@ -15,4 +15,4 @@ setblock -28 -37 33 air
 setblock -29 -39 31 minecraft:stone_button[face=ceiling,powered=true]
 clone -125 -48 119 -125 -48 119 -35 -37 37
 kill @e[tag=white_candle_frame]
-summon minecraft:item_frame -34 -36 34 {Facing:3b,Invisible:1b,Invulnerable:0b,Tags:["single_use", "white_candle_frame"],Item:{id:"minecraft:flint_and_steel",count:1,components:{"minecraft:can_place_on":{predicates:[{blocks:"minecraft:white_candle"}],show_in_tooltip:true},"minecraft:damage":64,"minecraft:custom_data":{puzzle:{id:"ground",persistent:1b}}}}}
+summon minecraft:item_frame -34 -36 34 {Facing:3b,Invisible:1b,Invulnerable:0b,Tags:["single_use", "white_candle_frame"],Item:{id:"minecraft:flint_and_steel",count:1,components:{"minecraft:can_place_on":{predicates:[{blocks:"minecraft:white_candle"}],show_in_tooltip:true},"minecraft:damage":64,"minecraft:custom_data":{puzzle:{id:"ground",persistent:1b}}}}}

@@ -7,4 +7,4 @@
 data modify storage escapemap:tmp isRedstone set value 0b
 execute if block -184 -49 34 redstone_block run data modify storage escapemap:tmp isRedstone set value 1b
 execute if data storage escapemap:tmp {isRedstone:1b} run setblock -184 -49 34 air
-execute if data storage escapemap:tmp {isRedstone:0b} run setblock -184 -49 34 redstone_block
+execute if data storage escapemap:tmp {isRedstone:0b} run setblock -184 -49 34 redstone_block

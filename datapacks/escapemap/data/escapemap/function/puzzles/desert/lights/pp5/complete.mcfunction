@@ -8,4 +8,4 @@ execute if score P desert_pp5 matches 0 run function escapemap:puzzles/complete
 execute if score P desert_pp5 matches 0 run setblock -152 -44 39 minecraft:waxed_oxidized_copper_bulb[lit=true]
 
 scoreboard players set P desert_pp5 1
-function escapemap:puzzles/desert/ocd/check
+function escapemap:puzzles/desert/ocd/check

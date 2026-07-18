@@ -10,4 +10,4 @@ setblock -169 -50 50 air
 setblock -169 -49 54 air
 function escapemap:puzzles/desert/depths/leaves_update
 function escapemap:puzzles/desert/depths/pp3/reset
-function escapemap:puzzles/desert/depths/pp4/reset
+function escapemap:puzzles/desert/depths/pp4/reset

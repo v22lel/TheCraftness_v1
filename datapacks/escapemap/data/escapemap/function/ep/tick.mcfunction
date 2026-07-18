@@ -8,4 +8,4 @@ function escapemap:ep/test/tick
 function escapemap:ep/test2/tick
 function escapemap:ep/desert_bushes/tick
 function escapemap:ep/castle_tower/tick
-function escapemap:ep/desert_tut/tick
+function escapemap:ep/desert_tut/tick
