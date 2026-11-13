@@ -8,10 +8,10 @@ playsound minecraft:desert.door master @a -181 -49 51
 particle minecraft:dust{color:[1,1,1], scale:4f} -181 -49 51
 particle minecraft:dust{color:[1,1,1], scale:4f} -182 -49 51
 fill -182 -50 51 -181 -49 51 air
-summon minecraft:block_display -181 -49 51 {Tags:["door_stair_pp3"],block_state:{Name:"minecraft:sandstone_stairs",Properties:{facing:"west",shape:"straight",half:"top"}},transformation:{translation:[-0.5f,0f,-0.5f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]},interpolation_duration:200}
-summon minecraft:block_display -181 -50 51 {Tags:["door_stair_pp3"],block_state:{Name:"minecraft:sandstone_stairs",Properties:{facing:"west",shape:"straight"}},transformation:{translation:[-0.5f,0f,-0.5f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]},interpolation_duration:200}
-summon minecraft:block_display -182 -49 51 {Tags:["door_stair_pp3"],block_state:{Name:"minecraft:sandstone_stairs",Properties:{facing:"east",shape:"straight",half:"top"}},transformation:{translation:[-0.5f,0f,-0.5f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]},interpolation_duration:200}
-summon minecraft:block_display -182 -50 51 {Tags:["door_stair_pp3"],block_state:{Name:"minecraft:sandstone_stairs",Properties:{facing:"east",shape:"straight"}},transformation:{translation:[-0.5f,0f,-0.5f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]},interpolation_duration:200}
+summon minecraft:block_display -181 -49 51 {Tags:["door_stair_pp3"],block_state:{id:"minecraft:sandstone_stairs",properties:{facing:"west",shape:"straight",half:"top"}},transformation:{translation:[-0.5f,0f,-0.5f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]},interpolation_duration:200}
+summon minecraft:block_display -181 -50 51 {Tags:["door_stair_pp3"],block_state:{id:"minecraft:sandstone_stairs",properties:{facing:"west",shape:"straight"}},transformation:{translation:[-0.5f,0f,-0.5f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]},interpolation_duration:200}
+summon minecraft:block_display -182 -49 51 {Tags:["door_stair_pp3"],block_state:{id:"minecraft:sandstone_stairs",properties:{facing:"east",shape:"straight",half:"top"}},transformation:{translation:[-0.5f,0f,-0.5f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]},interpolation_duration:200}
+summon minecraft:block_display -182 -50 51 {Tags:["door_stair_pp3"],block_state:{id:"minecraft:sandstone_stairs",properties:{facing:"east",shape:"straight"}},transformation:{translation:[-0.5f,0f,-0.5f],left_rotation:[0f,0f,0f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]},interpolation_duration:200}
 schedule function escapemap:puzzles/desert/depths/pp3/door_start 1t replace
 setblock -181 -49 51 barrier
 setblock -182 -49 51 barrier

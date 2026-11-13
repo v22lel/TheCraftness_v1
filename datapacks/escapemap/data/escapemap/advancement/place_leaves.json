@@ -3,19 +3,22 @@
     "place_leaves": {
       "trigger": "minecraft:placed_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": [
-                  "minecraft:pale_oak_leaves",
-                  "minecraft:sandstone_wall"
-                ]
-              }
+        "location": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "minecraft:pale_oak_leaves",
+                    "minecraft:sandstone_wall"
+                  ]
+                }
+              },
+              "type": "minecraft:location_check"
             }
-          }
-        ]
+          ]
+        }
       }
     }
   },

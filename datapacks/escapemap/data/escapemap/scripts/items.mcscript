@@ -1,11 +1,11 @@
 #file: ./items/multitool
-/give @s minecraft:shears[minecraft:custom_name='{"text":"Multitool","italic":false}',minecraft:unbreakable={},minecraft:custom_data={puzzle:{id:"multitool","persistent":1b}}] 1
+/give @s minecraft:shears[minecraft:custom_name={"text":"Multitool","italic":false},minecraft:unbreakable={},minecraft:custom_data={puzzle:{id:"multitool","persistent":1b}}] 1
 
 #file: ./items/village_yard_redstone
 /give @s minecraft:redstone[minecraft:custom_data={puzzle:{id:"village_yard","persistent":1b}}] 1
 
 #file: ./items/flashlight
-/give @s minecraft:soul_torch[minecraft:custom_name='{"text":"Flashlight","italic":false}',minecraft:custom_data={puzzle:{id:"flashlight","persistent":1b}}] 1
+/give @s minecraft:soul_torch[minecraft:custom_name={"text":"Flashlight","italic":false},minecraft:custom_data={puzzle:{id:"flashlight","persistent":1b}}] 1
 
 #file: ./items/castle_stair
 /give @s minecraft:oak_stairs[minecraft:custom_data={puzzle:{id:"castle_stair","persistent":1b}}] 1
@@ -17,4 +17,4 @@
 /give @s minecraft:sandstone_wall[minecraft:custom_data={puzzle:{id:"desert_wall","persistent":1b}}] 1
 
 #file: ./items/boat_slab
-/give @s sandstone_slab[can_place_on={predicates:[{blocks:"black_glazed_terracotta"}],show_in_tooltip:true},custom_data={puzzle:{id:"boat_slab",persistent:1b}}] 1
+/give @s sandstone_slab[can_place_on={blocks:"black_glazed_terracotta"},custom_data={puzzle:{id:"boat_slab",persistent:1b}}] 1

@@ -1,78 +1,52 @@
-modal modifyInventory(predicate, modifier) {
-    if ('items entity @s weapon.mainhand $(predicate)') {
-        /item modify entity @s weapon.mainhand $(modifier)
-    }
-    if ('items entity @s weapon.offhand $(predicate)') {
-        /item modify entity @s weapon.offhand $(modifier)
-    }
-    if ('items entity @s player.cursor $(predicate)') {
-        /item modify entity @s player.cursor $(modifier)
-    }
-    for (0, 3) {
-        if ('items entity @s player.crafting.$(i) $(predicate)') {
-            /item modify entity @s player.crafting.$(i) $(modifier)
-        }
-    }
-    for (0, 8) {
-        if ('items entity @s hotbar.$(i) $(predicate)') {
-            /item modify entity @s hotbar.$(i) $(modifier)
-        }
-    }
-    for (0, 26) {
-        if ('items entity @s inventory.$(i) $(predicate)') {
-            /item modify entity @s inventory.$(i) $(modifier)
-        }
-    }
-}
-
+// Multi-slot item updates; filtering lives in slot_source/inventory.
 #file: ./items/candle_flint_and_steel
-modifyInventory('minecraft:flint_and_steel[minecraft:custom_data~{puzzle:{id:"ground"}}]', 'escapemap:candle_flint_and_steel')
+/item modify entity @s escapemap:inventory/flint_and_steel_ground escapemap:candle_flint_and_steel
 
 #file: ./items/multitool_neutral
-modifyInventory('minecraft:shears[minecraft:custom_data~{puzzle:{id:"multitool"}}]', 'escapemap:multitool/neutral')
+/item modify entity @s escapemap:inventory/shears_multitool escapemap:multitool/neutral
 
 #file: ./items/multitool_village_yard
-modifyInventory('minecraft:shears[minecraft:custom_data~{puzzle:{id:"multitool"}}]', 'escapemap:multitool/village_yard')
+/item modify entity @s escapemap:inventory/shears_multitool escapemap:multitool/village_yard
 
 #file: ./items/multitool_spawn_tutorial
-modifyInventory('minecraft:shears[minecraft:custom_data~{puzzle:{id:"multitool"}}]', 'escapemap:multitool/spawn_tutorial')
+/item modify entity @s escapemap:inventory/shears_multitool escapemap:multitool/spawn_tutorial
 
 #file: ./items/multitool_mini_cave
-modifyInventory('minecraft:shears[minecraft:custom_data~{puzzle:{id:"multitool"}}]', 'escapemap:multitool/mini_cave')
+/item modify entity @s escapemap:inventory/shears_multitool escapemap:multitool/mini_cave
 
 #file: ./items/village_yard_redstone_neutral
-modifyInventory('minecraft:redstone[minecraft:custom_data~{puzzle:{id:"village_yard"}}]', 'escapemap:village_yard_redstone/neutral')
+/item modify entity @s escapemap:inventory/redstone_village_yard escapemap:village_yard_redstone/neutral
 
 #file: ./items/village_yard_redstone_active
-modifyInventory('minecraft:redstone[minecraft:custom_data~{puzzle:{id:"village_yard"}}]', 'escapemap:village_yard_redstone/active')
-modifyInventory('minecraft:redstone[minecraft:custom_data~{puzzle:{id:"ground"}}]', 'escapemap:village_yard_redstone/active')
+/item modify entity @s escapemap:inventory/redstone_village_yard escapemap:village_yard_redstone/active
+/item modify entity @s escapemap:inventory/redstone_ground escapemap:village_yard_redstone/active
 
 #file: ./items/castle_stair_neutral
-modifyInventory('minecraft:oak_stairs[minecraft:custom_data~{puzzle:{id:"castle_stair"}}]', 'escapemap:castle_stair/neutral')
+/item modify entity @s escapemap:inventory/oak_stairs_castle_stair escapemap:castle_stair/neutral
 
 #file: ./items/castle_stair_active
-modifyInventory('minecraft:oak_stairs[minecraft:custom_data~{puzzle:{id:"castle_stair"}}]', 'escapemap:castle_stair/active')
+/item modify entity @s escapemap:inventory/oak_stairs_castle_stair escapemap:castle_stair/active
 
 #file: ./items/flashlight_neutral
-modifyInventory('minecraft:tropical_fish[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/neutral')
-modifyInventory('minecraft:soul_torch[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/neutral')
+/item modify entity @s escapemap:inventory/tropical_fish_flashlight escapemap:flashlight/neutral
+/item modify entity @s escapemap:inventory/soul_torch_flashlight escapemap:flashlight/neutral
 
 #file: ./items/flashlight_basement
-modifyInventory('minecraft:tropical_fish[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/basement')
-modifyInventory('minecraft:soul_torch[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/basement')
+/item modify entity @s escapemap:inventory/tropical_fish_flashlight escapemap:flashlight/basement
+/item modify entity @s escapemap:inventory/soul_torch_flashlight escapemap:flashlight/basement
 
 #file: ./items/flashlight_active
-modifyInventory('minecraft:tropical_fish[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/active')
-modifyInventory('minecraft:soul_torch[minecraft:custom_data~{puzzle:{id:"flashlight"}}]', 'escapemap:flashlight/active')
+/item modify entity @s escapemap:inventory/tropical_fish_flashlight escapemap:flashlight/active
+/item modify entity @s escapemap:inventory/soul_torch_flashlight escapemap:flashlight/active
 
 #file: ./items/desert_leaves_neutral
-modifyInventory('minecraft:pale_oak_leaves[minecraft:custom_data~{puzzle:{id:"desert_leaves"}}]', 'escapemap:desert_leaves/neutral')
+/item modify entity @s escapemap:inventory/pale_oak_leaves_desert_leaves escapemap:desert_leaves/neutral
 
 #file: ./items/desert_leaves_active
-modifyInventory('minecraft:pale_oak_leaves[minecraft:custom_data~{puzzle:{id:"desert_leaves"}}]', 'escapemap:desert_leaves/active')
+/item modify entity @s escapemap:inventory/pale_oak_leaves_desert_leaves escapemap:desert_leaves/active
 
 #file: ./items/desert_wall_neutral
-modifyInventory('minecraft:sandstone_wall[minecraft:custom_data~{puzzle:{id:"desert_wall"}}]', 'escapemap:desert_wall/neutral')
+/item modify entity @s escapemap:inventory/sandstone_wall_desert_wall escapemap:desert_wall/neutral
 
 #file: ./items/desert_wall_active
-modifyInventory('minecraft:sandstone_wall[minecraft:custom_data~{puzzle:{id:"desert_wall"}}]', 'escapemap:desert_wall/active')
+/item modify entity @s escapemap:inventory/sandstone_wall_desert_wall escapemap:desert_wall/active

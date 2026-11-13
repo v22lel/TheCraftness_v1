@@ -1,2 +1,8 @@
 #file: ./drop/tick
 /execute as @e[type=item] unless data entity @s {Item:{components:{"minecraft:custom_data":{"puzzle":{"id":"ground"}}}}} at @s run tp @s @p
+
+#file: ./drop/pickup_rules
+// Fail closed in neutral space or when no player has a known active area.
+// Run every tick so newly spawned and newly loaded drops are covered too.
+/execute unless entity @a[scores={area=1..}] run function escapemap:area/freeze_items
+/execute if entity @a[scores={area=1..}] run function escapemap:area/unfreeze_items

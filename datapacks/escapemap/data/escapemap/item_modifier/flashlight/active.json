@@ -1,20 +1,29 @@
-[
-  {
-    "function": "minecraft:set_item",
-    "item": "minecraft:soul_torch"
-  },
-  {
-    "function": "minecraft:set_components",
-    "components": {
-      "minecraft:custom_data": {
-        "puzzle": {
-          "persistent": true,
-          "id": "flashlight"
-        }
+{
+  "type": "minecraft:sequence",
+  "functions": [
+    {
+      "item": "minecraft:soul_torch",
+      "type": "minecraft:set_item"
+    },
+    {
+      "components": {
+        "minecraft:custom_data": {
+          "puzzle": {
+            "persistent": true,
+            "id": "flashlight"
+          }
+        },
+        "minecraft:lore": [
+          [
+            {
+              "text": "(Mostly) trustworthy!",
+              "color": "gray",
+              "italic": false
+            }
+          ]
+        ]
       },
-      "minecraft:lore": [
-        "[{\"text\":\"(Mostly) trustworthy!\",\"color\":\"gray\",\"italic\":false}]"
-      ]
+      "type": "minecraft:set_components"
     }
-  }
-]
+  ]
+}
