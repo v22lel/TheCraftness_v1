@@ -15,6 +15,7 @@ function escapemap:badending/tick
 function escapemap:mechanical/elevators/elevator/tick
 function escapemap:ep/tick
 execute as @a run function escapemap:area/tick
+function escapemap:drop/pickup_rules
 execute as @a[gamemode=adventure,scores={sprint=0}] run attribute @s minecraft:movement_speed modifier remove minecraft:sprinting
 execute as @e[type=item] if items entity @s contents *[minecraft:custom_data~{puzzle:{persistent:true}}] run data modify entity @s Age set value -32768s
 execute as @e[type=item_frame,tag=single_use] unless data entity @s Item run kill @s

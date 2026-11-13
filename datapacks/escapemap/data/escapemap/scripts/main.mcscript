@@ -16,6 +16,8 @@ as (@a) {
     /function escapemap:area/tick
 }
 
+/function escapemap:drop/pickup_rules
+
 as (@a[gamemode=adventure,scores={sprint=0}]) {
     /attribute @s minecraft:movement_speed modifier remove minecraft:sprinting
 }
