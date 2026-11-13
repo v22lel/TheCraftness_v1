@@ -7,9 +7,8 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:redstone",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
               "components": {
                 "minecraft:custom_data": {
                   "puzzle": {
@@ -17,7 +16,8 @@
                     "persistent": true
                   }
                 }
-              }
+              },
+              "type": "minecraft:set_components"
             }
           ]
         }
