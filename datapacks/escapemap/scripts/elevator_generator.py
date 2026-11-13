@@ -116,7 +116,7 @@ def block_state_nbt(block: str) -> str:
     Supports simple block names like minecraft:stone.
 
     For block states such as minecraft:oak_slab[type=top], this makes:
-      block_state:{Name:"minecraft:oak_slab",Properties:{type:"top"}}
+      block_state:{id:"minecraft:oak_slab",properties:{type:"top"}}
     """
     block = block.strip()
 
