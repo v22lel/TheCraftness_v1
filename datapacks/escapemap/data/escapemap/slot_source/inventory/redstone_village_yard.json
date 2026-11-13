@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:filtered",
+  "slot_source": "escapemap:inventory/all",
+  "item_filter": {
+    "items": "minecraft:redstone",
+    "predicates": {
+      "minecraft:custom_data": {
+        "puzzle": {
+          "id": "village_yard"
+        }
+      }
+    }
+  }
+}
