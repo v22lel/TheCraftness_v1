@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:filtered",
+  "slot_source": "escapemap:inventory/all",
+  "item_filter": {
+    "items": "minecraft:pale_oak_leaves",
+    "predicates": {
+      "minecraft:custom_data": {
+        "puzzle": {
+          "id": "desert_leaves"
+        }
+      }
+    }
+  }
+}

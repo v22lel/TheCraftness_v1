@@ -3,15 +3,18 @@
     "rotate_item_frame": {
       "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type": "minecraft:item_frame"
+        "entity": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "entity": "this",
+              "predicate": {
+                "minecraft:entity_type": "minecraft:item_frame"
+              },
+              "type": "minecraft:entity_properties"
             }
-          }
-        ]
+          ]
+        }
       }
     }
   },

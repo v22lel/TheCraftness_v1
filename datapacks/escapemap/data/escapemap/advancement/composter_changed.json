@@ -3,18 +3,21 @@
     "cauldron_interaction": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": [
-          {
-            "condition": "minecraft:location_check",
-            "predicate": {
-              "block": {
-                "blocks": [
-                  "minecraft:composter"
-                ]
-              }
+        "location": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "minecraft:composter"
+                  ]
+                }
+              },
+              "type": "minecraft:location_check"
             }
-          }
-        ]
+          ]
+        }
       }
     }
   },

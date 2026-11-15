@@ -1,15 +1,18 @@
-[
-  {
-    "function": "minecraft:set_components",
-    "components": {
-      "!minecraft:can_place_on": {},
-      "minecraft:custom_data": {
-        "puzzle": {
-          "persistent": true,
-          "id": "desert_leaves"
-        }
+{
+  "type": "minecraft:sequence",
+  "functions": [
+    {
+      "components": {
+        "!minecraft:can_place_on": {},
+        "minecraft:custom_data": {
+          "puzzle": {
+            "persistent": true,
+            "id": "desert_leaves"
+          }
+        },
+        "!minecraft:lore": {}
       },
-      "!minecraft:lore": {}
+      "type": "minecraft:set_components"
     }
-  }
-]
+  ]
+}

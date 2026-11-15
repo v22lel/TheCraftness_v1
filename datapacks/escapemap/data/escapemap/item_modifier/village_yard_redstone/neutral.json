@@ -1,14 +1,17 @@
-[
-  {
-    "function": "minecraft:set_components",
-    "components": {
-      "!minecraft:can_place_on": {},
-      "minecraft:custom_data": {
-        "puzzle": {
-          "persistent": true,
-          "id": "village_yard"
+{
+  "type": "minecraft:sequence",
+  "functions": [
+    {
+      "components": {
+        "!minecraft:can_place_on": {},
+        "minecraft:custom_data": {
+          "puzzle": {
+            "persistent": true,
+            "id": "village_yard"
+          }
         }
-      }
+      },
+      "type": "minecraft:set_components"
     }
-  }
-]
+  ]
+}

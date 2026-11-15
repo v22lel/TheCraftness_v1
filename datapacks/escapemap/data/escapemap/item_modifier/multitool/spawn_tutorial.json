@@ -1,18 +1,21 @@
-[
-  {
-    "function": "minecraft:set_components",
-    "components": {
-      "minecraft:can_break": {
-        "blocks": [
-          "minecraft:pale_oak_leaves"
-        ]
-      },
-      "minecraft:custom_data": {
-        "puzzle": {
-          "persistent": true,
-          "id": "multitool"
+{
+  "type": "minecraft:sequence",
+  "functions": [
+    {
+      "components": {
+        "minecraft:can_break": {
+          "blocks": [
+            "minecraft:pale_oak_leaves"
+          ]
+        },
+        "minecraft:custom_data": {
+          "puzzle": {
+            "persistent": true,
+            "id": "multitool"
+          }
         }
-      }
+      },
+      "type": "minecraft:set_components"
     }
-  }
-]
+  ]
+}
