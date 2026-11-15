@@ -20,3 +20,27 @@
 /setblock -20 -44 3 air
 /fill -20 -42 3 -20 -39 3 air
 /setblock -20 -39 3 slime_block
+
+#file: ./lab/branch_pipes_left
+/setblock -8 -38 1 spruce_stairs[facing=east]
+/setblock -10 -38 1 air
+
+/setblock -12 -43 5 barrier[waterlogged=true]
+/setblock -12 -44 5 water
+/setblock -12 -45 5 quartz_stairs[waterlogged=true,facing=west]
+
+/setblock -6 -45 2 quartz_stairs[waterlogged=false,facing=east]
+/setblock -6 -44 2 air
+/setblock -6 -43 2 air
+
+#file: ./lab/branch_pipes_right
+/setblock -10 -38 1 spruce_stairs[facing=west]
+/setblock -8 -38 1 air
+
+/setblock -12 -43 5 air
+/setblock -12 -44 5 air
+/setblock -12 -45 5 quartz_stairs[waterlogged=false,facing=west]
+
+/setblock -6 -45 2 quartz_stairs[waterlogged=true,facing=east]
+/setblock -6 -44 2 water
+/setblock -6 -43 2 barrier[waterlogged=true]

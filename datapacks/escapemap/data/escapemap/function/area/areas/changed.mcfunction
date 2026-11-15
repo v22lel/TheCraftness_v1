@@ -12,3 +12,4 @@ execute if score @s area matches 4 run function escapemap:area/areas/castle
 execute if score @s area matches 5 run function escapemap:area/areas/basement
 execute if score @s area matches 6 run function escapemap:area/areas/mini_cave
 execute if score @s area matches 7 run function escapemap:area/areas/desert
+execute if score @s area matches 8 run function escapemap:area/areas/radiation

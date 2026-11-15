@@ -6,4 +6,4 @@
 ######
 advancement revoke @s only escapemap:place_leaves
 function escapemap:puzzles/desert/ruins/leaves_update
-function escapemap:puzzles/desert/depths/leaves_update
+function escapemap:puzzles/desert/depths/leaves_update

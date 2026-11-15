@@ -1,0 +1,4 @@
+#file: ./load
+
+#file: ./reset
+/function escapemap:puzzles/jungle/map_parts/reset

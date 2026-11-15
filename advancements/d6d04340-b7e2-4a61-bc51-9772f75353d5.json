@@ -4349,5 +4349,107 @@
     },
     "done": true
   },
+  "minecraft:recipes/combat/turtle_helmet": {
+    "criteria": {
+      "has_turtle_scute": "2026-08-21 09:35:05 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/wolf_armor": {
+    "criteria": {
+      "has_armadillo_scute": "2026-08-21 09:35:10 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_weathered_chiseled_copper": {
+    "criteria": {
+      "has_waxed_weathered_cut_copper_slab": "2026-08-21 09:54:22 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/magenta_dye_from_lilac": {
+    "criteria": {
+      "has_lilac": "2026-08-21 10:37:41 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/suspicious_stew_from_wither_rose": {
+    "criteria": {
+      "has_wither_rose": "2026-08-21 10:38:05 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/black_dye_from_wither_rose": {
+    "criteria": {
+      "has_wither_rose": "2026-08-21 10:38:05 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/orange_dye_from_open_eyeblossom": {
+    "criteria": {
+      "has_open_eyeblossom": "2026-08-21 10:39:53 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/suspicious_stew_from_open_eyeblossom": {
+    "criteria": {
+      "has_open_eyeblossom": "2026-08-21 10:39:53 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gray_dye_from_closed_eyeblossom": {
+    "criteria": {
+      "has_closed_eyeblossom": "2026-08-21 10:39:54 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/suspicious_stew_from_closed_eyeblossom": {
+    "criteria": {
+      "has_closed_eyeblossom": "2026-08-21 10:39:54 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/pink_dye_from_pink_petals": {
+    "criteria": {
+      "has_pink_petals": "2026-08-21 10:41:48 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/stick_from_bamboo_item": {
+    "criteria": {
+      "has_bamboo": "2026-08-21 10:42:17 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bamboo_block": {
+    "criteria": {
+      "has_bamboo": "2026-08-21 10:42:17 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/scaffolding": {
+    "criteria": {
+      "has_bamboo": "2026-08-21 10:42:17 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/nether_wart_block": {
+    "criteria": {
+      "has_nether_wart": "2026-08-21 10:43:06 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/red_nether_bricks": {
+    "criteria": {
+      "has_nether_wart": "2026-08-21 10:43:06 +0200"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/plant_seed": {
+    "criteria": {
+      "nether_wart": "2026-08-21 10:43:09 +0200"
+    },
+    "done": true
+  },
   "DataVersion": 4189
 }

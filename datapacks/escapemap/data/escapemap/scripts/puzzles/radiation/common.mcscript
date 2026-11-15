@@ -109,3 +109,11 @@ as (@a) {
     /attribute @s minecraft:block_interaction_range modifier remove radiation
     /attribute @s minecraft:movement_speed modifier remove radiation
 }
+
+/setblock -5 -36 11 lever[face=floor,facing=north,powered=false]
+/function escapemap:puzzles/radiation/lab/pipe1_on
+
+/function escapemap:puzzles/radiation/lab/pipe2_on
+
+/setblock -9 -37 2 lever[face=floor,facing=east,powered=false]
+/function escapemap:puzzles/radiation/lab/branch_pipes_left

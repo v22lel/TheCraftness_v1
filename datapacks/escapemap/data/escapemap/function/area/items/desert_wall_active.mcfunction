@@ -89,3 +89,4 @@ execute if items entity @s inventory.24 minecraft:sandstone_wall[minecraft:custo
 execute if items entity @s inventory.25 minecraft:sandstone_wall[minecraft:custom_data~{puzzle:{id:"desert_wall"}}] run item modify entity @s inventory.25 escapemap:desert_wall/active
 
 execute if items entity @s inventory.26 minecraft:sandstone_wall[minecraft:custom_data~{puzzle:{id:"desert_wall"}}] run item modify entity @s inventory.26 escapemap:desert_wall/active
+

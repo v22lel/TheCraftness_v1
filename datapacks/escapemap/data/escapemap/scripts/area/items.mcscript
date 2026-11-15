@@ -76,3 +76,6 @@ modifyInventory('minecraft:sandstone_wall[minecraft:custom_data~{puzzle:{id:"des
 
 #file: ./items/desert_wall_active
 modifyInventory('minecraft:sandstone_wall[minecraft:custom_data~{puzzle:{id:"desert_wall"}}]', 'escapemap:desert_wall/active')
+
+#file: ./items/kill_bacteria
+modifyInventory('minecraft:turtle_scute[minecraft:custom_data~{puzzle:{id:"bacteria_alive"}}]', 'escapemap:bacteria/dead')

@@ -6,4 +6,4 @@
 ######
 kill @e[tag=escapemap_faucet_base]
 kill @e[tag=escapemap_faucet_handle]
-kill @e[tag=faucet_interaction]
+kill @e[tag=faucet_interaction]

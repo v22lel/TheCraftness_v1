@@ -8,4 +8,8 @@ scoreboard players set @a radiation 0
 scoreboard players set @a rad_tier 0
 scoreboard players set @a rad_div 0
 execute as @a run attribute @s minecraft:block_interaction_range modifier remove radiation
-execute as @a run attribute @s minecraft:movement_speed modifier remove radiation
+execute as @a run attribute @s minecraft:movement_speed modifier remove radiation
+setblock -9 -37 2 lever[face=floor,facing=east,powered=false]
+function escapemap:puzzles/radiation/lab/pipe1_on
+function escapemap:puzzles/radiation/lab/pipe2_on
+function escapemap:puzzles/radiation/lab/branch_pipes_left
