@@ -7,6 +7,7 @@
 /execute if score @s area matches 5 run function escapemap:area/areas/basement
 /execute if score @s area matches 6 run function escapemap:area/areas/mini_cave
 /execute if score @s area matches 7 run function escapemap:area/areas/desert
+/execute if score @s area matches 8 run function escapemap:area/areas/radiation
 
 // Pickup locks are maintained every tick by drop/pickup_rules, not only on area changes.
 
@@ -23,6 +24,7 @@
 /function escapemap:area/items/flashlight_active
 /function escapemap:area/items/desert_leaves_neutral
 /function escapemap:area/items/desert_wall_neutral
+/function escapemap:area/items/kill_bacteria
 
 #file: ./areas/village_yard
 /function escapemap:area/items/multitool_village_yard
@@ -47,6 +49,8 @@
 /function escapemap:area/items/desert_leaves_active
 /function escapemap:area/items/desert_wall_active
 /function escapemap:area/items/multitool_spawn_tutorial
+
+#file: ./areas/radiation
 
 #file: ./areas/inventory_changed
 /function escapemap:area/areas/changed

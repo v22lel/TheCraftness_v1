@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:sequence",
+  "functions": [
+    {
+      "type": "minecraft:set_item",
+      "item": "minecraft:armadillo_scute"
+    },
+    {
+      "type": "minecraft:set_components",
+      "components": {
+        "minecraft:custom_data": {
+          "puzzle": {
+            "persistent": true,
+            "id": "bacteria_dead"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:set_name",
+      "target": "custom_name",
+      "name": {
+        "text": "Dead Helicobacter-Pylori Cluster",
+        "color": "gray",
+        "italic": false
+      }
+    }
+  ]
+}

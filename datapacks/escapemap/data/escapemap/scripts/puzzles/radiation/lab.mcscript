@@ -20,3 +20,24 @@
 /setblock -20 -44 3 air
 /fill -20 -42 3 -20 -39 3 air
 /setblock -20 -39 3 slime_block
+
+#file: ./lab/branch_left
+/setblock -10 -38 1 air
+/setblock -8 -38 1 minecraft:mossy_stone_brick_slab[type=bottom]
+
+/setblock -6 -43 2 air
+/setblock -6 -44 2 air
+
+/setblock -12 -43 5 minecraft:barrier[waterlogged=true]
+/setblock -12 -44 5 water
+
+
+#file: ./lab/branch_right
+/setblock -10 -38 1 minecraft:mossy_stone_brick_slab[type=bottom]
+/setblock -8 -38 1 air
+
+/setblock -6 -43 2 minecraft:barrier[waterlogged=true]
+/setblock -6 -44 2 water
+
+/setblock -12 -43 5 air
+/setblock -12 -44 5 air

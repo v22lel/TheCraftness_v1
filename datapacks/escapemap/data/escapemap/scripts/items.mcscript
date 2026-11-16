@@ -18,3 +18,10 @@
 
 #file: ./items/boat_slab
 /give @s sandstone_slab[can_place_on={blocks:"black_glazed_terracotta"},custom_data={puzzle:{id:"boat_slab",persistent:1b}}] 1
+
+
+#file: ./items/alive_bacteria
+/give @s turtle_scute[minecraft:custom_name={"text":"Helicobacter-Pylori Cluster","color":"dark_green","italic":false},custom_data={puzzle:{id:"bacteria_alive",persistent:1b}}] 1
+
+#file: ./items/dead_bacteria
+/give @s armadillo_scute[minecraft:custom_name={"text":"Dead Helicobacter-Pylori Cluster","color":"gray","italic":false},custom_data={puzzle:{id:"bacteria_dead",persistent:1b}}] 1

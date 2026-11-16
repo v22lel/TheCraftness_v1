@@ -20,7 +20,6 @@ if('score P puzzle_castle_smith_complete matches 0') {
 
 
 #file: ./smith/cauldron
-/say hi
 if('blocks -170 -37 -26 -173 -37 -24 -172 -40 -20 all') {
     /say correct
     /function escapemap:puzzles/castle/smith/complete

@@ -10,3 +10,4 @@ function escapemap:area/items/castle_stair_neutral
 function escapemap:area/items/flashlight_active
 function escapemap:area/items/desert_leaves_neutral
 function escapemap:area/items/desert_wall_neutral
+function escapemap:area/items/kill_bacteria
