@@ -1,0 +1,83 @@
+var jungle_input_progress
+var jungle_input_step_value
+
+#file: ./map_input/reset
+/function escapemap:puzzles/jungle/map_input/score_reset
+
+/fill 15 -41 114 15 -41 112 yellow_terracotta
+/fill 15 -41 112 11 -41 112 yellow_terracotta
+/fill 11 -41 112 11 -41 116 yellow_terracotta
+/fill 11 -41 116 15 -41 116 yellow_terracotta
+/fill 15 -41 116 15 -41 128 yellow_terracotta
+/fill 15 -41 128 13 -41 128 yellow_terracotta
+/fill 13 -41 127 10 -41 127 yellow_terracotta
+/fill 10 -41 127 10 -41 122 yellow_terracotta
+/fill 10 -41 122 12 -41 122 yellow_terracotta
+/fill 12 -41 122 12 -41 120 yellow_terracotta
+/fill 12 -41 120 9 -41 120 yellow_terracotta
+/fill 9 -41 120 9 -41 114 yellow_terracotta
+/fill 9 -41 114 16 -41 114 yellow_terracotta
+/fill 19 -39 114 19 -39 114 yellow_terracotta
+/fill 20 -38 114 20 -36 114 yellow_terracotta
+/fill 20 -36 118 20 -36 109 yellow_terracotta
+/fill 20 -36 118 21 -36 118 yellow_terracotta
+/fill 21 -36 109 21 -36 108 yellow_terracotta
+
+#file: ./map_input/score_reset
+jungle_input_progress P = 0
+jungle_input_step_value P = -1
+
+#file: ./map_input/single_step
+jungle_input_step_value P -= 1
+if(!'score P jungle_input_progress = P jungle_input_step_value') {
+    /function escapemap:puzzles/jungle/map_input/score_reset
+}
+if('score P jungle_input_progress = P jungle_input_step_value') {
+    //then this is the correct step!
+    if(jungle_input_progress P == 8) {
+        /function escapemap:puzzles/jungle/map_input/complete
+    }
+    jungle_input_progress P += 1
+}
+
+for(1,9,i){
+    #file: ./map_input/step/$(i)
+    jungle_input_step_value P = $(i)
+    /function escapemap:puzzles/jungle/map_input/single_step
+}
+
+const jungle_input_positions = Array{
+    "15 -41 114 15 -41 112",
+    "15 -41 112 11 -41 112",
+    "11 -41 112 11 -41 116",
+    "11 -41 116 15 -41 116",
+    "15 -41 116 15 -41 128",
+    "15 -41 128 13 -41 128",
+    "13 -41 127 10 -41 127",
+    "10 -41 127 10 -41 122",
+    "10 -41 122 12 -41 122",
+    "12 -41 122 12 -41 120",
+    "12 -41 120 9 -41 120",
+    "9 -41 120 9 -41 114",
+    "9 -41 114 16 -41 114",
+    "19 -39 114 19 -39 114",
+    "20 -38 114 20 -36 114",
+    "20 -36 118 20 -36 109",
+    "20 -36 118 21 -36 118",
+    "21 -36 109 21 -36 108"
+}
+
+const jungle_input_delays = Array{"5","10","15","20","25","30","35","40","45","50","55","60","65","70","75","80","85","85"}
+const jungle_input_pitches = Array{"0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1.0","1.1","1.2","1.3","1.4","1.5","1.6","1.7","1.7"}
+
+for(0,17,i){
+    #file: ./map_input/anim/$(i)
+    /execute as @a at @s run playsound minecraft:block.note_block.bit master @s ~ ~ ~ 1 $(jungle_input_pitches).$(i)
+    /fill $(jungle_input_positions).$(i) yellow_concrete
+}
+
+#file: ./map_input/complete
+for(0,17,i){
+    /schedule function escapemap:puzzles/jungle/map_input/anim/$(i) $(jungle_input_delays).$(i) replace
+}
+/schedule function escapemap:puzzles/jungle/complete 90t replace

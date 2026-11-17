@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:sequence",
+  "functions": [
+    {
+      "type": "minecraft:discard"
+    }
+  ]
+}

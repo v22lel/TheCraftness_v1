@@ -4469,5 +4469,335 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/gray_concrete_slab": {
+    "criteria": {
+      "has_gray_concrete": "2026-11-17 15:46:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/gray_concrete_slab_from_gray_concrete_stonecutting": {
+    "criteria": {
+      "has_gray_concrete": "2026-11-17 15:46:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/gray_concrete_stairs": {
+    "criteria": {
+      "has_gray_concrete": "2026-11-17 15:46:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/gray_concrete_stairs_from_gray_concrete_stonecutting": {
+    "criteria": {
+      "has_gray_concrete": "2026-11-17 15:46:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/orange_concrete_slab": {
+    "criteria": {
+      "has_orange_concrete": "2026-11-17 16:01:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/orange_concrete_slab_from_orange_concrete_stonecutting": {
+    "criteria": {
+      "has_orange_concrete": "2026-11-17 16:01:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/orange_concrete_stairs": {
+    "criteria": {
+      "has_orange_concrete": "2026-11-17 16:01:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/orange_concrete_stairs_from_orange_concrete_stonecutting": {
+    "criteria": {
+      "has_orange_concrete": "2026-11-17 16:01:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/lime_concrete_slab": {
+    "criteria": {
+      "has_lime_concrete": "2026-11-17 16:01:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/lime_concrete_slab_from_lime_concrete_stonecutting": {
+    "criteria": {
+      "has_lime_concrete": "2026-11-17 16:01:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/lime_concrete_stairs": {
+    "criteria": {
+      "has_lime_concrete": "2026-11-17 16:01:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/lime_concrete_stairs_from_lime_concrete_stonecutting": {
+    "criteria": {
+      "has_lime_concrete": "2026-11-17 16:01:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/white_concrete_slab": {
+    "criteria": {
+      "has_white_concrete": "2026-11-17 16:01:21 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/white_concrete_slab_from_white_concrete_stonecutting": {
+    "criteria": {
+      "has_white_concrete": "2026-11-17 16:01:21 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/white_concrete_stairs": {
+    "criteria": {
+      "has_white_concrete": "2026-11-17 16:01:21 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/white_concrete_stairs_from_white_concrete_stonecutting": {
+    "criteria": {
+      "has_white_concrete": "2026-11-17 16:01:21 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/coal": {
+    "criteria": {
+      "has_coal_block": "2026-11-17 16:02:01 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_lime_wool_slab": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:04:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_lime_wool_stairs": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:04:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/dye_lime_harness": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:04:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_lime_bed": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:04:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_lime_carpet": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:04:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_lime_cushion": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:04:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_black_wool": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:05:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_black_wool_slab": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:05:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_black_wool_stairs": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:05:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/dye_black_harness": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:05:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/black_candle": {
+    "criteria": {
+      "has_black_dye": "2026-11-17 16:05:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/black_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_black_dye": "2026-11-17 16:05:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_black_bed": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:05:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_black_carpet": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:05:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_black_cushion": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:05:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/black_bundle": {
+    "criteria": {
+      "has_black_dye": "2026-11-17 16:05:10 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_yellow_wool": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:16:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_yellow_wool_slab": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:16:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_yellow_wool_stairs": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:16:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/dye_yellow_harness": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:16:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_yellow_bed": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:16:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_yellow_carpet": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:16:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_yellow_cushion": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:16:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/yellow_candle": {
+    "criteria": {
+      "has_yellow_dye": "2026-11-17 16:16:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/yellow_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_yellow_dye": "2026-11-17 16:16:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/yellow_bundle": {
+    "criteria": {
+      "has_yellow_dye": "2026-11-17 16:16:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_orange_wool": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:19:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_orange_wool_slab": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:19:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_orange_wool_stairs": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:19:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/dye_orange_harness": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:19:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_orange_bed": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:19:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_orange_carpet": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:19:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_orange_cushion": {
+    "criteria": {
+      "has_needed_dye": "2026-11-17 16:19:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/orange_candle": {
+    "criteria": {
+      "has_orange_dye": "2026-11-17 16:19:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/orange_stained_glass_pane_from_glass_pane": {
+    "criteria": {
+      "has_orange_dye": "2026-11-17 16:19:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/orange_bundle": {
+    "criteria": {
+      "has_orange_dye": "2026-11-17 16:19:19 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/purple_stained_glass_pane": {
+    "criteria": {
+      "has_glass": "2026-11-17 16:44:45 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/red_sandstone": {
+    "criteria": {
+      "has_sand": "2026-11-17 17:51:14 +0100"
+    },
+    "done": true
+  },
   "DataVersion": 5023
 }

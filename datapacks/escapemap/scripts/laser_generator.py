@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from math import cos, radians, sin, sqrt, floor, ceil
 from pathlib import Path
+import os
 
 
 # ============================================================
@@ -12,6 +13,7 @@ from pathlib import Path
 NAMESPACE = "escapemap"
 FUNCTION_ROOT = "laser"
 
+OUT_DIR = Path("scripts/output/")
 OUT_FILE = Path("scripts/output/generated_lasers.mcscript")
 
 
@@ -211,7 +213,24 @@ LIGHTHOUSE_LASER = LaserInstance(
     aim_pitch_substeps=75,
 )
 
-LASER = LIGHTHOUSE_LASER
+JUNGLE_LASER = LaserInstance(
+   laser_id="jungle",
+   x=21,
+   y=-36,
+   z=106,
+   target_yaw_degrees=-171.4 * CUSTOM_ROTATION_FIX,
+   target_pitch_degrees=-18.4 * CUSTOM_ROTATION_FIX,
+
+   aim_yaw_delay_seconds=2.5,
+   aim_yaw_duration_seconds=12.5,
+   aim_yaw_substeps=125,
+
+   aim_pitch_delay_seconds=2.5,
+   aim_pitch_duration_seconds=7.5,
+   aim_pitch_substeps=75,
+)
+
+LASER = JUNGLE_LASER
 LASER.fix()
 
 
@@ -944,6 +963,8 @@ def generate_all() -> str:
 
 
 def main() -> None:
+    if not os.path.exists(OUT_DIR):
+        os.makedirs(OUT_DIR)
     OUT_FILE.write_text(generate_all(), encoding="utf-8")
     print(f"Wrote {OUT_FILE}")
 

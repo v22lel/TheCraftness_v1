@@ -51,6 +51,5 @@
 #file: ./items/desert_wall_active
 /item modify entity @s escapemap:inventory/sandstone_wall_desert_wall escapemap:desert_wall/active
 
-
 #file: ./items/kill_bacteria
 /item modify entity @s escapemap:inventory/alive_bacteria escapemap:bacteria/dead

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:sequence",
+  "functions": [
+    {
+      "type": "minecraft:set_item",
+      "item": "minecraft:lime_dye"
+    },
+    {
+      "type": "minecraft:set_components",
+      "components": {
+        "minecraft:custom_data": {
+          "puzzle": {
+            "persistent": true,
+            "id": "bacteria_cultivated"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:set_name",
+      "target": "custom_name",
+      "name": {
+        "text": "Cultivated Helicobacter-Pylori Cluster",
+        "color": "green",
+        "italic": false
+      }
+    }
+  ]
+}

@@ -1,14 +1,33 @@
 {
-  "type": "minecraft:filtered",
-  "slot_source": "escapemap:inventory/all",
-  "item_filter": {
-    "items": "minecraft:turtle_scute",
-    "predicates": {
-      "minecraft:custom_data": {
-        "puzzle": {
-          "id": "bacteria_alive"
+  "type": "minecraft:group",
+  "terms": [
+    {
+      "type": "minecraft:filtered",
+      "slot_source": "escapemap:inventory/all",
+      "item_filter": {
+        "items": "minecraft:turtle_scute",
+        "predicates": {
+          "minecraft:custom_data": {
+            "puzzle": {
+              "id": "bacteria_alive"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:filtered",
+      "slot_source": "escapemap:inventory/all",
+      "item_filter": {
+        "items": "minecraft:lime_dye",
+        "predicates": {
+          "minecraft:custom_data": {
+            "puzzle": {
+              "id": "bacteria_cultivated"
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

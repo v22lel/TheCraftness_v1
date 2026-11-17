@@ -9,8 +9,11 @@ scoreboard players set @a rad_tier 0
 scoreboard players set @a rad_div 0
 execute as @a run attribute @s minecraft:block_interaction_range modifier remove radiation
 execute as @a run attribute @s minecraft:movement_speed modifier remove radiation
+function escapemap:puzzles/radiation/bacteria/reset
 setblock -9 -37 2 minecraft:lever[facing=east,powered=false,face=floor]
 setblock -8 -39 2 air destroy
 setblock -5 -36 11 lever[facing=west,powered=false,face=floor]
+setblock -4 -38 11 air destroy
+setblock -5 -36 11 lever[facing=west,face=floor,powered=false]
 setblock -4 -38 11 air destroy
 function escapemap:puzzles/radiation/lab/pipe2_on

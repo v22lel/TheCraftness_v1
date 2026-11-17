@@ -1,0 +1,19 @@
+var jungle_complete
+
+#file: ./load
+
+#file: ./reset
+/function escapemap:puzzles/jungle/map_parts/reset
+/function escapemap:puzzles/jungle/map_input/reset
+jungle_complete P = 0
+/setblock 22 -36 118 waxed_oxidized_copper_bulb[lit=false,powered=false]
+
+/function escapemap:laser/jungle/reset
+
+#file: ./complete
+if(jungle_complete P == 0) {
+    /function escapemap:puzzles/complete
+    /setblock 22 -36 118 waxed_oxidized_copper_bulb[lit=true]
+    /function escapemap:laser/jungle/turn_on
+}
+jungle_complete P = 1
