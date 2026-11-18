@@ -10,43 +10,58 @@ var rad_roll
 /function escapemap:puzzles/radiation/bacteria/tick
 
 as (@a) {
-    if (area @s == 8 && radiation @s < 1000) {
+    if (area @s == 8 && radiation @s < 2000) {
         radiation @s += 1
-        if (radiation @s == 200) {
-            rad_tier @s = 1
+        if (radiation @s == 100) {
             /execute as @s run function escapemap:puzzles/radiation/apply_effects
         }
         if (radiation @s == 400) {
+            rad_tier @s = 1
+            /execute as @s run function escapemap:puzzles/radiation/apply_effects
+        }
+        if (radiation @s == 800) {
             rad_tier @s = 2
             /execute as @s run function escapemap:puzzles/radiation/apply_effects
         }
-        if (radiation @s == 600) {
+        if (radiation @s == 1600) {
             rad_tier @s = 3
+            /execute as @s run function escapemap:puzzles/radiation/apply_effects
+        }
+        if (radiation @s >= 1999) {
+            rad_tier @s = 4
             /execute as @s run function escapemap:puzzles/radiation/apply_effects
         }
     }
     unless (area @s == 8) {
         if (radiation @s > 3) {
-            radiation @s -= 4
-            if ('score @s radiation matches 195..199') {
+            radiation @s -= 8
+            if ('score @s radiation matches 90..99') {
+                /execute as @s run function escapemap:puzzles/radiation/apply_effects
+            }
+            if ('score @s radiation matches 390..399') {
                 rad_tier @s = 0
                 /execute as @s run function escapemap:puzzles/radiation/apply_effects
             }
-            if ('score @s radiation matches 395..399') {
+            if ('score @s radiation matches 790..799') {
                 rad_tier @s = 1
                 /execute as @s run function escapemap:puzzles/radiation/apply_effects
             }
-            if ('score @s radiation matches 595..599') {
+            if ('score @s radiation matches 1590..1599') {
                 rad_tier @s = 2
                 /execute as @s run function escapemap:puzzles/radiation/apply_effects
             }
+            if ('score @s radiation matches 1990..2000') {
+                rad_tier @s = 3
+                /execute as @s run function escapemap:puzzles/radiation/apply_effects
+            }
         }
-        if ('score @s radiation matches 1..5') {
+        if ('score @s radiation matches 1..9') {
+            /execute as @s run function escapemap:puzzles/radiation/apply_effects
             radiation @s = 0
         }
     }
     /scoreboard players operation @s rad_div = @s radiation
-    /scoreboard players operation @s rad_div /= 10 numbers
+    /scoreboard players operation @s rad_div /= 20 numbers
 }
 
 rad_timer timer += 1
@@ -60,17 +75,41 @@ if (rad_timer timer == 100) {
 
 #file: ./apply_effects
 /attribute @s minecraft:block_interaction_range modifier remove radiation
+/posteffect clear @s
+
+if (rad_tier @s == 0) {
+    if (radiation @s == 100) {
+        /posteffect add @s escapemap:radiation0
+        /posteffect add @s minecraft:blur
+    }
+    if ('score @s radiation matches 390..399') {
+        /posteffect add @s escapemap:radiation0
+        /posteffect add @s minecraft:blur
+    }
+}
 
 if (rad_tier @s == 1) {
     /attribute @s minecraft:block_interaction_range modifier add radiation -1.5 add_value
+    /posteffect add @s escapemap:radiation1
 }
 
 if (rad_tier @s == 2) {
     /attribute @s minecraft:block_interaction_range modifier add radiation -3.0 add_value
+    /posteffect add @s escapemap:radiation2
 }
 
 if (rad_tier @s == 3) {
     /attribute @s minecraft:block_interaction_range modifier add radiation -4.5 add_value
+    /posteffect add @s escapemap:radiation3
+}
+
+if (rad_tier @s == 4) {
+    /attribute @s minecraft:block_interaction_range modifier add radiation -4.5 add_value
+    /posteffect add @s escapemap:radiation4
+}
+
+unless (rad_tier @s == 0) {
+    /posteffect add @s minecraft:blur
 }
 
 #file: ./radiation_tick
@@ -123,4 +162,3 @@ as (@a) {
 /setblock -5 -36 11 lever[facing=west,face=floor,powered=false]
 /setblock -4 -38 11 air destroy
 
-/function escapemap:puzzles/radiation/lab/pipe2_on

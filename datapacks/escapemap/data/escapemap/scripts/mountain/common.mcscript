@@ -1,0 +1,41 @@
+modal resetShelf(pos, face) {
+    /setblock $(pos) minecraft:pale_oak_shelf[facing=$(face)]{Items:[{Slot:0b,id:"minecraft:black_concrete",count:1},{Slot:2b,id:"minecraft:black_concrete",count:1}]}
+}
+
+modal incrementShelf(pos) {
+    /execute if data block $(pos) {Items:[{Slot:0b,id:"minecraft:sea_lantern"}]} run data merge block $(pos) {Items:[{Slot:0b,id:"minecraft:sea_lantern"},{Slot:2b,id:"minecraft:sea_lantern"}]}
+    /execute unless data block $(pos) {Items:[{Slot:0b,id:"minecraft:sea_lantern"}]} run data merge block $(pos) {Items:[{Slot:0b,id:"minecraft:sea_lantern"},{Slot:2b,id:"minecraft:black_concrete"}]}
+}
+
+var lasers_complete
+
+#file: ./load
+
+
+#file: ./reset
+resetShelf('45 12 -60', 'west')
+resetShelf('46 12 -59', 'south')
+resetShelf('47 12 -60', 'east')
+resetShelf('46 12 -61', 'north')
+//sprint shelf
+resetShelf('49 12 -48', 'north')
+
+lasers_complete C = 0
+
+#file: ./laser_complete
+lasers_complete C += 1
+if('score C lasers_complete matches 1..2') {
+    //sprint shelf
+    incrementShelf('49 12 -48')
+
+    incrementShelf('45 12 -60')
+}
+if('score C lasers_complete matches 3..4') {
+    incrementShelf('46 12 -59')
+}
+if('score C lasers_complete matches 5..6') {
+    incrementShelf('47 12 -60')
+}
+if('score C lasers_complete matches 7..8') {
+    incrementShelf('46 12 -61')
+}

@@ -16,5 +16,9 @@ execute if data entity @e[tag=lab_growth1,limit=1] attack positioned as @e[tag=l
 
 execute if data entity @e[tag=lab_growth1,limit=1] interaction positioned as @e[tag=lab_growth1,limit=1] run function escapemap:puzzles/radiation/bacteria/grow1
 
+execute if data entity @e[tag=lab_growth2,limit=1] attack positioned as @e[tag=lab_growth2,limit=1] run function escapemap:puzzles/radiation/bacteria/grow2
+
+execute if data entity @e[tag=lab_growth2,limit=1] interaction positioned as @e[tag=lab_growth2,limit=1] run function escapemap:puzzles/radiation/bacteria/grow2
+
 execute as @e[type=item] if data entity @s {Item:{components:{"minecraft:custom_data":{"puzzle":{"id":"bacteria_alive"}}}}} run item modify entity @s contents escapemap:bacteria/dead
 execute as @e[type=item] if data entity @s {Item:{components:{"minecraft:custom_data":{"puzzle":{"id":"bacteria_cultivated"}}}}} run item modify entity @s contents escapemap:bacteria/dead

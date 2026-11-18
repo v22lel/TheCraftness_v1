@@ -1,0 +1,103 @@
+const path_positions = Array{
+    "-19 -45 21",
+    "-19 -44 21",
+    "-18 -43 21",
+    "-18 -42 21",
+    "-19 -40 21",
+    "-19 -39 20",
+    "-19 -39 19",
+    "-19 -39 18",
+    "-20 -39 18",
+    "-20 -39 17",
+    "-20 -39 16",
+    "-20 -39 15",
+    "-19 -39 9",
+    "-19 -39 8",
+    "-19 -39 7",
+    "-20 -39 7",
+    "-20 -39 6",
+    "-20 -39 5",
+    "-20 -39 4"
+}
+
+// 15
+// 42 45 48 51 54 57
+const path_delays = Array{
+    "3",
+    "6",
+    "9",
+    "12",
+    "18",
+    "21",
+    "24",
+    "27",
+    "30",
+    "33",
+    "36",
+    "39",
+    "60",
+    "63",
+    "66",
+    "69",
+    "72",
+    "75",
+    "78"
+}
+
+for(0,18,i){
+    #file: ./nutrient/anim/$(i)
+    /playsound minecraft:entity.small_sulfur_cube.eat block @a $(path_positions).$(i) 5 0.8
+    /setblock $(path_positions).$(i) slime_block
+}
+
+#file: ./nutrient/lamp
+/setblock -19 -41 21 waxed_oxidized_copper_bulb[lit=true]
+/function escapemap:puzzles/complete
+
+#file: ./nutrient/sound
+/playsound minecraft:entity.small_sulfur_cube.eat block @a -18 -40 12 5 0.8
+
+#file: ./nutrient/complete
+/function escapemap:puzzles/radiation/lab/pipe2_off
+
+#file: ./nutrient/start
+for(0,18,i){
+    /schedule function escapemap:puzzles/radiation/nutrient/anim/$(i) $(path_delays).$(i) replace
+}
+/schedule function escapemap:puzzles/radiation/nutrient/lamp 15t replace
+
+/schedule function escapemap:puzzles/radiation/nutrient/sound 42t append
+/schedule function escapemap:puzzles/radiation/nutrient/sound 45t append
+/schedule function escapemap:puzzles/radiation/nutrient/sound 48t append
+/schedule function escapemap:puzzles/radiation/nutrient/sound 51t append
+/schedule function escapemap:puzzles/radiation/nutrient/sound 54t append
+/schedule function escapemap:puzzles/radiation/nutrient/sound 57t append
+
+/schedule function escapemap:puzzles/radiation/nutrient/complete 81t replace
+
+#file: ./nutrient/reset
+/function escapemap:puzzles/radiation/lab/pipe2_on
+
+/setblock -19 -45 21 chiseled_resin_bricks
+/setblock -19 -44 21 chiseled_resin_bricks
+/setblock -18 -43 21 chiseled_resin_bricks
+/setblock -18 -42 21 chiseled_resin_bricks
+
+/setblock -19 -41 21 waxed_oxidized_copper_bulb[lit=false]
+
+/setblock -19 -40 21 chiseled_resin_bricks
+/setblock -19 -39 20 chiseled_resin_bricks
+/setblock -19 -39 19 chiseled_resin_bricks
+/setblock -19 -39 18 chiseled_resin_bricks
+/setblock -20 -39 18 chiseled_resin_bricks
+/setblock -20 -39 17 chiseled_resin_bricks
+/setblock -20 -39 16 chiseled_resin_bricks
+/setblock -20 -39 15 chiseled_resin_bricks
+
+/setblock -19 -39 9 chiseled_resin_bricks
+/setblock -19 -39 8 chiseled_resin_bricks
+/setblock -19 -39 7 chiseled_resin_bricks
+/setblock -20 -39 7 chiseled_resin_bricks
+/setblock -20 -39 6 chiseled_resin_bricks
+/setblock -20 -39 5 chiseled_resin_bricks
+/setblock -20 -39 4 chiseled_resin_bricks

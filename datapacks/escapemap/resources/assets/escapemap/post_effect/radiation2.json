@@ -1,0 +1,23 @@
+{
+  "targets": {},
+  "passes": [
+    {
+      "vertex_shader": "escapemap:post/radiation",
+      "fragment_shader": "escapemap:post/radiation",
+      "output": "minecraft:main",
+      "inputs": [
+        {
+          "sampler_name": "In",
+          "target": "minecraft:main"
+        }
+      ],
+      "uniforms": {
+        "RadiationConfig": [
+          { "name": "strength", "type": "float", "value": 7.0 },
+          { "name": "speed", "type": "float", "value": 1.3 },
+          { "name": "tint", "type": "float", "value": 0.6 }
+        ]
+      }
+    }
+  ]
+}

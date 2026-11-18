@@ -4799,5 +4799,149 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/poplar_slab": {
+    "criteria": {
+      "has_planks": "2026-11-18 15:42:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/poplar_stairs": {
+    "criteria": {
+      "has_planks": "2026-11-18 15:42:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/poplar_fence": {
+    "criteria": {
+      "has_planks": "2026-11-18 15:42:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/poplar_sign": {
+    "criteria": {
+      "has_planks": "2026-11-18 15:42:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/poplar_button": {
+    "criteria": {
+      "has_planks": "2026-11-18 15:42:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/poplar_door": {
+    "criteria": {
+      "has_planks": "2026-11-18 15:42:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/poplar_fence_gate": {
+    "criteria": {
+      "has_planks": "2026-11-18 15:42:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/poplar_pressure_plate": {
+    "criteria": {
+      "has_planks": "2026-11-18 15:42:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/poplar_trapdoor": {
+    "criteria": {
+      "has_planks": "2026-11-18 15:42:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/light_blue_stained_glass_pane": {
+    "criteria": {
+      "has_glass": "2026-11-18 17:49:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cyan_stained_glass_pane": {
+    "criteria": {
+      "has_glass": "2026-11-18 17:49:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/lodestone": {
+    "criteria": {
+      "has_lodestone": "2026-11-18 17:59:18 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/copper_lantern": {
+    "criteria": {
+      "has_copper_torch": "2026-11-18 17:59:47 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/warped_hanging_sign": {
+    "criteria": {
+      "has_stripped_log": "2026-11-18 18:07:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/warped_shelf": {
+    "criteria": {
+      "has_stripped_warped_stem": "2026-11-18 18:07:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/white_stained_glass_pane": {
+    "criteria": {
+      "has_glass": "2026-11-18 18:12:27 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/stone_spear": {
+    "criteria": {
+      "has_cobblestone": "2026-11-18 18:14:56 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/spruce_hanging_sign": {
+    "criteria": {
+      "has_stripped_log": "2026-11-18 18:24:20 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/spruce_shelf": {
+    "criteria": {
+      "has_stripped_spruce_log": "2026-11-18 18:24:20 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cyan_concrete_slab": {
+    "criteria": {
+      "has_cyan_concrete": "2026-11-18 18:25:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cyan_concrete_slab_from_cyan_concrete_stonecutting": {
+    "criteria": {
+      "has_cyan_concrete": "2026-11-18 18:25:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cyan_concrete_stairs": {
+    "criteria": {
+      "has_cyan_concrete": "2026-11-18 18:25:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cyan_concrete_stairs_from_cyan_concrete_stonecutting": {
+    "criteria": {
+      "has_cyan_concrete": "2026-11-18 18:25:03 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_lightning_rod_from_honeycomb": {
+    "criteria": {
+      "has_lightning_rod": "2026-11-18 18:31:37 +0100"
+    },
+    "done": true
+  },
   "DataVersion": 5023
 }

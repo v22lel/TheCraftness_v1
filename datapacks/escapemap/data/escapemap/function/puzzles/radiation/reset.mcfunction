@@ -16,4 +16,3 @@ setblock -5 -36 11 lever[facing=west,powered=false,face=floor]
 setblock -4 -38 11 air destroy
 setblock -5 -36 11 lever[facing=west,face=floor,powered=false]
 setblock -4 -38 11 air destroy
-function escapemap:puzzles/radiation/lab/pipe2_on
