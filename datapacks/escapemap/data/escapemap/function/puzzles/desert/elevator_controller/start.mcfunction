@@ -7,4 +7,5 @@
 function escapemap:puzzles/desert/elevator/go_to_top
 fill -167 -36 29 -171 -36 33 air replace barrier
 fill -169 -48 31 -169 -46 31 air
+function escapemap:puzzles/desert/post_secret/open_door
 tp @p -169 -49 31

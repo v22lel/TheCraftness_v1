@@ -18,6 +18,9 @@ if('score P puzzle_basement_secret_complete matches 0') {
 puzzle_basement_complete P = 1
 /setblock -108 -40 41 waxed_oxidized_copper_bulb[lit=true]
 
+/setblock -116 -36 46 oak_slab[type=top]
+/setblock -116 -35 46 air
+
 #file: ./basement/secret_complete
 /function escapemap:puzzles/secret_complete {p:"-116 -41 46"}
 puzzle_basement_secret_complete P = 1
@@ -31,3 +34,6 @@ puzzle_basement_secret_complete P = 0
 
 /setblock -118 -40 41 waxed_copper_bulb[lit=false,powered=false]
 /setblock -116 -41 46 soul_campfire[lit=false]
+
+/setblock -116 -36 46 air
+/setblock -116 -35 46 barrier

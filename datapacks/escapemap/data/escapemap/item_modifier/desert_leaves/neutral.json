@@ -13,6 +13,14 @@
         "!minecraft:lore": {}
       },
       "type": "minecraft:set_components"
+    },
+    {
+      "type": "minecraft:toggle_tooltips",
+      "toggles": {
+        "minecraft:can_place_on": false,
+        "minecraft:can_break": false,
+        "minecraft:unbreakable": false
+      }
     }
   ]
 }

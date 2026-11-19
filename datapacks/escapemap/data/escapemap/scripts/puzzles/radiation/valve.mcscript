@@ -1,0 +1,50 @@
+var pipe_counter
+
+#file: ./valve/onitemframe
+at(@s) {
+    asat('@e[tag=valve_slot,sort=nearest,limit=1]') {
+        unless ('data entity @s {Item:{components:{"minecraft:custom_data":{puzzle:{id:"valve"}}}}}') {
+            /function escapemap:puzzles/radiation/valve/reject
+        } else {
+            if ('items entity @p weapon.mainhand *[minecraft:custom_data~{puzzle:{id:"multitool"}}]') {
+                /function escapemap:puzzles/radiation/valve/drop
+            } else if('data entity @s {Tags:["lab_pipe_main"]}') {
+                /function escapemap:puzzles/radiation/valve/onmainpipe
+            } else {
+                /function escapemap:puzzles/radiation/valve/onanypipe
+            }
+        }
+    }
+}
+
+#file: ./valve/drop
+/item modify entity @s contents escapemap:consume
+as (@p) {
+    /function escapemap:items/valve
+}
+
+#file: ./valve/reject
+/item replace entity @p weapon.mainhand from entity @s contents
+/item modify entity @s contents escapemap:consume
+
+#file: ./valve/onmainpipe
+/function escapemap:puzzles/radiation/valve/onanypipe
+
+#file: ./valve/onanypipe
+pipe_counter G += 1
+if(pipe_counter G == 13) {
+    /playsound minecraft:ambient.underwater.loop.additions.rare master @p ~ ~ ~ 1 1
+    pipe_counter G = 0
+}
+
+#file: ./valve/reset
+pipe_counter G = 0
+pipe_counter M = 0
+
+as ('@e[tag=valve_slot]') {
+    /item modify entity @s contents escapemap:consume
+}
+
+/item replace entity @e[tag=lab_pipe_start,limit=1] contents from entity @e[tag=valve_supplier,limit=1] contents
+
+/function escapemap:puzzles/radiation/lab/pipe3_on

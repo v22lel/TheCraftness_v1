@@ -12,6 +12,7 @@ function escapemap:area/reset
 function escapemap:puzzles/reset
 function escapemap:super_secrets/reset
 function escapemap:badending/reset
+function escapemap:mountain/reset
 function escapemap:explicit_randomness/disable
 tp @a -135.5 -42.00 127.5
 clear @a

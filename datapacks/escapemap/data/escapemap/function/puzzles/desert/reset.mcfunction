@@ -14,3 +14,5 @@ function escapemap:puzzles/desert/elevator_controller/reset
 function escapemap:puzzles/desert/ocd/reset
 function escapemap:puzzles/desert/cave/reset
 function escapemap:puzzles/desert/ls1/reset
+function escapemap:puzzles/desert/post_secret/reset
+function escapemap:puzzles/desert/post_secret/close_door

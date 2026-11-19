@@ -9,3 +9,4 @@ function escapemap:puzzles/castle/pottery/onitemframe
 function escapemap:puzzles/castle/waterarrows/onitemframe
 function escapemap:puzzles/castle/towers/onitemframe
 function escapemap:puzzles/castle/tower/ontopofroof/onitemframe
+function escapemap:puzzles/radiation/onitemframe

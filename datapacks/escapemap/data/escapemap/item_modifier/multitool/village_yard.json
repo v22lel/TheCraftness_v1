@@ -13,9 +13,29 @@
             "persistent": true,
             "id": "multitool"
           }
-        }
+        },
+        "minecraft:lore": [
+          {
+            "color": "gray",
+            "italic": false,
+            "text": "Selected tool:"
+          },
+          {
+            "color": "blue",
+            "italic": false,
+            "text": "== Wirecutters =="
+          }
+        ]
       },
       "type": "minecraft:set_components"
+    },
+    {
+      "type": "minecraft:toggle_tooltips",
+      "toggles": {
+        "minecraft:can_place_on": false,
+        "minecraft:can_break": false,
+        "minecraft:unbreakable": false
+      }
     }
   ]
 }

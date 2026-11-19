@@ -1,3 +1,5 @@
+// tiny side room, 3x3, opens door to lever
+
 var desert_pp4
 
 modal togglePressurePlate4(rspos, pppos) {

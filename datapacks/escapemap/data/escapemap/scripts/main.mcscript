@@ -8,6 +8,7 @@
 /function escapemap:super_secrets/tick
 /function escapemap:drop/tick
 /function escapemap:badending/tick
+/function escapemap:mountain/tick
 //TEST
 /function escapemap:mechanical/elevators/elevator/tick
 /function escapemap:ep/tick

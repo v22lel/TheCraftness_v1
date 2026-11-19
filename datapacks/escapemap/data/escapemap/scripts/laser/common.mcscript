@@ -1,17 +1,18 @@
 #file: ./load
-var lasers_complete @a = 0
+var lasers_complete P = 0
 
 
 #file: ./turn_off
-'$execute if entity @e[tag=$(tag)] run scoreboard players remove @a lasers_complete 1'
+'$execute if entity @e[tag=$(tag)] run scoreboard players remove P lasers_complete 1'
 '$kill @e[tag=$(tag)]'
 
 
 #file: ./complete
-'$execute unless entity @e[tag=$(tag)] run scoreboard players add @a lasers_complete 1'
+'$execute unless entity @e[tag=$(tag)] run scoreboard players add P lasers_complete 1'
 '$execute unless entity @e[tag=$(tag)] run summon end_crystal 46 24 -60 {HasVisualFire:0b,NoGravity:1b,Silent:1b,Invulnerable:1b,ShowBottom:0b,Tags:["crystal_laser","$(tag)"],beam_target:[I;$(p)]}'
+/function escapemap:mountain/laser_complete
 
 
 #file: ./reset
-lasers_complete @a = 0
+lasers_complete P = 0
 /kill @e[tag=crystal_laser]

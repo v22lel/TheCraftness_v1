@@ -7,3 +7,5 @@
 function escapemap:puzzles/complete
 scoreboard players set P puzzle_basement_complete 1
 setblock -108 -40 41 waxed_oxidized_copper_bulb[lit=true]
+setblock -116 -36 46 oak_slab[type=top]
+setblock -116 -35 46 air

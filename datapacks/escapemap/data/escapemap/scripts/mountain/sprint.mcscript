@@ -1,0 +1,38 @@
+//0=locked, 1=unloccked collection, 2=activated
+var sprint_state
+
+#file: ./sprint/reset
+/setblock 49 13 -47 minecraft:waxed_exposed_copper_golem_statue[copper_golem_pose=running,facing=north]
+
+/setblock 52 14 -45 minecraft:soul_campfire[lit=false]
+/setblock 49 12 -47 minecraft:waxed_copper_bulb[lit=false,powered=false]
+
+sprint_state P = 0
+
+#file: ./sprint/tick
+if(sprint_state P == 1) {
+    /particle minecraft:trial_omen 49 14 -47 0.2 0.2 0.2 0 5
+
+    if('data entity @e[tag=sprint_interaction,limit=1] interaction' || 'data entity @e[tag=sprint_interaction,limit=1] attack') {
+        /function escapemap:mountain/sprint/activate
+    }
+}
+
+#file: ./sprint/unlock_collection
+/data remove entity @e[tag=sprint_interaction,limit=1] interaction
+/data remove entity @e[tag=sprint_interaction,limit=1] attack
+sprint_state P = 1
+
+#file: ./sprint/activate
+sprint_state P = 2
+
+/data remove entity @e[tag=sprint_interaction,limit=1] interaction
+/data remove entity @e[tag=sprint_interaction,limit=1] attack
+
+/summon minecraft:lightning_bolt 49 13 -47
+/setblock 49 13 -47 minecraft:waxed_oxidized_copper_golem_statue[copper_golem_pose=running,facing=north]
+
+/setblock 49 12 -47 minecraft:waxed_copper_bulb[lit=true,powered=false]
+/function escapemap:puzzles/secret_complete {p:"52 14 -45"}
+
+sprint @a = 1

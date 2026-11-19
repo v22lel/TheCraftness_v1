@@ -96,6 +96,9 @@ castle_puzzles_completed C = 0
 /function escapemap:puzzles/castle/towers/onitemframe
 /function escapemap:puzzles/castle/tower/ontopofroof/onitemframe
 
+//beautiful code and i will 1ßß% search this line at some point
+/function escapemap:puzzles/radiation/onitemframe
+
 #file: ./onpuzzlecomplete
 /scoreboard players add C castle_puzzles_completed 1
 

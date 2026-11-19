@@ -1,3 +1,4 @@
+// secret for getting all completed at once
 var desert_ocd
 
 modal rsCheck2(pos) {

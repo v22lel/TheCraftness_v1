@@ -10,3 +10,5 @@ fill -113 -41 42 -110 -41 42 minecraft:cauldron
 setblock -108 -40 41 waxed_oxidized_copper_bulb[lit=false,powered=false]
 setblock -118 -40 41 waxed_copper_bulb[lit=false,powered=false]
 setblock -116 -41 46 soul_campfire[lit=false]
+setblock -116 -36 46 air
+setblock -116 -35 46 barrier

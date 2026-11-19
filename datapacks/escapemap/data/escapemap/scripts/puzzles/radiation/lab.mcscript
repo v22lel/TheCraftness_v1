@@ -41,3 +41,31 @@
 
 /setblock -12 -43 5 air
 /setblock -12 -44 5 air
+
+#file: ./lab/pipe3_on
+/setblock -29 -38 12 water
+/schedule function escapemap:puzzles/radiation/lab/pipe3_on_delay 32t replace
+/schedule clear escapemap:puzzles/radiation/lab/pipe3_off_delay1
+/schedule clear escapemap:puzzles/radiation/lab/pipe3_off_delay2
+
+#file: ./lab/pipe3_on_delay
+/setblock -29 -43 12 minecraft:barrier[waterlogged=true]
+/setblock -29 -44 12 water
+
+#file: ./lab/pipe3_off
+/setblock -29 -38 12 air
+/schedule function escapemap:puzzles/radiation/lab/pipe3_off_delay1 26t replace
+/schedule function escapemap:puzzles/radiation/lab/pipe3_off_delay2 32t replace
+/schedule clear escapemap:puzzles/radiation/lab/pipe3_on_delay
+
+#file: ./lab/pipe3_off_delay1
+/setblock -29 -43 12 air
+/setblock -29 -44 12 barrier[waterlogged=true]
+
+#file: ./lab/pipe3_off_delay2
+/setblock -29 -44 12 air
+
+#file: ./lab/pipe3_toggle
+/execute store success storage escapemap:tmp pipeOn byte 1 if block -29 -38 12 water
+/execute if data storage escapemap:tmp {pipeOn:1b} run function escapemap:puzzles/radiation/lab/pipe3_off
+/execute if data storage escapemap:tmp {pipeOn:0b} run function escapemap:puzzles/radiation/lab/pipe3_on

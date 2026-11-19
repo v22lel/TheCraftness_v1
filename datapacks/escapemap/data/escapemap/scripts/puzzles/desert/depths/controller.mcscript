@@ -1,3 +1,5 @@
+// big room very hard to get around, 5x5 with some already lit
+
 var desert_pp3
 
 modal togglePressurePlate3(sspos, pppos) {
@@ -40,6 +42,8 @@ spawnDefault3('-174 -50 49')
 /setblock -182 -49 51 sandstone_stairs[facing=east,shape=straight,half=top]
 /setblock -182 -50 51 sandstone_stairs[facing=east,shape=straight]
 
+/setblock -180 -47 51 minecraft:waxed_oxidized_copper_bulb[lit=false]
+
 #file: ./pp3/toggle
 togglePressurePlate3("~ ~1 ~-1", "~ ~2 ~-2")
 togglePressurePlate3("~ ~1 ~1", "~ ~2 ~2")
@@ -56,7 +60,7 @@ if(desert_pp3 C == 25){
 #file: ./pp3/complete
 if(desert_pp3 P == 0) {
     /function escapemap:puzzles/complete
-    /setblock -164 -42 51 minecraft:waxed_oxidized_copper_bulb[lit=true]
+    /setblock -180 -47 51 minecraft:waxed_oxidized_copper_bulb[lit=true]
     /schedule function escapemap:puzzles/desert/depths/pp3/door 5s
 }
 desert_pp3 P = 1

@@ -1,3 +1,5 @@
+// missing redstone tutorial, 4 clusters of T shaped plates
+
 var desert_pp5
 
 modal togglePressurePlate5(rspos, pppos) {

@@ -7,10 +7,8 @@ modal incrementShelf(pos) {
     /execute unless data block $(pos) {Items:[{Slot:0b,id:"minecraft:sea_lantern"}]} run data merge block $(pos) {Items:[{Slot:0b,id:"minecraft:sea_lantern"},{Slot:2b,id:"minecraft:black_concrete"}]}
 }
 
-var lasers_complete
-
-#file: ./load
-
+#file: ./tick
+/function escapemap:mountain/sprint/tick
 
 #file: ./reset
 resetShelf('45 12 -60', 'west')
@@ -20,22 +18,29 @@ resetShelf('46 12 -61', 'north')
 //sprint shelf
 resetShelf('49 12 -48', 'north')
 
-lasers_complete C = 0
+/function escapemap:mountain/sprint/reset
+
+#file: ./laser_debug_complete
+lasers_complete P += 1
+/function escapemap:mountain/laser_complete
 
 #file: ./laser_complete
-lasers_complete C += 1
-if('score C lasers_complete matches 1..2') {
+if('score P lasers_complete matches 1..2') {
     //sprint shelf
     incrementShelf('49 12 -48')
 
     incrementShelf('45 12 -60')
+
+    if(lasers_complete P == 2) {
+        /function escapemap:mountain/sprint/unlock_collection
+    }
 }
-if('score C lasers_complete matches 3..4') {
+if('score P lasers_complete matches 3..4') {
     incrementShelf('46 12 -59')
 }
-if('score C lasers_complete matches 5..6') {
+if('score P lasers_complete matches 5..6') {
     incrementShelf('47 12 -60')
 }
-if('score C lasers_complete matches 7..8') {
+if('score P lasers_complete matches 7..8') {
     incrementShelf('46 12 -61')
 }

@@ -3142,5 +3142,179 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/creaking_heart": {
+    "criteria": {
+      "has_resin_block": "2026-11-19 16:47:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/resin_clump": {
+    "criteria": {
+      "has_resin_block": "2026-11-19 16:47:25 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cinnabar_brick_slab_from_polished_cinnabar_stonecutting": {
+    "criteria": {
+      "has_polished_cinnabar": "2026-11-19 17:40:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cinnabar_brick_stairs_from_polished_cinnabar_stonecutting": {
+    "criteria": {
+      "has_polished_cinnabar": "2026-11-19 17:40:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cinnabar_bricks": {
+    "criteria": {
+      "has_polished_cinnabar": "2026-11-19 17:40:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/cinnabar_bricks_from_polished_cinnabar_stonecutting": {
+    "criteria": {
+      "has_polished_cinnabar": "2026-11-19 17:40:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_cinnabar_slab": {
+    "criteria": {
+      "has_polished_cinnabar": "2026-11-19 17:40:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_cinnabar_slab_from_polished_cinnabar_stonecutting": {
+    "criteria": {
+      "has_polished_cinnabar": "2026-11-19 17:40:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_cinnabar_stairs": {
+    "criteria": {
+      "has_polished_cinnabar": "2026-11-19 17:40:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/polished_cinnabar_stairs_from_polished_cinnabar_stonecutting": {
+    "criteria": {
+      "has_polished_cinnabar": "2026-11-19 17:40:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cinnabar_brick_wall_from_polished_cinnabar_stonecutting": {
+    "criteria": {
+      "has_polished_cinnabar": "2026-11-19 17:40:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/polished_cinnabar_wall": {
+    "criteria": {
+      "has_polished_cinnabar": "2026-11-19 17:40:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/polished_cinnabar_wall_from_polished_cinnabar_stonecutting": {
+    "criteria": {
+      "has_polished_cinnabar": "2026-11-19 17:40:08 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/waxed_copper_door_from_honeycomb": {
+    "criteria": {
+      "has_copper_door": "2026-11-19 17:41:40 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/waxed_exposed_copper_door_from_honeycomb": {
+    "criteria": {
+      "has_exposed_copper_door": "2026-11-19 17:41:41 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_green_wool": {
+    "criteria": {
+      "has_needed_dye": "2026-11-19 17:54:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_green_wool_slab": {
+    "criteria": {
+      "has_needed_dye": "2026-11-19 17:54:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dye_green_wool_stairs": {
+    "criteria": {
+      "has_needed_dye": "2026-11-19 17:54:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/dye_green_harness": {
+    "criteria": {
+      "has_needed_dye": "2026-11-19 17:54:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_green_bed": {
+    "criteria": {
+      "has_needed_dye": "2026-11-19 17:54:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_green_carpet": {
+    "criteria": {
+      "has_needed_dye": "2026-11-19 17:54:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dye_green_cushion": {
+    "criteria": {
+      "has_needed_dye": "2026-11-19 17:54:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/green_candle": {
+    "criteria": {
+      "has_green_dye": "2026-11-19 17:54:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/cyan_dye": {
+    "criteria": {
+      "has_green_dye": "2026-11-19 17:54:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/lime_dye": {
+    "criteria": {
+      "has_green_dye": "2026-11-19 17:54:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/green_bundle": {
+    "criteria": {
+      "has_green_dye": "2026-11-19 17:54:28 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/mushroom_stew": {
+    "criteria": {
+      "has_mushroom": "2026-11-19 18:48:30 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/bowl": {
+    "criteria": {
+      "has_mushroom": "2026-11-19 18:48:30 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/white_glazed_terracotta": {
+    "criteria": {
+      "has_white_terracotta": "2026-11-19 19:39:18 +0100"
+    },
+    "done": true
+  },
   "DataVersion": 5023
 }

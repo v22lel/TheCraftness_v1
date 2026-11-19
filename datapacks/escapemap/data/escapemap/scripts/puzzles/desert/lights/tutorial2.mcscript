@@ -1,3 +1,5 @@
+// second floor, 3x4, two halves
+
 var desert_pp2
 
 modal togglePressurePlate2(rspos, pppos) {

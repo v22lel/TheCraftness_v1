@@ -51,6 +51,7 @@
 /function escapemap:area/items/multitool_spawn_tutorial
 
 #file: ./areas/radiation
+/function escapemap:area/items/multitool_lab
 
 #file: ./areas/inventory_changed
 /function escapemap:area/areas/changed

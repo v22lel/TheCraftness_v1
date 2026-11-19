@@ -14,6 +14,9 @@
 #file: ./items/multitool_mini_cave
 /item modify entity @s escapemap:inventory/shears_multitool escapemap:multitool/mini_cave
 
+#file: ./items/multitool_lab
+/item modify entity @s escapemap:inventory/shears_multitool escapemap:multitool/lab
+
 #file: ./items/village_yard_redstone_neutral
 /item modify entity @s escapemap:inventory/redstone_village_yard escapemap:village_yard_redstone/neutral
 

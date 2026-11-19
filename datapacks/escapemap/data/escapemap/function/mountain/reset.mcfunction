@@ -9,4 +9,4 @@ setblock 46 12 -59 minecraft:pale_oak_shelf[facing=south]{Items:[{Slot:0b,id:"mi
 setblock 47 12 -60 minecraft:pale_oak_shelf[facing=east]{Items:[{Slot:0b,id:"minecraft:black_concrete",count:1},{Slot:2b,id:"minecraft:black_concrete",count:1}]}
 setblock 46 12 -61 minecraft:pale_oak_shelf[facing=north]{Items:[{Slot:0b,id:"minecraft:black_concrete",count:1},{Slot:2b,id:"minecraft:black_concrete",count:1}]}
 setblock 49 12 -48 minecraft:pale_oak_shelf[facing=north]{Items:[{Slot:0b,id:"minecraft:black_concrete",count:1},{Slot:2b,id:"minecraft:black_concrete",count:1}]}
-scoreboard players set C lasers_complete 0
+function escapemap:mountain/sprint/reset
