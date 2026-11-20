@@ -16,7 +16,8 @@
         "minecraft:lore": [
           [
             {
-              "text": "(Mostly) trustworthy!",
+              "translate": "item.escapemap.flashlight.active",
+              "fallback": "(Mostly) trustworthy!",
               "color": "gray",
               "italic": false
             }

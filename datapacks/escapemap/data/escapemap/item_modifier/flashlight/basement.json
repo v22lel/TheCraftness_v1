@@ -16,7 +16,8 @@
         "minecraft:lore": [
           [
             {
-              "text": "Not enough oxygen...",
+              "translate": "item.escapemap.flashlight.not_enough_oxygen",
+              "fallback": "Not enough oxygen...",
               "color": "gray",
               "italic": false
             }

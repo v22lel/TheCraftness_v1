@@ -20,7 +20,8 @@
       "type": "minecraft:set_name",
       "target": "custom_name",
       "name": {
-        "text": "Dead Helicobacter-Pylori Cluster",
+        "translate": "item.escapemap.bacteria.dead",
+        "fallback": "Dead Helicobacter-Pylori Cluster",
         "color": "gray",
         "italic": false
       }

@@ -14,12 +14,14 @@
           {
             "color": "gray",
             "italic": false,
-            "text": "Selected tool:"
+            "translate": "item.escapemap.multitool.selected_tool",
+            "fallback": "Selected tool:"
           },
           {
             "color": "blue",
             "italic": false,
-            "text": "== None =="
+            "translate": "item.escapemap.multitool.tool.none",
+            "fallback": "== None =="
           }
         ]
       },

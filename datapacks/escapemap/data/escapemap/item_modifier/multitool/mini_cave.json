@@ -18,12 +18,14 @@
           {
             "color": "gray",
             "italic": false,
-            "text": "Selected tool:"
+            "translate": "item.escapemap.multitool.selected_tool",
+            "fallback": "Selected tool:"
           },
           {
             "color": "blue",
             "italic": false,
-            "text": "== Sturdy Knife =="
+            "translate": "item.escapemap.multitool.tool.sturdy_knife",
+            "fallback": "== Sturdy Knife =="
           }
         ]
       },

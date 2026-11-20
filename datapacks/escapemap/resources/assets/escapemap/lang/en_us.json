@@ -1,0 +1,22 @@
+{
+  "area.escapemap.castle": "Castle",
+  "item.escapemap.bacteria.alive": "Helicobacter-Pylori Cluster",
+  "item.escapemap.bacteria.cultivated": "Cultivated Helicobacter-Pylori Cluster",
+  "item.escapemap.bacteria.dead": "Dead Helicobacter-Pylori Cluster",
+  "item.escapemap.bacteria.strengthened": "Strengthened Helicobacter-Pylori Cluster",
+  "item.escapemap.flashlight": "Flashlight",
+  "item.escapemap.flashlight.active": "(Mostly) trustworthy!",
+  "item.escapemap.flashlight.disabled": "Disabled",
+  "item.escapemap.flashlight.not_enough_oxygen": "Not enough oxygen...",
+  "item.escapemap.multitool": "Multitool",
+  "item.escapemap.multitool.leaf_trimmers_hint": "Cuts leaves at blazingly fast speeds!",
+  "item.escapemap.multitool.selected_tool": "Selected tool:",
+  "item.escapemap.multitool.tool.none": "== None ==",
+  "item.escapemap.multitool.tool.plumbing_crowbar": "== Plumbing crowbar ==",
+  "item.escapemap.multitool.tool.rust": "Rust",
+  "item.escapemap.multitool.tool.rusty_leaf_trimmers": "== %sy Leaf Trimmers ==",
+  "item.escapemap.multitool.tool.sturdy_knife": "== Sturdy Knife ==",
+  "item.escapemap.multitool.tool.wirecutters": "== Wirecutters ==",
+  "item.escapemap.origin": "From: %s",
+  "item.escapemap.pipe_valve": "Pipe Valve"
+}

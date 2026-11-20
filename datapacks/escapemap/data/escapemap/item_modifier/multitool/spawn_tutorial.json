@@ -15,12 +15,21 @@
           }
         },
         "minecraft:lore": [
-          {"color": "gray", "italic": false, "text": "Selected tool:"},
-          {"color": "blue", "italic": false, "text": "== " , "extra": [
-            {"color": "gold", "italic": false, "text": "Rust"},
-            {"color": "blue", "italic": false, "text": "y Leaf Trimmers =="}
-          ]},
-          {"color": "gray", "italic": false, "text": "Cuts leaves at blazingly fast speeds!"}
+          {"color": "gray", "italic": false, "translate": "item.escapemap.multitool.selected_tool", "fallback": "Selected tool:"},
+          {
+            "color": "blue",
+            "italic": false,
+            "translate": "item.escapemap.multitool.tool.rusty_leaf_trimmers",
+            "fallback": "== %sy Leaf Trimmers ==",
+            "with": [
+              {
+                "color": "gold",
+                "translate": "item.escapemap.multitool.tool.rust",
+                "fallback": "Rust"
+              }
+            ]
+          },
+          {"color": "gray", "italic": false, "translate": "item.escapemap.multitool.leaf_trimmers_hint", "fallback": "Cuts leaves at blazingly fast speeds!"}
         ]
       },
       "type": "minecraft:set_components"

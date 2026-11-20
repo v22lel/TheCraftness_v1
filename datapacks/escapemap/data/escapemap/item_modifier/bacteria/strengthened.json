@@ -20,7 +20,8 @@
       "type": "minecraft:set_name",
       "target": "custom_name",
       "name": {
-        "text": "Strengthened Helicobacter-Pylori Cluster",
+        "translate": "item.escapemap.bacteria.strengthened",
+        "fallback": "Strengthened Helicobacter-Pylori Cluster",
         "color": "red",
         "italic": false
       }

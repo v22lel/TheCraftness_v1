@@ -11,18 +11,19 @@
           }
         },
         "minecraft:lore": [
-          [
-            {
-              "text": "From: ",
-              "color": "gray",
-              "italic": false
-            },
-            {
-              "text": "Castle",
-              "color": "light_purple",
-              "italic": false
-            }
-          ]
+          {
+            "translate": "item.escapemap.origin",
+            "fallback": "From: %s",
+            "color": "gray",
+            "italic": false,
+            "with": [
+              {
+                "translate": "area.escapemap.castle",
+                "fallback": "Castle",
+                "color": "light_purple"
+              }
+            ]
+          }
         ]
       },
       "type": "minecraft:set_components"

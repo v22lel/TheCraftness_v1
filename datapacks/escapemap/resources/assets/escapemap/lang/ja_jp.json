@@ -1,0 +1,22 @@
+{
+  "area.escapemap.castle": "孤城",
+  "item.escapemap.bacteria.alive": "ピロリ菌の塊",
+  "item.escapemap.bacteria.cultivated": "培養したピロリ菌の塊",
+  "item.escapemap.bacteria.dead": "死滅したピロリ菌の塊",
+  "item.escapemap.bacteria.strengthened": "強化したピロリ菌の塊",
+  "item.escapemap.flashlight": "懐中電灯",
+  "item.escapemap.flashlight.active": "（だいたい）頼りになる！",
+  "item.escapemap.flashlight.disabled": "使用不可",
+  "item.escapemap.flashlight.not_enough_oxygen": "酸素が足りない……",
+  "item.escapemap.multitool": "マルチツール",
+  "item.escapemap.multitool.leaf_trimmers_hint": "葉っぱを爆速で刈れる！",
+  "item.escapemap.multitool.selected_tool": "選択中の工具：",
+  "item.escapemap.multitool.tool.none": "== なし ==",
+  "item.escapemap.multitool.tool.plumbing_crowbar": "== 配管用バール ==",
+  "item.escapemap.multitool.tool.rust": "Rust",
+  "item.escapemap.multitool.tool.rusty_leaf_trimmers": "== 錆びた葉刈りばさみ（%s製） ==",
+  "item.escapemap.multitool.tool.sturdy_knife": "== 頑丈なナイフ ==",
+  "item.escapemap.multitool.tool.wirecutters": "== ワイヤーカッター ==",
+  "item.escapemap.origin": "入手場所：%s",
+  "item.escapemap.pipe_valve": "配管用バルブ"
+}

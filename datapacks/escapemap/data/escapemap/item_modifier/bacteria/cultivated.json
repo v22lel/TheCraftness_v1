@@ -20,7 +20,8 @@
       "type": "minecraft:set_name",
       "target": "custom_name",
       "name": {
-        "text": "Cultivated Helicobacter-Pylori Cluster",
+        "translate": "item.escapemap.bacteria.cultivated",
+        "fallback": "Cultivated Helicobacter-Pylori Cluster",
         "color": "green",
         "italic": false
       }

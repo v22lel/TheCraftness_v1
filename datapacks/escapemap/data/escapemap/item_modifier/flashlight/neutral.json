@@ -16,7 +16,8 @@
         "minecraft:lore": [
           [
             {
-              "text": "Disabled",
+              "translate": "item.escapemap.flashlight.disabled",
+              "fallback": "Disabled",
               "color": "gray",
               "italic": false
             }

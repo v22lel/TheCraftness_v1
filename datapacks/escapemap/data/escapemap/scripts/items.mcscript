@@ -1,11 +1,11 @@
 #file: ./items/multitool
-/give @s minecraft:shears[minecraft:custom_name={"text":"Multitool","italic":false},minecraft:unbreakable={},minecraft:custom_data={puzzle:{id:"multitool","persistent":1b}}] 1
+/give @s minecraft:shears[minecraft:custom_name={"translate":"item.escapemap.multitool","fallback":"Multitool","italic":false},minecraft:unbreakable={},minecraft:custom_data={puzzle:{id:"multitool","persistent":1b}}] 1
 
 #file: ./items/village_yard_redstone
 /give @s minecraft:redstone[minecraft:custom_data={puzzle:{id:"village_yard","persistent":1b}}] 1
 
 #file: ./items/flashlight
-/give @s minecraft:soul_torch[minecraft:custom_name={"text":"Flashlight","italic":false},minecraft:custom_data={puzzle:{id:"flashlight","persistent":1b}}] 1
+/give @s minecraft:soul_torch[minecraft:custom_name={"translate":"item.escapemap.flashlight","fallback":"Flashlight","italic":false},minecraft:custom_data={puzzle:{id:"flashlight","persistent":1b}}] 1
 
 #file: ./items/castle_stair
 /give @s minecraft:oak_stairs[minecraft:custom_data={puzzle:{id:"castle_stair","persistent":1b}}] 1
@@ -20,16 +20,16 @@
 /give @s sandstone_slab[can_place_on={blocks:"black_glazed_terracotta"},custom_data={puzzle:{id:"boat_slab",persistent:1b}}] 1
 
 #file: ./items/strong_bacteria
-/give @s green_dye[minecraft:custom_name={"text":"Strengthened Helicobacter-Pylori Cluster","color":"red","italic":false},custom_data={puzzle:{id:"bacteria_strong",persistent:1b}}] 1
+/give @s green_dye[minecraft:custom_name={"translate":"item.escapemap.bacteria.strengthened","fallback":"Strengthened Helicobacter-Pylori Cluster","color":"red","italic":false},custom_data={puzzle:{id:"bacteria_strong",persistent:1b}}] 1
 
 #file: ./items/cultivated_bacteria
-/give @s lime_dye[minecraft:custom_name={"text":"Cultivated Helicobacter-Pylori Cluster","color":"green","italic":false},custom_data={puzzle:{id:"bacteria_cultivated",persistent:1b}}] 1
+/give @s lime_dye[minecraft:custom_name={"translate":"item.escapemap.bacteria.cultivated","fallback":"Cultivated Helicobacter-Pylori Cluster","color":"green","italic":false},custom_data={puzzle:{id:"bacteria_cultivated",persistent:1b}}] 1
 
 #file: ./items/alive_bacteria
-/give @s turtle_scute[minecraft:custom_name={"text":"Helicobacter-Pylori Cluster","color":"dark_green","italic":false},custom_data={puzzle:{id:"bacteria_alive",persistent:1b}}] 1
+/give @s turtle_scute[minecraft:custom_name={"translate":"item.escapemap.bacteria.alive","fallback":"Helicobacter-Pylori Cluster","color":"dark_green","italic":false},custom_data={puzzle:{id:"bacteria_alive",persistent:1b}}] 1
 
 #file: ./items/dead_bacteria
-/give @s armadillo_scute[minecraft:custom_name={"text":"Dead Helicobacter-Pylori Cluster","color":"gray","italic":false},custom_data={puzzle:{id:"bacteria_dead",persistent:1b}}] 1
+/give @s armadillo_scute[minecraft:custom_name={"translate":"item.escapemap.bacteria.dead","fallback":"Dead Helicobacter-Pylori Cluster","color":"gray","italic":false},custom_data={puzzle:{id:"bacteria_dead",persistent:1b}}] 1
 
 #file: ./items/valve
-/give @s structure_void[minecraft:custom_name={"text":"Pipe Valve","color":"blue","italic":false},custom_data={puzzle:{id:"valve",persistent:1b}}] 1
+/give @s structure_void[minecraft:custom_name={"translate":"item.escapemap.pipe_valve","fallback":"Pipe Valve","color":"blue","italic":false},custom_data={puzzle:{id:"valve",persistent:1b}}] 1

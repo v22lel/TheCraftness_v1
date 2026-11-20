@@ -25,17 +25,20 @@
           {
             "color": "gray",
             "italic": false,
-            "text": "Can be placed on:"
+            "translate": "item.canPlace",
+            "fallback": "Can be placed on:"
           },
           {
             "color": "dark_gray",
             "italic": false,
-            "text": "Red Sandstone"
+            "translate": "block.minecraft.red_sandstone",
+            "fallback": "Red Sandstone"
           },
           {
             "color": "dark_gray",
             "italic": false,
-            "text": "Red Terracotta"
+            "translate": "block.minecraft.red_terracotta",
+            "fallback": "Red Terracotta"
           }
         ]
       },
