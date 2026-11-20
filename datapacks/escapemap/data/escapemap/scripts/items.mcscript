@@ -33,3 +33,6 @@
 
 #file: ./items/valve
 /give @s structure_void[minecraft:custom_name={"translate":"item.escapemap.pipe_valve","fallback":"Pipe Valve","color":"blue","italic":false},custom_data={puzzle:{id:"valve",persistent:1b}}] 1
+
+#file: ./items/faucet_handle
+/give @s minecraft:paper[minecraft:custom_name={"translate":"item.escapemap.faucet_handle","fallback":"Faucet Handle","italic":false},minecraft:item_model="escapemap:faucet_handle",minecraft:custom_data={puzzle:{id:"faucet_handle",persistent:1b}}] 1
