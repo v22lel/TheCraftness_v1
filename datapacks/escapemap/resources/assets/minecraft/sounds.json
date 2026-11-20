@@ -21,5 +21,11 @@
     "sounds": [
       "minecraft:ambient/cave/cave18"
     ]
+  },
+  "pipe": {
+    "sounds": [
+      "minecraft:pipe"
+    ],
+    "stream": true
   }
 }

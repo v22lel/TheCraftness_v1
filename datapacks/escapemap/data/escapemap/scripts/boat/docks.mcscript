@@ -1,0 +1,288 @@
+var dock_state
+#file: ./docks/call_boat/spawn_dock
+/kill @e[tag=calledBoat]
+/function escapemap:boat/docks/close_all
+
+/schedule clear escapemap:boat/docks/summon/spawn_dock
+/schedule clear escapemap:boat/docks/particle/spawn_dock
+/schedule clear escapemap:boat/docks/particle_post/spawn_dock
+/schedule function escapemap:boat/docks/particle/spawn_dock 42t append
+/schedule function escapemap:boat/docks/particle/spawn_dock 60t append
+/schedule function escapemap:boat/docks/particle/spawn_dock 70t append
+/schedule function escapemap:boat/docks/particle/spawn_dock 80t append
+/schedule function escapemap:boat/docks/particle/spawn_dock 90t append
+/schedule function escapemap:boat/docks/particle/spawn_dock 95t append
+/schedule function escapemap:boat/docks/particle/spawn_dock 100t append
+/schedule function escapemap:boat/docks/particle/spawn_dock 105t append
+/schedule function escapemap:boat/docks/particle/spawn_dock 110t append
+/schedule function escapemap:boat/docks/particle/spawn_dock 115t append
+/schedule function escapemap:boat/docks/summon/spawn_dock 120t replace
+/schedule function escapemap:boat/docks/particle_post/spawn_dock 125t append
+/schedule function escapemap:boat/docks/particle_post/spawn_dock 130t append
+/schedule function escapemap:boat/docks/complete/spawn_dock 135t append
+dock_state spawn_dock = 1
+
+
+#file: ./docks/particle/spawn_dock
+/particle minecraft:bubble -155 -43.25 122 0.7 0 0.7 0.3 75 normal
+/particle minecraft:snowflake -155 -44.5 122 0.7 0 0.7 0.1 75 normal
+
+
+#file: ./docks/post_particle/spawn_dock
+/particle minecraft:bubble {x} -43 {z} 0.7 0 0.7 0.3 75 normal
+/particle minecraft:snowflake {x} -44 {z} 0.7 0 0.7 0.1 75 normal
+
+
+#file: ./docks/summon/spawn_dock
+/kill @e[tag=calledBoat]
+/particle minecraft:bubble_pop -155 -43.5 122 1 0 1 0.2 100 normal
+/summon minecraft:spruce_boat -155 -52.286 122 {Motion:[0.0,3.5,0.0],Tags:["calledBoat"],Invulnerable:1}
+
+
+#file: ./docks/complete/spawn_dock
+dock_state spawn_dock = 2
+/setblock -154 -43 124 air
+/setblock -154 -41 124 air
+/setblock -153 -43 123 air
+/setblock -153 -41 123 air
+/setblock -154 -43 125 air
+/setblock -154 -41 125 air
+/setblock -154 -42 125 air
+/setblock -154 -42 124 air
+/setblock -153 -42 123 air
+
+
+#file: ./docks/call_boat/lighthouse_dock
+/kill @e[tag=calledBoat]
+/function escapemap:boat/docks/close_all
+
+/schedule clear escapemap:boat/docks/summon/lighthouse_dock
+/schedule clear escapemap:boat/docks/particle/lighthouse_dock
+/schedule clear escapemap:boat/docks/particle_post/lighthouse_dock
+/schedule function escapemap:boat/docks/particle/lighthouse_dock 42t append
+/schedule function escapemap:boat/docks/particle/lighthouse_dock 60t append
+/schedule function escapemap:boat/docks/particle/lighthouse_dock 70t append
+/schedule function escapemap:boat/docks/particle/lighthouse_dock 80t append
+/schedule function escapemap:boat/docks/particle/lighthouse_dock 90t append
+/schedule function escapemap:boat/docks/particle/lighthouse_dock 95t append
+/schedule function escapemap:boat/docks/particle/lighthouse_dock 100t append
+/schedule function escapemap:boat/docks/particle/lighthouse_dock 105t append
+/schedule function escapemap:boat/docks/particle/lighthouse_dock 110t append
+/schedule function escapemap:boat/docks/particle/lighthouse_dock 115t append
+/schedule function escapemap:boat/docks/summon/lighthouse_dock 120t replace
+/schedule function escapemap:boat/docks/particle_post/lighthouse_dock 125t append
+/schedule function escapemap:boat/docks/particle_post/lighthouse_dock 130t append
+/schedule function escapemap:boat/docks/complete/lighthouse_dock 135t append
+dock_state lighthouse_dock = 1
+
+
+#file: ./docks/particle/lighthouse_dock
+/particle minecraft:bubble -118 -43.25 -39 0.7 0 0.7 0.3 75 normal
+/particle minecraft:snowflake -118 -44.5 -39 0.7 0 0.7 0.1 75 normal
+
+
+#file: ./docks/post_particle/lighthouse_dock
+/particle minecraft:bubble {x} -43 {z} 0.7 0 0.7 0.3 75 normal
+/particle minecraft:snowflake {x} -44 {z} 0.7 0 0.7 0.1 75 normal
+
+
+#file: ./docks/summon/lighthouse_dock
+/kill @e[tag=calledBoat]
+/particle minecraft:bubble_pop -118 -43.5 -39 1 0 1 0.2 100 normal
+/summon minecraft:spruce_boat -118 -52.286 -39 {Motion:[0.0,3.5,0.0],Tags:["calledBoat"],Invulnerable:1}
+
+
+#file: ./docks/complete/lighthouse_dock
+dock_state lighthouse_dock = 2
+/setblock -116 -42 -40 air
+/setblock -117 -42 -39 air
+/setblock -116 -42 -38 air
+
+
+#file: ./docks/call_boat/jungle_dock
+/kill @e[tag=calledBoat]
+/function escapemap:boat/docks/close_all
+
+/schedule clear escapemap:boat/docks/summon/jungle_dock
+/schedule clear escapemap:boat/docks/particle/jungle_dock
+/schedule clear escapemap:boat/docks/particle_post/jungle_dock
+/schedule function escapemap:boat/docks/particle/jungle_dock 42t append
+/schedule function escapemap:boat/docks/particle/jungle_dock 60t append
+/schedule function escapemap:boat/docks/particle/jungle_dock 70t append
+/schedule function escapemap:boat/docks/particle/jungle_dock 80t append
+/schedule function escapemap:boat/docks/particle/jungle_dock 90t append
+/schedule function escapemap:boat/docks/particle/jungle_dock 95t append
+/schedule function escapemap:boat/docks/particle/jungle_dock 100t append
+/schedule function escapemap:boat/docks/particle/jungle_dock 105t append
+/schedule function escapemap:boat/docks/particle/jungle_dock 110t append
+/schedule function escapemap:boat/docks/particle/jungle_dock 115t append
+/schedule function escapemap:boat/docks/summon/jungle_dock 120t replace
+/schedule function escapemap:boat/docks/particle_post/jungle_dock 125t append
+/schedule function escapemap:boat/docks/particle_post/jungle_dock 130t append
+/schedule function escapemap:boat/docks/complete/jungle_dock 135t append
+dock_state jungle_dock = 1
+
+
+#file: ./docks/particle/jungle_dock
+/particle minecraft:bubble 10 -43.25 135 0.7 0 0.7 0.3 75 normal
+/particle minecraft:snowflake 10 -44.5 135 0.7 0 0.7 0.1 75 normal
+
+
+#file: ./docks/post_particle/jungle_dock
+/particle minecraft:bubble {x} -43 {z} 0.7 0 0.7 0.3 75 normal
+/particle minecraft:snowflake {x} -44 {z} 0.7 0 0.7 0.1 75 normal
+
+
+#file: ./docks/summon/jungle_dock
+/kill @e[tag=calledBoat]
+/particle minecraft:bubble_pop 10 -43.5 135 1 0 1 0.2 100 normal
+/summon minecraft:spruce_boat 10 -52.286 135 {Motion:[0.0,3.5,0.0],Tags:["calledBoat"],Invulnerable:1}
+
+
+#file: ./docks/complete/jungle_dock
+dock_state jungle_dock = 2
+/setblock 12 -42 135 air
+/setblock 12 -41 135 air
+/setblock 11 -42 134 air
+/setblock 11 -41 134 air
+
+
+#file: ./docks/tick
+//boat listener for spawn_dock
+if(dock_state spawn_dock == 0) {
+at(@a[gamemode=adventure,nbt={RootVehicle:{Entity:{id:"minecraft:spruce_boat"}}}]) {
+if('entity @e[tag=boat_marker,tag=spawn_dock,limit=1,distance=..12]') {
+/setblock -154 -43 124 air
+/setblock -154 -41 124 air
+/setblock -153 -43 123 air
+/setblock -153 -41 123 air
+/setblock -154 -43 125 air
+/setblock -154 -41 125 air
+/setblock -154 -42 125 air
+/setblock -154 -42 124 air
+/setblock -153 -42 123 air
+dock_state spawn_dock = 2
+}}}
+if(dock_state spawn_dock == 2) {
+at(@a[gamemode=adventure,nbt={RootVehicle:{Entity:{id:"minecraft:spruce_boat"}}}]) {
+if('entity @e[tag=boat_marker,tag=spawn_dock,limit=1,distance=12..]') {
+/setblock -154 -43 124 barrier
+/setblock -154 -41 124 barrier
+/setblock -153 -43 123 barrier
+/setblock -153 -41 123 barrier
+/setblock -154 -43 125 barrier
+/setblock -154 -41 125 barrier
+/setblock -154 -42 125 barrier
+/setblock -154 -42 124 barrier
+/setblock -153 -42 123 barrier
+dock_state spawn_dock = 0
+}}}
+//boat listener for lighthouse_dock
+if(dock_state lighthouse_dock == 0) {
+at(@a[gamemode=adventure,nbt={RootVehicle:{Entity:{id:"minecraft:spruce_boat"}}}]) {
+if('entity @e[tag=boat_marker,tag=lighthouse_dock,limit=1,distance=..13]') {
+/setblock -116 -42 -40 air
+/setblock -117 -42 -39 air
+/setblock -116 -42 -38 air
+dock_state lighthouse_dock = 2
+}}}
+if(dock_state lighthouse_dock == 2) {
+at(@a[gamemode=adventure,nbt={RootVehicle:{Entity:{id:"minecraft:spruce_boat"}}}]) {
+if('entity @e[tag=boat_marker,tag=lighthouse_dock,limit=1,distance=13..]') {
+/setblock -116 -42 -40 barrier
+/setblock -117 -42 -39 barrier
+/setblock -116 -42 -38 barrier
+dock_state lighthouse_dock = 0
+}}}
+//boat listener for jungle_dock
+if(dock_state jungle_dock == 0) {
+at(@a[gamemode=adventure,nbt={RootVehicle:{Entity:{id:"minecraft:spruce_boat"}}}]) {
+if('entity @e[tag=boat_marker,tag=jungle_dock,limit=1,distance=..12]') {
+/setblock 12 -42 135 air
+/setblock 12 -41 135 air
+/setblock 11 -42 134 air
+/setblock 11 -41 134 air
+dock_state jungle_dock = 2
+}}}
+if(dock_state jungle_dock == 2) {
+at(@a[gamemode=adventure,nbt={RootVehicle:{Entity:{id:"minecraft:spruce_boat"}}}]) {
+if('entity @e[tag=boat_marker,tag=jungle_dock,limit=1,distance=12..]') {
+/setblock 12 -42 135 barrier
+/setblock 12 -41 135 barrier
+/setblock 11 -42 134 barrier
+/setblock 11 -41 134 barrier
+dock_state jungle_dock = 0
+}}}
+
+
+#file: ./docks/reset
+//barriers for spawn_dock
+/setblock -154 -43 124 barrier
+/setblock -154 -41 124 barrier
+/setblock -153 -43 123 barrier
+/setblock -153 -41 123 barrier
+/setblock -154 -43 125 barrier
+/setblock -154 -41 125 barrier
+/setblock -154 -42 125 barrier
+/setblock -154 -42 124 barrier
+/setblock -153 -42 123 barrier
+dock_state spawn_dock = 0
+//barriers for lighthouse_dock
+/setblock -116 -42 -40 barrier
+/setblock -117 -42 -39 barrier
+/setblock -116 -42 -38 barrier
+dock_state lighthouse_dock = 0
+//barriers for jungle_dock
+/setblock 12 -42 135 barrier
+/setblock 12 -41 135 barrier
+/setblock 11 -42 134 barrier
+/setblock 11 -41 134 barrier
+dock_state jungle_dock = 0
+/kill @e[tag=calledBoat]
+
+
+#file: ./docks/use_horn
+//horn listener for spawn_dock
+at(@s){
+if('entity @e[tag=boat_marker,tag=spawn_dock,limit=1,distance=..8]') {
+if(dock_state spawn_dock == 0) {
+/function escapemap:boat/docks/call_boat/spawn_dock
+}}}
+//horn listener for lighthouse_dock
+at(@s){
+if('entity @e[tag=boat_marker,tag=lighthouse_dock,limit=1,distance=..8]') {
+if(dock_state lighthouse_dock == 0) {
+/function escapemap:boat/docks/call_boat/lighthouse_dock
+}}}
+//horn listener for jungle_dock
+at(@s){
+if('entity @e[tag=boat_marker,tag=jungle_dock,limit=1,distance=..5]') {
+if(dock_state jungle_dock == 0) {
+/function escapemap:boat/docks/call_boat/jungle_dock
+}}}
+
+
+#file: ./docks/close_all
+/setblock -154 -43 124 barrier
+/setblock -154 -41 124 barrier
+/setblock -153 -43 123 barrier
+/setblock -153 -41 123 barrier
+/setblock -154 -43 125 barrier
+/setblock -154 -41 125 barrier
+/setblock -154 -42 125 barrier
+/setblock -154 -42 124 barrier
+/setblock -153 -42 123 barrier
+
+dock_state spawn_dock = 0
+/setblock -116 -42 -40 barrier
+/setblock -117 -42 -39 barrier
+/setblock -116 -42 -38 barrier
+
+dock_state lighthouse_dock = 0
+/setblock 12 -42 135 barrier
+/setblock 12 -41 135 barrier
+/setblock 11 -42 134 barrier
+/setblock 11 -41 134 barrier
+
+dock_state jungle_dock = 0
+

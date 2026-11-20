@@ -1,0 +1,8 @@
+{
+  "name": "lighthouse_dock",
+  "marker_pos": "-151 -41 123",
+  "boat_pos": "-118 -39",
+  "horn_distance": 8,
+  "boat_distance": 13,
+  "barriers": ["-116 -42 -40", "-117 -42 -39", "-116 -42 -38"]
+}

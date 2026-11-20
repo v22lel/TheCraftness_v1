@@ -41,11 +41,7 @@ modal close2() {
 
 #file: ./boatcall/tick
 
-asat (@a[gamemode=adventure,nbt=!{RootVehicle:{Entity:{id:"minecraft:spruce_boat"}}}]) {
-    if ('biome ~ ~ ~ minecraft:warm_ocean' && 'block ~ ~ ~ water') {
-        /ride @s mount @e[type=#minecraft:boat,sort=nearest,limit=1]
-    }
-}
+
 
 // dock 1 open
 //-160 -45 118 dx=13 dy=5 dz=2

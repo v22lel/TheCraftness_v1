@@ -1,28 +1,13 @@
 //place0 = slab at the very start
 
-#file: ./placements/load
-var place0
-
 #file: ./placements/tick
-if('block -140 -42 122 #slabs' && 'entity @a[scores={place0=0}]') {
-    /setblock -140 -40 122 air
-    /setblock -140 -40 123 air
-    place0 @a = 1
-}
-
 //chest in castle seeds supply
 /data modify block -179 -38 -43 Items set value [{Slot:13b,id:"minecraft:wheat_seeds",count:1}]
 
 #file: ./placements/reset
-place0 @a = 0
 
 // mini cave
 /setblock 28 -23 -80 dead_brain_coral_block
-
-//spawn slab
-/setblock -140 -40 122 barrier
-/setblock -140 -40 123 barrier
-/setblock -140 -42 122 air
 
 
 //spawn trapdoors

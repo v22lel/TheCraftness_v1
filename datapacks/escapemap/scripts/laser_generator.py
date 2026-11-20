@@ -230,7 +230,24 @@ JUNGLE_LASER = LaserInstance(
    aim_pitch_substeps=75,
 )
 
-LASER = JUNGLE_LASER
+LAB_LASER = LaserInstance(
+    laser_id="lab",
+    x=-49,
+    y=-47,
+    z=12,
+    target_yaw_degrees=-127.1 * CUSTOM_ROTATION_FIX,
+    target_pitch_degrees=-29.3 * CUSTOM_ROTATION_FIX,
+
+    aim_yaw_delay_seconds=2.5,
+    aim_yaw_duration_seconds=12.5,
+    aim_yaw_substeps=125,
+
+    aim_pitch_delay_seconds=2.5,
+    aim_pitch_duration_seconds=7.5,
+    aim_pitch_substeps=75,
+)
+
+LASER = LAB_LASER
 LASER.fix()
 
 

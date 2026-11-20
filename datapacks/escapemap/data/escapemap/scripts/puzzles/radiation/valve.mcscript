@@ -11,7 +11,7 @@ at(@s) {
             } else if('data entity @s {Tags:["lab_pipe_main"]}') {
                 /function escapemap:puzzles/radiation/valve/onmainpipe
             } else {
-                /function escapemap:puzzles/radiation/valve/onanypipe
+                /function escapemap:puzzles/radiation/valve/onotherpipe
             }
         }
     }
@@ -29,6 +29,34 @@ as (@p) {
 
 #file: ./valve/onmainpipe
 /function escapemap:puzzles/radiation/valve/onanypipe
+pipe_counter M += 1
+if(pipe_counter M == 40) {
+    /function escapemap:puzzles/radiation/lab/pipe3_toggle
+    pipe_counter M = 0
+}
+
+#file: ./valve/onotherpipe
+if ('data entity @s {Tags:["lab_pipe_green"]}') {
+    pipe_counter green += 1
+    if (pipe_counter green == 20) {
+        /function escapemap:puzzles/radiation/enhancer/green/toggle
+        pipe_counter green = 0
+    }
+} else if ('data entity @s {Tags:["lab_pipe_blue"]}') {
+    pipe_counter blue += 1
+    if (pipe_counter blue == 20) {
+        /function escapemap:puzzles/radiation/enhancer/blue/toggle
+        pipe_counter blue = 0
+    }
+} else if ('data entity @s {Tags:["lab_pipe_magenta"]}') {
+    pipe_counter magenta += 1
+    if (pipe_counter magenta == 20) {
+        /function escapemap:puzzles/radiation/enhancer/magenta/toggle
+        pipe_counter magenta = 0
+    }
+} else {
+    /function escapemap:puzzles/radiation/valve/onanypipe
+}
 
 #file: ./valve/onanypipe
 pipe_counter G += 1
@@ -41,10 +69,19 @@ if(pipe_counter G == 13) {
 pipe_counter G = 0
 pipe_counter M = 0
 
+pipe_counter green = 0
+pipe_counter magenta = 0
+pipe_counter blue = 0
+
 as ('@e[tag=valve_slot]') {
     /item modify entity @s contents escapemap:consume
+    /data modify entity @s ItemRotation set value 0b
 }
 
 /item replace entity @e[tag=lab_pipe_start,limit=1] contents from entity @e[tag=valve_supplier,limit=1] contents
 
 /function escapemap:puzzles/radiation/lab/pipe3_on
+
+/function escapemap:puzzles/radiation/enhancer/green/off
+/function escapemap:puzzles/radiation/enhancer/magenta/off
+/function escapemap:puzzles/radiation/enhancer/blue/off

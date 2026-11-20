@@ -1,5 +1,5 @@
 #file: ./load
-var lasers_complete P = 0
+var lasers_complete
 
 
 #file: ./turn_off

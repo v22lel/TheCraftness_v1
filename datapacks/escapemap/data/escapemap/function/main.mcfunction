@@ -6,13 +6,13 @@
 ######
 function escapemap:jumppad
 function escapemap:spyglass/tick
-function escapemap:boatcall/tick
 function escapemap:placements/tick
 function escapemap:puzzles/tick
 function escapemap:super_secrets/tick
 function escapemap:drop/tick
 function escapemap:badending/tick
 function escapemap:mountain/tick
+function escapemap:boat/tick
 function escapemap:mechanical/elevators/elevator/tick
 function escapemap:ep/tick
 execute as @a run function escapemap:area/tick

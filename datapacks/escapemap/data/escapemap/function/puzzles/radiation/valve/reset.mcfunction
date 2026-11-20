@@ -6,6 +6,13 @@
 ######
 scoreboard players set G pipe_counter 0
 scoreboard players set M pipe_counter 0
+scoreboard players set green pipe_counter 0
+scoreboard players set magenta pipe_counter 0
+scoreboard players set blue pipe_counter 0
 execute as @e[tag=valve_slot] run item modify entity @s contents escapemap:consume
+execute as @e[tag=valve_slot] run data modify entity @s ItemRotation set value 0b
 item replace entity @e[tag=lab_pipe_start,limit=1] contents from entity @e[tag=valve_supplier,limit=1] contents
 function escapemap:puzzles/radiation/lab/pipe3_on
+function escapemap:puzzles/radiation/enhancer/green/off
+function escapemap:puzzles/radiation/enhancer/magenta/off
+function escapemap:puzzles/radiation/enhancer/blue/off

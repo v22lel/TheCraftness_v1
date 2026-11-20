@@ -5087,5 +5087,233 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/honey_bottle": {
+    "criteria": {
+      "has_honey_block": "2026-11-20 15:10:15 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/light_gray_wool_slab": {
+    "criteria": {
+      "has_light_gray_wool": "2026-11-20 15:12:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/light_gray_wool_stairs": {
+    "criteria": {
+      "has_light_gray_wool": "2026-11-20 15:12:22 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/magenta_concrete_slab": {
+    "criteria": {
+      "has_magenta_concrete": "2026-11-20 15:22:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/magenta_concrete_slab_from_magenta_concrete_stonecutting": {
+    "criteria": {
+      "has_magenta_concrete": "2026-11-20 15:22:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/magenta_concrete_stairs": {
+    "criteria": {
+      "has_magenta_concrete": "2026-11-20 15:22:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/magenta_concrete_stairs_from_magenta_concrete_stonecutting": {
+    "criteria": {
+      "has_magenta_concrete": "2026-11-20 15:22:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/poplar_chest_boat": {
+    "criteria": {
+      "has_boat": "2026-11-20 15:50:57 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/magenta_stained_glass_pane": {
+    "criteria": {
+      "has_glass": "2026-11-20 16:03:29 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_resin_bricks": {
+    "criteria": {
+      "has_slab": "2026-11-20 16:11:35 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_chiseled_copper": {
+    "criteria": {
+      "has_waxed_exposed_cut_copper_slab": "2026-11-20 17:20:23 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/exposed_chiseled_copper_from_exposed_cut_copper_stonecutting": {
+    "criteria": {
+      "has_exposed_cut_copper": "2026-11-20 17:20:51 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/exposed_cut_copper_slab": {
+    "criteria": {
+      "has_exposed_cut_copper": "2026-11-20 17:20:51 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/exposed_cut_copper_slab_from_exposed_cut_copper_stonecutting": {
+    "criteria": {
+      "has_exposed_cut_copper": "2026-11-20 17:20:51 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/exposed_cut_copper_stairs": {
+    "criteria": {
+      "has_exposed_cut_copper": "2026-11-20 17:20:51 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/exposed_cut_copper_stairs_from_exposed_cut_copper_stonecutting": {
+    "criteria": {
+      "has_exposed_cut_copper": "2026-11-20 17:20:51 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_cut_copper_from_honeycomb": {
+    "criteria": {
+      "has_exposed_cut_copper": "2026-11-20 17:20:51 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_chiseled_copper_from_waxed_exposed_cut_copper_stonecutting": {
+    "criteria": {
+      "has_waxed_exposed_cut_copper": "2026-11-20 17:20:55 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_cut_copper_slab": {
+    "criteria": {
+      "has_waxed_exposed_cut_copper": "2026-11-20 17:20:55 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_cut_copper_slab_from_waxed_exposed_cut_copper_stonecutting": {
+    "criteria": {
+      "has_waxed_exposed_cut_copper": "2026-11-20 17:20:55 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_cut_copper_stairs": {
+    "criteria": {
+      "has_waxed_exposed_cut_copper": "2026-11-20 17:20:55 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_cut_copper_stairs_from_waxed_exposed_cut_copper_stonecutting": {
+    "criteria": {
+      "has_waxed_exposed_cut_copper": "2026-11-20 17:20:55 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_chiseled_copper_from_waxed_exposed_copper_stonecutting": {
+    "criteria": {
+      "has_waxed_exposed_copper": "2026-11-20 17:21:00 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_copper_grate": {
+    "criteria": {
+      "has_waxed_exposed_copper": "2026-11-20 17:21:00 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_copper_grate_from_waxed_exposed_copper_stonecutting": {
+    "criteria": {
+      "has_waxed_exposed_copper": "2026-11-20 17:21:00 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_cut_copper": {
+    "criteria": {
+      "has_waxed_exposed_copper": "2026-11-20 17:21:00 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_cut_copper_from_waxed_exposed_copper_stonecutting": {
+    "criteria": {
+      "has_waxed_exposed_copper": "2026-11-20 17:21:00 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_cut_copper_slab_from_waxed_exposed_copper_stonecutting": {
+    "criteria": {
+      "has_waxed_exposed_copper": "2026-11-20 17:21:00 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_exposed_cut_copper_stairs_from_waxed_exposed_copper_stonecutting": {
+    "criteria": {
+      "has_waxed_exposed_copper": "2026-11-20 17:21:00 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/waxed_exposed_copper_bulb": {
+    "criteria": {
+      "has_waxed_exposed_copper": "2026-11-20 17:21:00 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_weathered_chiseled_copper": {
+    "criteria": {
+      "has_waxed_weathered_cut_copper_slab": "2026-11-20 17:23:26 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_weathered_cut_copper_from_honeycomb": {
+    "criteria": {
+      "has_weathered_cut_copper": "2026-11-20 17:25:07 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/weathered_chiseled_copper_from_weathered_cut_copper_stonecutting": {
+    "criteria": {
+      "has_weathered_cut_copper": "2026-11-20 17:25:07 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/weathered_cut_copper_slab": {
+    "criteria": {
+      "has_weathered_cut_copper": "2026-11-20 17:25:07 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/weathered_cut_copper_slab_from_weathered_cut_copper_stonecutting": {
+    "criteria": {
+      "has_weathered_cut_copper": "2026-11-20 17:25:07 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/weathered_cut_copper_stairs": {
+    "criteria": {
+      "has_weathered_cut_copper": "2026-11-20 17:25:07 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/weathered_cut_copper_stairs_from_weathered_cut_copper_stonecutting": {
+    "criteria": {
+      "has_weathered_cut_copper": "2026-11-20 17:25:07 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/waxed_weathered_copper_grate_from_honeycomb": {
+    "criteria": {
+      "has_weathered_copper_grate": "2026-11-20 17:25:09 +0100"
+    },
+    "done": true
+  },
   "DataVersion": 5023
 }

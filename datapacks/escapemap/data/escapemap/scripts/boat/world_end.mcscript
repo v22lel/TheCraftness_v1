@@ -1,0 +1,10 @@
+#file: ./world_end/tick
+positioned($(CENTER)) {
+    asat(@a[distance=300..,gamemode=adventure]) {
+        as(@e[type=#boat,distance=..2]) {
+            /kill @s
+        }
+        /effect give @s minecraft:blindness 5 255
+        /tp @s $(SPAWN)
+    }
+}

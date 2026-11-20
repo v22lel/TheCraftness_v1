@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "press_button": {
+      "trigger": "minecraft:default_block_use",
+      "conditions": {
+        "location": {
+          "type": "minecraft:all_of",
+          "terms": [
+            {
+              "predicate": {
+                "block": {
+                  "blocks": "minecraft:lever"
+                }
+              },
+              "type": "minecraft:location_check"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "escapemap:puzzles/lever_flick"
+  }
+}

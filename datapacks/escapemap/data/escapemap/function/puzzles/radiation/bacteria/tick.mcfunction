@@ -24,5 +24,9 @@ execute if data entity @e[tag=lab_door,limit=1] attack positioned as @e[tag=lab_
 
 execute if data entity @e[tag=lab_door,limit=1] interaction positioned as @e[tag=lab_door,limit=1] run function escapemap:puzzles/radiation/bacteria/door
 
+execute if data entity @e[tag=lab_merge,limit=1] attack positioned as @e[tag=lab_merge,limit=1] run function escapemap:puzzles/radiation/bacteria/enhance
+
+execute if data entity @e[tag=lab_merge,limit=1] interaction positioned as @e[tag=lab_merge,limit=1] run function escapemap:puzzles/radiation/bacteria/enhance
+
 execute as @e[type=item] if data entity @s {Item:{components:{"minecraft:custom_data":{"puzzle":{"id":"bacteria_alive"}}}}} run item modify entity @s contents escapemap:bacteria/dead
 execute as @e[type=item] if data entity @s {Item:{components:{"minecraft:custom_data":{"puzzle":{"id":"bacteria_cultivated"}}}}} run item modify entity @s contents escapemap:bacteria/dead

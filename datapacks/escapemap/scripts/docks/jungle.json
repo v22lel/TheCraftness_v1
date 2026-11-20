@@ -1,0 +1,8 @@
+{
+  "name": "jungle_dock",
+  "marker_pos": "-151 -41 123",
+  "boat_pos": "10 135",
+  "horn_distance": 5,
+  "boat_distance": 12,
+  "barriers": ["12 -42 135", "12 -41 135", "11 -42 134", "11 -41 134"]
+}

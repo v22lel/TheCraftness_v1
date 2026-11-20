@@ -50,3 +50,7 @@ super_secrets_complete @a = 0
 /function escapemap:puzzles/desert/ruins/check
 /function escapemap:puzzles/red_candle/attic/check
 /advancement revoke @s only escapemap:press_button
+
+#file: ./lever_flick
+/function escapemap:puzzles/radiation/lab/check
+/advancement revoke @s only escapemap:lever_flick

@@ -19,5 +19,6 @@
   "item.escapemap.multitool.tool.sturdy_knife": "== Sturdy Knife ==",
   "item.escapemap.multitool.tool.wirecutters": "== Wirecutters ==",
   "item.escapemap.origin": "From: %s",
-  "item.escapemap.pipe_valve": "Pipe Valve"
+  "item.escapemap.pipe_valve": "Pipe Valve",
+  "item.escapemap.boat_horn": "Boat Horn"
 }

@@ -11,7 +11,6 @@ function escapemap:numbers/load
 function escapemap:spyglass/load
 function escapemap:area/load
 function escapemap:boatcall/load
-function escapemap:placements/load
 function escapemap:puzzles/load
 function escapemap:super_secrets/load
 function escapemap:explicit_randomness/load

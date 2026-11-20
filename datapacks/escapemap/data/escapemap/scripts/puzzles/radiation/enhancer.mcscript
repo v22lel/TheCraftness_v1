@@ -1,0 +1,43 @@
+const heights = Array{
+    "-44",
+    "-43",
+    "-42",
+    "-41",
+    "-40"
+}
+
+const delays = Array{"3", "6", "9", "12", "15"}
+
+modal pipe(colour, x, z) {
+    for (0,4,i) {
+        #file: ./enhancer/$(colour)/o$(i)
+        /setblock $(x) $(heights).$(i) $(z) lava
+    }
+
+    for (0,4,i) {
+        #file: ./enhancer/$(colour)/c$(i)
+        /setblock $(x) $(heights).$(i) $(z) air
+    }
+
+    #file: ./enhancer/$(colour)/on
+    for (0,4,i) {
+        /schedule function escapemap:puzzles/radiation/enhancer/$(colour)/o$(i) $(delays).$(i) replace
+    }
+
+    #file: ./enhancer/$(colour)/off
+    for (0,4,i) {
+        /schedule function escapemap:puzzles/radiation/enhancer/$(colour)/c$(i) $(delays).$(i) replace
+    }
+
+    #file: ./enhancer/$(colour)/toggle
+    /execute store success storage escapemap:tmp enhancerOn byte 1 if block $(x) $(heights).0 $(z) lava
+    if('data storage escapemap:tmp {enhancerOn:1b}') {
+        /function escapemap:puzzles/radiation/enhancer/$(colour)/off
+    } else {
+        /function escapemap:puzzles/radiation/enhancer/$(colour)/on
+    }
+}
+
+pipe(blue, -24, 0)
+pipe(magenta, -33, 7)
+pipe(green, -34, 16)

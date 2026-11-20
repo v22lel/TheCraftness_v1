@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "used_boat_horn": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:goat_horn",
+          "predicates": {
+            "minecraft:custom_data": {
+              "puzzle": {
+                "id": "boat_horn"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "escapemap:boat/use_horn"
+  }
+}

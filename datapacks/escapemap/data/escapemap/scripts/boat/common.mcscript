@@ -1,0 +1,20 @@
+const CENTER = '-67 -35 48'
+const SPAWN = '-131 -38 118'
+
+#file: ./reset
+/function escapemap:boat/docks/reset
+
+#file: ./tick
+/function escapemap:boat/world_end/tick
+/function escapemap:boat/docks/tick
+
+asat (@a[gamemode=adventure,nbt=!{RootVehicle:{Entity:{id:"minecraft:spruce_boat"}}}]) {
+    // 'biome ~ ~ ~ minecraft:warm_ocean' &&
+    if ('block ~ ~ ~ water') {
+        /ride @s mount @e[type=#minecraft:boat,sort=nearest,limit=1]
+    }
+}
+
+#file: ./use_horn
+/advancement revoke @s only escapemap:boat_horn
+/function escapemap:boat/docks/use_horn
