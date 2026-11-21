@@ -12,3 +12,8 @@ execute as @a[x=-171.5,y=-53,z=28.5,dx=6,dy=19,dz=6] at @s run tp @s ~ ~0.1 ~
 function escapemap:puzzles/desert/elevator_listener/end
 execute as @e[type=minecraft:shulker,tag=escapemap_desert_elevator] run data merge entity @s {Peek:0b,AttachFace:0b}
 function escapemap:puzzles/desert/elevator/despawn_entities
+tors/elevator/place_station_3_blocks
+execute as @a[x=-167.5,y=-59,z=-47.5,dx=10,dy=18,dz=10] at @s run tp @s ~ ~0.1 ~
+function escapemap:puzzles/castle/layer2/elevators/elevator_listener/end
+execute as @e[type=minecraft:shulker,tag=escapemap_castle_elevator] run data merge entity @s {Peek:0b,AttachFace:0b}
+function escapemap:puzzles/castle/layer2/elevators/elevator/despawn_entities

@@ -14,3 +14,4 @@ function escapemap:puzzles/spawn/reset
 function escapemap:puzzles/radiation/reset
 function escapemap:puzzles/desert/reset
 function escapemap:puzzles/castle/reset
+function escapemap:puzzles/jungle/reset

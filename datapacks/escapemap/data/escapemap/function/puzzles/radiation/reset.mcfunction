@@ -11,6 +11,7 @@ execute as @a run attribute @s minecraft:block_interaction_range modifier remove
 execute as @a run attribute @s minecraft:movement_speed modifier remove radiation
 function escapemap:puzzles/radiation/bacteria/reset
 function escapemap:puzzles/radiation/valve/reset
+function escapemap:puzzles/radiation/lab/reset
 setblock -9 -37 2 minecraft:lever[facing=east,powered=false,face=floor]
 setblock -8 -39 2 air destroy
 setblock -5 -36 11 lever[facing=west,powered=false,face=floor]

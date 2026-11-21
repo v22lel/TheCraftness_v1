@@ -11,3 +11,4 @@ execute if score #running escapemap_desert_elevator matches 1 if score #tick esc
 execute if score #do_step escapemap_desert_elevator matches 1 run scoreboard players set #tick escapemap_desert_elevator 0
 execute if score #do_step escapemap_desert_elevator matches 1 if score #active escapemap_desert_elevator matches 0 run function escapemap:puzzles/desert/elevator/step_a
 execute if score #do_step escapemap_desert_elevator matches 1 if score #active escapemap_desert_elevator matches 1 run function escapemap:puzzles/desert/elevator/step_b
+ap:puzzles/castle/layer2/elevators/elevator/step_b

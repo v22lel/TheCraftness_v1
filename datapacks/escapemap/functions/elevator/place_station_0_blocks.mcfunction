@@ -49,3 +49,15 @@ setblock -168 -48 31 minecraft:deepslate_tile_wall[north=low,south=low]
 setblock -170 -50 31 minecraft:iron_bars[north=true,south=true]
 setblock -170 -49 31 minecraft:iron_bars[north=true,south=true]
 setblock -170 -48 31 minecraft:deepslate_tile_wall[north=low,south=low]
+inecraft:deepslate_bricks
+setblock -164 -45 -46 minecraft:deepslate_bricks
+setblock -165 -45 -46 minecraft:deepslate_bricks
+setblock -166 -45 -46 minecraft:deepslate_bricks
+setblock -161 -45 -39 minecraft:deepslate_bricks
+setblock -162 -45 -39 minecraft:deepslate_bricks
+setblock -164 -45 -39 minecraft:deepslate_bricks
+setblock -165 -45 -39 minecraft:deepslate_bricks
+setblock -161 -45 -47 minecraft:deepslate_bricks
+setblock -162 -45 -47 minecraft:deepslate_bricks
+setblock -164 -45 -47 minecraft:deepslate_bricks
+setblock -165 -45 -47 minecraft:deepslate_bricks

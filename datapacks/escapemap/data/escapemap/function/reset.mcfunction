@@ -7,7 +7,7 @@
 scoreboard players set @a sprint 0
 function escapemap:containers/reset
 function escapemap:placements/reset
-function escapemap:boatcall/reset
+function escapemap:boat/reset
 function escapemap:area/reset
 function escapemap:puzzles/reset
 function escapemap:super_secrets/reset

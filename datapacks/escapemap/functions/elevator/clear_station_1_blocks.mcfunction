@@ -49,3 +49,25 @@ setblock -168 -35 31 minecraft:air
 setblock -170 -37 31 minecraft:air
 setblock -170 -36 31 minecraft:air
 setblock -170 -35 31 minecraft:air
+raft:air
+setblock -167 -49 -45 minecraft:air
+setblock -160 -49 -40 minecraft:air
+setblock -161 -49 -40 minecraft:air
+setblock -162 -49 -40 minecraft:air
+setblock -164 -49 -40 minecraft:air
+setblock -165 -49 -40 minecraft:air
+setblock -166 -49 -40 minecraft:air
+setblock -160 -49 -46 minecraft:air
+setblock -161 -49 -46 minecraft:air
+setblock -162 -49 -46 minecraft:air
+setblock -164 -49 -46 minecraft:air
+setblock -165 -49 -46 minecraft:air
+setblock -166 -49 -46 minecraft:air
+setblock -161 -49 -39 minecraft:air
+setblock -162 -49 -39 minecraft:air
+setblock -164 -49 -39 minecraft:air
+setblock -165 -49 -39 minecraft:air
+setblock -161 -49 -47 minecraft:air
+setblock -162 -49 -47 minecraft:air
+setblock -164 -49 -47 minecraft:air
+setblock -165 -49 -47 minecraft:air

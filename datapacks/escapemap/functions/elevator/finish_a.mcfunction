@@ -13,3 +13,4 @@ scoreboard players set #a escapemap_desert_elevator 0
 scoreboard players set #active escapemap_desert_elevator 1
 scoreboard players add #cycle escapemap_desert_elevator 1
 execute if score #cycle escapemap_desert_elevator >= #max_cycles escapemap_desert_elevator run function escapemap:puzzles/desert/elevator/arrive
+/layer2/elevators/elevator/arrive

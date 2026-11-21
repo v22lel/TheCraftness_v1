@@ -16,3 +16,30 @@ execute if score #current_station escapemap_desert_elevator matches 0 positioned
 execute if score #current_station escapemap_desert_elevator matches 1 positioned -169 -38 31 run function escapemap:puzzles/desert/elevator/summon_entities
 function escapemap:puzzles/desert/elevator/calculate_distance
 execute as @a[x=-171.5,y=-53,z=28.5,dx=6,dy=19,dz=6] at @s run tp @s ~ ~0.1 ~
+ches 0 run scoreboard players set #max_cycles escapemap_castle_elevator 4
+execute if score #current_station escapemap_castle_elevator matches 1 if score #target_station escapemap_castle_elevator matches 2 run scoreboard players set #dir_sign escapemap_castle_elevator -1
+execute if score #current_station escapemap_castle_elevator matches 1 if score #target_station escapemap_castle_elevator matches 2 run scoreboard players set #max_cycles escapemap_castle_elevator 4
+execute if score #current_station escapemap_castle_elevator matches 1 if score #target_station escapemap_castle_elevator matches 3 run scoreboard players set #dir_sign escapemap_castle_elevator -1
+execute if score #current_station escapemap_castle_elevator matches 1 if score #target_station escapemap_castle_elevator matches 3 run scoreboard players set #max_cycles escapemap_castle_elevator 8
+execute if score #current_station escapemap_castle_elevator matches 2 if score #target_station escapemap_castle_elevator matches 0 run scoreboard players set #dir_sign escapemap_castle_elevator 1
+execute if score #current_station escapemap_castle_elevator matches 2 if score #target_station escapemap_castle_elevator matches 0 run scoreboard players set #max_cycles escapemap_castle_elevator 8
+execute if score #current_station escapemap_castle_elevator matches 2 if score #target_station escapemap_castle_elevator matches 1 run scoreboard players set #dir_sign escapemap_castle_elevator 1
+execute if score #current_station escapemap_castle_elevator matches 2 if score #target_station escapemap_castle_elevator matches 1 run scoreboard players set #max_cycles escapemap_castle_elevator 4
+execute if score #current_station escapemap_castle_elevator matches 2 if score #target_station escapemap_castle_elevator matches 3 run scoreboard players set #dir_sign escapemap_castle_elevator -1
+execute if score #current_station escapemap_castle_elevator matches 2 if score #target_station escapemap_castle_elevator matches 3 run scoreboard players set #max_cycles escapemap_castle_elevator 4
+execute if score #current_station escapemap_castle_elevator matches 3 if score #target_station escapemap_castle_elevator matches 0 run scoreboard players set #dir_sign escapemap_castle_elevator 1
+execute if score #current_station escapemap_castle_elevator matches 3 if score #target_station escapemap_castle_elevator matches 0 run scoreboard players set #max_cycles escapemap_castle_elevator 12
+execute if score #current_station escapemap_castle_elevator matches 3 if score #target_station escapemap_castle_elevator matches 1 run scoreboard players set #dir_sign escapemap_castle_elevator 1
+execute if score #current_station escapemap_castle_elevator matches 3 if score #target_station escapemap_castle_elevator matches 1 run scoreboard players set #max_cycles escapemap_castle_elevator 8
+execute if score #current_station escapemap_castle_elevator matches 3 if score #target_station escapemap_castle_elevator matches 2 run scoreboard players set #dir_sign escapemap_castle_elevator 1
+execute if score #current_station escapemap_castle_elevator matches 3 if score #target_station escapemap_castle_elevator matches 2 run scoreboard players set #max_cycles escapemap_castle_elevator 4
+execute if score #current_station escapemap_castle_elevator matches 0 run function escapemap:puzzles/castle/layer2/elevators/elevator/clear_station_0_blocks
+execute if score #current_station escapemap_castle_elevator matches 1 run function escapemap:puzzles/castle/layer2/elevators/elevator/clear_station_1_blocks
+execute if score #current_station escapemap_castle_elevator matches 2 run function escapemap:puzzles/castle/layer2/elevators/elevator/clear_station_2_blocks
+execute if score #current_station escapemap_castle_elevator matches 3 run function escapemap:puzzles/castle/layer2/elevators/elevator/clear_station_3_blocks
+execute if score #current_station escapemap_castle_elevator matches 0 positioned -163 -45 -43 run function escapemap:puzzles/castle/layer2/elevators/elevator/summon_entities
+execute if score #current_station escapemap_castle_elevator matches 1 positioned -163 -49 -43 run function escapemap:puzzles/castle/layer2/elevators/elevator/summon_entities
+execute if score #current_station escapemap_castle_elevator matches 2 positioned -163 -53 -43 run function escapemap:puzzles/castle/layer2/elevators/elevator/summon_entities
+execute if score #current_station escapemap_castle_elevator matches 3 positioned -163 -57 -43 run function escapemap:puzzles/castle/layer2/elevators/elevator/summon_entities
+function escapemap:puzzles/castle/layer2/elevators/elevator/calculate_distance
+execute as @a[x=-167.5,y=-59,z=-47.5,dx=10,dy=18,dz=10] at @s run tp @s ~ ~0.1 ~

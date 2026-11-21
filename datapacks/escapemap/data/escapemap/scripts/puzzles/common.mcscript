@@ -45,6 +45,7 @@ super_secrets_complete @a = 0
 /function escapemap:puzzles/radiation/reset
 /function escapemap:puzzles/desert/reset
 /function escapemap:puzzles/castle/reset
+/function escapemap:puzzles/jungle/reset
 
 #file: ./button_press
 /function escapemap:puzzles/desert/ruins/check

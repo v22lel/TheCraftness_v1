@@ -12,3 +12,4 @@ execute if score #dir_sign escapemap_desert_elevator matches -1 as @e[type=minec
 execute if score #dir_sign escapemap_desert_elevator matches 1 as @e[type=minecraft:block_display,tag=escapemap_desert_elevator_display] at @s run tp @s ~ ~0.01 ~
 execute if score #dir_sign escapemap_desert_elevator matches -1 as @e[type=minecraft:block_display,tag=escapemap_desert_elevator_display] at @s run tp @s ~ ~-0.01 ~
 execute if score #a escapemap_desert_elevator matches 100.. run function escapemap:puzzles/desert/elevator/finish_a
+levator/finish_a

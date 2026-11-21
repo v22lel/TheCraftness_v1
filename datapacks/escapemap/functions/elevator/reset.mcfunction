@@ -9,3 +9,6 @@ function escapemap:puzzles/desert/elevator/despawn_entities
 scoreboard players set #current_station escapemap_desert_elevator 0
 function escapemap:puzzles/desert/elevator/place_station_0_blocks
 function escapemap:puzzles/desert/elevator/clear_station_1_blocks
+e/layer2/elevators/elevator/clear_station_1_blocks
+function escapemap:puzzles/castle/layer2/elevators/elevator/clear_station_2_blocks
+function escapemap:puzzles/castle/layer2/elevators/elevator/clear_station_3_blocks
