@@ -1,0 +1,16 @@
+{
+  "homes": {
+    "overworld_-177_-51_55": {
+      "dimension": "minecraft:overworld",
+      "x": -176.69018239997408,
+      "y": -50.528341143975666,
+      "z": 54.79187507779445,
+      "rotX": 38.597195,
+      "rotY": 33.179413
+    }
+  },
+  "lastVisitedHomes": [
+    null,
+    null
+  ]
+}

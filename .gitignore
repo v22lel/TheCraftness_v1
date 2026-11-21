@@ -1,3 +1,5 @@
 session.lock
 datapacks/escapemap/.idea/
 .idea
+
+./**/__pycache__
